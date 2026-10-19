@@ -272,6 +272,19 @@ emitted for a future custom domain, and the sitemap is submitted in the search c
   troubleshooting (faq), sources with publisher, "found a mistake" link (prefilled fix issue),
   related guides (same device, then same category), language fallback note.
 - **Category / device / brand / task**: header with colour and icon, counts, filters, guide cards.
+  Settled in the implementation (a category must not drown in model guides):
+  - **Category**: the device types come first as subcategory tiles (icon `dev-<id>` when it exists,
+    else the category icon; guide count; a device without guides is a dashed tile, not a link), then
+    one section per device type with its first three guides (general ones before model guides) and
+    "Все N" to the device page; featured links last. No facet filters here.
+  - **Device hub**: a device with at least 6 model guides (a guide-level widget whose `meta` gives a `label`) from at least 3 brands is a
+    hub. General guides (not model guides: "Общие инструкции", care and cleaning) sit on top as cards; below, the models are grouped
+    by brand (A–Z) as compact model cards (the short name from the widget `meta`, the facet value,
+    "данные неполные" for partial data) with a quick filter (`data-js`, one choice each, `?b=` and
+    `?x=`): brand, plus the widget's facet when it has two or more values (washer-panel: mechanical
+    timer / electronic control). Other devices keep the faceted list.
+  - **Guide breadcrumbs**: Home > category > device > the guide's short name (`label`), on the page
+    and in `BreadcrumbList`.
 - **Catalog**: all guides, facet filters with counts, sort (new, A–Z, quickest), filters kept in the
   query string.
 - **Stats ("Индекс")**: totals; guides per category (bar chart), per device type, per brand, per
@@ -361,6 +374,7 @@ Guide = {
   category, device, brands, task,  // the taxonomy objects (not ids)
   models, difficulty, time,
   title, summary, introHtml,
+  label,                           // short name: the widget meta label ('Indesit WGS 834 TXR') or title
   tools: [string], parts: [{name, qty, ref}],
   aliases,
   steps: [{n, id, title, html, image: null | {kind: 'svg', svg, alt} | {kind: 'photo', src, alt, width, height},

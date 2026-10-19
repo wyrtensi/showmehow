@@ -323,3 +323,75 @@ test('render: stats bars open the filtered catalog and carry their numbers', () 
   assert.match(html, /<a class="legend-link" href="\/showmehow\/guides\/\?f=easy"/);
   assert.match(html, /<span class="bar-row c-kitchen is-zero">/, 'a category without guides is not a link');
 }));
+
+// ---- category subcategories, device hub, machine breadcrumbs (spec 5.2) ----------------------
+
+// Seven model guides of one device from three brands plus one for any brand: enough for a hub.
+function hubSite() {
+  const site = makeSite('ru');
+  const base = site.guides[0];
+  const brand = (id) => site.brands.find((b) => b.id === id);
+  const make = (i, brandId) => ({
+    ...base, slug: `earbuds-model-${i}`, path: `audio/earbuds-model-${i}/`, title: `Как пользоваться моделью ${i}`, brands: [brand(brandId)],
+    widget: { type: 'test-meta', params: { n: i }, placement: 'start' }, label: `${brand(brandId).name} M${i}`
+  });
+  const models = [make(1, 'apple'), make(2, 'apple'), make(3, 'samsung'), make(4, 'samsung'), make(5, 'xiaomi'), make(6, 'xiaomi'), make(7, 'xiaomi')];
+  const any = { ...base, slug: 'earbuds-any', path: 'audio/earbuds-any/', title: 'Как почистить любые наушники', brands: [brand('generic')], widget: null };
+  site.guides = [...site.guides, ...models, any];
+  site.byDevice[base.device.id] = [base, ...models, any];
+  site.byCategory.audio = site.guides.filter((g) => g.category.id === 'audio');
+  base.device.count = site.byDevice[base.device.id].length;
+  return { site, device: base.device, models };
+}
+
+function withMetaWidget(fn) {
+  widgets['test-meta'] = {
+    render: () => '<p>panel</p>', validate: () => [], client: false,
+    meta: (params) => ({ label: `M${params.n}`, facet: { key: 'x', label: 'Управление', id: params.n % 2 ? 'mechanical' : 'electronic', name: params.n % 2 ? 'Механика' : 'Электроника' }, partial: params.n === 5 })
+  };
+  try {
+    return withDemoWidget(fn);
+  } finally {
+    delete widgets['test-meta'];
+  }
+}
+
+test('render: category page shows device tiles first and guides grouped by device', () => withMetaWidget(() => {
+  const { site, device } = hubSite();
+  const html = render.renderCategory(site, site.categories.find((c) => c.id === 'audio')).html;
+  assert.doesNotMatch(html, /data-faceted/, 'no facet filters on the category page');
+  const tiles = html.indexOf('class="sub-tiles"');
+  const group = html.indexOf('class="section wrap device-group"');
+  assert.ok(tiles > 0 && group > tiles, 'tiles come before the groups');
+  assert.match(html, new RegExp(`<a class="sub-tile" href="/showmehow/device/${device.id}/">`));
+  assert.match(html, /<span class="sub-tile is-empty">/, 'a device without guides is a tile but not a link');
+  const section = html.slice(group, html.indexOf('</section>', group));
+  assert.equal((section.match(/<article class="gcard/g) || []).length, 3, 'three cards per device group');
+  assert.match(section, /Все 9/, '"All N" links to the device page');
+  assert.ok(section.includes('earbuds-any'), 'guides for any brand come first');
+}));
+
+test('render: a device with many models from several brands is a hub grouped by brand', () => withMetaWidget(() => {
+  const { site, device } = hubSite();
+  const html = render.renderDevice(site, device).html;
+  assert.match(html, /<section class="section wrap hub" data-hub/);
+  const generic = html.indexOf('id="h-generic"');
+  assert.ok(generic > 0 && generic < html.indexOf('data-hub'), '"for any model" sits above the models');
+  assert.equal((html.match(/data-hub-group/g) || []).length, 3, 'one group per brand');
+  assert.match(html, /data-hub-key="b" data-hub-val="samsung" aria-pressed="false">Samsung<span class="chip-count">2<\/span>/);
+  assert.match(html, /data-hub-key="x" data-hub-val="electronic"/, 'the widget facet becomes a filter');
+  assert.match(html, /<span class="model-name">M5<\/span>.*?<span class="model-partial">данные неполные<\/span>/s);
+  const small = makeSite('ru');
+  assert.doesNotMatch(render.renderDevice(small, small.devices[0]).html, /data-hub/, 'a small device keeps the plain list');
+}));
+
+test('render: a machine guide breadcrumb ends with its short name and passes the device', () => withMetaWidget(() => {
+  const { site, models } = hubSite();
+  const html = render.renderGuide(site, models[0]).html;
+  const start = html.indexOf('<nav class="crumbs"');
+  const nav = html.slice(start, html.indexOf('</nav>', start));
+  assert.match(nav, /href="\/showmehow\/device\/earbuds\/"/);
+  assert.match(nav, /<span aria-current="page">Apple M1<\/span>/);
+  const ld = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((m) => JSON.parse(m[1])).find((o) => o['@type'] === 'BreadcrumbList');
+  assert.deepEqual(ld.itemListElement.map((i) => i.name).slice(-2), [models[0].device.plural || models[0].device.name, 'Apple M1']);
+}));

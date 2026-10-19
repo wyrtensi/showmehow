@@ -169,6 +169,7 @@ export async function loadSite({ root, lang = 'ru', base = '/', siteUrl = '', la
   const S = String(siteUrl || '').replace(/\/+$/, '');
   const alertLabels = { ...DEFAULT_LABELS.en, ...DEFAULT_LABELS[L], ...(await i18nLabels(L)), ...(labels || {}) };
   const tax = Object.fromEntries(TAXONOMY.map((n) => [n, content.taxonomy[n].data]));
+  const registry = await loadWidgets();
 
   const site = {
     lang: L,
@@ -279,6 +280,10 @@ export async function loadSite({ root, lang = 'ru', base = '/', siteUrl = '', la
         words: countWords([body.intro.text, ...body.steps.map((s) => `${s.title}\n${s.text}`)].join('\n'))
       }
     };
+    // Short name for breadcrumbs and hub cards: the guide-level widget may know it (washer-panel:
+    // 'Indesit WGS 834 TXR'), else the title (spec 6, 7).
+    const meta = guide.widget && typeof registry[guide.widget.type]?.meta === 'function' ? registry[guide.widget.type].meta(guide.widget.params, L) : null;
+    guide.label = meta?.label ? String(meta.label) : guide.title;
     site.guides.push(guide);
   }
 

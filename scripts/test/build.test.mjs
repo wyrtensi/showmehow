@@ -88,7 +88,7 @@ test('loadSite returns the site model with English text and Russian fallback', a
     assert.deepEqual(r.steps[0].image, { kind: 'photo', src: '/showmehow/network/router-wifi-connect/label.png', alt: 'Наклейка на дне роутера с именем сети', width: 4, height: 3 });
     assert.deepEqual(r.parts, [{ name: 'Кабель Ethernet', qty: 1, ref: 'A-1' }]);
     assert.equal(r.faq[0].aHtml, 'Проверьте <strong>раскладку</strong> и регистр.');
-    assert.deepEqual(Object.keys(r).sort(), ['aliases', 'authors', 'brands', 'category', 'device', 'difficulty', 'fallback', 'faq', 'introHtml', 'langs', 'lastmod', 'models', 'parts', 'path', 'slug', 'sources', 'stats', 'steps', 'summary', 'task', 'time', 'title', 'tools', 'updated', 'variants', 'widget'].sort());
+    assert.deepEqual(Object.keys(r).sort(), ['aliases', 'authors', 'brands', 'category', 'device', 'difficulty', 'fallback', 'faq', 'introHtml', 'label', 'langs', 'lastmod', 'models', 'parts', 'path', 'slug', 'sources', 'stats', 'steps', 'summary', 'task', 'time', 'title', 'tools', 'updated', 'variants', 'widget'].sort());
     assert.deepEqual(Object.keys(r.steps[0]).sort(), ['html', 'id', 'image', 'md', 'n', 'title', 'variants', 'widgets']);
     assert.deepEqual(r.variants, []);
     assert.equal(r.steps[0].variants, null);
@@ -132,7 +132,7 @@ test('build writes pages, assets and data endpoints with the fixture renderer', 
     assert.equal(howTo.totalTime, 'PT3M');
     assert.equal(howTo.step[2].url, `${SITE_URL}/audio/airpods-pair-android/#step-3`);
     assert.ok(ld.some((o) => o['@type'] === 'FAQPage' && o.mainEntity.length === 2));
-    assert.ok(ld.some((o) => o['@type'] === 'BreadcrumbList' && o.itemListElement.length === 3));
+    assert.ok(ld.some((o) => o['@type'] === 'BreadcrumbList' && o.itemListElement.length === 4));
     assert.match(guide, /<link rel="canonical" href="https:\/\/wyrtensi.github.io\/showmehow\/audio\/airpods-pair-android\/">/);
     assert.match(guide, /hreflang="en" href="https:\/\/wyrtensi.github.io\/showmehow\/en\/audio\/airpods-pair-android\/"/);
     assert.match(guide, /href="\/showmehow\/assets\/site.css\?v=[0-9a-f]{8}"/, 'asset links get a version');
