@@ -30,5 +30,17 @@
   { "id": "nintendo", "name": "Nintendo", "aliases": ["нинтендо", "свитч", "switch", "nintendo switch"], "site": "https://www.nintendo.com/" },
   { "id": "marshall", "name": "Marshall", "aliases": ["маршал", "маршалл", "marshall headphones"], "site": "https://www.marshall.com/" },
   { "id": "blum", "name": "Blum", "aliases": ["блюм", "blum clip top", "петли блюм"], "site": "https://www.blum.com/" },
-  { "id": "trek", "name": "Trek", "aliases": ["трек", "trek bikes", "велосипед трек"], "site": "https://www.trekbikes.com/" }
+  { "id": "trek", "name": "Trek", "aliases": ["трек", "trek bikes", "велосипед трек"], "site": "https://www.trekbikes.com/" },
+  { "id": "ardo", "name": "Ardo", "aliases": ["ардо"] },
+  { "id": "ariston", "name": "Ariston", "aliases": ["аристон"] },
+  { "id": "hotpoint-ariston", "name": "Hotpoint-Ariston", "aliases": ["хотпоинт", "хотпоинт аристон", "hotpoint", "hotpoint ariston"], "site": "https://www.hotpoint.eu/" },
+  { "id": "beko", "name": "Beko", "aliases": ["беко"], "site": "https://www.beko.com/" },
+  { "id": "candy", "name": "Candy", "aliases": ["канди", "кэнди"], "site": "https://www.candy-home.com/" },
+  { "id": "electrolux", "name": "Electrolux", "aliases": ["электролюкс"], "site": "https://www.electrolux.com/" },
+  { "id": "gorenje", "name": "Gorenje", "aliases": ["горенье"], "site": "https://www.gorenje.com/" },
+  { "id": "miele", "name": "Miele", "aliases": ["миле", "миеле"], "site": "https://www.miele.com/" },
+  { "id": "siemens", "name": "Siemens", "aliases": ["сименс", "siwamat", "сивамат"], "site": "https://www.siemens-home.bsh-group.com/" },
+  { "id": "vyatka", "name": "Вятка", "aliases": ["vyatka", "вятка автомат"] },
+  { "id": "whirlpool", "name": "Whirlpool", "aliases": ["вирпул", "вирлпул", "вирлпуль"], "site": "https://www.whirlpool.com/" },
+  { "id": "zanussi", "name": "Zanussi", "aliases": ["занусси", "зануси"], "site": "https://www.zanussi.com/" }
 ]
