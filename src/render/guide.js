@@ -159,6 +159,8 @@ export function renderGuide(site, guide) {
   const srcLang = guide.fallback || !guide.langs?.en ? 'ru' : site.lang;
   const editUrl = `${REPO}/edit/main/guides/${guide.path}index.${srcLang}.md`;
   const brands = guide.brands.filter((b) => b.id !== 'generic');
+  // Home > category > device > the guide's short name (spec 5.2): 'Indesit WGS 834 TXR' for a machine guide.
+  const crumbItems = [{ name: cat.name, path: cat.id + '/' }, { name: guide.device.plural || guide.device.name, path: 'device/' + guide.device.id + '/' }, { name: guide.label || guide.title, path: guide.path }];
 
   const meta = [
     `<li class="meta-pill">${icon('clock')}<span>${esc(minutes(guide.time))}</span></li>`,
@@ -175,7 +177,7 @@ export function renderGuide(site, guide) {
 <div class="guide" data-guide="${attr(guide.slug)}" data-total="${total}">
 <section class="band guide-hero">
 <div class="wrap">
-${crumbs(site, [{ name: cat.name, path: cat.id + '/' }, { name: guide.device.plural || guide.device.name, path: 'device/' + guide.device.id + '/' }, { name: guide.title, path: guide.path }])}
+${crumbs(site, crumbItems)}
 <div class="guide-hero-in">
 <div class="guide-hero-text">
 <a class="cat-chip" href="${attr(site.href(cat.id + '/'))}">${catIcon(cat)}<span>${esc(cat.name)}</span></a>
@@ -242,7 +244,7 @@ ${rel.length ? `<section class="section wrap related" aria-labelledby="h-related
     path: guide.path + 'index.html',
     html: layout(site, {
       kind: 'guide', subject: guide, title: guide.title, description: guide.summary, body, accent: cat, mainClass: 'guide-page',
-      crumbs: [{ name: cat.name, path: cat.id + '/' }, { name: guide.title, path: guide.path }],
+      crumbs: crumbItems,
       bodyClass: 'has-step-nav'
     })
   };

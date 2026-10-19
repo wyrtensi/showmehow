@@ -1,0 +1,144 @@
+/* washer-panel widget (docs/spec.md 11.6).
+   Two parts. The panel drawing (.panel-wrap, .panel-svg) and the detergent drawer (.tray) are
+   washguide's styles as is, scoped under .wgt-washer, with washguide's own colour values (--wg-*)
+   and its dark-theme dimming filter: each machine keeps its own look. Everything around them
+   (presets, chips, result card, warnings) follows the Show Me How tokens; chips are 44 px and up. */
+.wgt-washer {
+  min-width: 0;
+  --wg-surface-2: #f1eee7; --wg-line: #e2ddd2; --wg-muted: #6b665c;
+  --wg-accent: #1d4ed8; --wg-accent-soft: #e6edff; --wg-panel-dim: none;
+  --wp-heat: #f2a33a; --wp-prewash: #a78bfa; --wp-wash: #4f86ec; --wp-rinse: #38b4e6; --wp-spin: #2fb985; --wp-drain: #9aa6b8;
+}
+@media screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .wgt-washer {
+    --wg-surface-2: #20242c; --wg-line: #2c313b; --wg-muted: #98a1b0;
+    --wg-accent: #8ab4ff; --wg-accent-soft: rgba(138, 180, 255, .14); --wg-panel-dim: brightness(.82) saturate(.9);
+    --wp-heat: #d99a3c; --wp-prewash: #9d8cec; --wp-wash: #5b8ef0; --wp-rinse: #4aaedb; --wp-spin: #34b98e; --wp-drain: #7d899c;
+  }
+}
+:root[data-theme="dark"] .wgt-washer {
+  --wg-surface-2: #20242c; --wg-line: #2c313b; --wg-muted: #98a1b0;
+  --wg-accent: #8ab4ff; --wg-accent-soft: rgba(138, 180, 255, .14); --wg-panel-dim: brightness(.82) saturate(.9);
+  --wp-heat: #d99a3c; --wp-prewash: #9d8cec; --wp-wash: #5b8ef0; --wp-rinse: #4aaedb; --wp-spin: #34b98e; --wp-drain: #7d899c;
+}
+
+/* ---- panel drawing: washguide src/style.css, scoped ---- */
+.wgt-washer .panel-wrap { border-radius: 18px; background: color-mix(in srgb, var(--wg-surface-2) 60%, transparent); padding: 6px; min-width: 0; }
+.wgt-washer .panel-svg { display: block; width: 100%; height: auto; max-height: 72vh; user-select: none; -webkit-user-select: none; filter: var(--wg-panel-dim); }
+.wgt-washer .panel-svg .cap { font-size: 15px; font-weight: 700; letter-spacing: .02em; }
+.wgt-washer .panel-svg text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 650; }
+.wgt-washer .panel-svg .pos { cursor: pointer; }
+.wgt-washer .panel-svg .pos .hit { fill: transparent; transition: fill .15s; }
+.wgt-washer .panel-svg .pos:hover .hit { fill: rgba(29, 78, 216, .15); }
+.wgt-washer .panel-svg .pos.on .hit { fill: #1d4ed8; }
+.wgt-washer .panel-svg .pos.on text { fill: #fff; }
+.wgt-washer .panel-svg .pos.on g { stroke: #fff; color: #fff; }
+.wgt-washer .panel-svg .pos.stop.on circle:first-child { fill: rgba(200, 30, 30, .25); }
+.wgt-washer .panel-svg .pos:focus-visible { outline: 3px solid var(--wg-accent); outline-offset: 2px; }
+.wgt-washer .panel-svg .rot { transition: transform .6s cubic-bezier(.34, 1.25, .64, 1); }
+/* the site's .btn (10-base.css) must not reach the drawing's <g class="btn"> */
+.wgt-washer .panel-svg .btn, .wgt-washer .panel-svg .btn:hover, .wgt-washer .panel-svg .btn:active { all: unset; }
+.wgt-washer .panel-svg .btn[role="button"] { cursor: pointer; }
+.wgt-washer .panel-svg .btn .face { transition: transform .15s; }
+.wgt-washer .panel-svg .btn.on .face { transform: translateY(4px); filter: brightness(.86); stroke: #1d4ed8; stroke-opacity: 1; stroke-width: 3; }
+.wgt-washer .panel-svg .btn.on .cap-shadow { opacity: .04; }
+.wgt-washer .panel-svg.mini .pos text { font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .wgt-washer .panel-svg .rot { transition: none; } }
+
+/* ---- detergent drawer: washguide src/style.css, scoped ---- */
+.wgt-washer .ic { width: 1.15em; height: 1.15em; flex: none; vertical-align: -.18em; }
+.wgt-washer .tray { display: grid; gap: 8px; background: var(--wg-surface-2); border: 2px solid var(--wg-line); border-radius: 14px 14px 4px 4px; padding: 10px; max-width: 620px; }
+.wgt-washer .slot { min-width: 0; border: 2px dashed var(--wg-line); border-radius: 10px; padding: 10px 6px; text-align: center; display: flex; flex-direction: column; gap: 4px; align-items: center; min-height: 120px; justify-content: space-between; opacity: .7; }
+.wgt-washer .slot.on { opacity: 1; border-style: solid; border-color: var(--wg-accent); background: var(--wg-accent-soft); }
+.wgt-washer .slot-mark { font-size: 1.4rem; font-weight: 800; height: 32px; display: flex; align-items: center; }
+.wgt-washer .slot-mark .mark { width: 30px; height: 30px; }
+.wgt-washer .slot-name { font-size: .8rem; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.wgt-washer .slot-state { font-size: .74rem; color: var(--wg-muted); }
+.wgt-washer .slot.on .slot-state { color: var(--wg-accent); font-weight: 700; }
+.wgt-washer .tray-front { max-width: 620px; text-align: center; font-size: .75rem; color: var(--wg-muted); border: 2px solid var(--wg-line); border-top: 0; border-radius: 0 0 14px 14px; padding: 4px; background: var(--wg-surface-2); }
+
+/* ---- widget chrome (Show Me How tokens) ---- */
+.wgt-washer .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wp-i { width: 1.2em; height: 1.2em; flex: none; vertical-align: -0.2em; }
+.wp-block { display: grid; gap: 0.6rem; min-width: 0; }
+.wp-label, .wp-group-t { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em; color: var(--ink-2); }
+.wp-group-t span { font-weight: 500; color: var(--ink-3); }
+.wp-h { font-size: 1.08rem; }
+.wp-small { font-size: 0.86rem; color: var(--ink-3); }
+.wp-note { font-size: 0.92rem; color: var(--ink-2); }
+.wp-note:empty { display: none; }
+.wp-error { color: var(--danger); font-weight: 500; }
+
+.wp-partial { padding: 0.75rem 0.95rem; border-radius: var(--r); background: var(--note-bg); border: 1px solid var(--note-line); color: var(--note-ink); font-size: 0.92rem; }
+.wp-partial-t { font-weight: 700; }
+.wp-partial ul { margin: 0.35rem 0 0; padding-left: 1.1rem; color: var(--ink); }
+
+.wp-presets, .wp-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.wp-preset, .wp-chip {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; min-height: 44px; min-width: 44px;
+  padding: 0.35rem 0.85rem; border-radius: 999px; border: 1.5px solid var(--line-strong); background: var(--surface);
+  color: var(--ink); font: inherit; font-size: 0.95rem; font-weight: 500; cursor: pointer; line-height: 1.2;
+  transition: border-color 0.15s var(--ease), background-color 0.15s var(--ease), transform 0.15s var(--ease);
+}
+.wp-chip { padding: 0.3rem 0.7rem; font-variant-numeric: tabular-nums; }
+.wp-chip small { font-size: 0.72em; color: var(--ink-3); }
+.wp-chip.has-zone { box-shadow: inset 0 -3px 0 var(--zc, transparent); }
+.wp-preset:hover, .wp-chip:hover { border-color: var(--accent); }
+.wp-preset:active, .wp-chip:active { transform: scale(0.97); }
+.wp-preset.on, .wp-chip.on { background: var(--accent-strong); border-color: var(--accent-strong); color: var(--on-accent); }
+.wp-chip.on small { color: inherit; opacity: 0.85; }
+.wp-more summary { display: inline-flex; align-items: center; min-height: 44px; cursor: pointer; color: var(--accent-ink); font-weight: 600; font-size: 0.92rem; }
+.wp-more[open] summary { margin-bottom: 0.45rem; }
+.wp-settings { display: grid; gap: 0.85rem; }
+.wp-group { display: grid; gap: 0.4rem; min-width: 0; }
+
+.wp-result-box { padding: 1rem; border-radius: var(--r); background: var(--surface-2); border: 1px solid var(--line); }
+.wp-result { display: grid; gap: 0.7rem; min-width: 0; }
+.wp-prog { display: flex; gap: 0.6rem; align-items: baseline; }
+.wp-prog-n {
+  flex: none; display: inline-grid; place-items: center; min-width: 2.2rem; height: 2.2rem; padding: 0 0.5rem; border-radius: 999px;
+  background: var(--accent-strong); color: var(--on-accent); font-weight: 700;
+}
+.wp-time { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; }
+.wp-time-i { width: 1.9rem; height: 1.9rem; color: var(--accent-strong); }
+.wp-time b { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.wp-time em { font-style: normal; font-size: 0.78rem; color: var(--ink-2); margin-left: 0.5rem; border: 1px solid var(--line-strong); border-radius: 999px; padding: 0.05rem 0.55rem; vertical-align: 0.35em; }
+.wp-manual { font-size: 0.88rem; color: var(--ink-2); }
+.wp-bars { display: flex; gap: 3px; height: 28px; border-radius: 9px; overflow: hidden; }
+.wp-bar { min-width: 4px; display: flex; align-items: center; padding: 0 0.4rem; color: #10151f; font-size: 0.74rem; font-weight: 700; white-space: nowrap; overflow: hidden; }
+.wp-bar span { overflow: hidden; text-overflow: ellipsis; }
+.wp-bar.ph-heat { background: var(--wp-heat); }
+.wp-bar.ph-prewash { background: var(--wp-prewash); }
+.wp-bar.ph-wash { background: var(--wp-wash); }
+.wp-bar.ph-rinse { background: var(--wp-rinse); }
+.wp-bar.ph-spin { background: var(--wp-spin); }
+.wp-bar.ph-drain { background: var(--wp-drain); }
+.wp-conflicts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.wp-conflicts li { display: flex; gap: 0.5rem; align-items: flex-start; border-radius: var(--r-s); padding: 0.5rem 0.7rem; font-size: 0.93rem; border: 1px solid transparent; }
+.wp-conflicts li .wp-i { margin-top: 0.15rem; }
+.wp-conflicts li span { color: var(--ink); }
+.wp-conflicts small { color: var(--ink-3); white-space: nowrap; }
+.wp-conflicts .lvl-error { background: var(--caution-bg); border-color: var(--caution-line); color: var(--caution-ink); }
+.wp-conflicts .lvl-warn { background: var(--warning-bg); border-color: var(--warning-line); color: var(--warning-ink); }
+.wp-conflicts .lvl-info { background: var(--note-bg); border-color: var(--note-line); color: var(--note-ink); }
+.wp-ok { display: flex; gap: 0.5rem; align-items: center; color: var(--ok-ink); background: var(--ok-soft); border-radius: var(--r-s); padding: 0.5rem 0.7rem; font-size: 0.93rem; }
+.wp-ending { padding: 0.6rem 0.8rem; border-radius: var(--r-s); background: var(--sunken); font-size: 0.95rem; font-weight: 500; }
+.wp-ending.end-water-stop { background: var(--note-bg); color: var(--note-ink); }
+.wp-path-box summary { cursor: pointer; font-size: 0.86rem; color: var(--ink-2); min-height: 32px; display: flex; align-items: center; }
+.wp-path { list-style: none; margin: 0.4rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.wp-path li { display: flex; flex-direction: column; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-s); padding: 0.15rem 0.5rem; min-width: 2.8rem; }
+.wp-path li b { font-size: 0.95rem; }
+.wp-path li span { font-size: 0.7rem; color: var(--ink-3); }
+.wp-path li.ph-prewash { border-bottom: 3px solid var(--wp-prewash); }
+.wp-path li.ph-wash, .wp-path li.ph-soak { border-bottom: 3px solid var(--wp-wash); }
+.wp-path li.ph-rinse, .wp-path li.ph-softener { border-bottom: 3px solid var(--wp-rinse); }
+.wp-path li.ph-spin { border-bottom: 3px solid var(--wp-spin); }
+.wp-path li.ph-drain { border-bottom: 3px solid var(--wp-drain); }
+.wp-end-dot { display: inline-block; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--danger); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-preset, .wp-chip { transition: none; }
+}
+@media print {
+  .wp-settings, .wp-presets-box { display: none; }
+}

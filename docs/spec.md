@@ -22,7 +22,7 @@ document disagree, fix one of them, do not leave them apart.
   is not required). No npm packages, no bundler. Browser code is native ES modules.
 - **No emoji** anywhere — content, UI, code. Icons are SVG.
 - **Interactive widgets are first-class.** A guide may embed a widget (section 6). The washguide
-  washing-machine panels will move here later as a widget.
+  washing-machine panels live here as the `washer-panel` widget (11.6).
 
 ## 2. Repository layout
 
@@ -272,6 +272,19 @@ emitted for a future custom domain, and the sitemap is submitted in the search c
   troubleshooting (faq), sources with publisher, "found a mistake" link (prefilled fix issue),
   related guides (same device, then same category), language fallback note.
 - **Category / device / brand / task**: header with colour and icon, counts, filters, guide cards.
+  Settled in the implementation (a category must not drown in model guides):
+  - **Category**: the device types come first as subcategory tiles (icon `dev-<id>` when it exists,
+    else the category icon; guide count; a device without guides is a dashed tile, not a link), then
+    one section per device type with its first three guides (general ones before model guides) and
+    "Все N" to the device page; featured links last. No facet filters here.
+  - **Device hub**: a device with at least 6 model guides (a guide-level widget whose `meta` gives a `label`) from at least 3 brands is a
+    hub. General guides (not model guides: "Общие инструкции", care and cleaning) sit on top as cards; below, the models are grouped
+    by brand (A–Z) as compact model cards (the short name from the widget `meta`, the facet value,
+    "данные неполные" for partial data) with a quick filter (`data-js`, one choice each, `?b=` and
+    `?x=`): brand, plus the widget's facet when it has two or more values (washer-panel: mechanical
+    timer / electronic control). Other devices keep the faceted list.
+  - **Guide breadcrumbs**: Home > category > device > the guide's short name (`label`), on the page
+    and in `BreadcrumbList`.
 - **Catalog**: all guides, facet filters with counts, sort (new, A–Z, quickest), filters kept in the
   query string.
 - **Stats ("Индекс")**: totals; guides per category (bar chart), per device type, per brand, per
@@ -325,8 +338,11 @@ Frontmatter: `widget:` block map with `type:` and scalar params. The widget is r
 introduction and before step 1 (`placement: end` puts it after the last step). A widget can also sit
 inside a step (11.3). The registry is
 `src/widgets/index.js` exporting `{[type]: {render, validate, client: boolean}}`; the validator
-rejects unknown types. Registered: `wifi-qr`, `saddle-height`, `reminder` (11.6); washguide arrives
-later as `type: washer-panel`. The build copies every browser module of a widget: all
+rejects unknown types. Registered: `wifi-qr`, `saddle-height`, `reminder`, `washer-panel` (11.6).
+A registry entry may also have `meta(params, lang) -> {label, facet: {key, label, id, name}, partial} | null`
+for a guide-level widget: listings use `label` as the guide's short name (breadcrumbs, hub cards) and
+`facet` as an extra hub filter (5.2). Widget data the browser fetches is copied by the build too:
+`data/washers/*.json` -> `assets/washers/*.json` (minified, versioned). The build copies every browser module of a widget: all
 `src/widgets/**/*.js` except `render.js`, `schema.js` and `index.js`, so `client.js` may import helpers
 (`wifi-qr/client.js` imports `./qr.js`). `render.js` runs only in the build and may import from
 `src/render/`.
@@ -358,6 +374,7 @@ Guide = {
   category, device, brands, task,  // the taxonomy objects (not ids)
   models, difficulty, time,
   title, summary, introHtml,
+  label,                           // short name: the widget meta label ('Indesit WGS 834 TXR') or title
   tools: [string], parts: [{name, qty, ref}],
   aliases,
   steps: [{n, id, title, html, image: null | {kind: 'svg', svg, alt} | {kind: 'photo', src, alt, width, height},
@@ -611,6 +628,19 @@ All widgets run fully in the browser; nothing typed is sent anywhere.
 - `reminder` — "напомнить" for maintenance: params `every` (`2w`, `1m`, `3m`, `6m`, `1y`) and
   `title`; the user picks a start date and gets an `.ics` file with an RRULE for their calendar
   (an all-day event with a `VALARM` at 09:00 on the day, so the calendar actually reminds).
+- `washer-panel` — the panel of one washing machine, ported from washguide: param `machine`
+  (an id from `data/washers/`, format in docs/washers.md). The panel drawing and the detergent
+  drawer are washguide's own rendering and styles as is (each machine keeps its colours, knob shapes,
+  labels and layout, so it looks like the person's machine), scoped under `.wgt-washer`, with
+  washguide's dark-theme dimming. Around it, in Show Me How tokens: preset chips ("Что стираем?",
+  four shown, the rest behind "Ещё"), chips mirroring every knob and option button (44 px targets),
+  the result card (programme, time estimate with phase bars, warnings, how the cycle ends, the knob
+  path folded) and the "partial data" note for `completeness: "partial"`. Server HTML shows the
+  first preset and the real left-to-right panel; `client.js` fetches `assets/washers/<id>.json`,
+  switches to the stacked panel when the widget is narrower than 640 px, turns knobs (clockwise-only
+  knobs always turn forward) and keeps `?p=&t=&s=&o=` or `?preset=` in the URL (other keys kept).
+  The engine (timer walk, time, conflicts, dosing, presets) is washguide's, tested by
+  `scripts/test/washer.test.mjs`. Machine guides are `guides/appliances/<id>-use/`.
 - `hold-timer` is not a widget: use `{{timer ...}}`.
 
 ## 12. Licence

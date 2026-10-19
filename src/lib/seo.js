@@ -152,7 +152,7 @@ export function breadcrumbs(site, kind, subject) {
   const cat = (id) => site.categories.find((c) => c.id === id);
   switch (kind) {
     case 'home': return [home];
-    case 'guide': return [home, { name: subject.category.name, path: pagePath('category', subject.category) }, { name: subject.title, path: subject.path }];
+    case 'guide': return [home, { name: subject.category.name, path: pagePath('category', subject.category) }, ...(subject.device ? [{ name: subject.device.plural || subject.device.name, path: pagePath('device', subject.device) }] : []), { name: subject.label || subject.title, path: subject.path }];
     case 'category': return [home, { name: subject.name, path: pagePath('category', subject) }];
     case 'device': {
       const c = cat(subject.category);

@@ -28,6 +28,9 @@ if (document.querySelector('[data-bar]')) import('./stats.js').then((m) => m.ini
 const faceted = document.querySelector('[data-faceted]');
 if (faceted) import('./facets.js').then((m) => m.initFacets(faceted));
 
+const hub = document.querySelector('[data-hub]');
+if (hub) import('./hub.js').then((m) => m.initHub(hub));
+
 const requests = document.querySelectorAll('[data-requests]');
 const requestForm = document.querySelector('[data-request-form]');
 if (requests.length || requestForm) {
