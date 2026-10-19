@@ -1,0 +1,46 @@
+[
+  { "id": "earbuds", "category": "audio", "ru": { "name": "Беспроводные наушники-вкладыши", "plural": "Беспроводные наушники" }, "en": { "name": "Wireless earbuds", "plural": "Wireless earbuds" }, "aliases": ["tws", "вкладыши", "airpods", "buds"] },
+  { "id": "headphones", "category": "audio", "ru": { "name": "Накладные наушники", "plural": "Накладные наушники" }, "en": { "name": "Over-ear headphones", "plural": "Over-ear headphones" }, "aliases": ["полноразмерные", "over-ear", "on-ear"] },
+  { "id": "speaker", "category": "audio", "ru": { "name": "Портативная колонка", "plural": "Портативные колонки" }, "en": { "name": "Portable speaker", "plural": "Portable speakers" }, "aliases": ["колонка", "bluetooth speaker"] },
+  { "id": "soundbar", "category": "audio", "ru": { "name": "Саундбар", "plural": "Саундбары" }, "en": { "name": "Soundbar", "plural": "Soundbars" } },
+
+  { "id": "smartphone", "category": "phones", "ru": { "name": "Смартфон", "plural": "Смартфоны" }, "en": { "name": "Smartphone", "plural": "Smartphones" }, "aliases": ["телефон", "phone", "iphone", "android"] },
+  { "id": "smartwatch", "category": "phones", "ru": { "name": "Умные часы", "plural": "Умные часы" }, "en": { "name": "Smartwatch", "plural": "Smartwatches" }, "aliases": ["часы", "watch"] },
+  { "id": "fitness-band", "category": "phones", "ru": { "name": "Фитнес-браслет", "plural": "Фитнес-браслеты" }, "en": { "name": "Fitness band", "plural": "Fitness bands" }, "aliases": ["браслет", "band", "трекер"] },
+  { "id": "tablet", "category": "phones", "ru": { "name": "Планшет", "plural": "Планшеты" }, "en": { "name": "Tablet", "plural": "Tablets" }, "aliases": ["ipad"] },
+
+  { "id": "router", "category": "network", "ru": { "name": "Wi-Fi роутер", "plural": "Wi-Fi роутеры" }, "en": { "name": "Wi-Fi router", "plural": "Wi-Fi routers" }, "aliases": ["маршрутизатор", "вайфай", "wifi"] },
+  { "id": "mesh", "category": "network", "ru": { "name": "Mesh-система", "plural": "Mesh-системы" }, "en": { "name": "Mesh system", "plural": "Mesh systems" } },
+  { "id": "wifi-extender", "category": "network", "ru": { "name": "Усилитель Wi-Fi", "plural": "Усилители Wi-Fi" }, "en": { "name": "Wi-Fi extender", "plural": "Wi-Fi extenders" }, "aliases": ["репитер", "repeater"] },
+
+  { "id": "smart-tv", "category": "tv", "ru": { "name": "Смарт-телевизор", "plural": "Смарт-телевизоры" }, "en": { "name": "Smart TV", "plural": "Smart TVs" }, "aliases": ["телевизор", "тв", "tv"] },
+  { "id": "tv-box", "category": "tv", "ru": { "name": "ТВ-приставка", "plural": "ТВ-приставки" }, "en": { "name": "Streaming box", "plural": "Streaming boxes" }, "aliases": ["приставка", "android tv", "chromecast"] },
+  { "id": "game-console", "category": "tv", "ru": { "name": "Игровая приставка", "plural": "Игровые приставки" }, "en": { "name": "Game console", "plural": "Game consoles" }, "aliases": ["консоль", "playstation", "xbox", "nintendo"] },
+  { "id": "gamepad", "category": "tv", "ru": { "name": "Геймпад", "plural": "Геймпады" }, "en": { "name": "Controller", "plural": "Controllers" }, "aliases": ["джойстик", "контроллер", "dualsense", "joystick"] },
+
+  { "id": "printer", "category": "computers", "ru": { "name": "Принтер", "plural": "Принтеры" }, "en": { "name": "Printer", "plural": "Printers" }, "aliases": ["мфу", "printer"] },
+  { "id": "mouse-keyboard", "category": "computers", "ru": { "name": "Мышь и клавиатура", "plural": "Мыши и клавиатуры" }, "en": { "name": "Mouse and keyboard", "plural": "Mice and keyboards" }, "aliases": ["мышка", "клавиатура", "mouse", "keyboard"] },
+  { "id": "laptop", "category": "computers", "ru": { "name": "Ноутбук", "plural": "Ноутбуки" }, "en": { "name": "Laptop", "plural": "Laptops" }, "aliases": ["ноут", "notebook"] },
+
+  { "id": "smart-speaker", "category": "smarthome", "ru": { "name": "Умная колонка", "plural": "Умные колонки" }, "en": { "name": "Smart speaker", "plural": "Smart speakers" }, "aliases": ["алиса", "станция", "alexa", "google home"] },
+  { "id": "smart-plug", "category": "smarthome", "ru": { "name": "Умная розетка", "plural": "Умные розетки" }, "en": { "name": "Smart plug", "plural": "Smart plugs" } },
+  { "id": "smart-bulb", "category": "smarthome", "ru": { "name": "Умная лампа", "plural": "Умные лампы" }, "en": { "name": "Smart bulb", "plural": "Smart bulbs" } },
+  { "id": "camera", "category": "smarthome", "ru": { "name": "Камера видеонаблюдения", "plural": "Камеры" }, "en": { "name": "Security camera", "plural": "Security cameras" }, "aliases": ["ip камера", "видеоняня"] },
+
+  { "id": "coffee-machine", "category": "kitchen", "ru": { "name": "Кофемашина", "plural": "Кофемашины" }, "en": { "name": "Coffee machine", "plural": "Coffee machines" }, "aliases": ["кофеварка", "espresso"] },
+  { "id": "dishwasher", "category": "kitchen", "ru": { "name": "Посудомоечная машина", "plural": "Посудомоечные машины" }, "en": { "name": "Dishwasher", "plural": "Dishwashers" }, "aliases": ["посудомойка", "пмм"] },
+  { "id": "multicooker", "category": "kitchen", "ru": { "name": "Мультиварка", "plural": "Мультиварки" }, "en": { "name": "Multicooker", "plural": "Multicookers" }, "aliases": ["скороварка", "instant pot"] },
+  { "id": "microwave", "category": "kitchen", "ru": { "name": "Микроволновка", "plural": "Микроволновки" }, "en": { "name": "Microwave", "plural": "Microwaves" }, "aliases": ["свч", "микроволновая печь"] },
+
+  { "id": "washing-machine", "category": "appliances", "ru": { "name": "Стиральная машина", "plural": "Стиральные машины" }, "en": { "name": "Washing machine", "plural": "Washing machines" }, "aliases": ["стиралка", "washer"] },
+  { "id": "robot-vacuum", "category": "appliances", "ru": { "name": "Робот-пылесос", "plural": "Роботы-пылесосы" }, "en": { "name": "Robot vacuum", "plural": "Robot vacuums" }, "aliases": ["пылесос", "робот", "roomba"] },
+  { "id": "air-conditioner", "category": "appliances", "ru": { "name": "Кондиционер", "plural": "Кондиционеры" }, "en": { "name": "Air conditioner", "plural": "Air conditioners" }, "aliases": ["сплит-система", "сплит", "ac"] },
+
+  { "id": "chest-of-drawers", "category": "furniture", "ru": { "name": "Комод", "plural": "Комоды" }, "en": { "name": "Chest of drawers", "plural": "Chests of drawers" }, "aliases": ["тумба", "dresser"] },
+  { "id": "wardrobe", "category": "furniture", "ru": { "name": "Шкаф", "plural": "Шкафы" }, "en": { "name": "Wardrobe", "plural": "Wardrobes" }, "aliases": ["гардероб"] },
+  { "id": "shelf", "category": "furniture", "ru": { "name": "Стеллаж", "plural": "Стеллажи и полки" }, "en": { "name": "Shelving unit", "plural": "Shelving units" }, "aliases": ["полка", "bookcase"] },
+  { "id": "desk", "category": "furniture", "ru": { "name": "Стол", "plural": "Столы" }, "en": { "name": "Desk", "plural": "Desks" }, "aliases": ["письменный стол", "table"] },
+
+  { "id": "bicycle", "category": "bikes", "ru": { "name": "Велосипед", "plural": "Велосипеды" }, "en": { "name": "Bicycle", "plural": "Bicycles" }, "aliases": ["велик", "bike"] },
+  { "id": "e-scooter", "category": "bikes", "ru": { "name": "Электросамокат", "plural": "Электросамокаты" }, "en": { "name": "E-scooter", "plural": "E-scooters" }, "aliases": ["самокат", "scooter"] }
+]

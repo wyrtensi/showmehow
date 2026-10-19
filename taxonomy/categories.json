@@ -1,0 +1,59 @@
+[
+  {
+    "id": "audio", "hue": 25, "icon": "cat-audio",
+    "ru": { "name": "Наушники и колонки", "desc": "Подключить по Bluetooth, сбросить, настроить шумоподавление и звук." },
+    "en": { "name": "Headphones and speakers", "desc": "Pair over Bluetooth, reset, set up noise cancelling and sound." }
+  },
+  {
+    "id": "phones", "hue": 290, "icon": "cat-phones",
+    "ru": { "name": "Телефоны и часы", "desc": "Перенос данных, сброс, умные часы и фитнес-браслеты." },
+    "en": { "name": "Phones and watches", "desc": "Move your data, reset, smartwatches and fitness bands." }
+  },
+  {
+    "id": "network", "hue": 190, "icon": "cat-network",
+    "ru": { "name": "Роутеры и интернет", "desc": "Первая настройка роутера, Wi-Fi, пароли и сброс." },
+    "en": { "name": "Routers and internet", "desc": "Router first setup, Wi-Fi, passwords and resets." }
+  },
+  {
+    "id": "tv", "hue": 255, "icon": "cat-tv",
+    "ru": { "name": "ТВ и приставки", "desc": "Телевизоры, ТВ-приставки и игровые консоли с геймпадами." },
+    "en": { "name": "TV and consoles", "desc": "TVs, streaming boxes, game consoles and controllers." }
+  },
+  {
+    "id": "computers", "hue": 225, "icon": "cat-computers",
+    "ru": { "name": "Компьютеры и принтеры", "desc": "Принтеры по Wi-Fi, мыши и клавиатуры, ноутбуки." },
+    "en": { "name": "Computers and printers", "desc": "Wi-Fi printers, mice and keyboards, laptops." }
+  },
+  {
+    "id": "smarthome", "hue": 150, "icon": "cat-smarthome",
+    "ru": { "name": "Умный дом", "desc": "Умные колонки, розетки, лампы и камеры." },
+    "en": { "name": "Smart home", "desc": "Smart speakers, plugs, bulbs and cameras." }
+  },
+  {
+    "id": "kitchen", "hue": 55, "icon": "cat-kitchen",
+    "ru": { "name": "Кухня", "desc": "Кофемашины, посудомойки, мультиварки: первый запуск, чистка, накипь." },
+    "en": { "name": "Kitchen", "desc": "Coffee machines, dishwashers, multicookers: first use, cleaning, descaling." }
+  },
+  {
+    "id": "appliances", "hue": 210, "icon": "cat-appliances",
+    "ru": { "name": "Бытовая техника", "desc": "Стиральные машины, роботы-пылесосы, кондиционеры." },
+    "en": { "name": "Home appliances", "desc": "Washing machines, robot vacuums, air conditioners." },
+    "featured": [
+      {
+        "url": "https://washguide.ru/",
+        "ru": { "title": "Старая стиралка", "desc": "Панели старых стиральных машин: куда ставить ручки, сколько идёт стирка, куда сыпать порошок." },
+        "en": { "title": "Old Washer Guide", "desc": "Panels of old washing machines: where to set the knobs, how long a wash takes, where the detergent goes." }
+      }
+    ]
+  },
+  {
+    "id": "furniture", "hue": 40, "icon": "cat-furniture",
+    "ru": { "name": "Мебель", "desc": "Сборка комодов, шкафов и столов, крепление к стене." },
+    "en": { "name": "Furniture", "desc": "Assembling chests, wardrobes and desks, anchoring to the wall." }
+  },
+  {
+    "id": "bikes", "hue": 125, "icon": "cat-bikes",
+    "ru": { "name": "Велосипеды и самокаты", "desc": "Собрать из коробки, настроить тормоза, электросамокаты." },
+    "en": { "name": "Bikes and scooters", "desc": "Out-of-the-box assembly, brake adjustment, e-scooters." }
+  }
+]
