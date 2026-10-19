@@ -1,0 +1,91 @@
+/* Interactive widgets (docs/spec.md sections 6 and 11): wifi-qr, saddle-height, reminder.
+   Shared card shell .wgt, small helpers .wgt-*, and per-widget pieces. Controls reuse .btn,
+   .field and .select from 10-base.css; touch targets are 46 px and up. */
+.wgt {
+  display: grid; gap: 1.1rem; padding: 1.15rem; border-radius: var(--r-l);
+  background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-2);
+}
+@media (min-width: 720px) { .wgt { padding: 1.5rem; gap: 1.25rem; } }
+.wgt-title { font-size: 1.25rem; }
+.wgt-lead { margin-top: 0.4rem; color: var(--ink-2); }
+.wgt-lead strong { color: var(--ink); }
+.wgt-form { display: grid; gap: 1rem; }
+.wgt-hint { font-size: 0.88rem; color: var(--ink-2); }
+.wgt-error { color: var(--danger); font-weight: 500; }
+.wgt-note {
+  padding: 0.6rem 0.85rem; border-radius: var(--r-s); font-size: 0.92rem;
+  background: var(--warning-bg); border: 1px solid var(--warning-line); color: var(--warning-ink);
+}
+.wgt-status { min-height: 1.6em; color: var(--ok-ink); font-weight: 500; }
+.wgt-status:empty { min-height: 0; }
+.wgt-chip {
+  display: inline-block; padding: 0.1rem 0.7rem; border-radius: 999px; white-space: nowrap;
+  background: var(--accent-soft); color: var(--accent-ink); font-size: 0.92rem; font-weight: 700;
+}
+.wgt-main { width: 100%; }
+@media (min-width: 560px) { .wgt-reminder .wgt-main { width: auto; justify-self: start; } }
+.wgt input[type="date"] { -webkit-appearance: none; appearance: none; min-height: 50px; }
+
+/* Shown only when JavaScript is off (html gets the "js" class from the page boot script). */
+.wgt-nojs {
+  padding: 0.85rem 1rem; border-radius: var(--r); border: 1.5px dashed var(--line-strong);
+  background: var(--sunken); color: var(--ink); display: grid; gap: 0.6rem;
+}
+html.js .wgt-nojs { display: none; }
+.wgt-table { width: 100%; max-width: 24rem; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.wgt-table th, .wgt-table td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid var(--line); }
+.wgt-table th { font-size: 0.85rem; color: var(--ink-2); }
+
+/* wifi-qr */
+.wgt-pass { display: flex; gap: 0.5rem; }
+.wgt-pass input { flex: 1 1 auto; min-width: 0; }
+.wgt-toggle { flex: none; min-width: 6.2rem; min-height: 50px; border-radius: 14px; }
+.wgt-out { display: grid; gap: 1rem; justify-items: center; align-content: start; }
+.wgt-out .wgt-main { max-width: 20rem; }
+/* The card is always dark on light, whatever the theme: QR scanners read inverted codes badly. */
+.wgt-card {
+  margin: 0; width: 100%; max-width: 20rem; padding: 1rem; border-radius: var(--r);
+  background: #ffffff; color: #1a1612; border: 1px solid var(--line-strong); box-shadow: var(--shadow-1); text-align: center;
+}
+.wgt-qr { aspect-ratio: 1; display: grid; place-items: center; }
+.wgt-qr svg { width: 100%; height: auto; display: block; }
+.wgt-qr-empty { padding: 1rem; font-size: 0.95rem; color: #5b5249; }
+.wgt-card-text { display: grid; gap: 0.2rem; margin-top: 0.7rem; }
+.wgt-card-name { font-size: 1.15rem; line-height: 1.25; overflow-wrap: anywhere; }
+.wgt-card-name:empty { display: none; }
+.wgt-card-hint { font-size: 0.88rem; color: #5b5249; }
+@media (min-width: 760px) {
+  .wgt-wifi { grid-template-columns: minmax(0, 1fr) 20rem; align-items: start; column-gap: 2rem; }
+  .wgt-wifi > .wgt-head, .wgt-wifi > .wgt-nojs { grid-column: 1 / -1; }
+}
+
+/* saddle-height */
+.wgt-split { display: grid; gap: 1.1rem; }
+@media (min-width: 640px) { .wgt-split { grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); align-items: center; gap: 1.75rem; } }
+.wgt-art-box { padding: 0.9rem; border-radius: var(--r); background: var(--accent-tint); }
+.wgt-art { width: 100%; height: auto; max-height: 17rem; margin-inline: auto; }
+.wgt-side { display: grid; gap: 1rem; }
+.wgt-result { padding: 1rem 1.1rem; border-radius: var(--r); background: var(--accent-tint); border: 1px solid var(--accent-soft); }
+.wgt-result-label { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-ink); }
+.wgt-big { margin: 0.2rem 0; font-size: clamp(2.6rem, 11vw, 3.6rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.wgt-result.is-ready .wgt-big { color: var(--accent-strong); }
+.wgt-unit { font-size: 1.25rem; font-weight: 500; letter-spacing: 0; color: var(--ink-2); }
+.wgt-result-note { font-size: 0.9rem; color: var(--ink-2); }
+.wgt-start { color: var(--ink-2); }
+.wgt-tip { padding: 0.9rem 1rem; border-radius: var(--r); background: var(--tip-bg); border: 1px solid var(--tip-line); display: grid; gap: 0.3rem; }
+.wgt-tip-title { font-weight: 700; color: var(--tip-ink); }
+
+/* Print: the card only. client.js puts a clone of it into .wgt-print-root and sets
+   html.wgt-printing for the duration of window.print(); a normal print of the guide is unchanged. */
+.wgt-print-root { display: none; }
+@media print {
+  .wgt { box-shadow: none; border-color: #ccc; break-inside: avoid; }
+  html.wgt-printing body > *:not(.wgt-print-root) { display: none !important; }
+  html.wgt-printing body { display: block; min-height: 0; background: #fff !important; color: #000; }
+  html.wgt-printing .wgt-print-root { display: block !important; }
+  html.wgt-printing .wgt-card {
+    max-width: 110mm; margin: 20mm auto 0; padding: 8mm; border: 2px solid #000; border-radius: 6mm; box-shadow: none; break-inside: avoid;
+  }
+  html.wgt-printing .wgt-card-name { font-size: 22pt; }
+  html.wgt-printing .wgt-card-hint { font-size: 12pt; color: #000; }
+}
