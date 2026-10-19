@@ -1,0 +1,33 @@
+/* Illustration colour classes (docs/spec.md 4.4). Guide SVGs are inlined and coloured only through
+   these, so they follow the page accent and both themes. s-paper, s-muted and s-line are extras
+   used by the site's own decorative art. */
+.f-paper { fill: var(--ill-paper); }
+.f-soft { fill: var(--ill-soft); }
+.f-muted { fill: var(--ill-muted); }
+.f-ink { fill: var(--ill-ink); }
+.s-ink { stroke: var(--ill-ink); }
+.f-accent { fill: var(--accent); }
+.s-accent { stroke: var(--accent); }
+.f-accent-soft { fill: var(--accent-soft); }
+.f-hl { fill: var(--hl); }
+.s-hl { stroke: var(--hl); }
+.f-ok { fill: var(--ok); }
+.f-warn { fill: var(--warn); }
+.s-paper { stroke: var(--ill-paper); }
+.s-muted { stroke: var(--ill-muted); }
+.s-line { stroke: var(--line-strong); }
+
+.anim-pulse, .anim-tap, .anim-nudge, .float-card { transform-box: fill-box; transform-origin: center; }
+.anim-pulse { animation: ill-pulse 1.8s ease-in-out infinite; }
+.anim-tap { animation: ill-tap 2.2s var(--ease) infinite; }
+.anim-nudge { animation: ill-nudge 1.6s ease-in-out infinite; }
+.float-card { animation: ill-float 6s ease-in-out infinite; }
+.fc-2 { animation-delay: -2s; }
+.fc-3 { animation-delay: -4s; }
+.hero-progress { transform-box: fill-box; transform-origin: left; animation: ill-progress 4s var(--ease) infinite; }
+
+@keyframes ill-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.12); } }
+@keyframes ill-tap { 0%, 55%, 100% { transform: translate(0, 0); } 30% { transform: translate(-3px, 7px); } }
+@keyframes ill-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+@keyframes ill-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes ill-progress { 0% { transform: scaleX(0.35); } 60%, 100% { transform: scaleX(1); } }

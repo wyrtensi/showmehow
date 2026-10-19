@@ -435,7 +435,95 @@ Friendly, warm and rich — a kind tutor, not a spec sheet. Not sparse: colour, 
   `actions/deploy-pages`; permissions `pages: write`, `id-token: write`; environment
   `github-pages`. Actions pinned to commit SHAs with the version in a comment.
 
-## 11. Licence
+## 11. Interactivity
+
+Every guide should feel alive, not like a printed manual, and at the same time stay **very
+simple**: a person in a hurry, with one hand busy, must just follow big clear steps. Rules:
+
+- one obvious main action per screen; interactive extras sit inside the step they belong to and
+  look like part of the text (a timer chip, a light chip), never like a dashboard;
+- no settings, modals or tours a person must deal with before reading step 1; nothing auto-plays
+  sound; nothing moves except the part the user should look at;
+- every control has a visible text label, a 44 px target and works with one thumb;
+- if a feature does not make the guide easier for a first-timer, leave it out.
+
+Everything below degrades to readable static HTML without JavaScript.
+
+### 11.1 Inline interactive syntax (markdown.js)
+
+`{{...}}` whose first word is a keyword is not a UI path:
+
+- `{{timer 15s}}`, `{{timer 2m}}`, `{{timer 1m30s}}` — a "hold / wait" timer chip:
+  `<button type="button" class="timer" data-seconds="15"><span class="timer-label">15 s</span></button>`
+  (label localised by the renderer through `labels.timer(seconds)`). The client turns it into a
+  countdown with a ring, vibrates (`navigator.vibrate`) and plays a short WebAudio tone at the end.
+  Max 3600 s.
+- `{{led white blink}}`, `{{led amber solid}}`, `{{led white/amber alternate}}` — an indicator light
+  chip showing exactly what the device shows. Colours: `white green amber red blue`; patterns:
+  `solid blink fast pulse alternate` (alternate needs two colours). Renders
+  `<span class="led led-white led-blink" role="img" aria-label="<localised description>"></span>`.
+- Anything else inside `{{ }}` stays a UI path. Unknown keyword-like input is an error in check.
+
+### 11.2 Variants ("choose your model")
+
+Frontmatter `variants:` — list of maps `- id: with-button` / `    name: Кейс с кнопкой` (2–6 items;
+the English file supplies `variants[].name`). In the body:
+
+- `> [!VARIANT with-button]` followed by `> ` lines — content only for that variant (inside a step);
+- `## Step title {variant=with-button}` or `{variant=a,b}` — the whole step belongs to those variants.
+
+The guide shows a picker ("Ваша модель:" chips) above step 1; the choice is kept per guide in
+localStorage and in `?v=<id>`; step numbering and progress follow the visible steps. Without a choice
+(or without JS) everything is shown and each variant block carries its name as a label. Validation:
+referenced ids exist, every variant has at least one step visible, English has the same ids.
+
+### 11.3 Widgets inside steps
+
+A fenced block whose info string is `widget <type>` renders that widget in place; its lines are
+`key: value` params (same scalar rules as frontmatter):
+
+    ```widget wifi-qr
+    security: WPA
+    ```
+
+Same registry and validation as section 6. Frontmatter `widget:` remains for a guide-level widget.
+Model: `step.widgets: [{type, params}]` and the HTML placeholder
+`<div class="widget" data-widget="<type>" data-params="<escaped JSON>">server HTML</div>`.
+
+### 11.4 Living illustrations
+
+- Animations (`anim-*`) inside a step illustration run only while that step is on screen
+  (IntersectionObserver adds `is-live` to the figure; in step mode the active step is live).
+- Elements with class `hot` get a pulsing hotspot ring: "this is the part".
+- Tapping an illustration opens it enlarged (lightbox with focus trap, Esc closes).
+
+### 11.5 Site-wide interactive features
+
+- **Finder** on home: "Что у вас?" — pick category, then device, then task; matching guides and
+  live counts update at every step; state in the query string; keyboard accessible.
+- **Continue**: home shows guides with progress saved in localStorage ("Вы остановились на шаге 3").
+- **Troubleshooting** on a guide: faq items render as symptom chips ("Что пошло не так?") that
+  reveal the answer; "не помогло" opens the prefilled fix issue.
+- **Completion**: checking the last step shows a small celebration (SVG burst, respects reduced
+  motion) with "share" and "next guide on this device".
+- **Stats**: bars and chips are interactive — hover/tap shows numbers, click opens the filtered
+  catalog.
+
+### 11.6 First widgets
+
+All widgets run fully in the browser; nothing typed is sent anywhere.
+
+- `wifi-qr` — enter network name, password, security (`WPA`/`WEP`/`nopass`, param `security`
+  presets it) → a QR code guests scan to join (`WIFI:T:<sec>;S:<ssid>;P:<pass>;;` with escaping of
+  `\ ; , : "`), plus a printable card. Own QR encoder (byte mode, error correction M, versions
+  1–10, mask selection), no libraries.
+- `saddle-height` — inseam in cm → saddle height from the bottom-bracket centre (inseam x 0.883,
+  marked as a starting point), plus the heel-on-pedal check.
+- `reminder` — "напомнить" for maintenance: params `every` (`2w`, `1m`, `3m`, `6m`, `1y`) and
+  `title`; the user picks a start date and gets an `.ics` file with an RRULE for their calendar.
+- `hold-timer` is not a widget: use `{{timer ...}}`.
+
+## 12. Licence
 
 Code: MIT. Guide texts and illustrations: CC BY-SA 4.0. Contributors agree by opening a PR (stated
 in CONTRIBUTING.md and the PR template).

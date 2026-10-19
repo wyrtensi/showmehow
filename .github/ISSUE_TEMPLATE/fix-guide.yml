@@ -1,0 +1,27 @@
+name: Ошибка в инструкции / Fix a guide
+description: Нашли неточность, устаревший шаг или неверную картинку? / Found a mistake, an outdated step or a wrong picture?
+title: "Ошибка / Fix: "
+labels:
+  - fix
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что заметили! Если готовы исправить сами, откройте pull request: как это сделать, описано в CONTRIBUTING.md.
+
+        Thanks for spotting it! If you would rather fix it yourself, open a pull request: CONTRIBUTING.md explains how.
+  - type: input
+    id: guide
+    attributes:
+      label: Инструкция / Guide
+      description: Ссылка на страницу инструкции. / Link to the guide page.
+      placeholder: "https://wyrtensi.github.io/showmehow/audio/airpods-pair-android/"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что не так / What is wrong
+      description: Номер шага, что написано и как на самом деле. Модель устройства и версия прошивки, если важны. / The step number, what it says and what really happens. Device model and firmware version if they matter.
+    validations:
+      required: true

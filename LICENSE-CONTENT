@@ -1,0 +1,51 @@
+Show Me How - content licence
+
+Copyright (c) 2026 wyrtensi and the contributors of the guides.
+
+Scope
+-----
+This licence applies to the content of the project:
+
+  - the texts of the guides (guides/**/index.*.md);
+  - the illustrations of the guides (guides/**/*.svg and photos taken by the contributors);
+  - the taxonomy and documentation texts (taxonomy/*.json, docs/*.md, README.md, CONTRIBUTING.md).
+
+The source code of the site generator is licensed under the MIT licence, see LICENSE.
+
+Licence
+-------
+The content is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International licence (CC BY-SA 4.0).
+
+You are free to:
+
+  - Share: copy and redistribute the material in any medium or format, for any purpose,
+    even commercially;
+  - Adapt: remix, transform, and build upon the material for any purpose, even commercially.
+
+Under the following terms:
+
+  - Attribution: you must give appropriate credit, provide a link to the licence, and indicate
+    if changes were made. You may do so in any reasonable manner, but not in any way that
+    suggests the licensor endorses you or your use. Credit "Show Me How" and the guide authors
+    listed in the guide's `authors` field, and link to https://github.com/wyrtensi/showmehow
+    or to the guide page on https://wyrtensi.github.io/showmehow/.
+  - ShareAlike: if you remix, transform, or build upon the material, you must distribute your
+    contributions under the same licence as the original.
+  - No additional restrictions: you may not apply legal terms or technological measures that
+    legally restrict others from doing anything the licence permits.
+
+Full legal code:  https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Human-readable summary:  https://creativecommons.org/licenses/by-sa/4.0/
+
+Third-party material
+--------------------
+Names of devices, brands and models are trademarks of their respective owners and are used only
+to identify the products a guide is about. The guides are written in the authors' own words from
+the manufacturers' public documentation, which is cited in each guide's `sources`; manufacturer
+images are not included. Show Me How is not affiliated with or endorsed by any manufacturer.
+
+No warranty
+-----------
+The guides are provided "as is", without warranty of any kind. Follow the manufacturer's safety
+instructions; you act at your own risk.

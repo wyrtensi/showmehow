@@ -1,0 +1,27 @@
+/* Reduced motion and print. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important;
+    transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+  }
+  .anim-pulse, .anim-tap, .anim-nudge, .float-card, .hero-progress, .big-blob, .spin { animation: none !important; }
+  .btn:hover, .gcard:hover, .cat-tile:hover, .task-chip:hover { transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .site-header, .site-footer, .palette, .toast, .step-nav, .mode-bar, .step-progress, .guide-aside, .step-foot,
+  .related, .fix-box, .skip-link, .guide-hero-art, .hero-visual, .filters, .faceted-bar, .done-banner { display: none !important; }
+  html.mode-steps .guide .steps > .step { display: block !important; }
+  .band { background: none; border: 0; padding: 0; }
+  .band::before, .band::after { display: none; }
+  .step-card, .needs, .faq-item, .source, .gcard, .panel { box-shadow: none; border-color: #ccc; break-inside: avoid; }
+  .step-fig { max-width: 12cm; }
+  .step, .faq-item { break-inside: avoid; }
+  a { color: inherit; }
+  .source::after { content: ' ' attr(href); font-size: 9pt; color: #555; }
+  .anim-pulse, .anim-tap, .anim-nudge, .float-card { animation: none !important; }
+}

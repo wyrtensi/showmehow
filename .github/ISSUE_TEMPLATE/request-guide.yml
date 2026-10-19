@@ -1,0 +1,64 @@
+name: Запросить инструкцию / Request a guide
+description: Нужной инструкции нет на сайте? Опишите, что нужно показать. / Missing a guide? Tell us what should be shown.
+title: "Инструкция / Guide: "
+labels:
+  - request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо! Чем точнее устройство и задача, тем быстрее появится инструкция. Поставьте реакцию "палец вверх" на чужой запрос, если он нужен и вам: так мы видим, что писать в первую очередь.
+
+        Thanks! The more precise the device and the task, the sooner the guide appears. Add a thumbs-up reaction to somebody else's request if you need it too: that is how we pick what to write first.
+  - type: input
+    id: device
+    attributes:
+      label: Устройство / Device
+      description: Бренд и модель, если знаете. / Brand and model, if you know them.
+      placeholder: "JBL Flip 6, IKEA MALM 3 ящика, Xiaomi Router AX3000"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Что нужно сделать / What you want to do
+      description: "Опишите задачу своими словами: подключить, настроить, собрать, сбросить. / Describe the task in your own words: pair, set up, assemble, reset."
+      placeholder: "Подключить колонку к телефону / Pair the speaker with my phone"
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Категория / Category
+      options:
+        - Наушники и колонки / Headphones and speakers
+        - Телефоны и часы / Phones and watches
+        - Роутеры и интернет / Routers and internet
+        - ТВ и приставки / TV and consoles
+        - Компьютеры и принтеры / Computers and printers
+        - Умный дом / Smart home
+        - Кухня / Kitchen
+        - Бытовая техника / Home appliances
+        - Мебель / Furniture
+        - Велосипеды и самокаты / Bikes and scooters
+        - Другое / Other
+      default: 10
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Язык инструкции / Guide language
+      options:
+        - Русский
+        - English
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Ссылки / Links
+      description: "Страница поддержки или PDF-инструкция производителя, если нашли. Необязательно. / The manufacturer's support page or manual PDF, if you found one. Optional."
+    validations:
+      required: false
