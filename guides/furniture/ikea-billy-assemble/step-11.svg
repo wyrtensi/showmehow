@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Tall bookcase beside a wall, an angle bracket joins its top to the wall</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="40" y="16" width="24" height="262" rx="4" stroke-width="3"/>
+  <path class="s-ink" d="M20 278 H280" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="64" y="40" width="132" height="238" rx="4" stroke-width="3"/>
+  <path class="s-ink" d="M64 100 H196 M64 160 H196 M64 220 H196" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <rect class="f-accent s-ink" x="64" y="26" width="64" height="14" rx="3" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="64" y="40" width="14" height="32" rx="3" stroke-width="2"/>
+  <circle class="f-ink" cx="52" cy="33" r="3"/>
+  <circle class="s-hl anim-pulse" cx="52" cy="33" r="14" fill="none" stroke-width="3"/>
+</svg>

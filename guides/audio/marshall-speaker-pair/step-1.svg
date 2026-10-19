@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Portable speaker with the power button highlighted and a hold timer</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="110" width="290" height="130" rx="26" stroke-width="3"/>
+  <path class="s-ink" d="M84 140 H326 M84 158 H326 M84 176 H326 M84 194 H326 M84 212 H326" fill="none" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <rect class="f-accent s-ink anim-pulse" x="178" y="98" width="54" height="20" rx="10" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M205 36 V76 M190 62 L205 76 L220 62" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="408" cy="150" r="38" stroke-width="3"/>
+  <path class="s-accent" d="M408 150 V122 M408 150 L426 160" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-accent" cx="408" cy="150" r="4"/>
+</svg>

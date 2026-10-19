@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>DualSense seen from above with the Create and PS buttons highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="f-soft s-ink" d="M120 90 C140 70 180 66 240 66 C300 66 340 70 360 90 C385 115 405 190 395 230 C388 255 360 260 345 240 C330 220 320 205 300 205 H180 C160 205 150 220 135 240 C120 260 92 255 85 230 C75 190 95 115 120 90 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="200" y="78" width="80" height="46" rx="12" stroke-width="2"/>
+  <path class="f-ink" d="M148 108 h8 v-8 h8 v8 h8 v8 h-8 v8 h-8 v-8 h-8 Z"/>
+  <circle class="f-ink" cx="330" cy="100" r="6"/><circle class="f-ink" cx="330" cy="132" r="6"/><circle class="f-ink" cx="314" cy="116" r="6"/><circle class="f-ink" cx="346" cy="116" r="6"/>
+  <circle class="f-muted s-ink" cx="200" cy="170" r="17" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="280" cy="170" r="17" stroke-width="2"/>
+  <rect class="s-accent anim-pulse" x="196" y="74" width="88" height="54" rx="14" fill="none" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="176" y="90" width="14" height="6" rx="3" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="240" cy="196" r="9" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="183" cy="93" r="16" fill="none" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="240" cy="196" r="17" fill="none" stroke-width="3"/>
+  <path class="s-hl" d="M183 77 V48 M175 56 L183 48 L191 56" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M240 214 V244 M232 236 L240 244 L248 236" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

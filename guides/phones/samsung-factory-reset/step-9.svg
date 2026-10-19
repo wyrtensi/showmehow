@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Phone restarting with a progress ring on a dark screen</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-ink" x="180" y="30" width="120" height="240" rx="16"/>
+  <circle class="s-hl" cx="240" cy="150" r="30" fill="none" stroke-width="3" opacity="0.3"/>
+  <path class="s-hl anim-pulse" d="M240 120 A30 30 0 0 1 270 150" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-accent" cx="240" cy="150" r="6"/>
+</svg>

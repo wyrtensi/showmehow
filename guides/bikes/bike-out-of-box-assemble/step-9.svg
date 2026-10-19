@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Tighten the four stem faceplate bolts a half turn at a time in an X pattern</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="130" y="60" width="220" height="180" rx="16" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="150" y="112" width="180" height="76" rx="8" stroke-width="3"/>
+  <circle class="f-muted s-ink" cx="165" cy="78" r="12" stroke-width="3"/>
+  <path class="s-ink" d="M160 78 h10 M165 73 v10" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-muted s-ink" cx="315" cy="78" r="12" stroke-width="3"/>
+  <path class="s-ink" d="M310 78 h10 M315 73 v10" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-muted s-ink" cx="165" cy="222" r="12" stroke-width="3"/>
+  <path class="s-ink" d="M160 222 h10 M165 217 v10" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-muted s-ink" cx="315" cy="222" r="12" stroke-width="3"/>
+  <path class="s-ink" d="M310 222 h10 M315 217 v10" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M165 78 L315 222 M315 78 L165 222" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M150 112 H330 M150 188 H330" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M386 150 L402.0 166.8 L434 130.8" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

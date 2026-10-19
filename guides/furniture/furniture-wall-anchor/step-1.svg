@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Four wall types: a wooden stud behind plasterboard, plasterboard alone, solid masonry and solid wood</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="100" y="24" width="120" height="120" rx="8" stroke-width="2"/>
+  <rect class="f-soft" x="110" y="34" width="100" height="100" rx="0" stroke-width="0"/>
+  <rect class="f-hl s-ink" x="144" y="34" width="32" height="100" rx="2" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="108" y="34" width="8" height="100" rx="1" stroke-width="1"/>
+  <rect class="f-paper s-ink" x="260" y="24" width="120" height="120" rx="8" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="310" y="34" width="14" height="100" rx="2" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="280" y="34" width="8" height="100" rx="1" stroke-width="1"/>
+  <rect class="f-paper s-ink" x="100" y="156" width="120" height="120" rx="8" stroke-width="2"/>
+  <path class="s-ink" d="M108 168 L212 168" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M120 168 L120 188" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M156 168 L156 188" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M192 168 L192 188" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M108 188 L212 188" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M138 188 L138 208" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M174 188 L174 208" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M210 188 L210 208" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M108 208 L212 208" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M120 208 L120 228" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M156 208 L156 228" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M192 208 L192 228" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M108 228 L212 228" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M138 228 L138 248" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M174 228 L174 248" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M210 228 L210 248" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M108 248 L212 248" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M120 248 L120 268" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M156 248 L156 268" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M192 248 L192 268" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="260" y="156" width="120" height="120" rx="8" stroke-width="2"/>
+  <rect class="f-hl" x="274" y="166" width="92" height="100" rx="4" stroke-width="0"/>
+  <path class="s-ink" d="M276 182 q20 -8 40 0 t46 0" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M276 200 q20 -8 40 0 t46 0" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M276 218 q20 -8 40 0 t46 0" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M276 236 q20 -8 40 0 t46 0" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M276 254 q20 -8 40 0 t46 0" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

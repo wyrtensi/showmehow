@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The front panel of the indoor unit is lifted up to reach the filter</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="100" width="360" height="60" rx="16" stroke-width="3"/>
+  <polygon class="f-paper s-ink" points="70,100 410,100 390,40 90,40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="100" y="112" width="280" height="34" rx="6" stroke-width="2"/>
+  <path class="s-ink" d="M120 112 L120 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M140 112 L140 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M160 112 L160 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M180 112 L180 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M200 112 L200 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M220 112 L220 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 112 L240 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M260 112 L260 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M280 112 L280 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M300 112 L300 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M320 112 L320 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M340 112 L340 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M360 112 L360 146" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M240 250 L240 190" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M246.0 200.4 L240 190 L234.0 200.4" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

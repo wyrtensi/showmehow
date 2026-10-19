@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Phone Bluetooth list with the info button and a remove button</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="22" width="28" height="5" rx="2.5"/>
+  <rect class="f-muted" x="192" y="48" width="50" height="8" rx="4"/>
+  <rect class="f-muted" x="194" y="90" width="18" height="12" rx="3"/>
+  <rect class="f-muted" x="220" y="94" width="42" height="6" rx="3"/>
+  <circle class="s-ink" cx="284" cy="96" r="9" fill="none" stroke-width="2"/>
+  <rect class="f-muted" x="194" y="136" width="18" height="12" rx="3"/>
+  <rect class="f-muted" x="220" y="140" width="34" height="6" rx="3"/>
+  <circle class="f-accent anim-pulse" cx="284" cy="142" r="10"/>
+  <circle class="s-hl" cx="284" cy="142" r="19" fill="none" stroke-width="3"/>
+  <rect class="f-accent-soft s-accent" x="196" y="206" width="88" height="30" rx="15" stroke-width="2"/>
+  <path class="s-accent" d="M226 221 H254" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-hl anim-nudge" d="M96 142 H150 M136 128 L150 142 L136 156" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

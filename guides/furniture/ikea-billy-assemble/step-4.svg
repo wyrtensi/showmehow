@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Side panel lying flat with three horizontal panels standing on its pins</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="120" width="380" height="140" rx="8" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="100" y="60" width="30" height="190" rx="4" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="225" y="60" width="30" height="190" rx="4" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="350" y="60" width="30" height="190" rx="4" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M115 20 V52 M101 38 L115 52 L129 38 M240 20 V52 M226 38 L240 52 L254 38 M365 20 V52 M351 38 L365 52 L379 38" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

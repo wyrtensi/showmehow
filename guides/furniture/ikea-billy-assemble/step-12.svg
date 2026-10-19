@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Shelf pin pressed into an upright and a shelf resting on four pins</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="24" width="40" height="252" rx="6" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="80" cy="60" r="5" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="80" cy="96" r="5" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="80" cy="132" r="5" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="80" cy="204" r="5" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="80" cy="240" r="5" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="100" y="160" width="26" height="12" rx="4" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="88" y="164" width="14" height="8" rx="2" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="100" y="146" width="320" height="14" rx="4" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M280 70 V128 M264 112 L280 128 L296 112" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

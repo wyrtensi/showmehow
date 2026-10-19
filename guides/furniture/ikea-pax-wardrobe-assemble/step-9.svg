@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Top of a wardrobe frame near a wall: an adjusting sleeve reaches the wall across a small gap</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="52" y="24" width="30" height="252" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="226" y="24" width="150" height="252" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="198" y="98" width="28" height="36" rx="6" stroke-width="3"/>
+  <path class="s-ink" d="M198 106 H226 M198 116 H226 M198 126 H226" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="s-hl" d="M84 166 H196 M100 150 L84 166 L100 182 M180 150 L196 166 L180 182" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M84 84 V148 M196 84 V148" fill="none" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 6"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Underside of a mouse with the Easy-Switch button pressed and a blinking light</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(-45 0) scale(0.95 1)">
+  <path class="f-soft s-ink" d="M240 24 C320 24 350 80 350 160 C350 240 310 280 240 280 C170 280 130 240 130 160 C130 80 160 24 240 24 Z" stroke-width="3"/>
+  <circle class="f-muted s-ink" cx="240" cy="110" r="14" stroke-width="2"/>
+  <circle class="f-ink" cx="240" cy="110" r="5"/>
+  </g>
+  <rect class="f-accent s-ink" x="120" y="180" width="60" height="26" rx="8" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="150" cy="193" r="6" stroke-width="2"/>
+  <circle class="f-ok anim-pulse" cx="124" cy="232" r="6"/>
+  <circle class="f-muted s-ink" cx="150" cy="232" r="6" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="176" cy="232" r="6" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="150" cy="193" r="30" fill="none" stroke-width="3"/>
+</svg>

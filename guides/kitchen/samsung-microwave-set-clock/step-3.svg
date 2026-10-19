@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Number pad of the microwave with digit keys highlighted and a display above it</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="130" y="24" width="220" height="252" rx="22" stroke-width="3"/>
+    <rect class="f-ink" x="150" y="44" width="180" height="46" rx="10"/>
+    <rect class="f-ok" x="182" y="55" width="16" height="24" rx="3"/>
+    <rect class="f-ok" x="206" y="55" width="16" height="24" rx="3"/>
+    <circle class="f-ok" cx="240" cy="61" r="3"/>
+    <circle class="f-ok" cx="240" cy="73" r="3"/>
+    <rect class="f-ok" x="258" y="55" width="16" height="24" rx="3"/>
+    <rect class="f-ok" x="282" y="55" width="16" height="24" rx="3"/>
+    <circle class="f-paper s-ink" cx="180" cy="130" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="240" cy="130" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="300" cy="130" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="180" cy="182" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="240" cy="182" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="300" cy="182" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="180" cy="234" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="240" cy="234" r="20" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="300" cy="234" r="20" stroke-width="3"/>
+    <circle class="f-accent" cx="180" cy="130" r="7"/>
+    <circle class="f-accent" cx="240" cy="182" r="7"/>
+    <circle class="f-accent" cx="300" cy="234" r="7"/>
+    <circle class="s-hl anim-pulse" cx="180" cy="130" r="30" fill="none" stroke-width="3"/>
+    <circle class="s-hl anim-pulse" cx="240" cy="182" r="30" fill="none" stroke-width="3"/>
+    <circle class="s-hl anim-pulse" cx="300" cy="234" r="30" fill="none" stroke-width="3"/>
+  </g>
+</svg>

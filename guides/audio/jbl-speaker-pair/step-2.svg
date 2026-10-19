@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>JBL speaker from above with the Bluetooth button highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="100" y="112" width="280" height="76" rx="38" stroke-width="3"/>
+  <rect class="f-muted" x="122" y="118" width="236" height="5" rx="2.5"/>
+  <circle class="f-paper s-ink" cx="152" cy="150" r="13" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="192" cy="150" r="13" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="192" cy="150" r="23" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="232" cy="150" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="272" cy="150" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="308" cy="150" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="344" cy="150" r="13" stroke-width="2"/>
+  <path class="s-ink" d="M152 144 V149 M147 146 A7 7 0 1 0 157 146" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M189 146 L196 153 L192 157 V143 L196 147 L189 154" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M230 147 C224 147 224 153 230 153 L234 147 C240 147 240 153 234 153 Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M268 150 H276 M304 150 H312 M308 146 V154" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M341 145 L349 150 L341 155 Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+
+  <path class="s-hl anim-nudge" d="M192 46 V76 M180 64 L192 78 L204 64" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

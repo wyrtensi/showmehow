@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>A single drop of chain lube falling on one roller of the chain</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="40" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="88" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="136" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="184" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="232" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="280" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="328" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="376" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="62" cy="183" r="6" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="110" cy="183" r="6" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="158" cy="183" r="6" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="206" cy="183" r="6" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="254" cy="183" r="6" stroke-width="2"/>
+  <path class="f-hl" d="M254 112 C266 130 270 142 254 150 C238 142 242 130 254 112 Z"/>
+  <rect class="f-soft s-ink" x="226" y="36" width="56" height="44" rx="10" stroke-width="3"/>
+  <path class="s-ink" d="M254 80 V100" fill="none" stroke-width="3" stroke-linecap="round"/>
+</svg>

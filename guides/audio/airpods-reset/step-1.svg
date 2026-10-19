@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Closed AirPods case and a 30 second timer</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="64" y="76" width="204" height="150" rx="52" stroke-width="3"/>
+  <path class="s-ink" d="M64 124 H268" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-muted" cx="166" cy="168" r="5"/>
+  <circle class="f-paper s-ink" cx="372" cy="150" r="52" stroke-width="3"/>
+  <path class="s-accent" d="M372 150 V116 M372 150 L394 162" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-accent" cx="372" cy="150" r="5"/>
+  <path class="s-hl anim-pulse" d="M372 68 A82 82 0 1 1 290 150" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

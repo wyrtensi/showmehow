@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Microwave from the front, the control panel on the right is highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="40" y="60" width="400" height="190" rx="20" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="60" y="80" width="260" height="150" rx="12" stroke-width="3"/>
+    <rect class="f-ink" x="76" y="96" width="228" height="118" rx="8"/>
+    <path class="s-paper" d="M96 112 L150 112 M96 126 L120 126" fill="none" stroke-width="2" opacity="0.3"/>
+    <rect class="f-ink" x="340" y="82" width="80" height="34" rx="8"/>
+    <rect class="f-ok" x="352" y="92" width="10" height="14" rx="2"/>
+    <rect class="f-ok" x="368" y="92" width="10" height="14" rx="2"/>
+    <rect class="f-ok" x="388" y="92" width="10" height="14" rx="2"/>
+    <circle class="f-muted s-ink" cx="360" cy="140" r="9" stroke-width="2"/>
+    <circle class="f-muted s-ink" cx="400" cy="140" r="9" stroke-width="2"/>
+    <circle class="f-muted s-ink" cx="360" cy="170" r="9" stroke-width="2"/>
+    <circle class="f-muted s-ink" cx="400" cy="170" r="9" stroke-width="2"/>
+    <circle class="f-muted s-ink" cx="360" cy="200" r="9" stroke-width="2"/>
+    <circle class="f-muted s-ink" cx="400" cy="200" r="9" stroke-width="2"/>
+    <rect class="s-hl anim-pulse" x="330" y="72" width="100" height="166" rx="16" fill="none" stroke-width="3"/>
+  </g>
+</svg>

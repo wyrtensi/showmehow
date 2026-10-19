@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Wardrobe frame from above: the two folded side panels swing open like a book</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="110" y="60" width="260" height="22" rx="4" stroke-width="3"/>
+  <polygon class="f-accent s-ink" points="110,82 132,82 132,200 110,200" stroke-width="3" stroke-linejoin="round"/>
+  <polygon class="f-accent s-ink" points="348,82 370,82 370,200 348,200" stroke-width="3" stroke-linejoin="round"/>
+  <polygon class="f-muted s-ink" points="132,82 160,82 160,176 132,176" stroke-width="2" stroke-linejoin="round" opacity="0.6"/>
+  <path class="s-hl anim-nudge" d="M96 226 C60 200 60 150 88 120 M88 120 L82 138 M88 120 L104 126" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M384 226 C420 200 420 150 392 120 M392 120 L398 138 M392 120 L376 126" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

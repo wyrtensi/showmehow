@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Six screws around the clamp are tightened with the hex wrench from the kit</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <circle class="f-muted s-ink" cx="240" cy="150" r="110" stroke-width="4"/>
+  <circle class="f-soft s-ink" cx="240" cy="150" r="70" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="318" cy="195" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M314 195 h8 M318 191 v8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="240" cy="240" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M236 240 h8 M240 236 v8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="162" cy="195" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M158 195 h8 M162 191 v8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="162" cy="105" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M158 105 h8 M162 101 v8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="240" cy="60" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M236 60 h8 M240 56 v8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="318" cy="105" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M314 105 h8 M318 101 v8" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-accent s-ink" d="M300 40 H340 V60 H322 V90 H300 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

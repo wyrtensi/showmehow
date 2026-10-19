@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Clean water running over the chain and cassette to rinse off the degreaser</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="70" y="40" width="110" height="56" rx="14" stroke-width="3"/>
+  <path class="s-ink" d="M180 60 H230 V76" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M230 94 V120 M214 106 V132 M246 106 V132" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="f-soft s-ink" cx="330" cy="206" r="62" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="330" cy="206" r="40" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="330" cy="206" r="14" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="60" y="190" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="108" y="190" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="156" y="190" width="44" height="26" rx="8" stroke-width="3"/>
+  <circle class="f-hl" cx="210" cy="150" r="5"/>
+  <circle class="f-hl" cx="250" cy="156" r="5"/>
+</svg>

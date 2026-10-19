@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>DualSense connected to a computer with a USB Type-C cable</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(-40 20) scale(0.8)">
+  <path class="f-soft s-ink" d="M120 90 C140 70 180 66 240 66 C300 66 340 70 360 90 C385 115 405 190 395 230 C388 255 360 260 345 240 C330 220 320 205 300 205 H180 C160 205 150 220 135 240 C120 260 92 255 85 230 C75 190 95 115 120 90 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="200" y="78" width="80" height="46" rx="12" stroke-width="2"/>
+  <path class="f-ink" d="M148 108 h8 v-8 h8 v8 h8 v8 h-8 v8 h-8 v-8 h-8 Z"/>
+  <circle class="f-ink" cx="330" cy="100" r="6"/><circle class="f-ink" cx="330" cy="132" r="6"/><circle class="f-ink" cx="314" cy="116" r="6"/><circle class="f-ink" cx="346" cy="116" r="6"/>
+  <circle class="f-muted s-ink" cx="200" cy="170" r="17" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="280" cy="170" r="17" stroke-width="2"/>
+  </g>
+  <rect class="f-accent s-ink" x="180" y="80" width="20" height="8" rx="4" stroke-width="2"/>
+  <path class="s-ink" d="M190 84 C190 40 250 30 300 60 C340 84 330 150 340 150" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="330" y="50" width="100" height="150" rx="12" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="344" y="66" width="72" height="14" rx="4" stroke-width="2"/>
+  <rect class="f-ink" x="344" y="96" width="72" height="6" rx="3"/>
+  <rect class="f-ink" x="344" y="112" width="72" height="6" rx="3"/>
+  <rect class="f-paper s-ink" x="324" y="140" width="30" height="16" rx="3" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="318" y="134" width="42" height="28" rx="8" fill="none" stroke-width="3"/>
+  <circle class="f-ok anim-pulse" cx="400" cy="180" r="5"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>A metal runner is screwed to each side of the drawer</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <polygon class="f-soft s-ink" points="100,220 340,220 400,170 160,170" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-paper s-ink" points="100,220 340,220 340,270 100,270" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-muted s-ink" points="340,220 400,170 400,220 340,270" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-accent s-ink" points="355,196 388,168 392,176 362,204" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-ink" cx="366" cy="192" r="4" stroke-width="1"/>
+  <circle class="f-ink" cx="380" cy="178" r="4" stroke-width="1"/>
+  <path class="s-hl anim-nudge" d="M430 100 L380 168" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M381.3 156.1 L380 168 L391.0 163.2" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

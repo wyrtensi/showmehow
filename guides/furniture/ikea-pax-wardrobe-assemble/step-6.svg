@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Top corners of the frame: a left and a right corner connector are pressed into place</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="110" width="26" height="170" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="394" y="110" width="26" height="170" rx="4" stroke-width="3"/>
+  <path class="s-ink" d="M86 280 H394" fill="none" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <polygon class="f-accent s-ink" points="86,110 140,110 140,170 100,170 86,156" stroke-width="3" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="118" cy="140" r="12" stroke-width="2"/>
+  <polygon class="f-accent s-ink" points="394,110 340,110 340,170 380,170 394,156" stroke-width="3" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="362" cy="140" r="12" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M113 70 V98 M99 84 L113 98 L127 84 M367 70 V98 M353 84 L367 98 L381 84" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

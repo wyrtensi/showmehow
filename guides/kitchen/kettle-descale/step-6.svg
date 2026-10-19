@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Removable limescale filter lowered into a cup with a little vinegar</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path class="f-soft s-ink" d="M150 160 H330 L316 252 C314 262 306 268 296 268 H184 C174 268 166 262 164 252 Z" stroke-width="3"/>
+    <polygon class="f-accent" points="154,196 326,196 316,252 306,266 174,266 164,252" opacity="0.55"/>
+    <path class="f-paper s-ink" d="M168 70 C168 56 180 50 192 50 H288 C300 50 312 56 312 70 L304 130 C302 140 296 146 286 146 H194 C184 146 178 140 176 130 Z" stroke-width="3"/>
+    <path class="s-ink" d="M196 76 V134 M220 72 V138 M244 72 V138 M268 72 V138 M290 76 V134 M180 96 H300 M182 118 H298" fill="none" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="228" y="30" width="24" height="24" rx="8" stroke-width="3"/>
+    <path class="s-hl anim-nudge" d="M240 156 V184 M226 172 L240 186 L254 172" fill="none" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Kettle on its power base with the switch lit and steam from the spout</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <ellipse class="f-muted s-ink" cx="240" cy="258" rx="108" ry="16" stroke-width="3"/>
+    <path class="f-soft s-ink" d="M148 108 L332 108 L350 248 L130 248 Z" stroke-width="3"/>
+    <path class="f-soft s-ink" d="M148 116 L104 96 L106 120 L140 140 Z" stroke-width="3"/>
+    <path class="s-ink" d="M332 120 C396 120 396 220 346 228" fill="none" stroke-width="8"/>
+    <rect class="f-muted s-ink" x="172" y="82" width="136" height="26" rx="12" stroke-width="3"/>
+    <circle class="f-ok anim-pulse" cx="380" cy="150" r="9"/>
+    <path class="s-ink" d="M96 76 C86 62 106 54 96 40 M122 70 C112 56 132 48 122 34" fill="none" stroke-width="3" opacity="0.5"/>
+    <circle class="s-hl anim-pulse" cx="380" cy="150" r="22" fill="none" stroke-width="3" opacity="0.8"/>
+  </g>
+</svg>

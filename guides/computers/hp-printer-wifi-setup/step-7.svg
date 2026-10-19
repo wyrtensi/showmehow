@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Printer with a solid wireless light and a test page coming out</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="f-soft s-ink" d="M90 150 H390 V230 a10 10 0 0 1 -10 10 H100 a10 10 0 0 1 -10 -10 Z" stroke-width="3" stroke-linejoin="round"/>
+  <path class="f-paper s-ink" d="M140 150 L156 70 H324 L340 150 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-ink" x="170" y="204" width="140" height="8" rx="4"/>
+  <circle class="f-ok" cx="116" cy="172" r="8"/>
+  <path class="s-ink" d="M110 170 a8 8 0 0 1 12 0 M113 175 a4 4 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <rect class="f-paper s-ink" x="170" y="222" width="140" height="62" rx="4" stroke-width="3" transform="rotate(0)"/>
+  <rect class="f-muted" x="186" y="236" width="108" height="7" rx="3.5"/>
+  <rect class="f-muted" x="186" y="250" width="80" height="7" rx="3.5"/>
+  <rect class="f-accent-soft" x="186" y="264" width="108" height="10" rx="3"/>
+</svg>

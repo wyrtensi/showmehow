@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Side brush with three arms and a centre screw, arrow shows unscrewing</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path class="s-ink" d="M240 150 L130 70 M240 150 L370 80 M240 150 L250 268" fill="none" stroke-width="12"/>
+    <path class="s-muted" d="M240 150 L130 70 M240 150 L370 80 M240 150 L250 268" fill="none" stroke-width="6"/>
+    <circle class="f-soft s-ink" cx="240" cy="150" r="42" stroke-width="3"/>
+    <circle class="f-accent s-ink" cx="240" cy="150" r="22" stroke-width="3"/>
+    <path class="s-paper" d="M228 150 H252 M240 138 V162" fill="none" stroke-width="3"/>
+    <path class="s-hl anim-nudge" d="M178 120 A76 76 0 0 1 310 112 M296 98 L312 112 L296 124" fill="none" stroke-width="3"/>
+  </g>
+</svg>

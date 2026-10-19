@@ -22,7 +22,13 @@
   { "id": "redmond", "name": "Redmond", "aliases": ["редмонд"], "site": "https://redmond.company/" },
   { "id": "indesit", "name": "Indesit", "aliases": ["индезит"], "site": "https://www.indesit.com/" },
   { "id": "roborock", "name": "Roborock", "aliases": ["роборок"], "site": "https://global.roborock.com/" },
+  { "id": "philips", "name": "Philips", "aliases": ["филипс", "филлипс"], "site": "https://www.philips.com/" },
   { "id": "ikea", "name": "IKEA", "aliases": ["икеа", "икея"], "site": "https://www.ikea.com/" },
   { "id": "shimano", "name": "Shimano", "aliases": ["шимано"], "site": "https://si.shimano.com/" },
-  { "id": "segway-ninebot", "name": "Segway-Ninebot", "aliases": ["ninebot", "найнбот", "сегвей", "segway"], "site": "https://www.segway.com/" }
+  { "id": "segway-ninebot", "name": "Segway-Ninebot", "aliases": ["ninebot", "найнбот", "сегвей", "segway"], "site": "https://www.segway.com/" },
+  { "id": "microsoft", "name": "Microsoft", "aliases": ["майкрософт", "майкрософт иксбокс", "xbox", "иксбокс", "windows", "виндовс"], "site": "https://support.microsoft.com/" },
+  { "id": "nintendo", "name": "Nintendo", "aliases": ["нинтендо", "свитч", "switch", "nintendo switch"], "site": "https://www.nintendo.com/" },
+  { "id": "marshall", "name": "Marshall", "aliases": ["маршал", "маршалл", "marshall headphones"], "site": "https://www.marshall.com/" },
+  { "id": "blum", "name": "Blum", "aliases": ["блюм", "blum clip top", "петли блюм"], "site": "https://www.blum.com/" },
+  { "id": "trek", "name": "Trek", "aliases": ["трек", "trek bikes", "велосипед трек"], "site": "https://www.trekbikes.com/" }
 ]

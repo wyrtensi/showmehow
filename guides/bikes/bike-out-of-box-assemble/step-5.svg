@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Tighten each pedal with a pedal wrench, turning it toward the front of the bike</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <circle class="f-soft s-ink" cx="110" cy="150" r="60" stroke-width="4"/>
+  <circle class="f-muted s-ink" cx="110" cy="150" r="12" stroke-width="3"/>
+  <path class="f-muted s-ink" d="M110 150 L230 190 L226 206 L104 166 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="238" y="176" width="90" height="30" rx="6" stroke-width="3"/>
+  <path class="f-muted s-ink" d="M222 176 H248 V206 H222 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-hl s-ink" d="M232 168 L330 100 L350 116 L242 206 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M320 240 L420 240" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M409.6 246.0 L420 240 L409.6 234.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="236" cy="192" r="30" fill="none" stroke-width="3"/>
+</svg>

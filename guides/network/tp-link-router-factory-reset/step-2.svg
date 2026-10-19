@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Router back panel with the Reset hole highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="150" y="40" width="16" height="74" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="314" y="40" width="16" height="74" rx="8" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="52" y="108" width="376" height="104" rx="18" stroke-width="3"/>
+  <rect class="f-ink s-ink" x="146" y="150" width="36" height="36" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="194" y="150" width="36" height="36" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="242" y="150" width="36" height="36" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="290" y="150" width="36" height="36" rx="6" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="388" cy="168" r="14" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="96" cy="168" r="11" stroke-width="2"/>
+  <circle class="f-accent" cx="96" cy="168" r="5"/>
+  <circle class="s-hl anim-pulse" cx="96" cy="168" r="26" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M96 274 V234 M82 248 L96 234 L110 248" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

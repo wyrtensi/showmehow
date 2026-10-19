@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Open Galaxy Buds case with two earbuds inside</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="110" y="96" width="260" height="150" rx="75" stroke-width="3"/>
+  <ellipse class="f-paper s-ink" cx="190" cy="172" rx="42" ry="54" stroke-width="2"/>
+  <ellipse class="f-paper s-ink" cx="290" cy="172" rx="42" ry="54" stroke-width="2"/>
+  <ellipse class="f-accent" cx="190" cy="166" rx="26" ry="32"/>
+  <rect class="f-accent" x="196" y="182" width="12" height="38" rx="6"/>
+  <ellipse class="f-accent" cx="290" cy="166" rx="26" ry="32"/>
+  <rect class="f-accent" x="272" y="182" width="12" height="38" rx="6"/>
+  <circle class="f-ok anim-pulse" cx="240" cy="128" r="6"/>
+  <path class="s-hl anim-nudge" d="M170 62 Q240 22 310 62 M294 46 L310 62 L290 70" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

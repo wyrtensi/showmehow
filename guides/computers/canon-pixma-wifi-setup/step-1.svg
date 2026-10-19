@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Printer control panel with the ON lamp lit next to the Stop button</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="70" y="50" width="340" height="200" rx="20" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="100" y="80" width="130" height="80" rx="8" stroke-width="2"/>
+  <rect class="f-muted" x="116" y="100" width="70" height="8" rx="4"/>
+  <rect class="f-muted" x="116" y="122" width="48" height="8" rx="4"/>
+  <circle class="f-paper s-ink" cx="130" cy="206" r="18" stroke-width="3"/>
+  <circle class="f-ok anim-pulse" cx="130" cy="182" r="6"/>
+  <circle class="s-hl anim-pulse" cx="130" cy="206" r="28" fill="none" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="200" cy="206" r="18" stroke-width="3"/>
+  <rect class="f-ink" x="192" y="198" width="16" height="16" rx="3"/>
+  <circle class="f-paper s-ink" cx="270" cy="206" r="18" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="340" cy="206" r="18" stroke-width="3"/>
+</svg>

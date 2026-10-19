@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Cam lock in a panel hole being turned with a screwdriver to pull the joint tight</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="90" y="130" width="300" height="100" rx="8" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="240" cy="180" r="38" stroke-width="3"/>
+  <circle class="f-accent s-ink" cx="240" cy="180" r="26" stroke-width="2"/>
+  <path class="s-ink" d="M224 180 H256" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-muted s-ink" x="226" y="40" width="28" height="30" rx="8" stroke-width="2"/>
+  <path class="s-ink" d="M240 70 V150" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-hl anim-nudge" d="M180 112 C190 84 290 84 300 112 M288 104 L300 112 L286 120" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

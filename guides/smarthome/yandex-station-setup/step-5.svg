@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Phone app with the plus icon in the top right corner highlighted and a menu item below</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="22" width="28" height="5" rx="2.5"/>
+  <rect class="f-muted" x="192" y="48" width="56" height="8" rx="4"/>
+  <circle class="f-accent s-ink" cx="278" cy="52" r="11" stroke-width="2"/>
+  <path class="s-ink" d="M278 46 v12 M272 52 h12" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="s-hl anim-pulse" cx="278" cy="52" r="20" fill="none" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="206" y="84" width="84" height="74" rx="10" stroke-width="2"/>
+  <rect class="f-accent-soft s-accent" x="212" y="92" width="72" height="26" rx="6" stroke-width="2"/>
+  <rect class="f-ink" x="220" y="102" width="50" height="6" rx="3"/>
+  <rect class="f-muted" x="220" y="132" width="50" height="6" rx="3"/>
+  <rect class="f-muted" x="192" y="184" width="86" height="8" rx="4"/>
+  <rect class="f-muted" x="192" y="204" width="70" height="8" rx="4"/>
+</svg>

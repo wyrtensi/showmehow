@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Seatpost raised in the seat tube so that its minimum insertion line stays hidden inside</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="110" y="120" width="80" height="160" rx="6" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="126" y="40" width="48" height="190" rx="4" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="70" y="22" width="160" height="22" rx="11" stroke-width="3"/>
+  <path class="s-hl" d="M126 190 H174" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5"/>
+  <path class="s-hl anim-nudge" d="M232 150 V90 M218 106 L232 90 L246 106" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

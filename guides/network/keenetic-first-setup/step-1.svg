@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Back of the router: the Internet cable from the provider goes into port 0</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="160" y="60" width="14" height="76" rx="7" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="446" y="60" width="14" height="76" rx="7" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="180" y="130" width="260" height="84" rx="16" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="210" y="158" width="28" height="26" rx="5" stroke-width="2"/>
+  <rect class="f-ink" x="216" y="164" width="16" height="8" rx="1"/>
+  <rect class="f-paper s-ink" x="250" y="158" width="28" height="26" rx="5" stroke-width="2"/>
+  <rect class="f-ink" x="256" y="164" width="16" height="8" rx="1"/>
+  <rect class="f-paper s-ink" x="290" y="158" width="28" height="26" rx="5" stroke-width="2"/>
+  <rect class="f-ink" x="296" y="164" width="16" height="8" rx="1"/>
+  <rect class="f-paper s-ink" x="330" y="158" width="28" height="26" rx="5" stroke-width="2"/>
+  <rect class="f-ink" x="336" y="164" width="16" height="8" rx="1"/>
+  <rect class="f-paper s-ink" x="370" y="158" width="28" height="26" rx="5" stroke-width="2"/>
+  <rect class="f-ink" x="376" y="164" width="16" height="8" rx="1"/>
+  <circle class="f-paper s-ink" cx="418" cy="172" r="9" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="204" y="152" width="40" height="38" rx="9" stroke-width="3" fill="none"/>
+
+  <path class="s-accent" d="M30 182 H214" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <rect class="f-paper s-ink" x="24" y="170" width="22" height="24" rx="4" stroke-width="2"/>
+</svg>

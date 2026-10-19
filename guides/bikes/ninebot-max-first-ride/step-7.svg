@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The phone finds the scooter over Bluetooth; a beep and a steady Bluetooth icon confirm the link</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="60" width="90" height="180" rx="18" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="70" y="82" width="70" height="136" rx="6" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="105" cy="150" r="14" stroke-width="2"/>
+  <path class="s-hl anim-pulse" d="M186.0 126.0 A30 30 0 0 1 186.0 174.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-pulse" d="M190.4 108.4 A52 52 0 0 1 190.4 191.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-pulse" d="M194.8 90.8 A74 74 0 0 1 194.8 209.2" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="320" y="150" width="120" height="20" rx="8" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="340" cy="190" r="14" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="420" cy="190" r="14" stroke-width="3"/>
+  <path class="s-ink" d="M400 150 L390 90" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="372" y="78" width="40" height="12" rx="5" stroke-width="3"/>
+</svg>

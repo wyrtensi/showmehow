@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>In the Roborock app tap the plus button to add a device</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="20" width="140" height="260" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="182" y="44" width="116" height="212" rx="12" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="278" cy="62" r="11" stroke-width="2"/>
+  <path class="s-ink" d="M278 56 L278 68" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M272 62 L284 62" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="278" cy="62" r="22" fill="none" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="194" y="96" width="92" height="50" rx="8" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="220" cy="121" r="14" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="194" y="156" width="92" height="50" rx="8" stroke-width="2"/>
+  <circle class="f-accent-soft s-ink" cx="220" cy="181" r="14" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M380 50 L306 60" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M315.5 52.7 L306 60 L317.1 64.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

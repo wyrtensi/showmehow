@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The flat micro filter is pulled down and off the bottom of the filter</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="205.0" y="50" width="70" height="90" rx="6" stroke-width="3"/>
+  <ellipse class="f-soft s-ink" cx="240" cy="50" rx="35.0" ry="12" stroke-width="3"/>
+  <path class="s-ink" d="M216.7 64 L216.7 136" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M228.3 64 L228.3 136" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240.0 64 L240.0 136" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M251.7 64 L251.7 136" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M263.3 64 L263.3 136" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse class="f-soft s-ink" cx="240" cy="232" rx="70" ry="16" stroke-width="3"/>
+  <path class="s-ink" d="M185 220 L185 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M196 220 L196 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M207 220 L207 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M218 220 L218 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M229 220 L229 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 220 L240 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M251 220 L251 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M262 220 L262 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M273 220 L273 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M284 220 L284 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M295 220 L295 244" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M240 160 L240 200" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M234.0 189.6 L240 200 L246.0 189.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="240" cy="232" r="62" fill="none" stroke-width="3"/>
+</svg>

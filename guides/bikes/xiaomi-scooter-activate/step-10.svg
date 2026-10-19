@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Scooter deck with one foot standing on it and the other foot pushing off the ground</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M30 262 H450" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="f-soft s-ink" cx="340" cy="232" r="30" stroke-width="3"/>
+  <circle class="f-soft s-ink" cx="130" cy="236" r="26" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="130" y="210" width="210" height="24" rx="10" stroke-width="3"/>
+  <path class="s-ink" d="M340 232 L310 56 M286 56 H334" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-hl" d="M200 208 V120 L252 56" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M184 208 L96 250 L56 262" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <path class="s-hl anim-nudge" d="M72 220 H30 M44 206 L30 220 L44 234" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-accent" cx="310" cy="56" r="8"/>
+</svg>

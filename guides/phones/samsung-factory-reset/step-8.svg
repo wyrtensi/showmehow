@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Password entry screen with dots and a confirm button</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="22" width="28" height="5" rx="2.5"/>
+  <path class="s-accent" d="M230 78 V70 A10 10 0 0 1 250 70 V78" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="224" y="76" width="32" height="24" rx="6" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="196" y="124" width="88" height="30" rx="8" stroke-width="2"/>
+  <circle class="f-ink" cx="212" cy="139" r="4"/>
+  <circle class="f-ink" cx="226" cy="139" r="4"/>
+  <circle class="f-ink" cx="240" cy="139" r="4"/>
+  <circle class="f-ink" cx="254" cy="139" r="4"/>
+  <rect class="f-accent s-ink" x="206" y="180" width="68" height="28" rx="14" stroke-width="2"/>
+  <circle class="s-hl anim-tap" cx="240" cy="194" r="22" fill="none" stroke-width="3"/>
+</svg>

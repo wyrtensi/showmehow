@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Kettle filled with water up to the top mark of the level scale</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <ellipse class="f-muted s-ink" cx="240" cy="256" rx="104" ry="16" stroke-width="3"/>
+    <path class="f-soft s-ink" d="M148 100 L332 100 L350 248 L130 248 Z" stroke-width="3"/>
+    <polygon class="f-accent" points="143,124 337,124 350,248 130,248" opacity="0.55"/>
+    <path class="f-soft s-ink" d="M148 108 L104 88 L106 112 L140 132 Z" stroke-width="3"/>
+    <path class="s-ink" d="M332 112 C396 112 396 218 346 226" fill="none" stroke-width="8"/>
+    <rect class="f-muted s-ink" x="172" y="74" width="136" height="26" rx="12" stroke-width="3"/>
+    <path class="s-ink" d="M158 160 H182 M158 190 H182 M158 220 H182" fill="none" stroke-width="2"/>
+    <path class="s-hl" d="M150 124 H196" fill="none" stroke-width="3"/>
+    <path class="s-hl anim-nudge" d="M76 100 V132 M62 118 L76 132 L90 118" fill="none" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Handlebar clamp on the stem with four screws and a T-shaped hex key turning one of them</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="70" width="360" height="30" rx="14" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="206" y="100" width="40" height="170" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="180" y="60" width="92" height="50" rx="10" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="200" cy="76" r="7" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="252" cy="76" r="7" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="200" cy="96" r="7" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="252" cy="96" r="7" stroke-width="2"/>
+  <path class="s-ink" d="M252 76 L330 20 M308 8 L350 36" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="s-hl anim-pulse" cx="252" cy="76" r="18" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M360 110 C380 140 340 164 316 146 M316 146 L322 160 M316 146 L332 142" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

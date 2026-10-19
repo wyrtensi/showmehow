@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Main brush with hair wound around it and a cleaning tool cutting the hair</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-muted s-ink" x="40" y="118" width="40" height="44" rx="10" stroke-width="3"/>
+    <rect class="f-muted s-ink" x="400" y="118" width="40" height="44" rx="10" stroke-width="3"/>
+    <rect class="f-accent s-ink" x="76" y="108" width="328" height="64" rx="16" stroke-width="3"/>
+    <path class="s-paper" d="M110 114 L130 166 M150 114 L170 166 M190 114 L210 166 M230 114 L250 166 M270 114 L290 166 M310 114 L330 166 M350 114 L370 166" fill="none" stroke-width="3" opacity="0.5"/>
+    <path class="s-ink" d="M96 100 C150 188 210 80 270 180 C310 232 350 100 392 176 M110 190 C170 120 230 200 300 112 C340 70 370 150 388 100" fill="none" stroke-width="2"/>
+    <path class="f-muted s-ink" d="M160 230 L330 196 L338 214 L170 248 Z" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="320" y="198" width="86" height="22" rx="10" stroke-width="3" transform="rotate(-11 363 209)"/>
+    <path class="s-hl anim-nudge" d="M250 60 V92 M236 80 L250 92 L264 80" fill="none" stroke-width="3"/>
+  </g>
+</svg>

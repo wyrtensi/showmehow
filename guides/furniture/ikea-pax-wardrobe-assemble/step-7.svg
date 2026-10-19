@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Step ladder beside the frame and a top panel being hooked in at one end first</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M30 270 H450" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="170" y="60" width="26" height="210" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="390" y="60" width="26" height="210" rx="4" stroke-width="3"/>
+  <polygon class="f-accent s-ink" points="196,60 270,36 416,52 416,64 270,50 196,72" stroke-width="3" stroke-linejoin="round"/>
+  <path class="s-ink" d="M60 270 L92 110 M130 270 L102 110 M92 110 H102 M68 230 H124 M76 190 H116 M84 150 H108" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M330 140 C350 110 350 90 334 72 M334 72 L350 76 M334 72 L334 90" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

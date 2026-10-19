@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Inkjet printer control panel with the Wireless and Cancel buttons highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="f-soft s-ink" d="M50 150 H430 V230 a10 10 0 0 1 -10 10 H60 a10 10 0 0 1 -10 -10 Z" stroke-width="3" stroke-linejoin="round"/>
+  <path class="f-paper s-ink" d="M110 150 L130 70 H350 L370 150 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-ink" x="160" y="200" width="160" height="8" rx="4"/>
+  <rect class="f-muted s-ink" x="76" y="164" width="328" height="28" rx="8" stroke-width="2"/>
+  <circle class="f-ink" cx="110" cy="178" r="9"/>
+  <circle class="f-paper" cx="110" cy="178" r="3"/>
+  <circle class="f-paper s-ink" cx="170" cy="178" r="9" stroke-width="2"/>
+  <path class="s-ink" d="M166 174 l8 8 M174 174 l-8 8" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-accent s-ink" cx="230" cy="178" r="9" stroke-width="2"/>
+  <path class="s-ink" d="M224 176 a8 8 0 0 1 12 0 M227 180 a4 4 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-paper s-ink" cx="290" cy="178" r="9" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="170" cy="178" r="17" fill="none" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="230" cy="178" r="17" fill="none" stroke-width="3"/>
+  <path class="s-hl" d="M170 130 V150 M162 142 L170 150 L178 142" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M230 130 V150 M222 142 L230 150 L238 142" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

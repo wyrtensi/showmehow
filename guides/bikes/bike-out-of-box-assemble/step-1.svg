@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The bike out of its box: check the fork legs and the frame for damage</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <polygon class="f-soft s-ink" points="70,110 290,110 310,250 50,250" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-muted s-ink" points="70,110 40,70 130,70 150,110" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-muted s-ink" points="290,110 320,70 230,70 210,110" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="180" cy="82" r="40" stroke-width="4"/>
+  <circle class="f-muted s-ink" cx="180" cy="82" r="6" stroke-width="2"/>
+  <path class="s-ink" d="M180 82 L220 44 M160 36 H210" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="390" cy="130" r="44" stroke-width="4"/>
+  <path class="s-ink" d="M422 162 L448 190" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M372 150 L392 90 M392 90 L408 150" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-muted s-ink" cx="390" cy="90" r="5" stroke-width="2"/>
+</svg>

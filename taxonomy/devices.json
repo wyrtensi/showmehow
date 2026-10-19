@@ -31,6 +31,8 @@
   { "id": "dishwasher", "category": "kitchen", "ru": { "name": "Посудомоечная машина", "plural": "Посудомоечные машины" }, "en": { "name": "Dishwasher", "plural": "Dishwashers" }, "aliases": ["посудомойка", "пмм"] },
   { "id": "multicooker", "category": "kitchen", "ru": { "name": "Мультиварка", "plural": "Мультиварки" }, "en": { "name": "Multicooker", "plural": "Multicookers" }, "aliases": ["скороварка", "instant pot"] },
   { "id": "microwave", "category": "kitchen", "ru": { "name": "Микроволновка", "plural": "Микроволновки" }, "en": { "name": "Microwave", "plural": "Microwaves" }, "aliases": ["свч", "микроволновая печь"] },
+  { "id": "air-fryer", "category": "kitchen", "ru": { "name": "Аэрогриль", "plural": "Аэрогрили и аэрофритюрницы" }, "en": { "name": "Air fryer", "plural": "Air fryers" }, "aliases": ["аэрофритюрница", "эйрфрайер", "airfryer", "фритюрница"] },
+  { "id": "kettle", "category": "kitchen", "ru": { "name": "Электрочайник", "plural": "Электрочайники" }, "en": { "name": "Electric kettle", "plural": "Electric kettles" }, "aliases": ["чайник", "kettle"] },
 
   { "id": "washing-machine", "category": "appliances", "ru": { "name": "Стиральная машина", "plural": "Стиральные машины" }, "en": { "name": "Washing machine", "plural": "Washing machines" }, "aliases": ["стиралка", "washer"] },
   { "id": "robot-vacuum", "category": "appliances", "ru": { "name": "Робот-пылесос", "plural": "Роботы-пылесосы" }, "en": { "name": "Robot vacuum", "plural": "Robot vacuums" }, "aliases": ["пылесос", "робот", "roomba"] },

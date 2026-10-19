@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Ink tank with the level between the lower and upper line and a closed cap</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="90" y="80" width="120" height="180" rx="10" stroke-width="3"/>
+  <rect class="f-accent" x="94" y="130" width="112" height="126" rx="6"/>
+  <path class="s-ink" d="M90 130 H210" fill="none" stroke-width="2" stroke-dasharray="8 6"/>
+  <path class="s-ink" d="M90 226 H210" fill="none" stroke-width="2" stroke-dasharray="8 6"/>
+  <rect class="f-muted s-ink" x="116" y="56" width="68" height="24" rx="8" stroke-width="3"/>
+  <circle class="f-ok" cx="236" cy="130" r="8"/>
+  <circle class="f-warn" cx="236" cy="226" r="8"/>
+</svg>

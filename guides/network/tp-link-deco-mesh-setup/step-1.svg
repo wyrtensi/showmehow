@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Phone with an app icon and an install button on the screen</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="170" y="14" width="140" height="272" rx="24" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="206" y="60" width="68" height="68" rx="18" stroke-width="2"/>
+  <circle class="f-paper" cx="240" cy="94" r="16"/>
+  <circle class="f-accent" cx="240" cy="94" r="7"/>
+  <rect class="f-ink" x="204" y="146" width="72" height="10" rx="5"/>
+  <rect class="f-muted" x="214" y="166" width="52" height="8" rx="4"/>
+  <rect class="f-accent s-ink" x="200" y="206" width="80" height="32" rx="16" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="192" y="198" width="96" height="48" rx="22" fill="none" stroke-width="3"/>
+</svg>

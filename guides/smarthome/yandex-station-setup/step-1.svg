@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Smart speaker with a glowing top ring connected by a cable to a wall outlet</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="150" y="70" width="110" height="170" rx="18" stroke-width="3"/>
+  <ellipse class="f-paper s-ink" cx="205" cy="70" rx="55" ry="14" stroke-width="3"/>
+  <ellipse class="f-accent anim-pulse" cx="205" cy="70" rx="38" ry="8"/>
+  <g class="f-muted"><circle cx="180" cy="110" r="4"/><circle cx="205" cy="110" r="4"/><circle cx="230" cy="110" r="4"/><circle cx="168" cy="132" r="4"/><circle cx="193" cy="132" r="4"/><circle cx="218" cy="132" r="4"/><circle cx="243" cy="132" r="4"/><circle cx="180" cy="154" r="4"/><circle cx="205" cy="154" r="4"/><circle cx="230" cy="154" r="4"/><circle cx="168" cy="176" r="4"/><circle cx="193" cy="176" r="4"/><circle cx="218" cy="176" r="4"/><circle cx="243" cy="176" r="4"/><circle cx="180" cy="198" r="4"/><circle cx="205" cy="198" r="4"/><circle cx="230" cy="198" r="4"/></g>
+  <path class="s-ink" d="M205 240 C205 270 300 270 340 250 H380" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="380" y="218" width="62" height="64" rx="10" stroke-width="3"/>
+  <circle class="f-ink" cx="400" cy="250" r="5"/><circle class="f-ink" cx="422" cy="250" r="5"/>
+  <path class="s-hl anim-nudge" d="M370 200 H340 M350 190 L340 200 L350 210" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

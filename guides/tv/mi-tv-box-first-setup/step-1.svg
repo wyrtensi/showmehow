@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>TV connected by an HDMI cable to a streaming box that is plugged into power</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="30" y="40" width="270" height="170" rx="12" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="42" y="52" width="246" height="146" rx="6" stroke-width="2"/>
+  <path class="s-ink" d="M130 210 L120 244 H210 L200 210" fill="none" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="332" y="150" width="110" height="70" rx="14" stroke-width="3"/>
+  <circle class="f-ok" cx="350" cy="206" r="4"/>
+  <rect class="f-ink" x="328" y="168" width="8" height="22" rx="3"/>
+  <path class="s-hl anim-nudge" d="M328 179 C300 179 316 120 300 110 H296" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="286" y="102" width="22" height="16" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M388 220 V252 H440" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="440" y="238" width="24" height="28" rx="6" stroke-width="2"/>
+  <circle class="f-ink" cx="448" cy="248" r="2"/><circle class="f-ink" cx="448" cy="258" r="2"/>
+  <rect class="f-accent-soft" x="70" y="80" width="150" height="14" rx="7"/>
+  <rect class="f-muted" x="70" y="110" width="100" height="10" rx="5"/>
+</svg>

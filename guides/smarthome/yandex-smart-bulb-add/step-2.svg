@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Light bulb being screwed into a ceiling socket with the light switched off</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="96" y="24" width="108" height="50" rx="8" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="116" y="74" width="68" height="40" rx="6" stroke-width="3"/>
+  <path class="s-ink" d="M116 88 H184 M116 100 H184" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="f-paper s-ink" d="M150 138 C104 138 92 184 120 214 C132 228 134 238 134 248 H166 C166 238 168 228 180 214 C208 184 196 138 150 138 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="132" y="248" width="36" height="20" rx="6" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M232 220 C250 190 248 160 224 138 M224 138 L242 142 M224 138 L226 156" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

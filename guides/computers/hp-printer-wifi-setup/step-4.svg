@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Printer control panel with the wireless light blinking and a one minute timer ring</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="60" y="110" width="250" height="80" rx="14" stroke-width="3"/>
+  <circle class="f-ink" cx="100" cy="150" r="10"/>
+  <circle class="f-paper s-ink" cx="150" cy="150" r="10" stroke-width="2"/>
+  <circle class="f-accent s-ink anim-pulse" cx="200" cy="150" r="12" stroke-width="2"/>
+  <path class="s-ink" d="M194 148 a8 8 0 0 1 12 0 M197 153 a4 4 0 0 1 6 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-paper s-ink" cx="250" cy="150" r="10" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="200" cy="150" r="22" fill="none" stroke-width="3"/>
+  <circle class="s-ink" cx="390" cy="150" r="52" fill="none" stroke-width="3"/>
+  <path class="s-accent" d="M390 98 A52 52 0 1 1 354 187" fill="none" stroke-width="8" stroke-linecap="round"/>
+  <path class="s-ink" d="M390 150 V120 M390 150 L410 160" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

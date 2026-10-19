@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The charging dock stands against a wall with free space on both sides and in front</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M40 40 L440 40" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="200" y="46" width="80" height="36" rx="10" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="228" y="54" width="24" height="10" rx="4" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M190 64 L100 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M110.4 58.0 L100 64 L110.4 70.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M290 64 L380 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M369.6 70.0 L380 64 L369.6 58.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M240 96 L240 250" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M234.0 239.6 L240 250 L246.0 239.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M100 52 L100 76" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M380 52 L380 76" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M228 250 L252 250" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

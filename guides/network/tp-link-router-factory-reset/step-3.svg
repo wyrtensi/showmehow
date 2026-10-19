@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Pin pressing the Reset button, stopwatch showing a long hold</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="64" width="250" height="172" rx="24" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="150" cy="150" r="20" stroke-width="3"/>
+  <circle class="f-accent" cx="150" cy="150" r="8"/>
+  <circle class="s-hl anim-pulse" cx="150" cy="150" r="34" fill="none" stroke-width="3"/>
+  <path class="f-muted s-ink" d="M166 158 L274 244 L286 230 L178 144 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="378" y="64" width="24" height="12" rx="4" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="390" cy="146" r="56" stroke-width="3"/>
+  <path class="f-hl" d="M390 146 V102 A44 44 0 1 1 362.6 180.5 Z" opacity="0.8"/>
+  <path class="s-ink" d="M390 146 V102" fill="none" stroke-width="2" stroke-linecap="round"/>
+</svg>

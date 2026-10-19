@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Pump head pushed straight onto a valve with its lever flipped to lock it</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="160" y="220" width="160" height="44" rx="10" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="228" y="150" width="24" height="72" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="206" y="86" width="68" height="70" rx="12" stroke-width="3"/>
+  <path class="s-ink" d="M274 104 L330 70" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-muted s-ink" x="322" y="56" width="40" height="22" rx="8" stroke-width="2" transform="rotate(-30 342 67)"/>
+  <path class="s-ink" d="M240 86 V50 C240 30 170 30 130 44" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-hl anim-nudge" d="M390 120 C410 98 404 78 384 64 M384 64 L402 66 M384 64 L388 82" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

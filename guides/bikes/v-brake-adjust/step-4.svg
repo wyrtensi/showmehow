@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>A small spring tension screw on each brake arm makes the pads return evenly</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M120 260 V120 Q120 80 160 70" fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M360 260 V120 Q360 80 320 70" fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="224" y="20" width="32" height="240" rx="4" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="120" cy="200" r="14" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="360" cy="200" r="14" stroke-width="3"/>
+  <path class="s-ink" d="M114 200 h12 M120 194 v12" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M354 200 h12 M360 194 v12" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="120" cy="200" r="26" fill="none" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="360" cy="200" r="26" fill="none" stroke-width="3"/>
+</svg>

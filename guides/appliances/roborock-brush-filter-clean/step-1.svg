@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Robot vacuum seen from below: wheels, main brush, side brush and charging contacts</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle class="f-soft s-ink" cx="220" cy="150" r="124" stroke-width="3"/>
+    <rect class="f-muted s-ink" x="84" y="120" width="22" height="64" rx="10" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="334" y="120" width="22" height="64" rx="10" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="220" cy="62" r="12" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="194" y="34" width="14" height="8" rx="3" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="232" y="34" width="14" height="8" rx="3" stroke-width="2"/>
+    <rect class="f-paper s-ink" x="166" y="128" width="108" height="34" rx="10" stroke-width="2"/>
+    <rect class="f-accent" x="172" y="134" width="96" height="22" rx="8"/>
+    <circle class="f-muted s-ink" cx="150" cy="82" r="8" stroke-width="2"/>
+    <path class="s-ink" d="M150 82 L128 52 M150 82 L178 62 M150 82 L132 112" fill="none" stroke-width="3"/>
+    <path class="s-hl anim-nudge" d="M390 100 C430 130 430 190 390 220 M376 212 L390 220 L394 204" fill="none" stroke-width="3"/>
+  </g>
+</svg>

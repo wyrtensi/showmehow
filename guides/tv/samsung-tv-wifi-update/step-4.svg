@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>List of Wi-Fi networks on a TV with one network selected and a signal icon</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="40" y="24" width="400" height="230" rx="14" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="54" y="38" width="372" height="202" rx="6" stroke-width="2"/>
+  <path class="s-ink" d="M200 254 L190 278 H290 L280 254" fill="none" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-ink" x="86" y="56" width="120" height="12" rx="6"/>
+  <rect class="f-soft" x="86" y="84" width="308" height="36" rx="10"/>
+  <rect class="f-muted" x="136" y="98" width="100" height="8" rx="4"/>
+  <rect class="f-accent-soft s-accent" x="86" y="130" width="308" height="40" rx="10" stroke-width="3"/>
+  <rect class="f-ink" x="136" y="146" width="130" height="8" rx="4"/>
+  <rect class="s-hl anim-pulse" x="80" y="124" width="320" height="52" rx="14" fill="none" stroke-width="3"/>
+  <rect class="f-soft" x="86" y="182" width="308" height="36" rx="10"/>
+  <rect class="f-muted" x="136" y="196" width="80" height="8" rx="4"/>
+  <path class="s-ink" d="M102 108 a14 14 0 0 1 24 0 M107 114 a7 7 0 0 1 14 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="s-ink" d="M102 156 a14 14 0 0 1 24 0 M107 162 a7 7 0 0 1 14 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="s-ink" d="M102 206 a14 14 0 0 1 24 0 M107 212 a7 7 0 0 1 14 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+</svg>

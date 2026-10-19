@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Open rinse aid dispenser filled up to the max line while a bottle pours</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="110" y="150" width="260" height="110" rx="18" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="170" y="170" width="140" height="70" rx="12" stroke-width="3"/>
+    <rect class="f-accent" x="176" y="196" width="128" height="38" rx="8" opacity="0.7"/>
+    <path class="s-hl" d="M170 196 H310" fill="none" stroke-width="3"/>
+    <path class="s-hl" d="M322 196 H346" fill="none" stroke-width="3"/>
+    <g transform="rotate(30 330 70)">
+      <rect class="f-paper s-ink" x="290" y="14" width="64" height="100" rx="14" stroke-width="3"/>
+      <rect class="f-accent" x="302" y="52" width="40" height="42" rx="8"/>
+      <rect class="f-muted s-ink" x="308" y="-6" width="28" height="22" rx="6" stroke-width="3"/>
+    </g>
+    <path class="s-hl anim-nudge" d="M252 118 V160" fill="none" stroke-width="3" stroke-dasharray="4 8"/>
+    <rect class="f-muted s-ink" x="116" y="130" width="70" height="26" rx="10" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>One foot on the deck and the other pushing off; both hands stay on the handlebar</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M60 250 H440" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="150" y="220" width="200" height="18" rx="8" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="170" cy="252" r="20" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="330" cy="252" r="20" stroke-width="3"/>
+  <path class="s-ink" d="M336 220 L350 90" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="330" y="80" width="50" height="12" rx="5" stroke-width="3"/>
+  <circle class="f-soft s-ink" cx="250" cy="60" r="18" stroke-width="3"/>
+  <path class="f-accent s-ink" d="M230 56 Q250 30 272 56 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M250 78 V150" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M250 100 L350 90" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M250 150 L240 218 M250 150 L190 244 L120 244" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M110 200 L60 200" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M70.4 194.0 L60 200 L70.4 206.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

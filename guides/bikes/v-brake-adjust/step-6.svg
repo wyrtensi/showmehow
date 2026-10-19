@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The cable is pulled snug through the pinch bolt on the brake arm, then the bolt is tightened</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M110 260 V120 Q110 80 150 70" fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M370 260 V120 Q370 80 330 70" fill="none" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M150 70 H330" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="300" y="56" width="40" height="28" rx="6" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="320" cy="70" r="8" stroke-width="3"/>
+  <path class="s-ink" d="M320 20 V56" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="320" cy="70" r="28" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M360 120 L330 90" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M341.6 93.1 L330 90 L333.1 101.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

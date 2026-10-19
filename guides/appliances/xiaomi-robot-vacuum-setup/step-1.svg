@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Robot vacuum docked on its charging station with the indicator lit</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-muted s-ink" x="30" y="248" width="420" height="20" rx="8" stroke-width="3"/>
+    <path class="f-soft s-ink" d="M70 248 V150 C70 134 82 122 98 122 H130 C140 122 146 128 146 138 V248 Z" stroke-width="3"/>
+    <circle class="f-ok anim-pulse" cx="108" cy="150" r="8"/>
+    <rect class="f-muted s-ink" x="146" y="214" width="10" height="16" rx="3" stroke-width="2"/>
+    <rect class="f-soft s-ink" x="156" y="176" width="248" height="72" rx="34" stroke-width="3"/>
+    <rect class="f-muted s-ink" x="246" y="146" width="68" height="36" rx="14" stroke-width="3"/>
+    <circle class="f-accent" cx="372" cy="196" r="9"/>
+    <circle class="f-muted s-ink" cx="330" cy="248" r="14" stroke-width="3"/>
+    <circle class="f-muted s-ink" cx="200" cy="250" r="10" stroke-width="3"/>
+    <path class="s-hl anim-pulse" d="M60 100 A60 60 0 0 1 120 100 M72 84 A38 38 0 0 1 108 84" fill="none" stroke-width="3" opacity="0.7"/>
+  </g>
+</svg>

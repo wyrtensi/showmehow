@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Cabinet from above: the door moves toward or away from the cabinet body</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="70" y="30" width="26" height="170" rx="4" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="384" y="30" width="26" height="170" rx="4" stroke-width="3"/>
+  <path class="s-ink" d="M70 200 H410" fill="none" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8"/>
+  <rect class="f-soft s-ink" x="70" y="208" width="340" height="26" rx="4" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="96" y="176" width="46" height="32" rx="8" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M250 150 V274 M236 166 L250 150 L264 166 M236 258 L250 274 L264 258" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

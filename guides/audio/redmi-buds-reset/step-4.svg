@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Charging case front: the white indicator stays lit while the button is held</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="140" y="70" width="200" height="170" rx="56" stroke-width="3"/>
+  <path class="s-ink" d="M142 128 H338" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="240" cy="178" r="12" stroke-width="2"/>
+  <circle class="f-ok anim-pulse" cx="240" cy="178" r="6"/>
+  <circle class="s-hl" cx="240" cy="178" r="30" fill="none" stroke-width="3" stroke-dasharray="6 8"/>
+  <path class="s-hl" d="M240 148 A30 30 0 1 1 210 178" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

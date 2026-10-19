@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Electric scooter standing on the ground with its kickstand folded down</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M30 262 H450" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="f-soft s-ink" cx="392" cy="230" r="32" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="392" cy="230" r="9" stroke-width="2"/>
+  <circle class="f-soft s-ink" cx="96" cy="234" r="28" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="96" cy="234" r="8" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="96" y="206" width="296" height="26" rx="12" stroke-width="3"/>
+  <path class="s-ink" d="M392 230 L350 50" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-ink" d="M322 50 H378" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="f-accent s-ink" d="M200 232 L218 262 H240 L226 232 Z" stroke-width="3" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M258 250 H300 M274 236 L258 250 L274 264" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

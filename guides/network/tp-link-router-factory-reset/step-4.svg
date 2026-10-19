@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Router front LEDs, SYS highlighted, slow blinking changing to quick blinking</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="64" width="380" height="112" rx="18" stroke-width="3"/>
+  <circle class="f-ok" cx="110" cy="120" r="9"/>
+  <circle class="f-accent anim-pulse" cx="170" cy="120" r="12"/>
+  <circle class="s-hl anim-pulse" cx="170" cy="120" r="26" fill="none" stroke-width="3"/>
+  <circle class="f-muted" cx="240" cy="120" r="9"/>
+  <circle class="f-muted" cx="300" cy="120" r="9"/>
+  <circle class="f-muted" cx="360" cy="120" r="9"/>
+  <circle class="f-muted" cx="80" cy="244" r="7"/>
+  <circle class="f-muted" cx="130" cy="244" r="7"/>
+  <circle class="f-muted" cx="180" cy="244" r="7"/>
+  <path class="s-ink" d="M214 244 H262 M250 232 L262 244 L250 256" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-hl" cx="296" cy="244" r="7"/>
+  <circle class="f-hl" cx="318" cy="244" r="7"/>
+  <circle class="f-hl" cx="340" cy="244" r="7"/>
+  <circle class="f-hl" cx="362" cy="244" r="7"/>
+  <circle class="f-hl" cx="384" cy="244" r="7"/>
+  <circle class="f-hl" cx="406" cy="244" r="7"/>
+</svg>

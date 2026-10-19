@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Two JBL speakers, the PartyBoost button pressed on each, a link between them</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="100" y="30" width="280" height="76" rx="38" stroke-width="3"/>
+  <rect class="f-muted" x="122" y="36" width="236" height="5" rx="2.5"/>
+  <circle class="f-paper s-ink" cx="152" cy="68" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="192" cy="68" r="13" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="232" cy="68" r="13" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="232" cy="68" r="23" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="272" cy="68" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="308" cy="68" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="344" cy="68" r="13" stroke-width="2"/>
+  <path class="s-ink" d="M152 62 V67 M147 64 A7 7 0 1 0 157 64" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M189 64 L196 71 L192 75 V61 L196 65 L189 72" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M230 65 C224 65 224 71 230 71 L234 65 C240 65 240 71 234 71 Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M268 68 H276 M304 68 H312 M308 64 V72" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M341 63 L349 68 L341 73 Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+
+  <rect class="f-soft s-ink" x="100" y="194" width="280" height="76" rx="38" stroke-width="3"/>
+  <rect class="f-muted" x="122" y="200" width="236" height="5" rx="2.5"/>
+  <circle class="f-paper s-ink" cx="152" cy="232" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="192" cy="232" r="13" stroke-width="2"/>
+  <circle class="f-accent s-ink" cx="232" cy="232" r="13" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="232" cy="232" r="23" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="272" cy="232" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="308" cy="232" r="13" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="344" cy="232" r="13" stroke-width="2"/>
+  <path class="s-ink" d="M152 226 V231 M147 228 A7 7 0 1 0 157 228" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M189 228 L196 235 L192 239 V225 L196 229 L189 236" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M230 229 C224 229 224 235 230 235 L234 229 C240 229 240 235 234 235 Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M268 232 H276 M304 232 H312 M308 228 V236" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path class="s-ink" d="M341 227 L349 232 L341 237 Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+
+  <path class="s-accent" d="M240 110 V190" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="3 8"/>
+  <circle class="f-ok" cx="240" cy="150" r="8"/>
+</svg>

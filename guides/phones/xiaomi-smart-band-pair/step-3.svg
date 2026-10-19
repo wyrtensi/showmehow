@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Mi Fitness app: the plus icon at the top right and the Add devices row highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(170 14) scale(1)">
+    <rect class="f-soft s-ink" x="0" y="0" width="140" height="272" rx="26" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="10" y="16" width="120" height="240" rx="16" stroke-width="2"/>
+    <rect class="f-ink" x="56" y="7" width="28" height="5" rx="2.5"/>
+    <rect class="f-ink" x="22" y="32" width="50" height="8" rx="4"/>
+    <circle class="f-accent s-ink" cx="108" cy="36" r="11" stroke-width="2"/>
+    <path class="s-ink" d="M108 30 V42 M102 36 H114" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <circle class="s-hl anim-pulse" cx="108" cy="36" r="19" fill="none" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="40" y="62" width="84" height="100" rx="12" stroke-width="2"/>
+    <rect class="f-accent-soft s-accent" x="46" y="70" width="72" height="26" rx="8" stroke-width="2"/>
+    <rect class="f-ink" x="54" y="79" width="50" height="8" rx="4"/>
+    <rect class="f-muted" x="54" y="112" width="50" height="8" rx="4"/>
+    <rect class="f-muted" x="54" y="136" width="38" height="8" rx="4"/>
+  </g>
+  <path class="s-hl anim-nudge" d="M96 60 H146 M132 47 L146 60 L132 73" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

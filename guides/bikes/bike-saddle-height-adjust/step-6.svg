@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Seat collar bolt being tightened with a hex key, a torque wrench symbol beside it</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="200" y="160" width="80" height="120" rx="6" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="216" y="40" width="48" height="140" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="194" y="150" width="92" height="30" rx="8" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="286" cy="165" r="10" stroke-width="2"/>
+  <path class="s-ink" d="M286 165 H400 M400 165 V120" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M352 210 C376 236 420 226 428 196 M428 196 L412 202 M428 196 L430 214" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

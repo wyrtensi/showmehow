@@ -1,13 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
-  <title>AirPods case, back side, setup button pressed</title>
-  <rect class="f-accent-soft" x="0" y="0" width="480" height="300" rx="24" opacity="0.55"/>
-  <rect class="f-soft s-ink" x="150" y="62" width="180" height="176" rx="56" stroke-width="3"/>
-  <path class="s-ink" d="M150 118 H330" fill="none" stroke-width="2" stroke-linecap="round"/>
-  <rect class="f-muted" x="226" y="70" width="28" height="10" rx="5"/>
-  <circle class="f-paper s-ink" cx="240" cy="184" r="15" stroke-width="3"/>
-  <circle class="f-accent anim-pulse" cx="240" cy="184" r="7"/>
-  <circle class="s-hl anim-pulse" cx="240" cy="184" r="30" fill="none" stroke-width="3" opacity="0.7"/>
-  <path class="f-soft s-ink" d="M300 292 C300 250 296 228 280 214 C270 205 258 205 252 214 L246 222 C242 210 228 206 220 214 C214 220 214 230 218 238 L232 262 C236 270 238 280 238 292 Z" stroke-width="3" stroke-linejoin="round"/>
-  <circle class="f-ok anim-pulse" cx="240" cy="96" r="6"/>
-  <path class="s-hl" d="M216 96 h-14 M264 96 h14 M240 76 v-10" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <title>AirPods case: setup button on the back, status light on the front</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="96" width="150" height="108" rx="40" stroke-width="3"/>
+  <path class="s-ink" d="M52 126 H198" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted" x="100" y="100" width="50" height="8" rx="4"/>
+  <circle class="f-paper s-ink" cx="125" cy="168" r="13" stroke-width="3"/>
+  <circle class="f-accent anim-pulse" cx="125" cy="168" r="6"/>
+  <circle class="s-hl anim-pulse" cx="125" cy="168" r="25" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M214 150 H260 M246 137 L260 150 L246 163" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="290" y="96" width="150" height="108" rx="40" stroke-width="3"/>
+  <path class="s-ink" d="M292 126 H438" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="340" y="100" width="50" height="8" rx="4" stroke-width="1.5"/>
+  <circle class="f-paper s-ink" cx="365" cy="150" r="6" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="365" cy="150" r="16" fill="none" stroke-width="3"/>
+  <path class="s-hl" d="M365 120 V112 M392 150 H400 M338 150 H330 M384 128 L390 122 M346 128 L340 122" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

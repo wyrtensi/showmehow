@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Xbox controller from the front with the central Xbox button highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="104" y="52" width="86" height="22" rx="10" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="290" y="52" width="86" height="22" rx="10" stroke-width="3"/>
+  <path class="f-soft s-ink" d="M120 100 C120 82 160 74 240 74 C320 74 360 82 360 100 C392 140 412 218 388 244 C370 260 342 238 328 206 H152 C138 238 110 260 92 244 C68 218 88 140 120 100 Z" stroke-width="3" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="240" cy="108" r="20" stroke-width="3"/>
+  <circle class="f-accent" cx="240" cy="108" r="10"/>
+  <circle class="s-hl anim-pulse" cx="240" cy="108" r="32" fill="none" stroke-width="3"/>
+  <circle class="f-ink" cx="158" cy="142" r="20"/>
+  <circle class="f-ink" cx="304" cy="184" r="20"/>
+  <path class="f-ink" d="M200 170 H212 V158 H224 V170 H236 V182 H224 V194 H212 V182 H200 Z"/>
+  <circle class="f-muted" cx="322" cy="132" r="7"/>
+  <circle class="f-muted" cx="346" cy="152" r="7"/>
+  <circle class="f-muted" cx="298" cy="152" r="7"/>
+  <circle class="f-muted" cx="322" cy="172" r="7"/>
+</svg>

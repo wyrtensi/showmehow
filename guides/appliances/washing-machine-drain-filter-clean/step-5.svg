@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>A coin, a button and lint sit in the chamber in front of the pump and are taken out</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="110" y="40" width="260" height="220" rx="18" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="240" cy="150" r="70" stroke-width="3"/>
+  <circle class="f-hl s-ink" cx="215" cy="170" r="16" stroke-width="3"/>
+  <circle class="f-soft s-ink" cx="268" cy="150" r="14" stroke-width="3"/>
+  <circle class="f-ink" cx="264" cy="146" r="2" stroke-width="1"/>
+  <circle class="f-ink" cx="272" cy="146" r="2" stroke-width="1"/>
+  <circle class="f-ink" cx="264" cy="154" r="2" stroke-width="1"/>
+  <circle class="f-ink" cx="272" cy="154" r="2" stroke-width="1"/>
+  <path class="s-ink" d="M200 120 q10 -14 20 0 t20 0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M420 70 L290 120" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M297.5 110.7 L290 120 L301.9 121.9" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

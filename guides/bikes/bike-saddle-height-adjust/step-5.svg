@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>View from above: saddle nose lined up with the top tube along the centre line of the bike</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-hl" d="M240 20 V280" fill="none" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"/>
+  <rect class="f-soft s-ink" x="224" y="40" width="32" height="130" rx="10" stroke-width="3"/>
+  <path class="f-accent s-ink" d="M240 176 C206 176 196 206 206 236 C214 262 266 262 274 236 C284 206 274 176 240 176 Z" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="240" cy="190" r="6" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M330 210 H378 M330 210 L344 196 M330 210 L344 224" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Band screen with a check mark to tap, a finger target ring around it</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(240 150)"><rect class="f-muted s-ink" x="-17" y="-60" width="34" height="46" rx="8" stroke-width="2"/><rect class="f-muted s-ink" x="-17" y="46" width="34" height="46" rx="8" stroke-width="2"/><rect class="f-ink s-ink" x="-23" y="-22" width="46" height="72" rx="14" stroke-width="3"/><rect class="f-paper" x="-17" y="-14" width="34" height="56" rx="9"/><path class="s-accent" d="M-8 14 L-2 21 L9 7" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <circle class="s-hl anim-pulse" cx="240" cy="164" r="30" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-tap" d="M300 230 L262 190" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

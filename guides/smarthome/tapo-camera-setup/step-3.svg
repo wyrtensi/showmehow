@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Security camera with its status light blinking red and green</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="f-soft s-ink" d="M150 250 H330 L318 214 H162 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="218" y="196" width="44" height="22" rx="6" stroke-width="2"/>
+  <circle class="f-soft s-ink" cx="240" cy="130" r="82" stroke-width="3"/>
+  <circle class="f-ink" cx="240" cy="130" r="48"/>
+  <circle class="f-muted s-ink" cx="240" cy="130" r="30" stroke-width="2"/>
+  <circle class="f-ink" cx="240" cy="130" r="14"/>
+  <circle class="f-paper" cx="234" cy="124" r="4"/>
+  <circle class="f-warn anim-pulse" cx="318" cy="84" r="7"/>
+  <circle class="f-ok anim-pulse" cx="338" cy="84" r="7"/>
+  <circle class="s-hl anim-pulse" cx="328" cy="84" r="24" fill="none" stroke-width="3"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Pull the plug out of the socket before you touch the machine</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="330" y="100" width="100" height="100" rx="16" stroke-width="3"/>
+  <circle class="f-ink" cx="365" cy="150" r="5" stroke-width="1"/>
+  <circle class="f-ink" cx="395" cy="150" r="5" stroke-width="1"/>
+  <rect class="f-muted s-ink" x="200" y="112" width="80" height="76" rx="14" stroke-width="3"/>
+  <rect class="f-ink" x="280" y="128" width="30" height="10" rx="3" stroke-width="1"/>
+  <rect class="f-ink" x="280" y="162" width="30" height="10" rx="3" stroke-width="1"/>
+  <path class="s-ink" d="M200 150 C150 150 150 220 90 220" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M250 90 L170 90" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M180.4 84.0 L170 90 L180.4 96.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

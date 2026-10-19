@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Cabinet from above: the door slides sideways, the gap to the neighbouring door changes</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="70" y="36" width="26" height="190" rx="4" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="424" y="36" width="26" height="190" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="70" y="226" width="180" height="26" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="270" y="226" width="180" height="26" rx="4" stroke-width="3"/>
+  <rect class="f-hl" x="250" y="226" width="20" height="26" opacity="0.7"/>
+  <rect class="f-accent s-ink" x="96" y="198" width="46" height="28" rx="8" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M130 190 H214 M146 176 L130 190 L146 204 M198 176 L214 190 L198 204" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Hex key turning the adjuster of a foot block to raise or lower the wardrobe</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M30 262 H450" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="110" y="40" width="30" height="160" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="140" y="166" width="250" height="34" rx="4" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="146" y="200" width="50" height="40" rx="6" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="156" y="240" width="30" height="22" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M171 150 V232 M171 150 H232" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M290 120 V230 M274 138 L290 120 L306 138 M274 212 L290 230 L306 212" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

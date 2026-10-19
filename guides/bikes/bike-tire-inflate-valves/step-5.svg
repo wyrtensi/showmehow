@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Floor pump with a pressure gauge, the needle reaching the target mark</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="110" y="250" width="160" height="16" rx="6" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="178" y="110" width="24" height="142" rx="6" stroke-width="3"/>
+  <path class="s-ink" d="M190 110 V44 M160 44 H220" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="f-paper s-ink" cx="340" cy="160" r="52" stroke-width="3"/>
+  <path class="s-ink" d="M300 186 A52 52 0 0 1 380 186" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="s-hl anim-nudge" d="M340 160 L366 128" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="f-ok" cx="370" cy="124" r="6"/>
+  <circle class="f-ink" cx="340" cy="160" r="5"/>
+  <path class="s-ink" d="M202 240 C250 240 270 200 290 190" fill="none" stroke-width="3" stroke-linecap="round"/>
+</svg>

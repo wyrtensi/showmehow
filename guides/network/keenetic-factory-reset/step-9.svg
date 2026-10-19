@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Browser with the router address typed in and the start button highlighted on the page</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="50" y="40" width="380" height="220" rx="16" stroke-width="3"/>
+  <path class="s-ink" d="M50 84 H430" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-muted" cx="74" cy="62" r="6"/>
+  <circle class="f-muted" cx="94" cy="62" r="6"/>
+  <circle class="f-muted" cx="114" cy="62" r="6"/>
+  <rect class="f-accent-soft s-ink" x="80" y="98" width="320" height="28" rx="14" stroke-width="2"/>
+  <rect class="f-ink" x="104" y="108" width="100" height="8" rx="4"/>
+  <circle class="f-accent" cx="240" cy="168" r="14"/>
+  <rect class="f-muted" x="170" y="192" width="140" height="10" rx="5"/>
+  <rect class="f-accent s-ink" x="180" y="214" width="120" height="30" rx="15" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="170" y="206" width="140" height="46" rx="23" fill="none" stroke-width="3"/>
+</svg>

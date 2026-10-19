@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The tip-over kit from the box: a bracket or strap, a wall plug and a screw</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="f-muted s-ink" d="M60 70 H140 V86 H76 V210 H60 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="100" cy="78" r="4" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="68" cy="180" r="4" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="200" y="100" width="26" height="90" rx="12" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="190" y="90" width="46" height="12" rx="4" stroke-width="2"/>
+  <path class="s-ink" d="M200 125 h26 M200 145 h26 M200 165 h26" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-muted s-ink" cx="300" cy="100" r="14" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="294" y="112" width="12" height="90" rx="3" stroke-width="3"/>
+  <path class="s-ink" d="M294 130 h12 M294 150 h12 M294 170 h12 M294 190 h12" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="350" y="100" width="90" height="22" rx="8" stroke-width="3"/>
+  <rect class="f-accent-soft s-ink" x="350" y="140" width="90" height="22" rx="8" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="360" cy="111" r="4" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="360" cy="151" r="4" stroke-width="2"/>
+</svg>

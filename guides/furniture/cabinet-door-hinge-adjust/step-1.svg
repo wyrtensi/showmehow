@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Concealed hinge from above: plate on the cabinet wall, arm with two adjustment screws, cup in the door</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="44" y="50" width="36" height="200" rx="6" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="296" y="60" width="124" height="180" rx="8" stroke-width="3"/>
+  <circle class="f-soft s-ink" cx="340" cy="150" r="34" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="340" cy="150" r="20" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="80" y="124" width="28" height="52" rx="4" stroke-width="2"/>
+  <circle class="f-ink" cx="94" cy="138" r="4"/>
+  <circle class="f-ink" cx="94" cy="162" r="4"/>
+  <rect class="f-accent s-ink" x="108" y="132" width="196" height="36" rx="12" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="196" cy="150" r="9" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="252" cy="150" r="9" stroke-width="2"/>
+  <path class="s-ink" d="M190 150 H202 M246 150 H258" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="s-hl anim-pulse" cx="196" cy="150" r="20" fill="none" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="252" cy="150" r="20" fill="none" stroke-width="3"/>
+</svg>

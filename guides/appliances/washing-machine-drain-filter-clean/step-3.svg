@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>A towel and a shallow container under the flap catch the water that runs out</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M40 180 H440" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-paper s-ink" d="M70 262 Q110 244 150 262 T230 262 T310 262 V280 H70 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-soft s-ink" d="M150 190 H330 L310 252 H170 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent-soft" x="160" y="232" width="160" height="16" rx="4" stroke-width="0"/>
+  <path class="s-ink" d="M380 120 C380 200 340 160 300 195" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-muted s-ink" cx="380" cy="112" r="14" stroke-width="3"/>
+</svg>

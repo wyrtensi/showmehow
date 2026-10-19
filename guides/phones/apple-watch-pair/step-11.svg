@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Apple Watch with a watch face next to an iPhone, sync arrows between them</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(-10 20) scale(0.9)">
+    <rect class="f-muted s-ink" x="206" y="8" width="68" height="58" rx="14" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="206" y="234" width="68" height="58" rx="14" stroke-width="2"/>
+    <rect class="f-soft s-ink" x="176" y="56" width="128" height="188" rx="42" stroke-width="3"/>
+    <rect class="f-ink" x="188" y="70" width="104" height="160" rx="32"/>
+    <circle class="f-paper" cx="240" cy="150" r="44"/>
+    <path class="s-ink" d="M240 150 V122 M240 150 L258 160" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle class="f-accent" cx="240" cy="150" r="4"/>
+    <rect class="f-muted s-ink" x="304" y="104" width="14" height="34" rx="6" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="304" y="152" width="10" height="40" rx="5" stroke-width="2"/>
+  </g>
+  <path class="s-hl anim-pulse" d="M232 120 H270 M258 108 L270 120 L258 132 M270 176 H232 M244 164 L232 176 L244 188" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="300" y="30" width="130" height="240" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="310" y="44" width="110" height="212" rx="16" stroke-width="2"/>
+  <rect class="f-muted" x="322" y="64" width="60" height="8" rx="4"/>
+  <rect class="f-muted" x="322" y="84" width="40" height="8" rx="4"/>
+  <circle class="f-ok" cx="365" cy="170" r="22"/>
+  <path class="s-ink" d="M355 170 L363 178 L377 162" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

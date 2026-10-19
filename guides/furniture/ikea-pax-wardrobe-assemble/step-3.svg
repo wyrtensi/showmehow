@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Packing strap around the folded frame being peeled off by its tab, scissors crossed out</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="110" width="250" height="110" rx="8" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="150" y="104" width="30" height="122" rx="4" stroke-width="2"/>
+  <path class="s-ink" d="M158 150 V140 M165 150 V140 M172 150 V140" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <rect class="f-paper s-ink" x="146" y="82" width="38" height="24" rx="4" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M165 74 V26 M151 42 L165 26 L179 42" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl" cx="390" cy="160" r="52" fill="none" stroke-width="3"/>
+  <path class="s-ink" d="M366 132 L414 188 M414 132 L366 188" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-hl" d="M354 124 L426 196" fill="none" stroke-width="3" stroke-linecap="round"/>
+</svg>

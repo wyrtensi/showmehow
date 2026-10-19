@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Router with its WPS button highlighted and a two-minute timer</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="90" y="46" width="14" height="70" rx="7" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="236" y="46" width="14" height="70" rx="7" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="50" y="108" width="240" height="110" rx="16" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="90" cy="163" r="20" stroke-width="3"/>
+  <circle class="f-accent" cx="90" cy="163" r="9"/>
+  <circle class="s-hl anim-pulse" cx="90" cy="163" r="34" fill="none" stroke-width="3"/>
+  <circle class="f-ok" cx="170" cy="163" r="7"/>
+  <circle class="f-muted" cx="206" cy="163" r="7"/>
+  <circle class="f-muted" cx="242" cy="163" r="7"/>
+  <rect class="f-muted s-ink" x="378" y="64" width="24" height="12" rx="4" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="390" cy="146" r="56" stroke-width="3"/>
+  <path class="f-hl" d="M390 146 V102 A44 44 0 0 1 434 146 Z" opacity="0.8"/>
+  <path class="s-ink" d="M390 146 V102" fill="none" stroke-width="2" stroke-linecap="round"/>
+</svg>

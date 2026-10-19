@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Washing machine control panel, the programme selector dial is turned to the drum cleaning position</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="40" y="70" width="400" height="160" rx="24" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="130" cy="150" r="52" stroke-width="3"/>
+    <circle class="f-muted s-ink" cx="130" cy="150" r="32" stroke-width="2"/>
+    <path class="s-ink" d="M130 150 L156 118" fill="none" stroke-width="3"/>
+    <circle class="f-accent" cx="156" cy="118" r="7"/>
+    <path class="s-hl anim-nudge" d="M70 96 A74 74 0 0 1 190 96" fill="none" stroke-width="3"/>
+    <path class="s-hl" d="M190 96 L176 92 M190 96 L186 110" fill="none" stroke-width="3"/>
+    <rect class="f-ink" x="232" y="100" width="130" height="58" rx="10"/>
+    <rect class="f-ok" x="252" y="116" width="14" height="26" rx="3"/>
+    <rect class="f-ok" x="274" y="116" width="14" height="26" rx="3"/>
+    <circle class="f-ok" cx="304" cy="122" r="3"/>
+    <circle class="f-ok" cx="304" cy="136" r="3"/>
+    <rect class="f-ok" x="316" y="116" width="14" height="26" rx="3"/>
+    <rect class="f-paper s-ink" x="232" y="180" width="58" height="26" rx="10" stroke-width="2"/>
+    <rect class="f-paper s-ink" x="304" y="180" width="58" height="26" rx="10" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="402" cy="150" r="20" stroke-width="3"/>
+    <path class="s-ink" d="M402 140 V151 M394 144 A9 9 0 1 0 410 144" fill="none" stroke-width="2"/>
+  </g>
+</svg>

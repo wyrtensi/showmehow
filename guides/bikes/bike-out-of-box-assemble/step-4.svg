@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Grease the pedal thread and start it by hand; both pedals tighten toward the front of the bike</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <circle class="f-soft s-ink" cx="110" cy="150" r="60" stroke-width="4"/>
+  <circle class="f-muted s-ink" cx="110" cy="150" r="12" stroke-width="3"/>
+  <path class="f-muted s-ink" d="M110 150 L230 190 L226 206 L104 166 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="238" y="176" width="90" height="30" rx="6" stroke-width="3"/>
+  <circle class="f-accent s-ink" cx="232" cy="198" r="8" stroke-width="2"/>
+  <path class="f-accent s-ink" d="M214 150 q10 -26 20 0 q-10 8 -20 0 Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M330 90 L430 90" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M419.6 96.0 L430 90 L419.6 84.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

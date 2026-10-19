@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Charging case turned upside down: the function button on the bottom edge next to the USB-C port</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="120" y="80" width="240" height="150" rx="48" stroke-width="3"/>
+  <path class="s-ink" d="M122 150 H358" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="206" y="168" width="68" height="22" rx="11" stroke-width="2"/>
+  <rect class="f-muted" x="222" y="175" width="36" height="8" rx="4"/>
+  <circle class="f-accent s-ink" cx="318" cy="179" r="13" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="318" cy="179" r="24" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M318 266 V232 M306 244 L318 230 L330 244" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

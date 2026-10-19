@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Reset screen with the factory data reset row highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="22" width="28" height="5" rx="2.5"/>
+  <rect class="f-muted" x="196" y="52" width="60" height="8" rx="4"/>
+  <rect class="f-soft s-ink" x="188" y="80" width="104" height="36" rx="12" stroke-width="2"/>
+  <rect class="f-muted" x="202" y="94" width="56" height="8" rx="4"/>
+  <rect class="f-accent-soft s-accent" x="188" y="130" width="104" height="48" rx="12" stroke-width="3"/>
+  <path class="s-accent" d="M206 168 L218 144 L230 168 Z M218 152 V160" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted" x="240" y="150" width="40" height="8" rx="4"/>
+  <rect class="f-soft s-ink" x="188" y="192" width="104" height="36" rx="12" stroke-width="2"/>
+  <rect class="f-muted" x="202" y="206" width="46" height="8" rx="4"/>
+  <circle class="s-hl anim-tap" cx="262" cy="154" r="20" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M96 154 H150 M136 140 L150 154 L136 168" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

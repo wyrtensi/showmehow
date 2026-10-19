@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Pulled-out pan with basket filled with food below the MAX line</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="70" y="80" width="300" height="150" rx="28" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="92" y="100" width="256" height="110" rx="16" stroke-width="2"/>
+    <rect class="f-soft s-ink" x="370" y="132" width="70" height="18" rx="9" stroke-width="3"/>
+    <rect class="f-accent" x="112" y="148" width="40" height="22" rx="8"/>
+    <rect class="f-accent" x="162" y="140" width="44" height="22" rx="8"/>
+    <rect class="f-accent" x="216" y="150" width="40" height="22" rx="8"/>
+    <rect class="f-accent" x="266" y="142" width="46" height="22" rx="8"/>
+    <rect class="f-accent" x="124" y="176" width="44" height="22" rx="8"/>
+    <rect class="f-accent" x="180" y="178" width="40" height="22" rx="8"/>
+    <rect class="f-accent" x="232" y="180" width="44" height="22" rx="8"/>
+    <rect class="f-accent" x="288" y="176" width="40" height="22" rx="8"/>
+    <path class="s-hl" d="M92 128 H348" fill="none" stroke-width="3" stroke-dasharray="10 8"/>
+    <path class="s-hl anim-nudge" d="M240 48 V84 M226 70 L240 84 L254 70" fill="none" stroke-width="3"/>
+  </g>
+</svg>

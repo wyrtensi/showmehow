@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Three display modes: duplicate, extend and second screen only, the first one selected</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="20" y="70" width="140" height="160" rx="14" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="36" y="100" width="50" height="38" rx="4" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="94" y="100" width="50" height="38" rx="4" stroke-width="2"/>
+  <circle class="f-accent" cx="61" cy="119" r="8"/>
+  <circle class="f-accent" cx="119" cy="119" r="8"/>
+  <rect class="f-accent" x="46" y="176" width="88" height="10" rx="5"/>
+  <rect class="s-hl anim-pulse" x="12" y="62" width="156" height="176" rx="18" fill="none" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="170" y="70" width="140" height="160" rx="14" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="186" y="100" width="50" height="38" rx="4" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="244" y="100" width="50" height="38" rx="4" stroke-width="2"/>
+  <circle class="f-accent" cx="269" cy="119" r="8"/>
+  <rect class="f-muted" x="196" y="176" width="88" height="10" rx="5"/>
+  <rect class="f-paper s-ink" x="320" y="70" width="140" height="160" rx="14" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="336" y="100" width="50" height="38" rx="4" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="394" y="100" width="50" height="38" rx="4" stroke-width="2"/>
+  <circle class="f-accent" cx="419" cy="119" r="8"/>
+  <rect class="f-muted" x="346" y="176" width="88" height="10" rx="5"/>
+</svg>

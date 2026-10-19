@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The pump impeller should turn freely by hand</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="110" y="40" width="260" height="220" rx="18" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="240" cy="150" r="70" stroke-width="3"/>
+  <circle class="f-accent s-ink" cx="240" cy="150" r="10" stroke-width="3"/>
+  <path class="s-ink" d="M240 150 L292.0 150.0" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 150 L266.0 195.0" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 150 L214.0 195.0" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 150 L188.0 150.0" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 150 L214.0 105.0" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 150 L266.0 105.0" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M283.0 75.5 A86 86 0 0 1 314.5 193.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M314.5 182.0 L314.5 193.0 L324.0 187.5" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

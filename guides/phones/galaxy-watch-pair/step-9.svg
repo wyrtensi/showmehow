@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Smartwatch with a tick on its face and a connected phone beside it</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(-60 0)">
+    <rect class="f-muted s-ink" x="212" y="6" width="56" height="70" rx="12" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="212" y="224" width="56" height="70" rx="12" stroke-width="2"/>
+    <circle class="f-soft s-ink" cx="240" cy="150" r="82" stroke-width="3"/>
+    <circle class="f-ink" cx="240" cy="150" r="66"/>
+    <circle class="f-ok" cx="240" cy="150" r="30"/>
+    <path class="s-ink" d="M226 150 L236 161 L256 138" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect class="f-muted s-ink" x="320" y="104" width="14" height="36" rx="6" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="320" y="160" width="14" height="36" rx="6" stroke-width="2"/>
+  </g>
+  <path class="s-hl anim-pulse" d="M296 128 Q310 150 296 172 M282 114 Q304 150 282 186" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="320" y="30" width="120" height="240" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="330" y="44" width="100" height="212" rx="16" stroke-width="2"/>
+  <circle class="f-accent-soft s-accent" cx="380" cy="130" r="30" stroke-width="2"/>
+  <path class="s-accent" d="M371 118 L389 138 L380 146 V114 L389 122 L371 142" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted" x="346" y="190" width="68" height="8" rx="4"/>
+  <rect class="f-muted" x="346" y="210" width="46" height="8" rx="4"/>
+</svg>

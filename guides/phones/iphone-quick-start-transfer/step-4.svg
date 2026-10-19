@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Old and new phone side by side with a wireless signal between them</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="50" width="130" height="200" rx="22" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="69" y="62" width="112" height="176" rx="14" stroke-width="2"/>
+  <rect class="f-accent-soft s-accent" x="78" y="150" width="94" height="68" rx="12" stroke-width="2"/>
+  <rect class="f-accent" x="92" y="190" width="66" height="18" rx="9"/>
+  <rect class="f-muted" x="92" y="164" width="50" height="7" rx="3.5"/>
+  <rect class="f-soft s-ink" x="290" y="50" width="130" height="200" rx="22" stroke-width="3"/>
+  <rect class="f-accent-soft s-ink" x="299" y="62" width="112" height="176" rx="14" stroke-width="2"/>
+  <circle class="f-accent" cx="355" cy="150" r="18"/>
+  <path class="s-hl anim-pulse" d="M222 126 Q238 150 222 174 M208 112 Q232 150 208 188 M258 126 Q242 150 258 174 M272 112 Q248 150 272 188" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

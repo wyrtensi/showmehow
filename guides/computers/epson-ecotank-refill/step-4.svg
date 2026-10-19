@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Four ink tanks with one cap open and the matching colour highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="90" width="380" height="170" rx="14" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="72" y="120" width="76" height="120" rx="8" stroke-width="2"/><rect class="f-ink" x="74" y="170" width="72" height="68" rx="6"/>
+  <rect class="f-paper s-ink" x="162" y="120" width="76" height="120" rx="8" stroke-width="2"/><rect class="f-accent" x="164" y="170" width="72" height="68" rx="6"/>
+  <rect class="f-paper s-ink" x="252" y="120" width="76" height="120" rx="8" stroke-width="2"/><rect class="f-hl" x="254" y="170" width="72" height="68" rx="6"/>
+  <rect class="f-paper s-ink" x="342" y="120" width="76" height="120" rx="8" stroke-width="2"/><rect class="f-warn" x="344" y="170" width="72" height="68" rx="6"/>
+  <rect class="f-muted s-ink" x="76" y="98" width="68" height="18" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="256" y="98" width="68" height="18" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="346" y="98" width="68" height="18" rx="6" stroke-width="2"/>
+  <path class="f-accent s-ink" d="M166 112 L236 112 L248 62 L178 62 Z" stroke-width="2" stroke-linejoin="round"/>
+  <rect class="s-hl anim-pulse" x="156" y="114" width="88" height="132" rx="12" fill="none" stroke-width="3"/>
+</svg>

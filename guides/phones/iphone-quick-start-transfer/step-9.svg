@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Two phones on charge next to each other with a transfer progress bar</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="30" width="130" height="200" rx="22" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="69" y="42" width="112" height="176" rx="14" stroke-width="2"/>
+  <polygon class="f-accent" points="130,100 108,140 124,140 118,172 142,128 126,128"/>
+  <path class="s-ink" d="M125 230 V262" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-muted s-ink" x="117" y="262" width="16" height="22" rx="4" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="290" y="30" width="130" height="200" rx="22" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="299" y="42" width="112" height="176" rx="14" stroke-width="2"/>
+  <polygon class="f-accent" points="360,100 338,140 354,140 348,172 372,128 356,128"/>
+  <path class="s-ink" d="M355 230 V262" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-muted s-ink" x="347" y="262" width="16" height="22" rx="4" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M206 110 H274 M262 98 L274 110 L262 122" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="202" y="150" width="76" height="16" rx="8" stroke-width="2"/>
+  <rect class="f-accent" x="206" y="154" width="40" height="8" rx="4"/>
+</svg>

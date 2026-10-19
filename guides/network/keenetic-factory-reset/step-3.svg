@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Router back panel with network ports and the reset button hole highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="90" width="380" height="120" rx="18" stroke-width="3"/>
+  <rect class="f-ink s-ink" x="84" y="130" width="38" height="38" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="134" y="130" width="38" height="38" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="184" y="130" width="38" height="38" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="234" y="130" width="38" height="38" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="284" y="130" width="38" height="38" rx="6" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="356" cy="149" r="12" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="394" cy="182" r="9" stroke-width="2"/>
+  <circle class="f-accent" cx="394" cy="182" r="4"/>
+  <circle class="s-hl anim-pulse" cx="394" cy="182" r="18" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M394 270 V228 M380 242 L394 228 L408 242" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

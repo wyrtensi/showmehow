@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Back of the AirPods case, setup button held for 15 seconds</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="132" y="40" width="216" height="168" rx="54" stroke-width="3"/>
+  <path class="s-ink" d="M132 92 H348" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <rect class="f-muted" x="224" y="52" width="32" height="10" rx="5"/>
+  <circle class="f-paper s-ink" cx="240" cy="152" r="16" stroke-width="3"/>
+  <circle class="f-accent anim-pulse" cx="240" cy="152" r="7"/>
+  <path class="s-hl anim-pulse" d="M240 106 A46 46 0 1 1 194 152" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-soft s-ink" d="M286 296 C286 262 284 246 270 234 C262 228 252 228 246 236 L240 244 C236 234 224 232 216 238 C210 244 210 254 214 262 L226 280 C230 286 232 292 232 296 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

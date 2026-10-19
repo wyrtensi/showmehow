@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Enlarged microwave panel, the confirm button highlighted at the bottom right</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="60" y="50" width="360" height="200" rx="22" stroke-width="3"/>
+    <rect class="f-ink" x="90" y="76" width="300" height="56" rx="12"/>
+    <rect class="f-ok" x="150" y="92" width="22" height="26" rx="4"/>
+    <rect class="f-ok" x="184" y="92" width="22" height="26" rx="4"/>
+    <circle class="f-ok" cx="228" cy="98" r="4"/>
+    <circle class="f-ok" cx="228" cy="112" r="4"/>
+    <rect class="f-ok" x="250" y="92" width="22" height="26" rx="4"/>
+    <rect class="f-ok" x="284" y="92" width="22" height="26" rx="4"/>
+    <rect class="f-paper s-ink" x="90" y="156" width="80" height="40" rx="12" stroke-width="2"/>
+    <rect class="f-paper s-ink" x="190" y="156" width="80" height="40" rx="12" stroke-width="2"/>
+    <rect class="f-paper s-ink" x="290" y="156" width="100" height="40" rx="12" stroke-width="2"/>
+    <rect class="f-paper s-ink" x="90" y="208" width="80" height="28" rx="12" stroke-width="2"/>
+    <rect class="f-paper s-ink" x="190" y="208" width="80" height="28" rx="12" stroke-width="2"/>
+    <rect class="f-accent s-ink" x="290" y="208" width="100" height="28" rx="12" stroke-width="3"/>
+    <path class="s-paper" d="M318 222 L330 232 L362 214" fill="none" stroke-width="3"/>
+    <rect class="s-hl anim-tap" x="280" y="198" width="120" height="48" rx="18" fill="none" stroke-width="3"/>
+  </g>
+</svg>

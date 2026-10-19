@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>A clean rag wrapped around the chain wiping off the excess lube while the chain moves</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="40" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="88" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="136" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="290" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="338" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="386" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <path class="f-paper s-ink" d="M180 140 C200 120 270 120 290 140 L290 226 C270 246 200 246 180 226 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="186" y="170" width="98" height="26" rx="8" stroke-width="2" opacity="0.6"/>
+  <path class="s-hl anim-nudge" d="M146 90 H214 M162 76 L146 90 L162 104" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M232 266 L232 282 M250 266 L250 282" fill="none" stroke-width="3" stroke-linecap="round"/>
+</svg>

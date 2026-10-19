@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Remote pointed at the wall-mounted indoor unit while the power button is pressed</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="40" y="30" width="400" height="104" rx="26" stroke-width="3"/>
+    <rect class="f-muted s-ink" x="60" y="104" width="360" height="18" rx="9" stroke-width="2"/>
+    <circle class="f-ok anim-pulse" cx="386" cy="62" r="6"/>
+    <rect class="f-ink" x="340" y="52" width="26" height="20" rx="4"/>
+    <path class="s-ink" d="M70 62 H300 M70 80 H300" fill="none" stroke-width="2" opacity="0.4"/>
+    <rect class="f-soft s-ink" x="64" y="190" width="44" height="100" rx="14" stroke-width="3" transform="rotate(-30 86 240)"/>
+    <circle class="f-accent s-ink" cx="104" cy="206" r="8" stroke-width="2"/>
+    <path class="s-hl anim-pulse" d="M150 196 A48 48 0 0 1 190 150 M170 214 A78 78 0 0 1 238 150 M190 232 A110 110 0 0 1 290 150" fill="none" stroke-width="3" opacity="0.8"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Rinse the filter under running water; use a soft brush if it is greasy</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M60 70 H150 Q170 70 170 90 V110" fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="150" y="108" width="40" height="14" rx="4" stroke-width="3"/>
+  <path class="s-accent" d="M160 132 L160 154" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-accent" d="M170 132 L170 154" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-accent" d="M180 132 L180 154" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="140.0" y="170" width="80" height="80" rx="6" stroke-width="3"/>
+  <ellipse class="f-soft s-ink" cx="180" cy="170" rx="40.0" ry="12" stroke-width="3"/>
+  <path class="s-ink" d="M153.3 184 L153.3 246" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M166.7 184 L166.7 246" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M180.0 184 L180.0 246" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M193.3 184 L193.3 246" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M206.7 184 L206.7 246" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-hl s-ink" x="300" y="190" width="40" height="14" rx="6" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="340" y="192" width="60" height="10" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M300 193 L292 193" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M300 196 L292 196" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M300 199 L292 199" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M300 202 L292 202" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M300 205 L292 205" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M250 150 L290 196" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M278.7 192.1 L290 196 L287.7 184.2" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

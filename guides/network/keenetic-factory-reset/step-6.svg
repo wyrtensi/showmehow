@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Web interface with a reset button highlighted and a confirmation field</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="40" y="36" width="400" height="228" rx="16" stroke-width="3"/>
+  <path class="s-ink" d="M40 74 H440 M130 74 V264" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-muted" cx="62" cy="55" r="6"/>
+  <circle class="f-muted" cx="82" cy="55" r="6"/>
+  <circle class="f-muted" cx="102" cy="55" r="6"/>
+  <rect class="f-muted" x="54" y="96" width="62" height="10" rx="5"/>
+  <rect class="f-accent" x="54" y="124" width="62" height="10" rx="5"/>
+  <rect class="f-muted" x="54" y="152" width="62" height="10" rx="5"/>
+  <rect class="f-muted" x="150" y="94" width="150" height="12" rx="6"/>
+  <rect class="f-accent s-ink" x="150" y="126" width="130" height="34" rx="10" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="142" y="118" width="146" height="50" rx="14" fill="none" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="150" y="190" width="200" height="30" rx="8" stroke-width="2"/>
+  <rect class="f-ink" x="164" y="201" width="72" height="8" rx="4"/>
+  <rect class="f-muted" x="370" y="190" width="54" height="30" rx="8"/>
+</svg>

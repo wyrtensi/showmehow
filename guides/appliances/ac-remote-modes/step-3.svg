@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Remote with the Mode button highlighted and a snowflake for cooling mode</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-soft s-ink" x="70" y="14" width="120" height="262" rx="18" stroke-width="3"/>
+    <rect class="f-ink" x="82" y="30" width="96" height="48" rx="8"/>
+    <rect class="f-ok" x="100" y="42" width="12" height="24" rx="3"/>
+    <rect class="f-ok" x="120" y="42" width="12" height="24" rx="3"/>
+    <circle class="f-paper s-ink" cx="98" cy="106" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="162" cy="106" r="11" stroke-width="2"/>
+    <circle class="f-accent s-ink" cx="98" cy="136" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="130" cy="136" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="162" cy="136" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="130" cy="166" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="98" cy="196" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="130" cy="196" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="162" cy="196" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="98" cy="226" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="130" cy="226" r="11" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="162" cy="226" r="11" stroke-width="2"/>
+    <circle class="s-hl anim-pulse" cx="98" cy="136" r="20" fill="none" stroke-width="3"/>
+    <path class="s-hl" d="M200 136 H250 M236 124 L250 136 L236 148" fill="none" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="340" cy="140" r="64" stroke-width="3"/>
+    <path class="s-accent" d="M340 90 V190 M297 115 L383 165 M297 165 L383 115" fill="none" stroke-width="3"/>
+    <path class="s-accent" d="M328 98 L340 108 L352 98 M328 182 L340 172 L352 182" fill="none" stroke-width="3"/>
+  </g>
+</svg>

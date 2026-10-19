@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Coffee machine control panel with the descale light blinking</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="150" y="22" width="180" height="256" rx="18" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="172" y="34" width="136" height="24" rx="8" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="172" y="70" width="136" height="66" rx="10" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="192" cy="90" r="6" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="210" cy="90" r="6" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="228" cy="90" r="6" stroke-width="2"/>
+  <circle class="f-warn anim-pulse s-ink" cx="246" cy="90" r="6" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="200" cy="118" r="9" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="284" cy="104" r="17" stroke-width="3"/>
+  <path class="s-ink" d="M284 104 L284 91" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="204" y="148" width="72" height="56" rx="8" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="232" y="150" width="16" height="34" rx="4" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="214" y="190" width="12" height="14" rx="3" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="254" y="190" width="12" height="14" rx="3" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="170" y="226" width="140" height="40" rx="8" stroke-width="2"/>
+  <path class="s-ink" d="M186 240 L294 240" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M186 252 L294 252" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="246" cy="90" r="18" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M380 60 L276 86" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M284.6 77.7 L276 86 L287.5 89.3" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="400" cy="200" r="32" stroke-width="3"/>
+  <circle class="f-warn anim-pulse s-ink" cx="400" cy="200" r="12" stroke-width="2"/>
+</svg>

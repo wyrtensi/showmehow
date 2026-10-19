@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Old iPhone sending a backup up to the cloud and the data to a new phone</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(40 40) scale(0.8)">
+    <rect class="f-soft s-ink" x="0" y="0" width="140" height="272" rx="26" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="10" y="16" width="120" height="240" rx="16" stroke-width="2"/>
+    <rect class="f-ink" x="56" y="7" width="28" height="5" rx="2.5"/>
+    <rect class="f-muted" x="24" y="60" width="60" height="8" rx="4"/>
+    <rect class="f-muted" x="24" y="80" width="80" height="8" rx="4"/>
+    <rect class="f-muted" x="24" y="100" width="40" height="8" rx="4"/>
+  </g>
+  <path class="f-paper s-ink" d="M206 108 H270 A18 18 0 0 0 266 74 A24 24 0 0 0 220 80 A16 16 0 0 0 206 108 Z" stroke-width="3" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M152 100 L196 94 M186 82 L198 94 L184 104" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <g transform="translate(350 40) scale(0.8)">
+    <rect class="f-soft s-ink" x="0" y="0" width="140" height="272" rx="26" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="10" y="16" width="120" height="240" rx="16" stroke-width="2"/>
+    <rect class="f-ink" x="56" y="7" width="28" height="5" rx="2.5"/>
+    <rect class="f-muted" x="24" y="60" width="60" height="8" rx="4"/>
+    <rect class="f-muted" x="24" y="80" width="80" height="8" rx="4"/>
+    <rect class="f-muted" x="24" y="100" width="40" height="8" rx="4"/>
+  </g>
+  <path class="s-hl anim-nudge" d="M284 96 H340 M326 83 L340 96 L326 109" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

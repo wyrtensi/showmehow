@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The front wheel goes up into the fork; centre the brake rotor and close the axle</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M170 30 V150 M310 30 V150" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M170 30 H310" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="240" cy="220" r="66" stroke-width="5"/>
+  <circle class="f-muted s-ink" cx="240" cy="220" r="8" stroke-width="3"/>
+  <circle class="f-accent-soft s-ink" cx="240" cy="220" r="28" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="158" y="150" width="24" height="14" rx="4" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="298" y="150" width="24" height="14" rx="4" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M400 200 L400 160" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M406.0 170.4 L400 160 L394.0 170.4" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="170" cy="157" r="22" fill="none" stroke-width="3"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Back panel with nails along its edges and the centre line, one nail being hammered in</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="50" y="60" width="300" height="190" rx="6" stroke-width="3"/>
+  <path class="s-ink" d="M50 155 H350" fill="none" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8"/>
+  <circle class="f-ink" cx="74" cy="80" r="5"/>
+  <circle class="f-ink" cx="150" cy="80" r="5"/>
+  <circle class="f-ink" cx="226" cy="80" r="5"/>
+  <circle class="f-ink" cx="326" cy="80" r="5"/>
+  <circle class="f-ink" cx="74" cy="230" r="5"/>
+  <circle class="f-ink" cx="150" cy="230" r="5"/>
+  <circle class="f-ink" cx="226" cy="230" r="5"/>
+  <circle class="f-ink" cx="326" cy="230" r="5"/>
+  <circle class="f-ink" cx="74" cy="155" r="5"/>
+  <circle class="f-ink" cx="150" cy="155" r="5"/>
+  <circle class="f-ink" cx="326" cy="155" r="5"/>
+  <circle class="f-accent" cx="226" cy="155" r="7"/>
+  <circle class="s-hl anim-pulse" cx="226" cy="155" r="20" fill="none" stroke-width="3"/>
+  <path class="s-ink" d="M380 250 L318 142" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-accent s-ink" x="286" y="104" width="64" height="26" rx="6" stroke-width="3" transform="rotate(30 318 117)"/>
+</svg>

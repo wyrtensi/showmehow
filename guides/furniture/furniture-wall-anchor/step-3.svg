@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The bracket is screwed to the back of the furniture, near its top edge</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="120" y="40" width="190" height="220" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="120" y="40" width="190" height="18" rx="4" stroke-width="3"/>
+  <path class="f-accent s-ink" d="M310 56 H350 V74 H328 V120 H310 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="318" cy="100" r="4" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="322" cy="80" r="28" fill="none" stroke-width="3"/>
+  <path class="s-ink" d="M350 40 L350 262" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

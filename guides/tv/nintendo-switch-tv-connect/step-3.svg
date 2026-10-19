@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Upper dock connector with a USB-C plug, cable running to a wall outlet</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="40" y="50" width="230" height="200" rx="14" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="64" y="84" width="182" height="52" rx="12" stroke-width="2"/>
+  <rect class="f-ink s-ink" x="64" y="164" width="182" height="52" rx="12" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="206" y="96" width="76" height="28" rx="14" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="54" y="74" width="212" height="72" rx="18" fill="none" stroke-width="3"/>
+  <path class="s-ink" d="M282 110 H320 C346 110 346 190 372 190 H388" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="388" y="148" width="62" height="86" rx="10" stroke-width="3"/>
+  <circle class="f-ink" cx="408" cy="191" r="5"/>
+  <circle class="f-ink" cx="430" cy="191" r="5"/>
+</svg>

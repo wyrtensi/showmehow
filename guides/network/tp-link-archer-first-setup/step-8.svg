@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Setup complete screen with a large check mark and a firmware auto-update switch</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="26" width="360" height="248" rx="18" stroke-width="3"/>
+  <rect class="f-paper" x="68" y="34" width="344" height="232" rx="12"/>
+  <circle class="f-accent-soft s-accent" cx="240" cy="98" r="34" stroke-width="3"/>
+  <path class="s-accent" d="M224 98 L236 110 L258 84" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+  <rect class="f-soft" x="100" y="152" width="280" height="40" rx="12"/>
+  <rect class="f-muted" x="116" y="168" width="120" height="8" rx="4"/>
+  <rect class="f-accent" x="318" y="162" width="46" height="22" rx="11"/>
+  <circle class="f-paper" cx="353" cy="173" r="8"/>
+  <rect class="f-accent s-ink" x="306" y="224" width="84" height="32" rx="16" stroke-width="2"/>
+  <path class="s-ink" d="M342 240 H356 M351 235 L356 240 L351 245" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect class="s-hl anim-pulse" x="300" y="218" width="96" height="44" rx="22" stroke-width="3" fill="none"/>
+</svg>

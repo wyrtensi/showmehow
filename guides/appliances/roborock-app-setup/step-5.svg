@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Hold the home and power buttons together until the voice says Wi-Fi is being reset</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <circle class="f-soft s-ink" cx="240" cy="150" r="120" stroke-width="3"/>
+  <circle class="f-accent anim-pulse s-ink" cx="240" cy="96" r="8" stroke-width="2"/>
+  <path class="s-ink" d="M226 88 A18 18 0 0 1 254 88 M231 82 A11 11 0 0 1 249 82" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="190" cy="170" r="24" stroke-width="3"/>
+  <path class="s-ink" d="M178 172 L190 160 L202 172 V182 H178 Z" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="290" cy="170" r="24" stroke-width="3"/>
+  <path class="s-ink" d="M290 158 V170 M280 162 A14 14 0 1 0 300 162" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="190" cy="170" r="36" fill="none" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="290" cy="170" r="36" fill="none" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="420" cy="70" r="28" stroke-width="3"/>
+  <path class="s-hl" d="M420 70 L434.5 78.4" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M420 70 L420 50" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="415" y="33" width="10" height="7" rx="2" stroke-width="2"/>
+</svg>

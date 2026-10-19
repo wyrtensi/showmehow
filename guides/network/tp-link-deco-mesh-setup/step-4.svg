@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Two Deco units: steady yellow light while starting, pulsing blue light when ready</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="f-soft s-ink" d="M60 220 V110 C60 56 160 56 160 110 V220 C160 244 60 244 60 220 Z" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse class="f-paper s-ink" cx="110" cy="110" rx="50" ry="14" stroke-width="2"/>
+  <circle class="f-warn" cx="110" cy="190" r="10"/>
+  <path class="s-ink" d="M208 150 H262 M248 136 L262 150 L248 164" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-soft s-ink" d="M320 220 V110 C320 56 420 56 420 110 V220 C420 244 320 244 320 220 Z" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse class="f-paper s-ink" cx="370" cy="110" rx="50" ry="14" stroke-width="2"/>
+  <circle class="f-accent anim-pulse" cx="370" cy="190" r="10"/>
+  <circle class="s-hl anim-pulse" cx="370" cy="190" r="24" fill="none" stroke-width="3"/>
+</svg>

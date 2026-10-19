@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Printer connected to a laptop by a USB cable, with wireless waves as the alternative</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="92" y="76" width="110" height="52" rx="6" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="60" y="118" width="174" height="92" rx="16" stroke-width="3"/>
+  <rect class="f-ink" x="90" y="168" width="114" height="10" rx="5"/>
+  <rect class="f-paper s-ink" x="102" y="184" width="90" height="50" rx="4" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="176" y="132" width="40" height="18" rx="5" stroke-width="2"/>
+  <circle class="f-ok" cx="188" cy="141" r="4"/>
+  <rect class="f-paper s-ink" x="310" y="96" width="132" height="92" rx="8" stroke-width="3"/>
+  <rect class="f-accent-soft" x="322" y="108" width="108" height="68" rx="4"/>
+  <rect class="f-soft s-ink" x="288" y="194" width="176" height="16" rx="8" stroke-width="3"/>
+  <path class="s-accent anim-nudge" d="M234 190 C262 190 270 240 300 240 C320 240 322 214 340 206" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M248 100 A24 24 0 0 1 296 100 M236 88 A40 40 0 0 1 308 88" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-hl" cx="272" cy="112" r="5"/>
+</svg>

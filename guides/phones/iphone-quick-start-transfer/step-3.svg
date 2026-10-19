@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Old phone with Wi-Fi and Bluetooth turned on</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="22" width="28" height="5" rx="2.5"/>
+  <circle class="f-accent-soft s-accent" cx="240" cy="92" r="34" stroke-width="2"/>
+  <path class="s-accent" d="M222 88 Q240 72 258 88 M229 96 Q240 86 251 96" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-accent" cx="240" cy="105" r="3.5"/>
+  <circle class="f-accent-soft s-accent" cx="240" cy="176" r="34" stroke-width="2"/>
+  <path class="s-accent" d="M230 163 L250 189 L240 197 V155 L250 163 L230 189" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="s-hl anim-pulse" cx="240" cy="92" r="44" fill="none" stroke-width="3" opacity="0.7"/>
+  <circle class="s-hl anim-pulse" cx="240" cy="176" r="44" fill="none" stroke-width="3" opacity="0.7"/>
+  <rect class="f-ink" x="214" y="254" width="52" height="5" rx="2.5"/>
+</svg>

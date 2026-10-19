@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Degreaser spray can aimed at the chain, spray droplets landing on the links</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-accent s-ink" x="56" y="70" width="64" height="150" rx="14" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="76" y="46" width="24" height="26" rx="6" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="80" y="110" width="40" height="64" rx="6" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M100 56 H170 M170 56 L186 74 M170 56 L186 40 M196 56 H212" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-hl" cx="236" cy="46" r="5"/>
+  <circle class="f-hl" cx="268" cy="64" r="5"/>
+  <circle class="f-hl" cx="300" cy="82" r="5"/>
+  <rect class="f-muted s-ink" x="190" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="238" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="286" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="334" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="382" y="170" width="44" height="26" rx="8" stroke-width="3"/>
+</svg>

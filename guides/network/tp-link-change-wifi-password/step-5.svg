@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Wireless settings form: the network name and the password fields highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="26" width="360" height="248" rx="18" stroke-width="3"/>
+  <rect class="f-paper" x="68" y="34" width="344" height="232" rx="12"/>
+  <rect class="f-muted" x="90" y="52" width="60" height="8" rx="4"/>
+  <rect class="f-accent-soft s-accent" x="90" y="64" width="300" height="34" rx="10" stroke-width="2"/>
+  <rect class="f-muted" x="104" y="77" width="100" height="8" rx="4"/>
+  <rect class="f-muted" x="90" y="112" width="60" height="8" rx="4"/>
+  <rect class="f-accent-soft s-accent" x="90" y="124" width="300" height="34" rx="10" stroke-width="2"/>
+  <rect class="f-muted" x="104" y="137" width="100" height="8" rx="4"/>
+  <rect class="f-soft" x="90" y="176" width="140" height="22" rx="11"/>
+  <rect class="f-muted" x="104" y="183" width="70" height="8" rx="4"/>
+</svg>

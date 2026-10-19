@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Coarse filter: turn it counterclockwise and lift the whole filter out</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="200.0" y="120" width="80" height="110" rx="6" stroke-width="3"/>
+  <ellipse class="f-soft s-ink" cx="240" cy="120" rx="40.0" ry="12" stroke-width="3"/>
+  <path class="s-ink" d="M213.3 134 L213.3 226" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M226.7 134 L226.7 226" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240.0 134 L240.0 226" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M253.3 134 L253.3 226" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M266.7 134 L266.7 226" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="222" y="86" width="36" height="22" rx="6" stroke-width="3"/>
+  <path class="s-hl" d="M305.8 121.9 A70 70 0 1 0 174.2 121.9" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M165.8 114.8 L174.2 121.9 L176.1 111.1" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M240 78 L240 30" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M246.0 40.4 L240 30 L234.0 40.4" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="170" y="250" width="140" height="16" rx="6" stroke-width="2"/>
+</svg>

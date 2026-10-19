@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Let the washed filter dry in a ventilated shady spot, out of direct sun</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <polygon class="f-paper s-ink" points="120,250 260,250 300,90 160,90" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M148 250 L188 90" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M176 250 L216 90" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M204 250 L244 90" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M232 250 L272 90" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M260 250 L300 90" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-hl s-ink" cx="380" cy="70" r="28" stroke-width="3"/>
+  <path class="s-ink" d="M418 70 L430 70" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M407 97 L415 105" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M380 108 L380 120" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M353 97 L345 105" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M342 70 L330 70" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M353 43 L345 35" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M380 32 L380 20" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M407 43 L415 35" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M350 40 L410 100" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M410 40 L350 100" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-accent" d="M330 190 q20 -14 40 0 t40 0 M330 220 q20 -14 40 0 t40 0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

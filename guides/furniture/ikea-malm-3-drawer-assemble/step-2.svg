@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Four threaded bolts are screwed into the base panel lying on a soft surface</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <polygon class="f-paper s-ink" points="60,250 360,250 420,200 120,200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-muted s-ink" points="60,250 360,250 360,262 60,262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="155" y="120" width="10" height="56" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M155 148.0 h10 M155 159.2 h10 M155 170.4 h10" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="195" y="120" width="10" height="56" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M195 148.0 h10 M195 159.2 h10 M195 170.4 h10" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="295" y="120" width="10" height="56" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M295 148.0 h10 M295 159.2 h10 M295 170.4 h10" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="335" y="120" width="10" height="56" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M335 148.0 h10 M335 159.2 h10 M335 170.4 h10" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M175.6 103.1 A26 26 0 0 1 224.4 103.1" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M216.0 96.0 L224.4 103.1 L226.3 92.3" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

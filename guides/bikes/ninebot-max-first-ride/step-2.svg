@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The handlebar slides onto the stem with the headlight facing forward</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M240 280 V150" fill="none" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="110" y="90" width="260" height="26" rx="12" stroke-width="4"/>
+  <path class="f-hl s-ink" d="M222 56 A18 18 0 0 1 258 56 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 116 C190 140 290 140 240 170" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M380 50 L380 110" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M374.0 99.6 L380 110 L386.0 99.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

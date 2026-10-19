@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Seat collar with a quick release lever being opened while the other hand holds the seatpost</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="200" y="150" width="80" height="130" rx="6" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="216" y="30" width="48" height="140" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="194" y="150" width="92" height="30" rx="8" stroke-width="3"/>
+  <path class="s-ink" d="M286 165 H330" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-accent s-ink" x="330" y="150" width="76" height="30" rx="14" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M380 130 C392 100 420 100 432 126 M432 126 L416 124 M432 126 L428 142" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M170 60 V120 M154 76 L170 60 L186 76 M154 104 L170 120 L186 104" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

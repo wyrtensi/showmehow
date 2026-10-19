@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Handlebar control panel with a round power button being pressed and sound waves from the scooter</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="40" y="120" width="400" height="30" rx="14" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="160" y="60" width="160" height="110" rx="18" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="184" y="80" width="112" height="30" rx="8" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="240" cy="140" r="16" stroke-width="3"/>
+  <circle class="f-accent anim-pulse" cx="240" cy="140" r="7"/>
+  <circle class="s-hl anim-pulse" cx="240" cy="140" r="30" fill="none" stroke-width="3" opacity="0.7"/>
+  <path class="s-hl" d="M380 70 C396 82 396 98 380 110 M398 60 C424 82 424 100 398 122" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-ink" d="M240 170 V270" fill="none" stroke-width="3" stroke-linecap="round"/>
+</svg>

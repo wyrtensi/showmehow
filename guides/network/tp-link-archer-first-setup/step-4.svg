@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Setup wizard: a time zone drop-down list and the Next button highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="26" width="360" height="248" rx="18" stroke-width="3"/>
+  <rect class="f-paper" x="68" y="34" width="344" height="232" rx="12"/>
+  <rect class="f-ink" x="90" y="56" width="120" height="10" rx="5"/>
+  <rect class="f-accent-soft s-accent" x="90" y="90" width="300" height="34" rx="10" stroke-width="2"/>
+  <rect class="f-muted" x="104" y="103" width="100" height="8" rx="4"/>
+  <path class="s-ink" d="M360 104 L368 112 L376 104" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect class="f-paper s-ink" x="90" y="134" width="300" height="34" rx="10" stroke-width="2"/>
+  <rect class="f-muted" x="104" y="147" width="100" height="8" rx="4"/>
+  <rect class="f-paper s-ink" x="90" y="178" width="300" height="34" rx="10" stroke-width="2"/>
+  <rect class="f-muted" x="104" y="191" width="100" height="8" rx="4"/>
+  <rect class="f-accent s-ink" x="306" y="224" width="84" height="32" rx="16" stroke-width="2"/>
+  <path class="s-ink" d="M342 240 H356 M351 235 L356 240 L351 245" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect class="s-hl anim-pulse" x="300" y="218" width="96" height="44" rx="22" stroke-width="3" fill="none"/>
+</svg>

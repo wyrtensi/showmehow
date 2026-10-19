@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Headphones: hold the power button on the left ear cup until the light flashes twice</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g transform="translate(240 150) scale(1.1)"><path class="f-soft s-ink" d="M-108 20 C-108 -130 108 -130 108 20 L84 20 C84 -85 -84 -85 -84 20 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect class="f-soft s-ink" x="-140" y="-10" width="62" height="110" rx="28" stroke-width="3"/><rect class="f-soft s-ink" x="78" y="-10" width="62" height="110" rx="28" stroke-width="3"/><rect class="f-muted" x="-92" y="6" width="10" height="78" rx="5"/><rect class="f-muted" x="82" y="6" width="10" height="78" rx="5"/><rect class="f-accent" x="-148" y="50" width="10" height="28" rx="5"/></g>
+  <circle class="s-hl anim-pulse" cx="83" cy="220" r="26" fill="none" stroke-width="3"/>
+  <circle class="f-accent anim-pulse" cx="124" cy="168" r="5"/>
+  <circle class="f-accent anim-pulse" cx="124" cy="186" r="5"/>
+</svg>

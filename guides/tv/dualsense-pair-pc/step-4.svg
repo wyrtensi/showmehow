@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>List of nearby Bluetooth devices with the wireless controller row highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="60" y="30" width="360" height="240" rx="14" stroke-width="3"/>
+  <rect class="f-ink" x="86" y="54" width="120" height="12" rx="6"/>
+  <rect class="f-soft s-ink" x="84" y="88" width="312" height="44" rx="12" stroke-width="2"/>
+  <rect class="f-muted" x="132" y="105" width="110" height="10" rx="5"/>
+  <circle class="f-muted" cx="108" cy="110" r="10"/>
+  <rect class="f-accent-soft s-accent" x="84" y="146" width="312" height="52" rx="12" stroke-width="3"/>
+  <path class="f-ink" d="M98 168 h6 v-6 h6 v6 h6 v6 h-6 v6 h-6 v-6 h-6 Z"/>
+  <rect class="f-ink" x="132" y="166" width="120" height="10" rx="5"/>
+  <rect class="f-accent s-ink" x="320" y="158" width="64" height="28" rx="8" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="78" y="140" width="324" height="64" rx="16" fill="none" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="84" y="212" width="312" height="40" rx="12" stroke-width="2"/>
+  <rect class="f-muted" x="132" y="228" width="90" height="10" rx="5"/>
+  <circle class="f-muted" cx="108" cy="232" r="10"/>
+</svg>

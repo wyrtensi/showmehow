@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Hold the power button to switch the robot on, then put it on the dock</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <circle class="f-soft s-ink" cx="150" cy="160" r="70" stroke-width="3"/>
+  <circle class="f-muted s-ink" cx="150" cy="160" r="16" stroke-width="3"/>
+  <circle class="f-accent s-ink" cx="150" cy="104" r="5" stroke-width="2"/>
+  <circle class="f-accent anim-pulse s-ink" cx="150" cy="160" r="8" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="150" cy="160" r="26" fill="none" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="340" y="130" width="70" height="60" rx="12" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="336" y="150" width="14" height="20" rx="4" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M230 160 L320 160" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M309.6 166.0 L320 160 L309.6 154.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

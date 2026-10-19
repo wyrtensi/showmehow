@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Wizard form with two input fields and a Next button highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="90" y="30" width="300" height="240" rx="16" stroke-width="3"/>
+  <rect class="f-ink" x="120" y="56" width="120" height="12" rx="6"/>
+  <rect class="f-soft s-ink" x="120" y="92" width="240" height="38" rx="8" stroke-width="2"/>
+  <rect class="f-muted" x="134" y="107" width="80" height="8" rx="4"/>
+  <rect class="f-soft s-ink" x="120" y="144" width="240" height="38" rx="8" stroke-width="2"/>
+  <circle class="f-muted" cx="140" cy="163" r="4"/>
+  <circle class="f-muted" cx="156" cy="163" r="4"/>
+  <circle class="f-muted" cx="172" cy="163" r="4"/>
+  <circle class="f-muted" cx="188" cy="163" r="4"/>
+  <rect class="f-accent s-ink" x="250" y="206" width="110" height="36" rx="10" stroke-width="2"/>
+  <rect class="f-paper" x="274" y="221" width="62" height="7" rx="3"/>
+  <rect class="s-hl anim-pulse" x="242" y="198" width="126" height="52" rx="14" fill="none" stroke-width="3"/>
+</svg>

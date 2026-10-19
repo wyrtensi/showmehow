@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Network button pressed and held while the Wi-Fi icon blinks on the display</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="70" y="60" width="340" height="190" rx="20" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="100" y="86" width="130" height="80" rx="8" stroke-width="2"/>
+  <path class="s-accent anim-pulse" d="M142 118 A24 24 0 0 1 188 118 M150 128 A14 14 0 0 1 180 128" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-accent anim-pulse" cx="165" cy="140" r="4"/>
+  <circle class="f-paper s-ink" cx="130" cy="208" r="18" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="200" cy="208" r="18" stroke-width="3"/>
+  <circle class="f-accent s-ink" cx="270" cy="212" r="16" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="340" cy="208" r="18" stroke-width="3"/>
+  <path class="f-paper s-ink" d="M300 292 C300 262 292 244 276 232 C266 226 256 232 258 244 L262 262 L252 262 C246 262 246 272 252 274 L258 292 Z" stroke-width="3" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M270 20 V48 M256 34 L270 48 L284 34" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

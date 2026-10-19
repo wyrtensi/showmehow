@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Lit smart bulb blinking quickly, with short flash marks around it</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <path class="f-paper s-ink" d="M150 70 C98 70 84 124 116 158 C130 174 132 186 132 198 H168 C168 186 170 174 184 158 C216 124 202 70 150 70 Z" stroke-width="3" stroke-linejoin="round"/>
+  <circle class="f-ok anim-pulse" cx="150" cy="118" r="26"/>
+  <rect class="f-accent s-ink" x="130" y="198" width="40" height="24" rx="6" stroke-width="3"/>
+  <path class="s-hl anim-pulse" d="M150 36 V18 M92 62 L80 50 M208 62 L220 50 M60 120 H42 M240 120 H258" fill="none" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Open AirPods case with both earbuds inside, next to a phone</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="130" y="40" width="160" height="106" rx="40" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="170" y="102" width="26" height="84" rx="13" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="224" y="102" width="26" height="84" rx="13" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="120" y="146" width="180" height="100" rx="44" stroke-width="3"/>
+  <ellipse class="f-muted" cx="183" cy="176" rx="24" ry="8"/>
+  <ellipse class="f-muted" cx="237" cy="176" rx="24" ry="8"/>
+  
+  <rect class="f-soft s-ink" x="366" y="84" width="70" height="124" rx="14" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="372" y="94" width="58" height="104" rx="8" stroke-width="2"/>
+  <path class="s-hl" d="M310 146 H352" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 8"/>
+  <path class="s-hl" d="M350 141.2 A8 8 0 0 1 350 150.8" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M345.2 137.2 A15.2 15.2 0 0 1 345.2 154.8" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Filter in place: turn the coarse filter clockwise until the arrow marks line up</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <circle class="f-paper s-ink" cx="240" cy="150" r="100" stroke-width="3"/>
+  <circle class="f-accent-soft s-ink" cx="240" cy="150" r="66" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="212" y="142" width="56" height="16" rx="6" stroke-width="3"/>
+  <polygon class="f-hl s-ink" points="240,40 232,24 248,24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon class="f-hl s-ink" points="240,100 232,114 248,114" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M127.2 109.0 A120 120 0 0 1 331.9 72.9" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M321.6 69.1 L331.9 72.9 L330.0 62.1" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

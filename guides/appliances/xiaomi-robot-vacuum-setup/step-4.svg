@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Top of a round robot vacuum with two buttons highlighted that are held together</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle class="f-soft s-ink" cx="240" cy="150" r="124" stroke-width="3"/>
+    <circle class="f-muted s-ink" cx="240" cy="168" r="44" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="240" cy="168" r="18" stroke-width="2"/>
+    <path class="s-ink" d="M150 90 A110 110 0 0 1 330 90" fill="none" stroke-width="2" opacity="0.5"/>
+    <circle class="f-paper s-ink" cx="200" cy="72" r="20" stroke-width="3"/>
+    <path class="s-ink" d="M200 62 V74 M192 66 A10 10 0 1 0 208 66" fill="none" stroke-width="2"/>
+    <circle class="f-paper s-ink" cx="280" cy="72" r="20" stroke-width="3"/>
+    <path class="s-ink" d="M270 72 H290 M270 72 L278 66 M270 72 L278 78" fill="none" stroke-width="2"/>
+    <circle class="f-ok" cx="240" cy="52" r="5"/>
+    <circle class="s-hl anim-pulse" cx="200" cy="72" r="32" fill="none" stroke-width="3"/>
+    <circle class="s-hl anim-pulse" cx="280" cy="72" r="32" fill="none" stroke-width="3"/>
+    <path class="s-hl" d="M232 72 H248" fill="none" stroke-width="3"/>
+  </g>
+</svg>

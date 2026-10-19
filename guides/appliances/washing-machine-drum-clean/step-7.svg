@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Rubber door seal ring of the washing machine pulled back and wiped with a cloth</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle class="f-muted s-ink" cx="200" cy="150" r="118" stroke-width="3"/>
+    <circle class="f-paper s-ink" cx="200" cy="150" r="92" stroke-width="3"/>
+    <circle class="f-ink" cx="200" cy="150" r="74"/>
+    <path class="s-ink" d="M130 80 A100 100 0 0 1 270 80" fill="none" stroke-width="2" opacity="0.5"/>
+    <path class="f-soft s-ink" d="M268 52 C304 70 330 100 336 150" fill="none" stroke-width="3"/>
+    <rect class="f-accent s-ink" x="312" y="120" width="104" height="64" rx="16" stroke-width="3" transform="rotate(-18 364 152)"/>
+    <path class="s-paper" d="M330 150 H398 M334 168 H388" fill="none" stroke-width="3" transform="rotate(-18 364 152)"/>
+    <path class="s-hl anim-nudge" d="M392 214 C372 244 340 252 310 236 M322 252 L308 236 L326 228" fill="none" stroke-width="3"/>
+    <path class="s-hl" d="M96 240 C80 220 76 200 78 180" fill="none" stroke-width="3" stroke-dasharray="4 8"/>
+  </g>
+</svg>

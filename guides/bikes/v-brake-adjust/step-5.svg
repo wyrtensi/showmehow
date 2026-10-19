@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Turn the barrel adjuster on the brake lever all the way in before you set the cable</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="40" y="120" width="300" height="30" rx="10" stroke-width="3"/>
+  <path class="f-soft s-ink" d="M280 150 Q300 190 280 240 L250 240 Q260 190 250 150 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="320" y="100" width="70" height="40" rx="10" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="380" y="108" width="40" height="24" rx="6" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="402" cy="120" r="30" fill="none" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M440 190 L408 140" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M418.7 145.5 L408 140 L408.5 152.0" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M420 120 H460" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

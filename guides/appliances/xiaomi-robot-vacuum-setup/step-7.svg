@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Phone and robot vacuum linked by signal waves while the connection is made</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect class="f-muted s-ink" x="30" y="248" width="420" height="20" rx="8" stroke-width="3"/>
+    <rect class="f-soft s-ink" x="60" y="70" width="90" height="170" rx="18" stroke-width="3"/>
+    <rect class="f-paper s-ink" x="70" y="88" width="70" height="120" rx="8" stroke-width="2"/>
+    <circle class="f-accent" cx="105" cy="148" r="14"/>
+    <path class="s-hl anim-pulse" d="M176 130 A40 40 0 0 1 176 170 M196 112 A66 66 0 0 1 196 188 M216 94 A92 92 0 0 1 216 206" fill="none" stroke-width="3"/>
+    <rect class="f-soft s-ink" x="270" y="176" width="170" height="72" rx="34" stroke-width="3"/>
+    <rect class="f-muted s-ink" x="324" y="148" width="62" height="34" rx="14" stroke-width="3"/>
+    <circle class="f-ok anim-pulse" cx="412" cy="196" r="8"/>
+    <circle class="f-muted s-ink" cx="372" cy="248" r="14" stroke-width="3"/>
+  </g>
+</svg>

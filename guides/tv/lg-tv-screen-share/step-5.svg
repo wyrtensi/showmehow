@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>TV with a connection request window and the Yes button highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="36" width="380" height="214" rx="12" stroke-width="3"/>
+  <rect class="f-ink" x="64" y="50" width="352" height="186" rx="4"/>
+  <rect class="f-paper s-ink" x="120" y="86" width="240" height="116" rx="12" stroke-width="3"/>
+  <rect class="f-muted" x="146" y="108" width="140" height="10" rx="5"/>
+  <rect class="f-muted" x="146" y="130" width="100" height="10" rx="5"/>
+  <rect class="f-soft s-ink" x="146" y="160" width="88" height="28" rx="8" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="246" y="160" width="88" height="28" rx="8" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="238" y="153" width="104" height="42" rx="12" fill="none" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="206" y="250" width="68" height="12" rx="3" stroke-width="2"/>
+</svg>

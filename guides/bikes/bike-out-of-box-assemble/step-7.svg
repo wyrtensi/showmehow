@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>The seatpost goes into the frame past the minimum insertion mark; the saddle height is adjusted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="200" y="130" width="36" height="150" rx="6" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="206" y="70" width="24" height="120" rx="4" stroke-width="3"/>
+  <path class="s-hl" d="M200 175 L236 175" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="f-soft s-ink" d="M130 70 Q130 50 160 50 H290 Q330 50 340 66 Q300 78 160 80 Q132 82 130 70 Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="196" y="120" width="44" height="12" rx="4" stroke-width="3"/>
+  <path class="s-hl anim-nudge" d="M110 130 L110 80" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M116.0 90.4 L110 80 L104.0 90.4" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl anim-nudge" d="M110 160 L110 210" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M104.0 199.6 L110 210 L116.0 199.6" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

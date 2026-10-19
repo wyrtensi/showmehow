@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>iPhone camera viewfinder aimed at the pairing animation on an Apple Watch</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="50" y="30" width="140" height="240" rx="26" stroke-width="3"/>
+  <rect class="f-ink" x="60" y="44" width="120" height="212" rx="16"/>
+  <path class="s-hl anim-pulse" d="M82 110 V90 H102 M158 90 H178 V110 M178 190 V210 H158 M102 210 H82 V190" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(-14 0)"/>
+  <circle class="f-accent-soft" cx="120" cy="150" r="22"/>
+  <circle class="f-accent" cx="120" cy="150" r="9"/>
+  <path class="s-ink" d="M200 150 H262" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <g transform="translate(150 26) scale(0.8)">
+    <rect class="f-muted s-ink" x="206" y="8" width="68" height="58" rx="14" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="206" y="234" width="68" height="58" rx="14" stroke-width="2"/>
+    <rect class="f-soft s-ink" x="176" y="56" width="128" height="188" rx="42" stroke-width="3"/>
+    <rect class="f-ink" x="188" y="70" width="104" height="160" rx="32"/>
+    <circle class="f-accent-soft" cx="240" cy="150" r="40"/>
+    <circle class="f-accent" cx="240" cy="150" r="24"/>
+    <circle class="f-paper" cx="240" cy="150" r="8"/>
+    <rect class="f-muted s-ink" x="304" y="104" width="14" height="34" rx="6" stroke-width="2"/>
+    <rect class="f-muted s-ink" x="304" y="152" width="10" height="40" rx="5" stroke-width="2"/>
+  </g>
+</svg>

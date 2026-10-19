@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Panel end with two wooden dowels being pressed into the holes</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="70" y="150" width="340" height="56" rx="6" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="150" cy="150" r="9" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="330" cy="150" r="9" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="142" y="112" width="16" height="44" rx="6" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="322" y="112" width="16" height="44" rx="6" stroke-width="2"/>
+  <path class="s-ink" d="M146 124 H154 M146 134 H154 M326 124 H334 M326 134 H334" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="s-hl anim-nudge" d="M240 60 V120 M224 104 L240 120 L256 104" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

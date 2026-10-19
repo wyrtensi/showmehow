@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Thin Presta valve with its knurled nut being unscrewed by hand</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="116" y="150" width="68" height="130" rx="10" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="138" y="40" width="24" height="112" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="132" y="60" width="36" height="22" rx="6" stroke-width="3"/>
+  <path class="s-ink" d="M138 66 V76 M150 66 V76 M162 66 V76" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <path class="s-hl anim-nudge" d="M96 40 C120 18 180 18 204 40 M192 28 L204 40 L188 44" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

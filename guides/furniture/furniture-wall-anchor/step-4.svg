@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Drill a hole in the wall exactly where the bracket will sit</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="250" y="30" width="190" height="240" rx="6" stroke-width="3"/>
+  <circle class="f-paper" cx="250" cy="150" r="0.1" stroke-width="0"/>
+  <rect class="f-accent s-ink" x="70" y="130" width="80" height="40" rx="10" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="150" y="142" width="50" height="16" rx="4" stroke-width="2"/>
+  <rect class="f-ink" x="200" y="146" width="70" height="8" rx="3" stroke-width="1"/>
+  <path class="s-ink" d="M296 148 h-18 M296 160 h-22 M296 172 h-18" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

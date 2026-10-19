@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Adjustable foot block snapped onto the bottom corner of a wardrobe side panel</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M30 262 H450" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="100" y="30" width="30" height="180" rx="4" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="130" y="176" width="260" height="34" rx="4" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="136" y="190" width="50" height="58" rx="6" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="146" y="248" width="30" height="14" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M150 254 H172" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <circle class="f-paper s-ink" cx="161" cy="204" r="6" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M240 130 H198 M214 114 L198 130 L214 146" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

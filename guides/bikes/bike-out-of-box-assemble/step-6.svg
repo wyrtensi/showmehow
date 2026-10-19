@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Two valve types, a wide Schrader and a thin Presta, and a pump gauge for the pressure on the tyre</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="80" y="70" width="50" height="150" rx="10" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="94" y="40" width="22" height="34" rx="5" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="98" y="20" width="14" height="24" rx="4" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="190" y="90" width="20" height="130" rx="8" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="194" y="60" width="12" height="34" rx="4" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="190" y="80" width="20" height="10" rx="3" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="380" cy="150" r="70" stroke-width="4"/>
+  <circle class="f-muted s-ink" cx="380" cy="150" r="8" stroke-width="2"/>
+  <path class="s-ink" d="M332 122 L323 117" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M348 104 L342 96" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M370 95 L369 85" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M394 96 L397 86" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M416 107 L422 99" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M431 126 L440 122" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M380 150 L410 110" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

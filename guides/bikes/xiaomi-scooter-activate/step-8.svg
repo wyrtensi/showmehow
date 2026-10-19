@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <title>Phone with a plus button in the corner scanning a square QR code on the scooter</title>
+  <rect class="f-accent-soft" width="300" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="76" y="24" width="148" height="252" rx="22" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="88" y="52" width="124" height="196" rx="6" stroke-width="2"/>
+  <circle class="f-accent" cx="194" cy="68" r="11"/>
+  <path class="s-ink" d="M194 62 V74 M188 68 H200" fill="none" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <rect class="f-muted s-ink" x="112" y="120" width="76" height="76" rx="6" stroke-width="2"/>
+  <rect class="f-ink" x="120" y="128" width="20" height="20"/>
+  <rect class="f-ink" x="160" y="128" width="20" height="20"/>
+  <rect class="f-ink" x="120" y="168" width="20" height="20"/>
+  <rect class="f-ink" x="152" y="160" width="10" height="10"/>
+  <path class="s-hl anim-pulse" d="M104 112 V102 H114 M186 102 H196 V112 M196 204 V214 H186 M114 214 H104 V204" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Three bicycle valve types side by side - thin Presta, wider car-style Schrader and Dunlop</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <path class="s-ink" d="M40 250 H440" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="76" y="110" width="28" height="140" rx="8" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="84" y="60" width="12" height="52" rx="4" stroke-width="2"/>
+  <path class="s-ink" d="M76 140 H104 M76 152 H104 M76 164 H104" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <rect class="f-soft s-ink" x="206" y="110" width="40" height="140" rx="8" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="218" y="66" width="16" height="46" rx="4" stroke-width="2"/>
+  <circle class="f-paper s-ink" cx="226" cy="64" r="5" stroke-width="2"/>
+  <rect class="f-soft s-ink" x="344" y="110" width="44" height="140" rx="10" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="352" y="70" width="28" height="42" rx="8" stroke-width="2"/>
+  <path class="s-ink" d="M352 124 H380" fill="none" stroke-width="2" stroke-linecap="round"/>
+</svg>

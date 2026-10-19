@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Folding joint at the base of the stem with the quick release lever pulled up and the stem raised</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-muted s-ink" x="120" y="226" width="240" height="30" rx="10" stroke-width="3"/>
+  <rect class="f-soft s-ink" x="206" y="40" width="30" height="190" rx="6" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="221" cy="214" r="18" stroke-width="3"/>
+  <path class="f-accent s-ink" d="M236 200 H320 C334 200 334 220 320 220 H236 Z" stroke-width="3" stroke-linejoin="round" transform="rotate(-38 236 210)"/>
+  <path class="s-hl anim-nudge" d="M330 120 C350 90 392 96 400 130 M400 130 L384 124 M400 130 L396 146" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M170 130 V60 M156 76 L170 60 L184 76" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

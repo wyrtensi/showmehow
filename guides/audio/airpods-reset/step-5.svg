@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Case light flashing amber, then white</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="100" width="360" height="100" rx="50" stroke-width="3"/>
+  <circle class="f-warn anim-pulse" cx="144" cy="150" r="22"/>
+  <path class="s-ink" d="M192 150 H288 M272 136 L288 150 L272 164" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="f-paper s-ink" cx="336" cy="150" r="22" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="336" cy="150" r="36" fill="none" stroke-width="3"/>
+  <circle class="f-accent" cx="336" cy="150" r="7"/>
+</svg>

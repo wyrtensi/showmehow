@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Unfold the handlebar stem upright and close the quick release lever</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="110" y="210" width="280" height="26" rx="12" stroke-width="3"/>
+  <circle class="f-paper s-ink" cx="130" cy="258" r="28" stroke-width="4"/>
+  <circle class="f-paper s-ink" cx="370" cy="258" r="28" stroke-width="4"/>
+  <circle class="f-muted s-ink" cx="130" cy="258" r="8" stroke-width="2"/>
+  <circle class="f-muted s-ink" cx="370" cy="258" r="8" stroke-width="2"/>
+  <path class="s-ink" d="M150 210 L210 60" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-muted s-ink" x="190" y="40" width="80" height="18" rx="8" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="158" y="150" width="36" height="18" rx="6" stroke-width="3"/>
+  <circle class="s-hl anim-pulse" cx="176" cy="159" r="26" fill="none" stroke-width="3"/>
+  <path class="s-hl" d="M177.4 134.8 A80 80 0 0 1 228.8 196.1" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-hl" d="M221.7 187.7 L228.8 196.1 L232.6 185.8" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

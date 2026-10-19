@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Slide the drawers in; never pull out more than one drawer at a time</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="40" width="220" height="220" rx="10" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="76" y="56" width="188" height="60" rx="6" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="76" y="124" width="188" height="60" rx="6" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="76" y="192" width="188" height="56" rx="6" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="156" y="80" width="28" height="8" rx="4" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="156" y="148" width="28" height="8" rx="4" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="156" y="214" width="28" height="8" rx="4" stroke-width="2"/>
+  <polygon class="f-accent-soft s-ink" points="76,56 264,56 284,30 96,30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="320" y="60" width="110" height="30" rx="4" stroke-width="2"/>
+  <rect class="f-paper s-ink" x="320" y="100" width="110" height="30" rx="4" stroke-width="2"/>
+  <path class="s-hl" d="M330 50 L420 140 M420 50 L330 140" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

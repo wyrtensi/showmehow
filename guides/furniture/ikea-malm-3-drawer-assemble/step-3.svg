@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Wooden dowels go into the bottom edge of each side panel before it is set on the base</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <polygon class="f-soft s-ink" points="70,250 410,250 440,215 100,215" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-paper s-ink" x="90" y="70" width="40" height="140" rx="4" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="350" y="70" width="40" height="140" rx="4" stroke-width="3"/>
+  <rect class="f-hl s-ink" x="100" y="210" width="8" height="22" rx="3" stroke-width="2"/>
+  <rect class="f-hl s-ink" x="118" y="210" width="8" height="22" rx="3" stroke-width="2"/>
+  <rect class="f-hl s-ink" x="360" y="210" width="8" height="22" rx="3" stroke-width="2"/>
+  <rect class="f-hl s-ink" x="378" y="210" width="8" height="22" rx="3" stroke-width="2"/>
+  <rect class="f-accent-soft s-ink" x="100" y="100" width="20" height="28" rx="3" stroke-width="2"/>
+  <circle class="s-hl anim-pulse" cx="110" cy="215" r="30" fill="none" stroke-width="3"/>
+</svg>

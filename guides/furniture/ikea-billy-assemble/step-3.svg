@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Cam bolt being screwed into a side panel with a screwdriver</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="60" y="190" width="360" height="52" rx="6" stroke-width="3"/>
+  <rect class="f-accent s-ink" x="228" y="96" width="24" height="16" rx="6" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="232" y="112" width="16" height="64" rx="3" stroke-width="2"/>
+  <path class="s-ink" d="M232 176 L248 182 L232 188 L248 194 L232 200 L248 206" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="s-ink" d="M240 40 V90" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <rect class="f-muted s-ink" x="226" y="22" width="28" height="22" rx="8" stroke-width="2"/>
+  <path class="s-hl anim-nudge" d="M190 78 C196 56 284 56 290 78 M278 70 L290 78 L276 86" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

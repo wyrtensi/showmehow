@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Router with Wi-Fi waves, a phone and a bulb connected to the same network</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="180" width="140" height="44" rx="10" stroke-width="3"/>
+  <circle class="f-ok" cx="196" cy="202" r="5"/>
+  <path class="s-ink" d="M210 180 V150 M270 180 V150" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <path class="s-hl" d="M200 120 C220 100 260 100 280 120 M214 138 C228 126 252 126 266 138" fill="none" stroke-width="3" stroke-linecap="round"/>
+  <circle class="f-accent" cx="240" cy="150" r="6"/>
+  <rect class="f-soft s-ink" x="50" y="60" width="54" height="96" rx="10" stroke-width="3"/>
+  <path class="s-hl" d="M110 90 C140 70 170 74 190 90" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 8"/>
+  <path class="f-paper s-ink" d="M392 80 C358 80 350 118 370 140 C378 150 380 156 380 164 H404 C404 156 406 150 414 140 C434 118 426 80 392 80 Z" stroke-width="3" stroke-linejoin="round"/>
+  <rect class="f-accent s-ink" x="378" y="164" width="28" height="16" rx="5" stroke-width="3"/>
+  <path class="s-hl" d="M290 90 C320 74 350 78 366 92" fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 8"/>
+</svg>

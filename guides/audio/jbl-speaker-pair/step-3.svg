@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Phone Bluetooth list with the JBL speaker entry highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="21" width="28" height="5" rx="2.5"/>
+  <rect class="f-muted" x="192" y="46" width="56" height="8" rx="4"/>
+  <path class="s-ink" d="M199 76 L209 86 L204 91 V73 L209 78 L199 88" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect class="f-muted" x="222" y="78" width="40" height="7" rx="3.5"/>
+  <rect class="f-accent-soft s-accent" x="184" y="102" width="112" height="44" rx="12" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="194" y="114" width="30" height="20" rx="10" stroke-width="2"/>
+  <rect class="f-ink" x="230" y="120" width="52" height="8" rx="4"/>
+  <rect class="s-hl anim-pulse" x="180" y="98" width="120" height="52" rx="14" stroke-width="3" fill="none"/>
+  <rect class="f-muted" x="192" y="166" width="18" height="14" rx="3"/>
+  <rect class="f-muted" x="218" y="170" width="50" height="7" rx="3.5"/>
+  <rect class="f-muted" x="192" y="200" width="18" height="14" rx="3"/>
+  <rect class="f-muted" x="218" y="204" width="44" height="7" rx="3.5"/>
+  <path class="s-hl anim-nudge" d="M96 124 H146 M132 111 L146 124 L132 137" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Lower dock connector with an HDMI plug, cable running to the TV</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-paper s-ink" x="40" y="50" width="230" height="200" rx="14" stroke-width="3"/>
+  <rect class="f-muted s-ink" x="64" y="84" width="182" height="52" rx="12" stroke-width="2"/>
+  <rect class="f-ink s-ink" x="64" y="164" width="182" height="52" rx="12" stroke-width="2"/>
+  <rect class="f-accent s-ink" x="206" y="176" width="76" height="28" rx="6" stroke-width="2"/>
+  <rect class="s-hl anim-pulse" x="54" y="154" width="212" height="72" rx="18" fill="none" stroke-width="3"/>
+  <path class="s-ink" d="M282 190 H330 C350 190 356 168 372 150" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="f-soft s-ink" x="340" y="60" width="116" height="86" rx="8" stroke-width="3"/>
+  <rect class="f-accent-soft" x="350" y="70" width="96" height="66" rx="4"/>
+  <rect class="f-muted s-ink" x="378" y="146" width="40" height="10" rx="3" stroke-width="2"/>
+  <rect class="f-muted s-ink" x="364" y="156" width="68" height="8" rx="4" stroke-width="2"/>
+</svg>

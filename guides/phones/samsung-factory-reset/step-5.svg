@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <title>Settings list with the general management row highlighted</title>
+  <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
+  <rect class="f-soft s-ink" x="170" y="14" width="140" height="272" rx="26" stroke-width="3"/>
+  <rect class="f-paper s-ink" x="180" y="30" width="120" height="240" rx="16" stroke-width="2"/>
+  <rect class="f-ink" x="226" y="22" width="28" height="5" rx="2.5"/>
+  <circle class="f-muted" cx="204" cy="68" r="9"/>
+  <rect class="f-muted" x="222" y="64" width="54" height="8" rx="4"/>
+  <circle class="f-muted" cx="204" cy="104" r="9"/>
+  <rect class="f-muted" x="222" y="100" width="44" height="8" rx="4"/>
+  <rect class="f-accent-soft s-accent" x="188" y="128" width="104" height="38" rx="12" stroke-width="2"/>
+  <circle class="f-accent" cx="206" cy="147" r="9"/>
+  <rect class="f-muted" x="224" y="143" width="50" height="8" rx="4"/>
+  <circle class="s-hl anim-pulse" cx="206" cy="147" r="16" fill="none" stroke-width="3"/>
+  <circle class="f-muted" cx="204" cy="196" r="9"/>
+  <rect class="f-muted" x="222" y="192" width="58" height="8" rx="4"/>
+  <circle class="f-muted" cx="204" cy="232" r="9"/>
+  <rect class="f-muted" x="222" y="228" width="40" height="8" rx="4"/>
+  <path class="s-hl anim-nudge" d="M96 147 H150 M136 133 L150 147 L136 161" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
