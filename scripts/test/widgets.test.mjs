@@ -184,7 +184,9 @@ test('ics: a complete all-day VEVENT with UID, DTSTAMP in UTC and CRLF line endi
     'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Show Me How//Reminder//EN', 'CALSCALE:GREGORIAN',
     'BEGIN:VEVENT', 'UID:test-uid@showmehow', 'DTSTAMP:20261019T090507Z',
     'DTSTART;VALUE=DATE:20261019', 'DTEND;VALUE=DATE:20261020', 'RRULE:FREQ=MONTHLY;INTERVAL=3',
-    'SUMMARY:Clean the filter', 'TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR'
+    'SUMMARY:Clean the filter', 'TRANSP:TRANSPARENT',
+    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Clean the filter', 'TRIGGER:PT9H', 'END:VALARM',
+    'END:VEVENT', 'END:VCALENDAR'
   ]);
 });
 
@@ -367,7 +369,7 @@ test('render: saddle-height is useful without JavaScript and mentions the heel c
   assert.match(en, /From 50 to 110/);
   assert.match(en, /inputmode="decimal"/);
   const ru = renderSaddle({}, CTX('ru'));
-  assert.match(ru, /Формула: длина ноги × 0\.883\./);
+  assert.match(ru, /Формула: длина ноги × 0,883\./);
   assert.match(ru, /Проверка пяткой/);
   assert.match(ru, /<td>80<\/td><td>70,6<\/td>/);
 });

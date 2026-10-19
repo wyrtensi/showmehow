@@ -7,6 +7,8 @@
 }
 .cat-chip .i { width: 28px; height: 28px; padding: 5px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-strong); }
 .cat-chip:hover { text-decoration: none; box-shadow: var(--shadow-2); }
+/* On phones the breadcrumb right above already names the category. */
+@media (max-width: 640px) { .guide-hero .cat-chip { display: none; } }
 .guide-title { margin-top: 0.75rem; max-width: 22ch; }
 .meta-row { list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.25rem; }
 .meta-pill {

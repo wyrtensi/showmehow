@@ -66,16 +66,14 @@ export function initFacets(box) {
 
   // Restore from the query string.
   const params = new URLSearchParams(location.search);
-  let restored = 0;
   for (const k of keys) {
     const want = new Set((params.get(k) || '').split(',').filter(Boolean));
-    form.querySelectorAll(`[name="${k}"]`).forEach((i) => {
-      i.checked = want.has(i.value);
-      if (i.checked) restored++;
-    });
+    form.querySelectorAll(`[name="${k}"]`).forEach((i) => { i.checked = want.has(i.value); });
   }
   if (sortSel && sorters[params.get('sort')]) sortSel.value = params.get('sort');
-  if (details && !restored && window.matchMedia('(max-width: 999px)').matches) details.open = false;
+  // Narrow screens start with the filters folded so the guides come first; the badge on the
+  // toggle shows how many filters the link brought along.
+  if (details && window.matchMedia('(max-width: 999px)').matches) details.open = false;
 
   form?.addEventListener('change', () => apply());
   form?.addEventListener('submit', (e) => e.preventDefault());

@@ -74,6 +74,8 @@
 .hero-stats .i { width: 16px; height: 16px; color: var(--accent-strong); }
 .hero-link { margin-top: 1rem; }
 .task-chips-hero { margin-top: 1.25rem; }
+/* On phones the task links repeat the Task filter right below and push the guides off screen. */
+@media (max-width: 640px) { .task-chips-hero { display: none; } }
 
 .device-strip { margin-top: 1.5rem; }
 .device-strip-title { font-size: 0.85rem; font-weight: 700; color: var(--ink-2); margin-bottom: 0.5rem; }

@@ -7,6 +7,9 @@ export const base = root.dataset.base || '/';
 export const iconsUrl = root.dataset.icons || base + 'assets/icons.svg';
 export const searchUrl = root.dataset.search || `${base}assets/search.${lang}.json`;
 
+// The build adds ?v=<hash of all browser JS> to every relative import, this module included; a
+// module URL built at run time (a widget client) carries the same query to stay cache-busted.
+export const version = new URL(import.meta.url).search;
 export const t = (key, vars) => translate(lang, key, vars);
 export const href = (path = '', l = lang) => base + (l === 'ru' ? '' : l + '/') + String(path).replace(/^\/+/, '');
 

@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import * as render from '../../src/render/index.js';
+import { inlineSvg } from '../../src/lib/svg.js';
 import { widgets } from '../../src/widgets/index.js';
 import { t, alertLabels, STRINGS } from '../../src/lib/i18n.js';
 
@@ -13,7 +14,9 @@ const fixture = join(root, 'scripts', 'test', 'fixtures', 'site');
 const json = (p) => JSON.parse(readFileSync(join(fixture, p), 'utf8'));
 
 const ui = (...segs) => `<span class="ui-path">${segs.map((s) => `<span class="ui-seg">${s}</span>`).join('<span class="ui-sep"></span>')}</span>`;
-const SVG = readFileSync(join(fixture, 'guides/audio/airpods-pair-android/step-3.svg'), 'utf8');
+const SVG_ALT = 'Задняя сторона кейса, палец зажимает кнопку';
+// As model.js inlines it: the <svg> itself is the image with the alt text.
+const SVG = inlineSvg(readFileSync(join(fixture, 'guides/audio/airpods-pair-android/step-3.svg'), 'utf8'), { prefix: 't-s3', label: SVG_ALT }).svg;
 
 function step(n, title, html, image = null) {
   return { n, id: `step-${n}`, title, html, image };
@@ -33,7 +36,7 @@ function rawGuides(lang, labels) {
       steps: [
         step(1, 'Включите Bluetooth на телефоне', `<p>Откройте ${ui('Настройки', 'Bluetooth')} и включите переключатель.</p>`),
         step(2, 'Откройте кейс с наушниками', '<p>Оба наушника должны лежать в кейсе.</p>'),
-        step(3, 'Зажмите кнопку на задней стенке кейса', `<p>Удерживайте кнопку, пока индикатор не начнёт <strong>мигать белым</strong>.</p><div class="alert alert-tip"><p class="alert-title">${labels.tip}</p><p>У AirPods 4 дважды коснитесь кейса.</p></div>`, { kind: 'svg', svg: SVG, alt: 'Задняя сторона кейса, палец зажимает кнопку' }),
+        step(3, 'Зажмите кнопку на задней стенке кейса', `<p>Удерживайте кнопку, пока индикатор не начнёт <strong>мигать белым</strong>.</p><div class="alert alert-tip"><p class="alert-title">${labels.tip}</p><p>У AirPods 4 дважды коснитесь кейса.</p></div>`, { kind: 'svg', svg: SVG, alt: SVG_ALT }),
         step(4, 'Выберите AirPods в списке', '<p>Нажмите на имя наушников.</p>'),
         step(5, 'Проверьте звук', `<p>Включите музыку.</p><div class="alert alert-note"><p class="alert-title">${labels.note}</p><p>Нажмите <kbd>OK</kbd>.</p></div>`)
       ],
@@ -187,7 +190,7 @@ test('render: guide page has steps, anchors, checklist, sources and the widget',
   for (let n = 1; n <= 5; n++) assert.match(html, new RegExp(`<li class="[^"]*step[^"]*" id="step-${n}"`));
   assert.match(html, /data-done="5"/);
   assert.match(html, /data-tool="1"/);
-  assert.match(html, /class="ill" role="img" aria-label="Задняя сторона/);
+  assert.match(html, /class="ill"><svg[^>]* role="img" aria-label="Задняя сторона/);
   assert.match(html, /<body class="[^"]*c-audio/);
   assert.match(html, /href="https:\/\/support\.apple\.com\/ru-ru\/111865" rel="noopener" target="_blank"/);
   assert.match(html, /template=fix-guide\.yml/);
@@ -271,7 +274,7 @@ test('render: timer and LED chips pass through; step widgets get their server HT
 test('render: illustrations open enlarged; faq chips with a prefilled "did not help" issue', () => withDemoWidget(() => {
   const { site, guide } = interactiveSite();
   const html = render.renderGuide(site, guide).html;
-  assert.match(html, /<figure class="step-fig" data-zoomable><div class="ill" role="img" aria-label="[^"]+">[\s\S]*?<\/div><button type="button" class="fig-zoom" data-zoom data-js>[\s\S]*?<span>Увеличить<\/span><\/button><\/figure>/);
+  assert.match(html, /<figure class="step-fig" data-zoomable><div class="ill"><svg[^>]* role="img" aria-label="[^"]+"[\s\S]*?<\/div><button type="button" class="fig-zoom" data-zoom data-js>[\s\S]*?<span>Увеличить<\/span><\/button><\/figure>/);
   assert.match(html, /data-lightbox-strings data-close="Закрыть"/);
   assert.match(html, /<h2 class="section-title" id="h-faq">Что пошло не так\?<\/h2>/);
   assert.match(html, /<div class="faq-chips" role="group" aria-labelledby="h-faq" data-js><button type="button" class="faq-chip" data-faq-pick="0" aria-expanded="false" aria-controls="faq-0">Индикатор не мигает<\/button>/);

@@ -41,7 +41,7 @@ On the new phone tap **Receive data**, on the old phone tap **Send data**.
 
 ![Screen with the choice of wireless or cable transfer, wireless highlighted](step-4.svg)
 
-On the old phone choose its system (Android) and **Wireless**. Open Smart Switch on the old phone and tap **Allow**.
+On the new phone choose the old phone's system (Android) and **Wireless**. Then open Smart Switch on the old phone and tap **Allow**.
 
 > [!NOTE]
 > From an iPhone: on the Galaxy pick iPhone/iPad and "Get data from iCloud instead", sign in to iCloud and enter the verification code. For a cable transfer connect the phones with a USB cable (an adapter may be needed), choose Smart Switch and **Receive data** on the new phone, **Allow** on the old one.

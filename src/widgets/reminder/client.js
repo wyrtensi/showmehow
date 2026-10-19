@@ -76,7 +76,7 @@ function randomId() {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
 }
 
-// One all-day, repeating VEVENT. start is 'YYYY-MM-DD'. Lines are joined with CRLF and the file
+// One all-day, repeating VEVENT with a morning alarm. start is 'YYYY-MM-DD'. Lines are joined with CRLF and the file
 // ends with CRLF, as the RFC requires.
 export function buildIcs({ title, every, start, description = '', url = '', now = new Date(), uid = `${randomId()}@showmehow` }) {
   const rule = rrule(every);
@@ -98,7 +98,8 @@ export function buildIcs({ title, every, start, description = '', url = '', now 
   ];
   if (description) lines.push(`DESCRIPTION:${escapeText(description)}`);
   if (/^https?:\/\//i.test(url)) lines.push(`URL:${url.replace(/[\r\n]/g, '')}`);
-  lines.push('TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR');
+  // An all-day event alone often stays silent: the alarm fires at 09:00 on the day.
+  lines.push('TRANSP:TRANSPARENT', 'BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${escapeText(title)}`, 'TRIGGER:PT9H', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR');
   return `${lines.map((line) => foldLine(line)).join('\r\n')}\r\n`;
 }
 

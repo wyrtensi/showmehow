@@ -14,6 +14,16 @@ try {
 
 const OG_LOCALE = { ru: 'ru_RU', en: 'en_US' };
 
+// Visit counter on our own server (stats.wyrtensi.ru). GitHub Pages cannot proxy it through
+// the site's origin, so the page talks to the counter directly. Production builds only, never on 404.
+const COUNTER = 'https://stats.wyrtensi.ru/admin/count';
+
+function counter(site, page) {
+  if (!site.siteUrl || page.kind === '404') return '';
+  return `<script src="${attr(asset(site, 'assets/stats.js'))}" defer></script>
+<script data-goatcounter="${COUNTER}" src="${COUNTER}.js" defer></script>`;
+}
+
 // Runs before first paint: theme and the remembered reading mode, so nothing flashes.
 // Values are JSON, as src/client/core.js stores them.
 const BOOT = `(function(d){d.className+=' js';try{var s=localStorage,t=JSON.parse(s.getItem('smh-theme'));if(t==='light'||t==='dark')d.setAttribute('data-theme',t);if(JSON.parse(s.getItem('smh-mode'))==='steps')d.className+=' mode-steps'}catch(e){}})(document.documentElement)`;
@@ -97,6 +107,7 @@ ${og}
 ${tw}
 ${ld}
 <script type="module" src="${attr(asset(site, 'assets/js/client/app.js'))}"></script>
+${counter(site, page)}
 </head>`;
 }
 
@@ -180,7 +191,7 @@ ${themeSeg(site, 'theme-seg')}
 <div class="footer-col"><p class="footer-title">${esc(tr('footer.project'))}</p><ul>${links.map(([h, l]) => `<li><a href="${attr(h)}">${esc(l)}</a></li>`).join('')}${ext.map(([h, l]) => `<li><a href="${attr(h)}" rel="noopener" target="_blank">${esc(l)}</a></li>`).join('')}</ul>
 <p class="footer-title">${esc(tr('footer.agents'))}</p><ul class="footer-mono">${agents.map(([h, l]) => `<li><a href="${attr(h)}">${esc(l)}</a></li>`).join('')}</ul></div>
 </div>
-<div class="wrap footer-bottom"><p>${esc(tr('footer.license'))}</p><p>${langSwitchText(site)}</p></div>
+<div class="wrap footer-bottom"><p>${esc(tr('footer.license'))}</p><p class="footer-privacy">${esc(tr('footer.privacy'))} <a href="https://stats.wyrtensi.ru/" rel="noopener" target="_blank">stats.wyrtensi.ru</a></p><p>${langSwitchText(site)}</p></div>
 </footer>`;
 }
 

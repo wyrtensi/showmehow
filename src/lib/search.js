@@ -621,48 +621,82 @@ export function createSearcher(index, synonyms) {
 
     const S = slots.length;
     const best = [];
+    const bestSid = [];
     const rest = [];
     const mask = [];
+    const df = [];
     const hitCount = new Uint8Array(N);
     for (const slot of slots) {
       const b = new Float32Array(N);
+      const bs = new Int32Array(N);
       const sum = new Float32Array(N);
       const m = new Uint16Array(N);
+      const any = new Uint8Array(N);
       for (const [sid, f] of resolve(slot)) {
         const list = postings[sid];
         for (let i = 0; i < list.length; i++) {
           const p = list[i];
           const d = p >> 4;
+          any[d] = 1;
           if (allowed && !allowed[d]) continue;
           const field = p & 15;
           const v = WEIGHTS[field] * f;
           sum[d] += v;
-          if (v > b[d]) b[d] = v;
+          if (v > b[d]) {
+            b[d] = v;
+            bs[d] = sid;
+          }
           m[d] |= 1 << field;
         }
       }
-      for (let d = 0; d < N; d++) if (b[d] > 0) hitCount[d] += 1;
+      let count = 0;
+      for (let d = 0; d < N; d++) {
+        if (b[d] > 0) hitCount[d] += 1;
+        count += any[d];
+      }
       best.push(b);
+      bestSid.push(bs);
       rest.push(sum);
       mask.push(m);
+      df.push(count);
     }
 
-    const collect = (needed, penalty) => {
+    // OR fallback weights (docs/spec.md section 8): a rare query word outweighs a common one
+    // (idf over the whole index, ignoring filters, normalised to a mean of 1 over the query).
+    const idf = df.map((n) => (n ? Math.log(1 + N / n) : 0));
+    const idfMean = idf.reduce((a, x) => a + x, 0) / (idf.filter(Boolean).length || 1);
+    const orWeight = idf.map((x) => (idfMean ? x / idfMean : 1));
+
+    const collect = (needed, penalty, weighted) => {
       const rows = [];
       for (let d = 0; d < N; d++) {
         if (hitCount[d] < needed || !hitCount[d]) continue;
         let total = 0;
         let union = 0;
         let allTitle = true;
+        const used = weighted ? new Map() : null;
         for (let s = 0; s < S; s++) {
           const b = best[s][d];
           if (!b) {
             allTitle = false;
             continue;
           }
-          total += b + 0.1 * Math.min(rest[s][d] - b, b);
           union |= mask[s][d];
           if (!(mask[s][d] & 1)) allTitle = false;
+          let v = b + 0.1 * Math.min(rest[s][d] - b, b);
+          if (weighted) {
+            v *= orWeight[s];
+            // One word of the guide answers one query word: "нинтендо свитч" must not count
+            // the single "switch" of another guide twice.
+            const sid = bestSid[s][d];
+            const prev = used.get(sid);
+            if (prev !== undefined) {
+              if (v <= prev) continue;
+              total -= prev;
+            }
+            used.set(sid, v);
+          }
+          total += v;
         }
         if (allTitle) total *= 1.2;
         rows.push({ i: d, score: total * penalty, mask: union });
@@ -671,10 +705,10 @@ export function createSearcher(index, synonyms) {
     };
 
     let partial = false;
-    let rows = collect(S, 1);
+    let rows = collect(S, 1, false);
     if (!rows.length) {
       partial = true;
-      rows = collect(1, OR_PENALTY);
+      rows = collect(1, OR_PENALTY, S > 1);
     }
     rows.sort(byRank);
     return rows.slice(0, limit).map((r) => present(r.i, r.score, r.mask, partial));

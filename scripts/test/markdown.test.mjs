@@ -218,3 +218,14 @@ test('plain text of the interactive syntax', () => {
   assert.equal(plainText('Wait {{timer 1m30s}}, light {{led white/amber alternate}} {{Menu > OK}}.'), 'Wait 1m30s, light white/amber alternate Menu > OK.');
   assert.equal(plainText('> [!VARIANT with-button]\n> Only here.\n\n```widget wifi-qr\nsecurity: WPA\n```\n\nEnd.'), 'Only here.\n\nEnd.');
 });
+
+test('hostile input in links, code info strings, kbd and widget params stays inert', () => {
+  for (const src of ['[x](//evil.example)', '[x](data:text/html,x)', '[x](JaVaScRiPt:alert(1))']) {
+    assert.ok(!/<a\b/.test(renderInline(src)), src);
+  }
+  assert.equal(renderInline('<kbd onclick="x">A</kbd>'), '&lt;kbd onclick=&quot;x&quot;&gt;A&lt;/kbd&gt;');
+  assert.equal(md('```html"><script>\nx\n```'), '<pre><code>x</code></pre>');
+  const widget = md('```widget wifi-qr\nsecurity: "</div><script>x</script>"\n```');
+  assert.ok(!/<script|<\/div><script/.test(widget.replace(/<\/div>$/, '')), widget);
+  assert.ok(!/data-variant="[^"]*"[^>]*"/.test(md('> [!VARIANT a"b]\n> x')));
+});

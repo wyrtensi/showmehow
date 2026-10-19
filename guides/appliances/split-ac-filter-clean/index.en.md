@@ -46,7 +46,7 @@ Push the front panel of the indoor unit up. If your model has the air intake on 
 
 ![The filter is slid out of the unit and held flat](step-3.svg)
 
-Carefully pull the filter out. Hold it flat: it can break if it is bent. When it is fitted correctly, no dust can get into the unit.
+Carefully pull the filter out. Hold it flat: it can break if it is bent.
 
 ## Remove the dust
 

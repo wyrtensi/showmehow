@@ -40,7 +40,7 @@ function open(fig, from) {
   const box = dialog.querySelector('[data-art]');
   box.textContent = '';
   box.append(copy);
-  dialog.querySelector('[data-cap]').textContent = art.getAttribute('aria-label') || art.getAttribute('alt') || '';
+  dialog.querySelector('[data-cap]').textContent = art.getAttribute('alt') || art.querySelector('svg')?.getAttribute('aria-label') || '';
   dialog.setAttribute('aria-label', dialog.querySelector('[data-cap]').textContent);
   document.documentElement.classList.add('has-lightbox');
   dialog.showModal();

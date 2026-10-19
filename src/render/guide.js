@@ -21,7 +21,8 @@ function imageHtml(site, guide, image) {
   // Tap to enlarge (spec 11.4): the whole figure opens the lightbox; the button is the visible,
   // keyboard-reachable control. It needs JavaScript, so it is hidden without it.
   const zoom = `<button type="button" class="fig-zoom" data-zoom data-js>${icon('search')}<span>${esc(tr('fig.zoom'))}</span></button>`;
-  if (image.kind === 'svg') return `<figure class="step-fig" data-zoomable><div class="ill" role="img" aria-label="${attr(image.alt)}">${image.svg}</div>${zoom}</figure>`;
+  // The inlined <svg> carries role="img" and the alt text itself (model.js), so the wrapper stays plain.
+  if (image.kind === 'svg') return `<figure class="step-fig" data-zoomable><div class="ill">${image.svg}</div>${zoom}</figure>`;
   const src = /^(\/|https?:)/.test(image.src) ? image.src : site.href(guide.path) + image.src;
   const size = image.width && image.height ? ` width="${image.width}" height="${image.height}"` : '';
   return `<figure class="step-fig step-photo" data-zoomable><img src="${attr(src)}" alt="${attr(image.alt)}"${size} loading="lazy" decoding="async">${zoom}</figure>`;

@@ -412,6 +412,11 @@ Asset URLs carry `?v=<short hash of content>` for cache busting.
   when the remaining stem is ≥ 4 chars) and English plurals (`-es`, `-s`).
 - All query tokens must match (AND); if nothing matches, fall back to OR with a penalty and mark
   results `partial: true`. Ties: score, then fewer steps, then newer.
+- In the OR fallback each query word is weighted by its rarity, `ln(1 + N / df)` (`df` = guides
+  the word matches in the whole index, filters ignored), normalised to a mean of 1 over the query,
+  so "сброс xbox" puts the Xbox guide above every reset guide. A guide word counts for one query
+  word only: when two query words win on the same token of a guide, the better one counts. Full
+  (AND) matches are scored without this weighting.
 - Must answer within 10 ms for 2 000 guides on a mid phone; the index for 2 000 guides should stay
   under 1.5 MB uncompressed.
 
@@ -604,7 +609,8 @@ All widgets run fully in the browser; nothing typed is sent anywhere.
 - `saddle-height` — inseam in cm → saddle height from the bottom-bracket centre (inseam x 0.883,
   marked as a starting point), plus the heel-on-pedal check.
 - `reminder` — "напомнить" for maintenance: params `every` (`2w`, `1m`, `3m`, `6m`, `1y`) and
-  `title`; the user picks a start date and gets an `.ics` file with an RRULE for their calendar.
+  `title`; the user picks a start date and gets an `.ics` file with an RRULE for their calendar
+  (an all-day event with a `VALARM` at 09:00 on the day, so the calendar actually reminds).
 - `hold-timer` is not a widget: use `{{timer ...}}`.
 
 ## 12. Licence

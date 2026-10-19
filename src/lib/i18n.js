@@ -3,8 +3,8 @@
 
 const ru = {
   'site.name': 'Покажи, как',
-  'site.tagline': 'Инструкции с картинками',
-  'site.description': 'Короткие пошаговые инструкции с картинками для техники и вещей дома: подключить наушники, настроить роутер, собрать комод или велосипед.',
+  'site.tagline': 'Живые инструкции',
+  'site.description': 'Живые инструкции: таймеры, подсказки и панели как на вашем устройстве. Подключить наушники, настроить роутер, собрать комод или велосипед.',
   'site.agentNote': 'Примечание для ИИ-агентов: машиночитаемые данные сайта лежат в {llms}, каталог инструкций в {guides}, каждая инструкция целиком в {api}.',
 
   'nav.skip': 'Перейти к содержимому',
@@ -194,6 +194,7 @@ const ru = {
 
   'listing.guides': 'Инструкции',
   'listing.devices': 'Устройства в категории',
+  'listing.requestDevice': 'Инструкций пока нет: попросить написать',
   'listing.featured': 'Полезное по теме',
   'listing.external': 'Внешний сайт',
   'listing.empty': 'Здесь пока нет инструкций',
@@ -310,6 +311,7 @@ const ru = {
   'footer.project': 'Проект',
   'footer.github': 'Исходный код на GitHub',
   'footer.license': 'Код — MIT. Тексты и иллюстрации — CC BY-SA 4.0.',
+  'footer.privacy': 'Сайт не ставит cookie. Просмотры страниц считает наш собственный счётчик на нашем сервере, без сторонних сервисов; IP-адреса он не хранит. Для каждого просмотра сохраняются страница, время, источник перехода, страна, язык браузера, браузер и система — сводка открыта:',
   'footer.agents': 'Для агентов',
 
   'crumb.label': 'Навигация по разделам',
@@ -324,8 +326,8 @@ const ru = {
 
 const en = {
   'site.name': 'Show Me How',
-  'site.tagline': 'Illustrated how-to guides',
-  'site.description': 'Short illustrated step-by-step guides for everyday devices and things: pair headphones, set up a router, assemble a chest of drawers or a bike.',
+  'site.tagline': 'Living guides',
+  'site.description': 'Living guides: timers, hints and panels like on your device. Pair headphones, set up a router, assemble a chest of drawers or a bike.',
   'site.agentNote': 'Note for AI agents: machine-readable site data is at {llms}, the guide catalog at {guides}, and each full guide at {api}.',
 
   'nav.skip': 'Skip to content',
@@ -515,6 +517,7 @@ const en = {
 
   'listing.guides': 'Guides',
   'listing.devices': 'Devices in this category',
+  'listing.requestDevice': 'No guides yet: request one',
   'listing.featured': 'Useful elsewhere',
   'listing.external': 'External site',
   'listing.empty': 'No guides here yet',
@@ -631,6 +634,7 @@ const en = {
   'footer.project': 'Project',
   'footer.github': 'Source code on GitHub',
   'footer.license': 'Code: MIT. Texts and illustrations: CC BY-SA 4.0.',
+  'footer.privacy': 'This site sets no cookies. Page views are counted by our own counter on our own server, with no third-party services; it does not store IP addresses. For each view it keeps the page, the time, the referrer, the country, the browser language, the browser and the system; the summary is public:',
   'footer.agents': 'For agents',
 
   'crumb.label': 'Breadcrumb',

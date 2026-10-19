@@ -122,6 +122,11 @@ details[open] > summary .dd-chev { transform: rotate(180deg); }
 .crumbs a .i { width: 1.05em; height: 1.05em; }
 .crumb-sep { width: 0.9em; height: 0.9em; opacity: 0.6; }
 .crumbs [aria-current] { color: var(--ink); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 28ch; }
+/* On phones the current page repeats the heading right below it: keep it for screen readers only. */
+@media (max-width: 640px) {
+  .crumbs li:has(> [aria-current]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .crumbs li:nth-last-child(2) .crumb-sep { display: none; }
+}
 
 /* Coloured page band with a dotted texture */
 .band { position: relative; overflow: hidden; background: var(--accent-tint); border-bottom: 1px solid var(--accent-soft); padding: 1rem 0 2rem; }

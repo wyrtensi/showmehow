@@ -346,6 +346,70 @@ test('search: all words must match (AND), otherwise OR with partial: true', () =
   assert.deepEqual(searcher.search('qzxwvk'), []);
 });
 
+// Partial (OR) ranking on a set shaped like the shipped catalog: many reset guides, few console ones.
+function partialSet() {
+  const microsoft = { id: 'microsoft', name: 'Microsoft', aliases: ['xbox', 'иксбокс'] };
+  const nintendo = { id: 'nintendo', name: 'Nintendo', aliases: ['нинтендо', 'свитч', 'switch', 'nintendo switch'] };
+  const console_ = { id: 'game-console', name: 'Игровая приставка', aliases: ['консоль', 'xbox', 'nintendo'] };
+  const phone = { id: 'smartphone', name: 'Смартфон', aliases: [] };
+  const reset = (slug, category, device, brand, title) => guide({ slug, category, device, brands: [brand], task: TASKS.reset, title, aliases: ['сброс до заводских'] });
+  return [
+    reset('airpods-reset', CATS.audio, DEVS.earbuds, BRANDS.apple, 'Как сбросить AirPods до заводских настроек'),
+    reset('buds-reset', CATS.audio, DEVS.earbuds, BRANDS.xiaomi, 'Как сбросить наушники Redmi Buds'),
+    reset('router-reset', CATS.network, DEVS.router, BRANDS.tplink, 'Как сбросить роутер TP-Link'),
+    reset('phone-reset', CATS.phones, phone, BRANDS.samsung, 'Как сбросить Samsung до заводских настроек'),
+    reset('vacuum-reset', CATS.appliances, DEVS.vacuum, BRANDS.roborock, 'Как сбросить робот-пылесос Roborock'),
+    guide({
+      slug: 'xbox-controller-pair-pc', category: CATS.tv, device: DEVS.gamepad, brands: [microsoft], task: TASKS.pair,
+      title: 'Как подключить геймпад Xbox к компьютеру', steps: ['Включите Bluetooth', 'Включите геймпад кнопкой Xbox', 'Выберите геймпад']
+    }),
+    guide({
+      slug: 'dualsense-pair-pc', category: CATS.tv, device: DEVS.gamepad, brands: [BRANDS.sony], task: TASKS.pair,
+      title: 'Как подключить геймпад DualSense к компьютеру'
+    }),
+    guide({
+      slug: 'nintendo-switch-tv-connect', category: CATS.tv, device: console_, brands: [nintendo], task: TASKS.setup,
+      title: 'Как подключить Nintendo Switch к телевизору'
+    }),
+    guide({
+      slug: 'samsung-smart-switch-transfer', category: CATS.phones, device: phone, brands: [BRANDS.samsung], task: TASKS.setup,
+      title: 'Как перенести данные на Samsung через Smart Switch'
+    })
+  ];
+}
+
+test('search: in the OR fallback a rare query word outweighs a common one', () => {
+  const s = createSearcher(buildIndex(partialSet(), { lang: 'ru' }, synonyms));
+  const r = s.search('сброс xbox');
+  assert.ok(r.every((x) => x.partial));
+  assert.equal(r[0].slug, 'xbox-controller-pair-pc');
+  assert.ok(r.find((x) => x.slug === 'airpods-reset').score < r[0].score);
+  assert.equal(top(s, 'xbox сбросить'), 'xbox-controller-pair-pc'); // word order does not matter
+});
+
+test('search: in the OR fallback one guide word does not answer two query words', () => {
+  const s = createSearcher(buildIndex(partialSet(), { lang: 'ru' }, synonyms));
+  const r = slugs(s.search('нинтендо свитч геймпад'));
+  assert.equal(r[0], 'nintendo-switch-tv-connect');
+  const smart = r.indexOf('samsung-smart-switch-transfer');
+  assert.ok(smart === -1 || (smart > r.indexOf('dualsense-pair-pc') && smart > r.indexOf('xbox-controller-pair-pc')), r.join(' '));
+  // Even when a synonym group ties both query words to "switch", Smart Switch scores that word once.
+  const wide = createSearcher(buildIndex(partialSet(), { lang: 'ru' }, []), [['nintendo', 'нинтендо', 'switch', 'свитч'], ...synonyms]);
+  const w = slugs(wide.search('нинтендо свитч геймпад'));
+  assert.equal(w[0], 'nintendo-switch-tv-connect');
+  assert.ok(w.indexOf('samsung-smart-switch-transfer') > w.indexOf('dualsense-pair-pc'), w.join(' '));
+});
+
+test('search: OR weighting leaves full (AND) matches alone', () => {
+  const s = createSearcher(buildIndex(partialSet(), { lang: 'ru' }, synonyms));
+  const r = s.search('сбросить роутер');
+  assert.deepEqual(slugs(r), ['router-reset']);
+  assert.ok(!r[0].partial);
+  const one = s.search('сбросить');
+  assert.equal(one.length, 5);
+  assert.ok(one.every((x) => !x.partial && x.score === one[0].score));
+});
+
 test('search: stop words do not break a natural-language query', () => {
   assert.equal(top(searcher, 'как подключить airpods к андроид'), 'airpods-pair-android');
   assert.equal(top(searcher, 'how to pair airpods'), 'airpods-pair-android');

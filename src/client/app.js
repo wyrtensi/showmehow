@@ -1,6 +1,6 @@
 // Browser entry (native ES module). Everything is prerendered; this adds search, step mode,
 // progress, filters, requests and widgets on top.
-import { lang, t, href } from './core.js';
+import { lang, t, href, version } from './core.js';
 import { initTheme, initLangSwitch, initDropdowns } from './prefs.js';
 import { initPalette, initInstant } from './palette.js';
 
@@ -47,7 +47,7 @@ for (const el of document.querySelectorAll('[data-widget][data-widget-client]'))
   } catch (error) {
     console.error(`widget ${type}: bad params`, error);
   }
-  import(new URL(`../widgets/${type}/client.js`, import.meta.url).href)
+  import(new URL(`../widgets/${type}/client.js${version}`, import.meta.url).href)
     .then((m) => m.mount?.(el, params, { lang, t, href }))
     .catch((error) => console.error(`widget ${type}:`, error));
 }
