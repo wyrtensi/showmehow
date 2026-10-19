@@ -259,7 +259,7 @@ test('new: scaffolds a guide from the template', async () => {
 
 test('build: widgets are registered and every widget browser module is copied', async () => {
   const { widgets } = await import('../../src/widgets/index.js');
-  assert.deepEqual(Object.keys(widgets).sort(), ['reminder', 'saddle-height', 'wifi-qr']);
+  assert.deepEqual(Object.keys(widgets).sort(), ['reminder', 'saddle-height', 'washer-panel', 'wifi-qr']);
   for (const [type, w] of Object.entries(widgets)) {
     assert.equal(typeof w.render, 'function', type);
     assert.equal(typeof w.validate, 'function', type);
@@ -270,6 +270,7 @@ test('build: widgets are registered and every widget browser module is copied', 
   try {
     const res = await build({ root: ROOT, content: root, out, base: '/showmehow/', renderer: RENDERER, log: quiet });
     for (const f of ['assets/js/widgets/wifi-qr/client.js', 'assets/js/widgets/wifi-qr/qr.js', 'assets/js/widgets/saddle-height/client.js', 'assets/js/widgets/reminder/client.js',
+      'assets/js/widgets/washer-panel/client.js', 'assets/js/widgets/washer-panel/engine.js', 'assets/js/widgets/washer-panel/panel.js', 'assets/js/widgets/washer-panel/strings.js', 'assets/washers/indesit-wgs-834-txr.json',
       'assets/js/client/timer.js', 'assets/js/client/lightbox.js', 'assets/js/client/home.js', 'assets/js/client/stats.js']) {
       assert.ok(res.files.includes(f), `${f} is copied`);
     }

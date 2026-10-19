@@ -142,6 +142,15 @@ export async function build(opts = {}) {
   output.add('assets/site.css', css.join('\n'));
   for (const s of await collectScripts(root, warn)) output.add(s.path, s.text);
   output.add('assets/icons.svg', await iconSprite(root));
+  // Widget data the browser fetches: washer-panel machines (data/washers/<id>.json), minified.
+  for (const file of await walk(join(root, 'data', 'washers'), (f) => f.endsWith('.json'))) {
+    const name = toPosix(relative(join(root, 'data', 'washers'), file));
+    try {
+      output.add(`assets/washers/${name}`, JSON.stringify(JSON.parse(await readFile(file, 'utf8'))));
+    } catch (error) {
+      throw new BuildError(`data/washers/${name}: ${error.message}`);
+    }
+  }
 
   // 3. Site models.
   const sites = {};

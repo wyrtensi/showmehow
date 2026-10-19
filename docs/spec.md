@@ -22,7 +22,7 @@ document disagree, fix one of them, do not leave them apart.
   is not required). No npm packages, no bundler. Browser code is native ES modules.
 - **No emoji** anywhere — content, UI, code. Icons are SVG.
 - **Interactive widgets are first-class.** A guide may embed a widget (section 6). The washguide
-  washing-machine panels will move here later as a widget.
+  washing-machine panels live here as the `washer-panel` widget (11.6).
 
 ## 2. Repository layout
 
@@ -325,8 +325,11 @@ Frontmatter: `widget:` block map with `type:` and scalar params. The widget is r
 introduction and before step 1 (`placement: end` puts it after the last step). A widget can also sit
 inside a step (11.3). The registry is
 `src/widgets/index.js` exporting `{[type]: {render, validate, client: boolean}}`; the validator
-rejects unknown types. Registered: `wifi-qr`, `saddle-height`, `reminder` (11.6); washguide arrives
-later as `type: washer-panel`. The build copies every browser module of a widget: all
+rejects unknown types. Registered: `wifi-qr`, `saddle-height`, `reminder`, `washer-panel` (11.6).
+A registry entry may also have `meta(params, lang) -> {label, facet: {key, label, id, name}, partial} | null`
+for a guide-level widget: listings use `label` as the guide's short name (breadcrumbs, hub cards) and
+`facet` as an extra hub filter (5.2). Widget data the browser fetches is copied by the build too:
+`data/washers/*.json` -> `assets/washers/*.json` (minified, versioned). The build copies every browser module of a widget: all
 `src/widgets/**/*.js` except `render.js`, `schema.js` and `index.js`, so `client.js` may import helpers
 (`wifi-qr/client.js` imports `./qr.js`). `render.js` runs only in the build and may import from
 `src/render/`.
@@ -605,6 +608,19 @@ All widgets run fully in the browser; nothing typed is sent anywhere.
   marked as a starting point), plus the heel-on-pedal check.
 - `reminder` — "напомнить" for maintenance: params `every` (`2w`, `1m`, `3m`, `6m`, `1y`) and
   `title`; the user picks a start date and gets an `.ics` file with an RRULE for their calendar.
+- `washer-panel` — the panel of one washing machine, ported from washguide: param `machine`
+  (an id from `data/washers/`, format in docs/washers.md). The panel drawing and the detergent
+  drawer are washguide's own rendering and styles as is (each machine keeps its colours, knob shapes,
+  labels and layout, so it looks like the person's machine), scoped under `.wgt-washer`, with
+  washguide's dark-theme dimming. Around it, in Show Me How tokens: preset chips ("Что стираем?",
+  four shown, the rest behind "Ещё"), chips mirroring every knob and option button (44 px targets),
+  the result card (programme, time estimate with phase bars, warnings, how the cycle ends, the knob
+  path folded) and the "partial data" note for `completeness: "partial"`. Server HTML shows the
+  first preset and the real left-to-right panel; `client.js` fetches `assets/washers/<id>.json`,
+  switches to the stacked panel when the widget is narrower than 640 px, turns knobs (clockwise-only
+  knobs always turn forward) and keeps `?p=&t=&s=&o=` or `?preset=` in the URL (other keys kept).
+  The engine (timer walk, time, conflicts, dosing, presets) is washguide's, tested by
+  `scripts/test/washer.test.mjs`. Machine guides are `guides/appliances/<id>-use/`.
 - `hold-timer` is not a widget: use `{{timer ...}}`.
 
 ## 12. Licence
