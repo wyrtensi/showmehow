@@ -8,14 +8,14 @@ import { scaffold } from '../new.mjs';
 import { loadSite, readContent } from '../../src/lib/model.js';
 import { checkAll } from '../../src/lib/schema.js';
 import { href, absUrl, normalizeBase, parseLocation, switchLang, pagePath, outputFile } from '../../src/lib/paths.js';
-import { makeRoot, removeRoot, guideFile, BASE_FIELDS, ROOT, SAMPLE, tinyPng } from './fixtures/content.mjs';
+import { makeRoot, removeRoot, guideFile, BASE_FIELDS, ROOT, FIXTURE, SAMPLE, tinyPng } from './fixtures/content.mjs';
 
 const RENDERER = join(ROOT, 'scripts', 'test', 'fixtures', 'render-min.mjs');
 const SITE_URL = 'https://wyrtensi.github.io/showmehow';
 const quiet = { log() {}, warn() {}, error() {} };
 
 async function fixture() {
-  const sample = await readFile(join(ROOT, SAMPLE, 'index.ru.md'), 'utf8');
+  const sample = await readFile(join(FIXTURE, SAMPLE, 'index.ru.md'), 'utf8');
   const en = sample.replace(/^title: .*$/m, 'title: How to pair AirPods with an Android phone')
     .replace(/^summary: .*$/m, 'summary: AirPods work with any phone over Bluetooth. Put the case into pairing mode and pick them in the Bluetooth settings.')
     .replace('> [!TIP]', '> [!WARNING]');
@@ -88,8 +88,11 @@ test('loadSite returns the site model with English text and Russian fallback', a
     assert.deepEqual(r.steps[0].image, { kind: 'photo', src: '/showmehow/network/router-wifi-connect/label.png', alt: 'Наклейка на дне роутера с именем сети', width: 4, height: 3 });
     assert.deepEqual(r.parts, [{ name: 'Кабель Ethernet', qty: 1, ref: 'A-1' }]);
     assert.equal(r.faq[0].aHtml, 'Проверьте <strong>раскладку</strong> и регистр.');
-    assert.deepEqual(Object.keys(r).sort(), ['aliases', 'authors', 'brands', 'category', 'device', 'difficulty', 'fallback', 'faq', 'introHtml', 'langs', 'lastmod', 'models', 'parts', 'path', 'slug', 'sources', 'stats', 'steps', 'summary', 'task', 'time', 'title', 'tools', 'updated', 'widget'].sort());
-    assert.deepEqual(Object.keys(r.steps[0]).sort(), ['html', 'id', 'image', 'md', 'n', 'title']);
+    assert.deepEqual(Object.keys(r).sort(), ['aliases', 'authors', 'brands', 'category', 'device', 'difficulty', 'fallback', 'faq', 'introHtml', 'langs', 'lastmod', 'models', 'parts', 'path', 'slug', 'sources', 'stats', 'steps', 'summary', 'task', 'time', 'title', 'tools', 'updated', 'variants', 'widget'].sort());
+    assert.deepEqual(Object.keys(r.steps[0]).sort(), ['html', 'id', 'image', 'md', 'n', 'title', 'variants', 'widgets']);
+    assert.deepEqual(r.variants, []);
+    assert.equal(r.steps[0].variants, null);
+    assert.deepEqual(r.steps[0].widgets, []);
     assert.equal(r.steps[2].id, 'step-3');
 
     const net = ru.categories.find((c) => c.id === 'network');
@@ -250,4 +253,68 @@ test('new: scaffolds a guide from the template', async () => {
   } finally {
     await removeRoot(root);
   }
+});
+
+// ---------------------------------------------------------------- interactivity (spec 11)
+
+test('build: widgets are registered and every widget browser module is copied', async () => {
+  const { widgets } = await import('../../src/widgets/index.js');
+  assert.deepEqual(Object.keys(widgets).sort(), ['reminder', 'saddle-height', 'wifi-qr']);
+  for (const [type, w] of Object.entries(widgets)) {
+    assert.equal(typeof w.render, 'function', type);
+    assert.equal(typeof w.validate, 'function', type);
+    assert.equal(w.client, true, type);
+  }
+  const root = await makeRoot('build-widgets', {});
+  const out = join(root, 'dist');
+  try {
+    const res = await build({ root: ROOT, content: root, out, base: '/showmehow/', renderer: RENDERER, log: quiet });
+    for (const f of ['assets/js/widgets/wifi-qr/client.js', 'assets/js/widgets/wifi-qr/qr.js', 'assets/js/widgets/saddle-height/client.js', 'assets/js/widgets/reminder/client.js',
+      'assets/js/client/timer.js', 'assets/js/client/lightbox.js', 'assets/js/client/home.js', 'assets/js/client/stats.js']) {
+      assert.ok(res.files.includes(f), `${f} is copied`);
+    }
+    for (const f of res.files) assert.doesNotMatch(f, /widgets\/[^/]+\/(render|schema)\.js$|widgets\/index\.js$/, `${f}: server-only module copied`);
+    const client = await readFile(join(out, 'assets/js/widgets/wifi-qr/client.js'), 'utf8');
+    assert.match(client, /from '\.\/qr\.js\?v=[0-9a-f]{8}'/);
+  } finally {
+    await removeRoot(root);
+  }
+});
+
+test('loadSite: variants, step variants and step widgets in both languages', async () => {
+  const body = '## Откройте кейс\n\nЖдите {{timer 15s}}.\n\n## Зажмите кнопку {variant=with-button}\n\nТекст.\n\n## Коснитесь кейса {variant=touch-case}\n\n> [!VARIANT touch-case]\n> Сенсор.\n\n```widget wifi-qr\nsecurity: WEP\n```\n';
+  const variants = '\n  - id: with-button\n    name: Кейс с кнопкой\n  - id: touch-case\n    name: Сенсорный кейс';
+  const ru = guideFile({ ...BASE_FIELDS, variants }, body);
+  const en = guideFile({ ...BASE_FIELDS, title: 'How to pair the earbuds with a phone', summary: 'Earbuds pair over Bluetooth in a couple of minutes. Turn on pairing mode and pick them in the list.', variants: '\n  - id: with-button\n    name: Case with a button\n  - id: touch-case\n    name: Touch case' }, body);
+  const root = await makeRoot('build-variants', { 'guides/audio/variant-guide/index.ru.md': ru, 'guides/audio/variant-guide/index.en.md': en }, { sample: false });
+  try {
+    const content = await readContent(root);
+    const check = await checkAll(root, { codeRoot: ROOT, content });
+    assert.deepEqual(check.errors, []);
+    const siteRu = await loadSite({ root, lang: 'ru', content });
+    const siteEn = await loadSite({ root, lang: 'en', content });
+    const g = siteRu.guides[0];
+    assert.deepEqual(g.variants, [{ id: 'with-button', name: 'Кейс с кнопкой' }, { id: 'touch-case', name: 'Сенсорный кейс' }]);
+    assert.deepEqual(g.steps.map((s) => s.variants), [null, ['with-button'], ['touch-case']]);
+    assert.deepEqual(g.steps[2].widgets, [{ type: 'wifi-qr', params: { security: 'WEP' } }]);
+    assert.match(g.steps[0].html, /<span class="timer-label">15 с<\/span>/);
+    assert.match(g.steps[2].html, /<p class="variant-label">Сенсорный кейс<\/p>/);
+    assert.match(g.steps[2].html, /<div class="widget" data-widget="wifi-qr" data-params="\{&quot;security&quot;:&quot;WEP&quot;\}"><\/div>/);
+    const e = siteEn.guides[0];
+    assert.deepEqual(e.variants.map((v) => v.name), ['Case with a button', 'Touch case']);
+    assert.match(e.steps[0].html, /<span class="timer-label">15 s<\/span>/);
+    assert.match(e.steps[2].html, /<p class="variant-label">Touch case<\/p>/);
+  } finally {
+    await removeRoot(root);
+  }
+});
+
+test('llms-full text: chips become words, widget blocks are left out', async () => {
+  const { mdToText } = await import('../../src/lib/seo.js');
+  const md = 'Hold {{timer 15s}}, light {{led white blink}} {{Menu > OK}}.\n\n> [!VARIANT touch-case]\n> Tap.\n\n```widget wifi-qr\nsecurity: WPA\n```\n\nEnd.';
+  const text = mdToText(md, 'en');
+  assert.match(text, /^Hold 15s, light \(white blink\) Menu > OK\./);
+  assert.match(text, /> \(touch-case\)\n> Tap\./);
+  assert.doesNotMatch(text, /widget|security/);
+  assert.match(text, /End\.$/);
 });

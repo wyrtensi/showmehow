@@ -1,0 +1,11 @@
+[
+  { "id": "pair", "ru": { "name": "Подключение", "verb": "Подключить" }, "en": { "name": "Pairing", "verb": "Pair" } },
+  { "id": "setup", "ru": { "name": "Настройка", "verb": "Настроить" }, "en": { "name": "Setup", "verb": "Set up" } },
+  { "id": "assemble", "ru": { "name": "Сборка", "verb": "Собрать" }, "en": { "name": "Assembly", "verb": "Assemble" } },
+  { "id": "install", "ru": { "name": "Установка", "verb": "Установить" }, "en": { "name": "Installation", "verb": "Install" } },
+  { "id": "reset", "ru": { "name": "Сброс", "verb": "Сбросить" }, "en": { "name": "Reset", "verb": "Reset" } },
+  { "id": "maintain", "ru": { "name": "Уход и чистка", "verb": "Почистить" }, "en": { "name": "Care and cleaning", "verb": "Clean" } },
+  { "id": "fix", "ru": { "name": "Неполадки", "verb": "Исправить" }, "en": { "name": "Troubleshooting", "verb": "Fix" } },
+  { "id": "update", "ru": { "name": "Обновление", "verb": "Обновить" }, "en": { "name": "Updating", "verb": "Update" } },
+  { "id": "transfer", "ru": { "name": "Перенос данных", "verb": "Перенести" }, "en": { "name": "Data transfer", "verb": "Transfer" } }
+]

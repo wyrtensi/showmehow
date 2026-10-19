@@ -15,6 +15,8 @@ import {
 const root = new URL('../../', import.meta.url);
 const readJson = (path) => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
 const synonyms = readJson('data/synonyms.json');
+// Taxonomy from the frozen fixture: content authors append devices and brands to the live files.
+const readTaxonomy = (name) => readJson(`scripts/test/fixtures/site/taxonomy/${name}.json`);
 
 // ---------------------------------------------------------------- synthetic guides (docs/spec.md section 7)
 
@@ -447,9 +449,9 @@ test('search: synonyms file is well formed and covers the taxonomy', () => {
   const grouped = new Set();
   for (const group of synonyms) for (const term of group) for (const t of tokenize(term)) grouped.add(stem(t));
   const covered = (...texts) => texts.flat().filter(Boolean).some((text) => tokenize(text).some((t) => grouped.has(stem(t))));
-  for (const t of readJson('taxonomy/tasks.json')) assert.ok(covered(t.ru.name, t.ru.verb, t.en.name, t.en.verb), `task ${t.id}`);
-  for (const c of readJson('taxonomy/categories.json')) assert.ok(covered(c.ru.name, c.en.name), `category ${c.id}`);
-  for (const d of readJson('taxonomy/devices.json')) {
+  for (const t of readTaxonomy('tasks')) assert.ok(covered(t.ru.name, t.ru.verb, t.en.name, t.en.verb), `task ${t.id}`);
+  for (const c of readTaxonomy('categories')) assert.ok(covered(c.ru.name, c.en.name), `category ${c.id}`);
+  for (const d of readTaxonomy('devices')) {
     assert.ok(covered(d.ru.name, d.ru.plural, d.en.name, d.en.plural, d.aliases), `device ${d.id}`);
   }
   const some = (word) => synonyms.some((g) => g.some((t) => stem(t) === stem(word)));
@@ -484,10 +486,10 @@ function syntheticCorpus(count) {
   const words = [...pool];
   const pick = () => words[Math.floor(words.length * rand() ** 1.6)];
   const phrase = (n) => Array.from({ length: n }, pick).join(' ');
-  const cats = readJson('taxonomy/categories.json');
-  const devices = readJson('taxonomy/devices.json');
-  const brands = readJson('taxonomy/brands.json');
-  const tasks = readJson('taxonomy/tasks.json');
+  const cats = readTaxonomy('categories');
+  const devices = readTaxonomy('devices');
+  const brands = readTaxonomy('brands');
+  const tasks = readTaxonomy('tasks');
   const catById = Object.fromEntries(cats.map((c) => [c.id, { id: c.id, name: c.ru.name }]));
   const guides = [];
   for (let i = 0; i < count; i++) {

@@ -36,10 +36,12 @@
 | `updated` | да | `ГГГГ-ММ-ДД`: когда инструкцию проверяли в последний раз. |
 | `authors` | да | логины GitHub. |
 | `widget` | нет | интерактивный виджет: `type:` и его параметры. |
+| `variants` | нет | 2-6 моделей, у которых отличаются отдельные шаги: список `id` (kebab-case) и `name` (до 40 знаков). |
 | `draft` | нет | `true` - не попадает в сборку, но проверяется. |
 
 Неизвестные поля и неизвестные id - ошибка. В `index.en.md` читаются только `title`, `summary`, `tools`,
-`parts[].name`, `aliases`, `faq` и `sources[].title`; остальное берётся из русского файла.
+`parts[].name`, `aliases`, `faq`, `sources[].title` и `variants[].name` (те же `id` в том же порядке);
+остальное берётся из русского файла.
 
 ## Текст
 
@@ -52,13 +54,60 @@
 - Инлайн: `**жирный**`, `*курсив*`, `` `код` ``, `[текст](https://...)`, `<kbd>Win</kbd>`. Путь по интерфейсу: `{{Настройки > Bluetooth > Добавить}}`.
 - Любой другой HTML экранируется. Эмодзи запрещены.
 
+## Интерактивные элементы
+
+Всё это необязательно и выглядит как часть текста. Без JavaScript инструкция читается как обычно.
+
+- **Таймер** `{{timer 15s}}`, `{{timer 2m}}`, `{{timer 1m30s}}` - кнопка-чип «15 с» там, где нужно удерживать
+  кнопку или подождать. По нажатию идёт обратный отсчёт с кольцом, в конце телефон вибрирует и звучит
+  короткий сигнал. От 1 секунды до часа (`1h`).
+- **Индикатор** `{{led white blink}}` - огонёк, который мигает так же, как на устройстве. Цвета: `white`,
+  `green`, `amber`, `red`, `blue`; режимы: `solid` (горит, можно не писать), `blink`, `fast`, `pulse`,
+  `alternate` (два цвета попеременно: `{{led white/amber alternate}}`). Пишите рядом и словами: «индикатор
+  {{led white blink}} мигает белым».
+- Ошибка в таймере или индикаторе (`{{timer 15}}`, `{{led pink}}`) - ошибка проверки. Всё остальное в `{{ }}` -
+  путь по интерфейсу.
+- **Модели** - если у части моделей отличаются шаги. В заголовке:
+
+  ```
+  variants:
+    - id: with-button
+      name: Кейс с кнопкой
+    - id: touch-case
+      name: Сенсорный кейс
+  ```
+
+  Шаг только для одной модели: `## Зажмите кнопку {variant=with-button}` (или `{variant=a,b}`). Часть шага:
+
+  ```
+  > [!VARIANT touch-case]
+  > Дважды коснитесь передней стенки кейса.
+  ```
+
+  Над шагом 1 появятся чипы «Ваша модель:»; выбор запоминается и попадает в ссылку (`?v=touch-case`),
+  номера шагов и прогресс считают только видимые шаги. Без выбора видно всё, у каждой части подпись с
+  названием модели. Проверка: id существуют, у каждой модели есть хотя бы один шаг, в английском файле
+  те же id и те же шаги по моделям.
+- **Виджет внутри шага** - блок кода с пометкой `widget <тип>`, внутри строки `ключ: значение`:
+
+  ````
+  ```widget wifi-qr
+  security: WPA
+  ```
+  ````
+
+  Типы: `wifi-qr` (`security`: `WPA`, `WEP`, `nopass`), `saddle-height` (без параметров), `reminder`
+  (`every`: `2w`, `1m`, `3m`, `6m`, `1y`; `title`). Неизвестный тип или параметр - ошибка.
+- **Живые картинки.** Анимации `anim-*` играют, только пока шаг на экране. Классом `hot` отметьте деталь,
+  на которую надо смотреть: вокруг неё пульсирует кольцо. Картинку можно открыть крупно.
+
 ## Иллюстрации
 
 Схематичный плоский рисунок: контур устройства, часть, с которой нужно что-то сделать, стрелка или пульс.
 Один и тот же файл служит обоим языкам, поэтому текста на рисунке нет.
 
 - `viewBox="0 0 480 300"` (широкий) или `0 0 300 300`; атрибутов `width` и `height` нет.
-- Цвета только классами, никаких `#rrggbb`: `f-paper`, `f-soft`, `f-muted`, `f-ink`, `s-ink`, `f-accent`, `s-accent`, `f-accent-soft`, `f-hl`, `s-hl`, `f-ok`, `f-warn`; анимации `anim-pulse`, `anim-tap`, `anim-nudge`.
+- Цвета только классами, никаких `#rrggbb`: `f-paper`, `f-soft`, `f-muted`, `f-ink`, `s-ink`, `f-accent`, `s-accent`, `f-accent-soft`, `f-hl`, `s-hl`, `f-ok`, `f-warn`; анимации `anim-pulse`, `anim-tap`, `anim-nudge`; `hot` отмечает деталь, на которую надо смотреть.
 - Обводка 3 для контуров, 2 для деталей, `stroke-linecap="round"` и `stroke-linejoin="round"`.
 - Разрешены элементы `svg g path rect circle ellipse line polyline polygon defs marker use title`. Скрипты, `style`, `text`, `image`, `foreignObject`, обработчики `on*` и внешние ссылки отвергаются. До 40 КБ.
 - Свои фотографии (`.webp`, `.jpg`, `.png`, до 300 КБ и 1600 px в ширину) допустимы. Фотографии и картинки производителей - нет.
@@ -201,11 +250,12 @@ spaces, `#` comments. Tabs are an error.
 | `updated` | yes | `YYYY-MM-DD`: when the guide was last checked. |
 | `authors` | yes | GitHub logins. |
 | `widget` | no | An interactive widget: `type:` plus its parameters. |
+| `variants` | no | 2-6 models whose steps differ in places: a list of `id` (kebab-case) and `name` (up to 40 characters). |
 | `draft` | no | `true` keeps the guide out of the build but still validates it. |
 
 Unknown fields and unknown ids are errors. In `index.en.md` only `title`, `summary`, `tools`,
-`parts[].name`, `aliases`, `faq` and `sources[].title` are read; everything else comes from the
-Russian file.
+`parts[].name`, `aliases`, `faq`, `sources[].title` and `variants[].name` (same ids, same order) are read;
+everything else comes from the Russian file.
 
 ## Body
 
@@ -218,13 +268,58 @@ Russian file.
 - Inline: `**bold**`, `*em*`, `` `code` ``, `[text](https://...)`, `<kbd>Win</kbd>`. A UI path is `{{Settings > Bluetooth > Add}}`.
 - Any other HTML is escaped. Emoji are forbidden.
 
+## Interactive extras
+
+All optional; they read as part of the text, and without JavaScript the guide reads as usual.
+
+- **Timer** `{{timer 15s}}`, `{{timer 2m}}`, `{{timer 1m30s}}`: a "15 s" chip where the reader holds a button or
+  waits. Pressing it counts down with a ring; at the end the phone vibrates and a short tone plays.
+  1 second to one hour (`1h`).
+- **Indicator light** `{{led white blink}}`: a light that blinks the way the device does. Colours `white`,
+  `green`, `amber`, `red`, `blue`; patterns `solid` (the default), `blink`, `fast`, `pulse`, `alternate`
+  (two colours: `{{led white/amber alternate}}`). Say it in words too: "the light {{led white blink}} blinks white".
+- A bad timer or light (`{{timer 15}}`, `{{led pink}}`) fails the check. Anything else in `{{ }}` is a UI path.
+- **Models**, when some steps differ between models. In the frontmatter:
+
+  ```
+  variants:
+    - id: with-button
+      name: Case with a button
+    - id: touch-case
+      name: Touch case
+  ```
+
+  A step for one model only: `## Press the button {variant=with-button}` (or `{variant=a,b}`). Part of a step:
+
+  ```
+  > [!VARIANT touch-case]
+  > Double-tap the front of the case.
+  ```
+
+  "Your model:" chips appear above step 1; the choice is remembered and kept in the link (`?v=touch-case`),
+  and step numbers and progress count only the visible steps. Without a choice everything shows, each
+  part labelled with its model. The check: ids exist, every model keeps at least one step, the English
+  file has the same ids and the same steps per model.
+- **A widget inside a step**: a fenced block with the info string `widget <type>` and `key: value` lines:
+
+  ````
+  ```widget wifi-qr
+  security: WPA
+  ```
+  ````
+
+  Types: `wifi-qr` (`security`: `WPA`, `WEP`, `nopass`), `saddle-height` (no parameters), `reminder`
+  (`every`: `2w`, `1m`, `3m`, `6m`, `1y`; `title`). An unknown type or parameter is an error.
+- **Living illustrations.** `anim-*` animations play only while the step is on screen. Give the part to look
+  at the class `hot` and a pulsing ring appears around it. Readers can tap a picture to enlarge it.
+
 ## Illustrations
 
 A flat schematic drawing: the device outline, the part the user touches, an arrow or a pulse. The same
 file serves both languages, so there is no text in the picture.
 
 - `viewBox="0 0 480 300"` (wide) or `0 0 300 300`; no `width` or `height` attributes.
-- Colours only through classes, never `#rrggbb`: `f-paper`, `f-soft`, `f-muted`, `f-ink`, `s-ink`, `f-accent`, `s-accent`, `f-accent-soft`, `f-hl`, `s-hl`, `f-ok`, `f-warn`; animations `anim-pulse`, `anim-tap`, `anim-nudge`.
+- Colours only through classes, never `#rrggbb`: `f-paper`, `f-soft`, `f-muted`, `f-ink`, `s-ink`, `f-accent`, `s-accent`, `f-accent-soft`, `f-hl`, `s-hl`, `f-ok`, `f-warn`; animations `anim-pulse`, `anim-tap`, `anim-nudge`; `hot` marks the part to look at.
 - Stroke width 3 for outlines, 2 for details, `stroke-linecap="round"` and `stroke-linejoin="round"`.
 - Allowed elements: `svg g path rect circle ellipse line polyline polygon defs marker use title`. Scripts, `style`, `text`, `image`, `foreignObject`, `on*` handlers and external references are rejected. Up to 40 KB.
 - Your own photos (`.webp`, `.jpg`, `.png`, up to 300 KB and 1600 px wide) are allowed. Manufacturer photos and images are not.

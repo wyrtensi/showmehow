@@ -5,15 +5,15 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { readContent, loadWidgets, imageSize, IMAGE_EXT, PHOTO_EXT } from './model.js';
 import { checkSvg } from './svg.js';
-import { plainText } from './markdown.js';
+import { plainText, renderInline, DEFAULT_LABELS } from './markdown.js';
 
 export const RESERVED_IDS = ['en', 'device', 'brand', 'task', 'guides', 'stats', 'requests', 'contribute', 'search', 'assets', 'api'];
 export const FIELDS = {
   title: true, summary: true, category: true, device: true, brands: true, models: false, task: true,
   difficulty: true, time: true, tools: false, parts: false, aliases: false, sources: true, faq: false,
-  updated: true, authors: true, widget: false, draft: false
+  updated: true, authors: true, widget: false, variants: false, draft: false
 };
-export const EN_FIELDS = ['title', 'summary', 'tools', 'parts', 'aliases', 'faq', 'sources'];
+export const EN_FIELDS = ['title', 'summary', 'tools', 'parts', 'aliases', 'faq', 'sources', 'variants'];
 export const DIFFICULTY = ['easy', 'medium', 'hard'];
 const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const EMOJI = /[\p{Extended_Pictographic}\u{FE0F}]/u;
@@ -186,6 +186,10 @@ async function validateGuide(entry, ctx) {
       } else {
         enImages.forEach((img, k) => {
           if (img !== ruImages[k]) add('error', en.file, en.split.steps[k].line, `step ${k + 1} uses ${img || 'no image'} but the Russian step uses ${ruImages[k] || 'no image'}`);
+          const tag = (s) => (s.variants ? [...s.variants].sort().join(',') : '');
+          const enTag = tag(en.split.steps[k]);
+          const ruTag = tag(ru.split.steps[k]);
+          if (enTag !== ruTag) add('error', en.file, en.split.steps[k].line, `step ${k + 1} is for ${enTag ? `{variant=${enTag}}` : 'every variant'} but the Russian step is for ${ruTag ? `{variant=${ruTag}}` : 'every variant'}`);
         });
       }
     }
@@ -249,6 +253,23 @@ async function validateGuide(entry, ctx) {
     mapList('faq', { q: true, a: true }, { max: 8 }).forEach((f) => {
       if (!f) return;
       for (const sub of ['q', 'a']) if (f.item[sub] !== undefined && typeof f.item[sub] !== 'string') add('error', doc.file, f.at(sub), `faq: ${sub} must be text`);
+      if (typeof f.item.a === 'string') {
+        // Answers allow inline Markdown, so {{timer ...}} / {{led ...}} and links are checked too.
+        const issues = [];
+        renderInline(f.item.a, { issues, line: f.at('a'), labels: DEFAULT_LABELS[lang] });
+        for (const i of issues) add(i.level, doc.file, i.line, `faq: ${i.message}`);
+      }
+    });
+    const variants = mapList('variants', { id: true, name: true }, { min: 2, max: 6 });
+    const variantIds = new Set();
+    variants.forEach((v) => {
+      if (!v) return;
+      const { id, name } = v.item;
+      if (id !== undefined && (typeof id !== 'string' || !ID.test(id))) add('error', doc.file, v.at('id'), `variants: id "${id}" must be kebab-case [a-z0-9-]`);
+      else if (id !== undefined && variantIds.has(id)) add('error', doc.file, v.at('id'), `variants: duplicate id "${id}"`);
+      else if (id !== undefined) variantIds.add(id);
+      if (name !== undefined && (typeof name !== 'string' || !name.trim())) add('error', doc.file, v.at('name'), 'variants: name must be text');
+      else if (typeof name === 'string' && [...name.trim()].length > 40) add('error', doc.file, v.at('name'), `variants: name is ${[...name.trim()].length} characters, at most 40`);
     });
     const sources = mapList('sources', lang === 'ru' ? { title: true, url: true, publisher: true } : { title: true, url: false, publisher: false }, { min: lang === 'ru' ? 1 : 0 });
     sources.forEach((s) => {
@@ -256,6 +277,12 @@ async function validateGuide(entry, ctx) {
     });
     if (lang === 'en') {
       const ruData = entry.docs.ru && entry.docs.ru.data;
+      const ruIds = ruData && Array.isArray(ruData.variants) ? ruData.variants.map((v) => v && v.id).filter(Boolean) : [];
+      const enIds = [...variantIds];
+      if (ruIds.length && !has('variants')) warn('title', 'the Russian file has variants but the English file does not; the Russian names are shown');
+      else if (has('variants') && JSON.stringify(enIds) !== JSON.stringify(ruIds)) {
+        err('variants', `variants must have the same ids in the same order as the Russian file (${ruIds.join(', ') || 'none'}), got ${enIds.join(', ') || 'none'}`);
+      }
       for (const key of ['parts', 'sources']) {
         if (ruData && Array.isArray(d[key]) && Array.isArray(ruData[key]) && d[key].length !== ruData[key].length) {
           warn(key, `${key} has ${d[key].length} items, the Russian file ${ruData[key].length}; they are matched by position`);
@@ -322,10 +349,40 @@ async function validateGuide(entry, ctx) {
     if (steps.length < 3 || steps.length > 30) add('error', doc.file, steps.length ? steps[0].line : doc.bodyLine, `a guide has 3-30 steps ("## " headings), this one has ${steps.length}`);
     if (split.intro.paragraphs > 3) add('warning', doc.file, split.intro.line, `the introduction has ${split.intro.paragraphs} paragraphs, keep it to 3`);
     const images = [];
+    // Variants (spec 11.2): ids come from the Russian frontmatter; every reference must exist and
+    // every variant must keep at least one step.
+    const ruData = entry.docs.ru && !entry.docs.ru.error ? entry.docs.ru.data : null;
+    const known = new Set(ruData && Array.isArray(ruData.variants) ? ruData.variants.map((v) => v && v.id).filter((id) => typeof id === 'string') : []);
+    const unknown = (ids, line) => {
+      for (const id of ids || []) {
+        if (!known.has(id)) add('error', doc.file, line, known.size ? `unknown variant "${id}"; the guide defines ${[...known].join(', ')}` : `variant "${id}" is used but the guide has no "variants:" in the Russian frontmatter`);
+      }
+    };
+    for (const s of steps) {
+      unknown(s.variants, s.line);
+      for (const r of s.variantRefs || []) unknown(r.ids, r.line);
+    }
+    if (known.size) {
+      for (const id of known) {
+        if (!steps.some((s) => !s.variants || s.variants.includes(id))) add('error', doc.file, doc.bodyLine, `variant "${id}" has no steps: every variant needs at least one visible step`);
+      }
+    }
+    // Widgets inside steps (spec 11.3): same registry and validation as the frontmatter widget.
+    for (const s of steps) {
+      for (const w of s.widgets || []) {
+        const reg = widgets[w.type];
+        if (!reg) { add('error', doc.file, w.line, `unknown widget type "${w.type}"`); continue; }
+        let scalar = true;
+        for (const [k, v] of Object.entries(w.params || {})) {
+          if (v !== null && typeof v === 'object') { add('error', doc.file, w.line, `widget ${w.type}: ${k} must be a scalar`); scalar = false; }
+        }
+        if (scalar && typeof reg.validate === 'function') for (const msg of reg.validate(w.params || {}) || []) add('error', doc.file, w.line, `widget ${w.type}: ${msg}`);
+      }
+    }
     for (const s of steps) {
       const len = [...(s.title || '')].length;
       if (len < 3 || len > 80) add('error', doc.file, s.line, `step title is ${len} characters, expected 3-80`);
-      if (!s.text.trim() && !s.image) add('warning', doc.file, s.line, 'step has no text');
+      if (!s.text.trim() && !s.image && !(s.widgets && s.widgets.length)) add('warning', doc.file, s.line, 'step has no text');
       const img = s.image;
       images.push(img ? img.src : null);
       if (!img) continue;

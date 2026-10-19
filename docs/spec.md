@@ -134,10 +134,11 @@ Fields (`*` = required):
 | `updated`* | date | `YYYY-MM-DD`, when the guide was last checked. |
 | `authors`* | string list | GitHub logins. |
 | `widget` | block map | `type:` plus widget-specific scalars, see section 6. |
+| `variants` | list of maps | `- id:` (kebab-case) / `    name:` (text, at most 40 chars), 2–6 items, see 11.2. |
 | `draft` | boolean | `true` keeps the guide out of the build (still validated). |
 
 The English file repeats the frontmatter but only these fields are read from it: `title`,
-`summary`, `tools`, `parts[].name`, `aliases`, `faq`, `sources[].title`. Everything else comes from
+`summary`, `tools`, `parts[].name`, `aliases`, `faq`, `sources[].title`, `variants[].name`. Everything else comes from
 the Russian file; the validator warns if the English file sets a different `category`, `device`,
 `brands`, `task`, `difficulty`, `time` or `widget`.
 
@@ -158,7 +159,8 @@ Block syntax:
   paragraphs, lists). A blockquote without a marker renders as a plain quote;
 - image on its own line: `![alt text](file.svg)` — the step illustration, at most one per step,
   alt text required (10–160 chars, describes what the picture shows);
-- fenced code blocks with ``` for literal strings (Wi-Fi names, commands, addresses);
+- fenced code blocks with ``` for literal strings (Wi-Fi names, commands, addresses); the first word
+  of the info string is the language, ```` ```widget <type> ```` is a widget block (11.3);
 - tables: GFM pipe tables with a `|---|` separator row (settings, indicator meanings).
 
 Inline syntax: `**bold**`, `*em*` / `_em_`, `` `code` ``, `[text](https://...)` (http/https and
@@ -168,7 +170,7 @@ which renders as a chain of interface labels:
 `<span class="ui-path"><span class="ui-seg">Настройки</span><span class="ui-sep"></span>...</span>`.
 
 Output HTML uses only these elements: `p h3 ul ol li strong em code pre a kbd span table thead
-tbody tr th td blockquote figure img div` (alerts: `<div class="alert alert-tip"><p class="alert-title">...`
+tbody tr th td blockquote figure img div button` (`button` only for timer chips, 11.1; alerts: `<div class="alert alert-tip"><p class="alert-title">...`
 — the title text comes from i18n, the renderer receives a `labels` map).
 
 ### 4.4 Illustrations
@@ -197,6 +199,7 @@ Style:
 | `f-hl` / `s-hl` | highlight: arrows, taps, "press here" marks |
 | `f-ok` / `f-warn` | indicator lights: green-ish / amber-ish |
 | `anim-pulse` `anim-tap` `anim-nudge` | optional CSS animations (disabled under reduced motion) |
+| `hot` | the part to look at: a pulsing hotspot ring (11.4) |
 
 - stroke width 3 for outlines, 2 for details, `stroke-linecap="round"` `stroke-linejoin="round"`;
 - allowed elements: `svg g path rect circle ellipse line polyline polygon defs marker use title`;
@@ -319,10 +322,14 @@ A widget is `src/widgets/<type>/` with:
 - `schema.js` exporting `validate(params) -> string[]` (error messages).
 
 Frontmatter: `widget:` block map with `type:` and scalar params. The widget is rendered after the
-introduction and before step 1 (`placement: end` puts it after the last step). The registry is
+introduction and before step 1 (`placement: end` puts it after the last step). A widget can also sit
+inside a step (11.3). The registry is
 `src/widgets/index.js` exporting `{[type]: {render, validate, client: boolean}}`; the validator
-rejects unknown types. The first release ships the registry and no widgets except what the
-frontend needs for a demo; washguide arrives later as `type: washer-panel`.
+rejects unknown types. Registered: `wifi-qr`, `saddle-height`, `reminder` (11.6); washguide arrives
+later as `type: washer-panel`. The build copies every browser module of a widget: all
+`src/widgets/**/*.js` except `render.js`, `schema.js` and `index.js`, so `client.js` may import helpers
+(`wifi-qr/client.js` imports `./qr.js`). `render.js` runs only in the build and may import from
+`src/render/`.
 
 ## 7. Site model (core -> render contract)
 
@@ -353,7 +360,10 @@ Guide = {
   title, summary, introHtml,
   tools: [string], parts: [{name, qty, ref}],
   aliases,
-  steps: [{n, id, title, html, image: null | {kind: 'svg', svg, alt} | {kind: 'photo', src, alt, width, height}}],
+  steps: [{n, id, title, html, image: null | {kind: 'svg', svg, alt} | {kind: 'photo', src, alt, width, height},
+           variants: null | [id],          // {variant=a,b} on the heading (11.2)
+           widgets: [{type, params}]}],    // ```widget blocks, in order (11.3)
+  variants: [{id, name}],          // from the Russian file, names in lang (11.2)
   faq: [{q, aHtml}], sources: [{title, url, publisher}],
   updated, lastmod, authors,
   widget: null | {type, params, placement},
@@ -375,8 +385,9 @@ for ru at the dist root). Page metadata (canonical, alternates, JSON-LD objects)
 
 `build.mjs`: validate (stop on errors) → for each lang `loadSite` → render all pages → write
 `dist/` → copy `static/` → bundle CSS (`src/styles/*.css` in name order → `assets/site.css`) →
-copy `src/client/**`, `src/lib/{search,i18n,paths}.js` and `src/widgets/**/client.js` to
-`assets/js/` keeping relative imports valid → icons sprite `assets/icons.svg` (each
+copy `src/client/**`, `src/lib/{search,i18n,paths}.js` and the widget browser modules
+(`src/widgets/**/*.js` except `render.js`, `schema.js`, `index.js`) to `assets/js/` keeping relative
+imports valid → icons sprite `assets/icons.svg` (each
 `src/icons/<name>.svg` becomes `<symbol id="i-<name>">`) → data endpoints → `.nojekyll`.
 Asset URLs carry `?v=<short hash of content>` for cache busting.
 
@@ -462,7 +473,28 @@ Everything below degrades to readable static HTML without JavaScript.
   chip showing exactly what the device shows. Colours: `white green amber red blue`; patterns:
   `solid blink fast pulse alternate` (alternate needs two colours). Renders
   `<span class="led led-white led-blink" role="img" aria-label="<localised description>"></span>`.
-- Anything else inside `{{ }}` stays a UI path. Unknown keyword-like input is an error in check.
+- Anything else inside `{{ }}` stays a UI path. Only `timer` and `led` are keywords: bad values
+  in them (`{{timer 15}}`, `{{led pink}}`) are errors in check.
+
+Settled in the implementation:
+
+- A chip starts with the keyword `timer` or `led` (lower case, after optional spaces); every other
+  `{{...}}` is a UI path, so `{{Timer > Start}}` stays a path. A bad duration, a value outside
+  1–3600 s, an unknown colour or pattern, two colours without `alternate` or `alternate` with one
+  colour is an error with the line (also inside faq answers). The bad chip renders as its text.
+- Durations: `<n>h`, `<n>m`, `<n>s` in that order, at least one part (`15s`, `2m`, `1m30s`, `1h`).
+- The LED pattern is optional (`{{led amber}}` = `solid`). Classes: `led led-<colour> led-<pattern>`
+  plus `led-b-<colour>` for the second colour of `alternate`; non-solid lights carry
+  `data-legend="<short word>"` ("мигает", "blinking"), shown as text when animations are off
+  (reduced motion, print), where `alternate` shows both colours half and half.
+- The renderer's `labels` map has `timer(seconds)` ("1 мин 30 с", "1 min 30 s"), `led(colours, pattern)`
+  (aria-label: "Мигает белым", "Alternating white and amber") and `ledLegend(pattern)`;
+  `DEFAULT_LABELS` in markdown.js provides them for ru and en.
+- Client (`src/client/timer.js`): the chip gets a ring; a press starts the countdown (the label shows
+  `m:ss` and a visible "Стоп"), another press stops it; at the end the chip says "Время вышло", the
+  phone vibrates and a two-note tone plays. The AudioContext is created inside the press handler only.
+  Without JavaScript the chip is plain text.
+- `plainText` turns `{{timer 2m}}` into "2m" and `{{led white blink}}` into "white blink".
 
 ### 11.2 Variants ("choose your model")
 
@@ -477,6 +509,20 @@ localStorage and in `?v=<id>`; step numbering and progress follow the visible st
 (or without JS) everything is shown and each variant block carries its name as a label. Validation:
 referenced ids exist, every variant has at least one step visible, English has the same ids.
 
+Settled in the implementation:
+
+- `> [!VARIANT a]` (or `a,b`) renders `<div class="variant" data-variant="a"><p class="variant-label">Name</p>...</div>`;
+  a variant step is `<li class="step" data-variants="a b">` with `<p class="step-for">Только для: Name</p>`
+  above its title, and its table-of-contents item carries the same `data-variants`. Variant blocks
+  and steps are allowed in steps only; ids must be kebab-case.
+- The picker (`data-js`, hidden without JavaScript) has one chip per variant plus "Показать всё",
+  which is the default. Once a model is chosen the labels hide and variant blocks lose their frame.
+- Storage key `smh-variant:<slug>`; `?v=<id>` wins over storage and is written with replaceState.
+  Done ticks stay keyed by the original step number, anchors stay `#step-<n>`; the visible numbers,
+  "Шаг k из N", the table of contents, progress, step mode and the completion all use the visible steps.
+- English: same ids in the same order (error), the same `{variant=...}` per step (error); English
+  without `variants:` falls back to the Russian names (warning).
+
 ### 11.3 Widgets inside steps
 
 A fenced block whose info string is `widget <type>` renders that widget in place; its lines are
@@ -490,12 +536,27 @@ Same registry and validation as section 6. Frontmatter `widget:` remains for a g
 Model: `step.widgets: [{type, params}]` and the HTML placeholder
 `<div class="widget" data-widget="<type>" data-params="<escaped JSON>">server HTML</div>`.
 
+Settled in the implementation: markdown.js emits the placeholder empty (it does not know the
+registry); `src/render/guide.js` fills in `render(params, ctx)` and adds `widget-inline` and
+`data-widget-client` when the widget has a client, so `app.js` mounts it like a guide-level widget.
+Params use the frontmatter scalar rules (a syntax error is reported with its line) and must be
+scalars. Widget blocks are allowed in steps only; a step whose only content is a widget is not
+"empty". Widget fixed ids (`saddle-height`, `reminder`) mean one of each per page.
+
 ### 11.4 Living illustrations
 
 - Animations (`anim-*`) inside a step illustration run only while that step is on screen
   (IntersectionObserver adds `is-live` to the figure; in step mode the active step is live).
 - Elements with class `hot` get a pulsing hotspot ring: "this is the part".
 - Tapping an illustration opens it enlarged (lightbox with focus trap, Esc closes).
+
+Settled in the implementation: without JavaScript animations simply run; with it they are paused
+(`animation-play-state`) until the figure gets `is-live`. `.hot` gets a soft glow in CSS, and the
+client adds a `<circle class="hot-ring">` around each `.hot` element (from `getBBox`) the first time
+the figure is live; under reduced motion the ring is static. Every figure has a visible
+"Увеличить" button (`data-js`); a tap anywhere on the figure opens a modal `<dialog>` with a copy
+of the illustration, its alt text and a "Закрыть" button; Tab stays inside, Esc and the backdrop
+close it, focus returns to the button.
 
 ### 11.5 Site-wide interactive features
 
@@ -508,6 +569,29 @@ Model: `step.widgets: [{type, params}]` and the HTML placeholder
   motion) with "share" and "next guide on this device".
 - **Stats**: bars and chips are interactive — hover/tap shows numbers, click opens the filtered
   catalog.
+
+Settled in the implementation:
+
+- Finder: radio chips in three fieldsets (arrow keys work natively); the query keys are the catalog's
+  facet keys `?c=&d=&k=`, so "Открыть в каталоге" links to `guides/?c=..&d=..&k=..`. Category
+  chips are prerendered with counts; device and task chips, counts and the first six matches come
+  from the `<script type="application/json" id="smh-home">` island
+  (`{g: [[slug, path, title, category, device, task, minutes]], d: {id: plural}, k: {id: name}}`).
+  The whole finder is `data-js`; without JavaScript the category tiles are the way in.
+- Continue: guide pages keep `smh-recent` in localStorage (at most 8 `{s, n, total, step, v, at}`,
+  newest first; removed when finished or reset); home shows up to three with a progress bar, a link to
+  `<path>?v=<variant>#step-<n>` and a "remove" button.
+- Troubleshooting: the faq stays `<details>` (no JavaScript, print); with JavaScript the summaries
+  become chips above (`aria-expanded`) and one answer shows at a time. Every answer ends with a
+  "Не помогло" link to the fix issue whose `problem` field is prefilled with the question
+  (`fixIssueHref(site, guide, problem)`).
+- Completion: when every visible step is ticked the banner shows; the burst (rays, dots, a check)
+  plays once only when it was just completed (`.is-fresh`) and is static under reduced motion. The
+  primary action is the next guide for the same device (after this one in `byDevice`, wrapping; none
+  when the device has one guide), the secondary one "Поделиться" (Web Share, else copy the link).
+- Stats: a bar row with guides is one link to `guides/?c=`, `?d=`, `?b=` or `?k=` with a tooltip
+  "N инструкций, P% от всех" on hover and focus; on touch screens the first tap shows it and the second
+  opens the catalog. Difficulty legend rows link to `?f=`.
 
 ### 11.6 First widgets
 

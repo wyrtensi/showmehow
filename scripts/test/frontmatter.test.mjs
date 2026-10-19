@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { parseFrontmatter, FrontmatterError } from '../../src/lib/frontmatter.js';
-import { ROOT, SAMPLE } from './fixtures/content.mjs';
+import { FIXTURE, SAMPLE } from './fixtures/content.mjs';
 
 const fm = (body) => parseFrontmatter(`---\n${body}\n---\nbody`);
 const fails = (body, line, re) => {
@@ -15,7 +15,7 @@ const fails = (body, line, re) => {
 };
 
 test('parses the sample guide with line numbers', async () => {
-  const text = await readFile(join(ROOT, SAMPLE, 'index.ru.md'), 'utf8');
+  const text = await readFile(join(FIXTURE, SAMPLE, 'index.ru.md'), 'utf8');
   const r = parseFrontmatter(text);
   assert.equal(r.data.category, 'audio');
   assert.equal(r.data.time, 3);
@@ -31,7 +31,7 @@ test('parses the sample guide with line numbers', async () => {
 });
 
 test('CRLF and BOM input give the same result as LF', async () => {
-  const text = await readFile(join(ROOT, SAMPLE, 'index.ru.md'), 'utf8');
+  const text = await readFile(join(FIXTURE, SAMPLE, 'index.ru.md'), 'utf8');
   const lf = parseFrontmatter(text);
   const crlf = parseFrontmatter('﻿' + text.replace(/\n/g, '\r\n'));
   assert.deepEqual(crlf.data, lf.data);

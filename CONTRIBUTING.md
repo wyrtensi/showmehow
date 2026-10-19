@@ -23,6 +23,7 @@ Show Me How - это инструкции, которые пишут люди, �
 2. Создайте заготовку: `npm run new -- категория/slug`, например `npm run new -- audio/jbl-flip-6-pair-phone`. Категория берётся из `taxonomy/categories.json`, slug - короткое имя задачи латиницей через дефис, уникальное во всём проекте.
 3. Откройте `guides/<категория>/<slug>/index.ru.md`, заполните заголовок (frontmatter) и напишите шаги. Формат описан в [docs/guide-format.md](docs/guide-format.md), полные правила - в [docs/spec.md](docs/spec.md), раздел 4.
 4. Нарисуйте иллюстрации (`step-1.svg` и так далее) по правилам раздела 4.4. Английская версия `index.en.md` необязательна; если пишете, то с тем же числом шагов и теми же картинками.
+   Где помогает, добавьте интерактивные элементы (подробно в [docs/guide-format.md](docs/guide-format.md#интерактивные-элементы)): таймер `{{timer 15s}}` там, где нужно удерживать кнопку или ждать; индикатор `{{led white blink}}`; модели `variants:` с `## Шаг {variant=id}` и `> [!VARIANT id]`; виджет в шаге ```` ```widget wifi-qr ````. Если элемент не делает инструкцию проще для новичка, не добавляйте его.
 5. Если нужного устройства или бренда нет в `taxonomy/devices.json` или `taxonomy/brands.json`, добавьте запись в этом же pull request (русское и английское названия, псевдонимы).
 6. Проверьте:
    ```bash
@@ -85,6 +86,7 @@ You need Node 20+ and git. Nothing else to install: the project has no npm depen
 2. Create the scaffold: `npm run new -- category/slug`, for example `npm run new -- audio/jbl-flip-6-pair-phone`. The category comes from `taxonomy/categories.json`; the slug is a short hyphenated name of the task, unique across the whole project.
 3. Open `guides/<category>/<slug>/index.ru.md`, fill in the frontmatter and write the steps. The format is described in [docs/guide-format.md](docs/guide-format.md); the complete rules are in [docs/spec.md](docs/spec.md), section 4. Russian is the primary language and is required.
 4. Draw the illustrations (`step-1.svg` and so on) following section 4.4. The English version `index.en.md` is optional; if you write it, keep the same number of steps and the same images.
+   Where it helps, add interactive extras (details in [docs/guide-format.md](docs/guide-format.md#interactive-extras)): a timer `{{timer 15s}}` where the reader holds a button or waits; an indicator light `{{led white blink}}`; models with `variants:`, `## Step {variant=id}` and `> [!VARIANT id]`; a widget in a step with ```` ```widget wifi-qr ````. If an extra does not make the guide easier for a first-timer, leave it out.
 5. If the device or brand is missing from `taxonomy/devices.json` or `taxonomy/brands.json`, add it in the same pull request (Russian and English names, aliases).
 6. Verify:
    ```bash

@@ -45,15 +45,17 @@ class Output {
   }
 }
 
-// Browser JS: entries from src/client, src/lib/{search,i18n,paths}.js and widget client.js files,
-// plus whatever they import relatively; copied to assets/js/ mirroring src/ so relative imports
+// Browser JS: entries from src/client, src/lib/{search,i18n,paths}.js and widget browser modules
+// (src/widgets/**/*.js except render.js and schema.js), plus whatever they import relatively; copied to assets/js/ mirroring src/ so relative imports
 // stay valid. Import specifiers get ?v=<hash of all browser JS>.
 async function collectScripts(root, warn) {
   const src = join(root, 'src');
   const entries = [
     ...(await walk(join(src, 'client'), (f) => /\.m?js$/.test(f))),
     ...BROWSER_LIB.map((f) => join(src, 'lib', f)).filter((f) => existsSync(f)),
-    ...(await walk(join(src, 'widgets'), (f) => /[\\/]client\.js$/.test(f)))
+    // Every browser module of a widget: client.js and its helpers (wifi-qr/qr.js), not the
+    // server-only render.js and schema.js. index.js is the build-time registry.
+    ...(await walk(join(src, 'widgets'), (f) => /\.js$/.test(f) && !/[\\/](render|schema)\.js$/.test(f) && !/[\\/]widgets[\\/]index\.js$/.test(f)))
   ];
   const seen = new Map();
   const queue = [...entries];

@@ -7,25 +7,63 @@ import { layout } from './layout.js';
 
 const CHECK = '<svg class="check-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
+// Celebration burst (spec 11.5): rays and dots around a check. Shown static when the guide is
+// already finished on load or under reduced motion; client.js adds .is-fresh to play it once.
+const BURST = (() => {
+  const rays = Array.from({ length: 12 }, (_, k) => `<path class="burst-ray burst-${'abc'[k % 3]}" d="M60 20V8" transform="rotate(${k * 30} 60 60)"/>`).join('');
+  const dots = Array.from({ length: 6 }, (_, k) => `<circle class="burst-dot burst-${'cab'[k % 3]}" cx="60" cy="13" r="3.2" transform="rotate(${k * 60 + 15} 60 60)"/>`).join('');
+  return `<svg class="burst" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><g class="burst-rays">${rays}${dots}</g><circle class="burst-core" cx="60" cy="60" r="30"/><path class="burst-check" d="M46 61l10 10 19-21"/></svg>`;
+})();
+
 function imageHtml(site, guide, image) {
   if (!image) return '';
-  if (image.kind === 'svg') return `<figure class="step-fig"><div class="ill" role="img" aria-label="${attr(image.alt)}">${image.svg}</div></figure>`;
+  const { tr } = tools(site);
+  // Tap to enlarge (spec 11.4): the whole figure opens the lightbox; the button is the visible,
+  // keyboard-reachable control. It needs JavaScript, so it is hidden without it.
+  const zoom = `<button type="button" class="fig-zoom" data-zoom data-js>${icon('search')}<span>${esc(tr('fig.zoom'))}</span></button>`;
+  if (image.kind === 'svg') return `<figure class="step-fig" data-zoomable><div class="ill" role="img" aria-label="${attr(image.alt)}">${image.svg}</div>${zoom}</figure>`;
   const src = /^(\/|https?:)/.test(image.src) ? image.src : site.href(guide.path) + image.src;
   const size = image.width && image.height ? ` width="${image.width}" height="${image.height}"` : '';
-  return `<figure class="step-fig step-photo"><img src="${attr(src)}" alt="${attr(image.alt)}"${size} loading="lazy" decoding="async"></figure>`;
+  return `<figure class="step-fig step-photo" data-zoomable><img src="${attr(src)}" alt="${attr(image.alt)}"${size} loading="lazy" decoding="async">${zoom}</figure>`;
 }
+
+const unescapeAttr = (s) => s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+
+function widgetCtx(site, guide) {
+  return { lang: site.lang, guide, t: translator(site.lang), href: (p, l) => site.href(p, l) };
+}
+
+// Widgets inside steps (spec 11.3): markdown.js leaves an empty placeholder
+// <div class="widget" data-widget="type" data-params="json"></div>; fill in the server HTML.
+function fillStepWidgets(site, guide, html) {
+  return html.replace(/<div class="widget" data-widget="([a-z0-9-]+)" data-params="([^"]*)"><\/div>/g, (all, type, json) => {
+    const def = widgets[type];
+    if (!def) throw new Error(`${guide.slug}: unknown widget type "${type}"`);
+    let params = {};
+    try {
+      params = JSON.parse(unescapeAttr(json));
+    } catch {
+      throw new Error(`${guide.slug}: bad params for widget "${type}"`);
+    }
+    return `<div class="widget widget-inline" data-widget="${attr(type)}"${def.client ? ' data-widget-client' : ''} data-params="${json}">${def.render(params, widgetCtx(site, guide))}</div>`;
+  });
+}
+
+const variantNames = (guide, ids) => ids.map((id) => guide.variants?.find((v) => v.id === id)?.name || id).join(', ');
 
 function step(site, guide, s, total) {
   const { tr } = tools(site);
-  return `<li class="${cls('step', s.image && 'has-fig')}" id="${attr(s.id)}" data-step="${s.n}">
+  const only = s.variants?.length ? ` data-variants="${attr(s.variants.join(' '))}"` : '';
+  const forLabel = s.variants?.length ? `<p class="step-for">${esc(tr('variant.only', { names: variantNames(guide, s.variants) }))}</p>` : '';
+  return `<li class="${cls('step', s.image && 'has-fig')}" id="${attr(s.id)}" data-step="${s.n}"${only}>
 <article class="step-card" aria-labelledby="${attr(s.id)}-t">
 <header class="step-head">
 <span class="step-num" aria-hidden="true"><span class="step-num-n">${s.n}</span>${CHECK}</span>
-<h2 class="step-title" id="${attr(s.id)}-t"><span class="step-of">${esc(tr('guide.stepOf', { n: s.n, total }))} </span>${esc(s.title)}</h2>
+<div class="step-titles">${forLabel}<h2 class="step-title" id="${attr(s.id)}-t"><span class="step-of">${esc(tr('guide.stepOf', { n: s.n, total }))} </span>${esc(s.title)}</h2></div>
 </header>
 <div class="step-content">
 ${imageHtml(site, guide, s.image)}
-<div class="step-body prose">${s.html}</div>
+<div class="step-body prose">${fillStepWidgets(site, guide, s.html)}</div>
 </div>
 <footer class="step-foot">
 <label class="step-check" data-js><input type="checkbox" class="step-done" data-done="${s.n}" aria-label="${attr(tr('guide.markDone', { n: s.n }))}"><span class="check-box">${CHECK}</span><span class="step-check-text">${esc(tr('guide.done'))}</span></label>
@@ -52,8 +90,32 @@ function widgetHtml(site, guide, where) {
   if (!w || (w.placement === 'end') !== (where === 'end')) return '';
   const def = widgets[w.type];
   if (!def) throw new Error(`${guide.slug}: unknown widget type "${w.type}"`);
-  const ctx = { lang: site.lang, guide, t: translator(site.lang), href: (p, l) => site.href(p, l) };
-  return `<section class="widget" data-widget="${attr(w.type)}"${def.client ? ' data-widget-client' : ''} data-params="${attr(JSON.stringify(w.params || {}))}">${def.render(w.params || {}, ctx)}</section>`;
+  return `<section class="widget" data-widget="${attr(w.type)}"${def.client ? ' data-widget-client' : ''} data-params="${attr(JSON.stringify(w.params || {}))}">${def.render(w.params || {}, widgetCtx(site, guide))}</section>`;
+}
+
+// "Your model:" chips above step 1 (spec 11.2). Needs JavaScript; without it every step shows
+// with its "Only for" label.
+function variantPicker(site, guide) {
+  const { tr } = tools(site);
+  if (!guide.variants?.length) return '';
+  const chips = guide.variants.map((v) => `<button type="button" class="variant-chip" data-variant-pick="${attr(v.id)}" aria-pressed="false">${esc(v.name)}</button>`).join('');
+  return `<div class="variant-picker" data-variant-picker data-js role="group" aria-labelledby="h-variant">
+<p class="variant-q" id="h-variant">${icon('fork')}<span>${esc(tr('variant.pick'))}</span></p>
+<div class="variant-chips">${chips}<button type="button" class="variant-chip variant-all" data-variant-pick="" aria-pressed="true">${esc(tr('variant.all'))}</button></div>
+<p class="variant-hint">${esc(tr('variant.hint'))}</p>
+</div>`;
+}
+
+// Troubleshooting as symptom chips (spec 11.5). Without JavaScript the items are plain <details>;
+// with it the chips reveal one answer at a time. Every answer links to the prefilled fix issue.
+function faqHtml(site, guide) {
+  const { tr } = tools(site);
+  if (!guide.faq.length) return '';
+  const chips = guide.faq.map((f, i) => `<button type="button" class="faq-chip" data-faq-pick="${i}" aria-expanded="false" aria-controls="faq-${i}">${esc(f.q)}</button>`).join('');
+  const items = guide.faq.map((f, i) => `<details class="faq-item" id="faq-${i}" data-faq-item="${i}"${i === 0 ? ' open' : ''}><summary>${esc(f.q)}${icon('chevron-down', 'dd-chev')}</summary><div class="faq-a prose">${f.aHtml}<p class="faq-more"><a class="faq-fix" href="${attr(fixIssueHref(site, guide, tr('faq.problem', { q: f.q })))}" rel="noopener" target="_blank">${icon('flag')}<span>${esc(tr('faq.notHelped'))}</span></a><span class="faq-more-hint">${esc(tr('faq.notHelpedHint'))}</span></p></div></details>`).join('');
+  return `<section class="faq" aria-labelledby="h-faq" data-faq>${sectionHead(tr('guide.faq'), { id: 'h-faq', icon: 'help', lead: tr('faq.lead') })}
+<div class="faq-chips" role="group" aria-labelledby="h-faq" data-js>${chips}</div>
+<div class="faq-list">${items}</div></section>`;
 }
 
 function related(site, guide) {
@@ -66,6 +128,26 @@ function related(site, guide) {
     }
   }
   return out;
+}
+
+// The next guide for the same device: the one after this guide in the device list, wrapping.
+function nextOnDevice(site, guide) {
+  const list = (site.byDevice?.[guide.device.id] || []).filter((g) => g.slug !== guide.slug);
+  if (!list.length) return null;
+  const all = site.byDevice[guide.device.id];
+  const at = all.findIndex((g) => g.slug === guide.slug);
+  return all.slice(at + 1).find((g) => g.slug !== guide.slug) || list[0];
+}
+
+function doneBanner(site, guide) {
+  const { tr } = tools(site);
+  const next = nextOnDevice(site, guide);
+  const nextHtml = next ? `<a class="done-next" href="${attr(site.href(next.path))}"><span class="done-next-k">${esc(tr('done.next'))}</span><span class="done-next-t">${esc(next.title)}</span>${icon('arrow-right')}</a>` : '';
+  return `<div class="done-banner" data-done-banner hidden tabindex="-1" role="status">
+<div class="done-burst" aria-hidden="true">${BURST}</div>
+<div class="done-text"><p class="done-title">${esc(tr('guide.allDone'))}</p><p>${esc(tr('guide.allDoneText'))}</p>
+<div class="done-actions">${nextHtml}<button type="button" class="btn btn-soft done-share" data-done-share data-text="${attr(tr('done.shareText', { title: guide.title }))}">${icon('share')}<span>${esc(tr('done.share'))}</span></button></div></div>
+</div>`;
 }
 
 export function renderGuide(site, guide) {
@@ -86,6 +168,7 @@ export function renderGuide(site, guide) {
   ].join('');
 
   const fallback = guide.fallback ? `<div class="fallback-note" lang="${site.lang}">${icon('globe')}<p>${esc(tr('guide.fallback'))} <a href="${attr(site.href('contribute/'))}">${esc(tr('guide.fallbackCta'))}</a></p></div>` : '';
+  const tocItem = (s) => `<li${s.variants?.length ? ` data-variants="${attr(s.variants.join(' '))}"` : ''}><a href="#${attr(s.id)}" data-toc="${s.n}"><span class="toc-n">${s.n}</span><span class="toc-t">${esc(s.title)}</span></a></li>`;
 
   const body = `
 <div class="guide" data-guide="${attr(guide.slug)}" data-total="${total}">
@@ -111,6 +194,7 @@ ${fallback}
 ${guide.introHtml ? `<div class="intro prose">${guide.introHtml}</div>` : ''}
 ${needs(site, guide)}
 ${widgetHtml(site, guide, 'start')}
+${variantPicker(site, guide)}
 <div class="mode-bar" data-js>
 <div class="seg mode-seg" role="group" aria-label="${attr(tr('guide.modes'))}"><button type="button" class="seg-btn" data-mode="full" aria-pressed="true">${icon('list')}<span>${esc(tr('guide.modeFull'))}</span></button><button type="button" class="seg-btn" data-mode="steps" aria-pressed="false">${icon('play')}<span>${esc(tr('guide.modeSteps'))}</span></button></div>
 <span class="mode-progress" data-progress-text>${esc(tr('guide.progress', { done: 0, total }))}</span>
@@ -119,12 +203,9 @@ ${widgetHtml(site, guide, 'start')}
 <ol class="steps" data-steps>
 ${guide.steps.map((s) => step(site, guide, s, total)).join('\n')}
 </ol>
-<div class="done-banner" data-done-banner hidden>
-<span class="done-burst" aria-hidden="true">${icon('sparkle')}${icon('check-circle')}${icon('sparkle')}</span>
-<div><p class="done-title">${esc(tr('guide.allDone'))}</p><p>${esc(tr('guide.allDoneText'))}</p></div>
-</div>
+${doneBanner(site, guide)}
 ${widgetHtml(site, guide, 'end')}
-${guide.faq.length ? `<section class="faq" aria-labelledby="h-faq">${sectionHead(tr('guide.faq'), { id: 'h-faq', icon: 'help' })}<div class="faq-list">${guide.faq.map((f, i) => `<details class="faq-item"${i === 0 ? ' open' : ''}><summary>${esc(f.q)}${icon('chevron-down', 'dd-chev')}</summary><div class="faq-a prose">${f.aHtml}</div></details>`).join('')}</div></section>` : ''}
+${faqHtml(site, guide)}
 <section class="sources" aria-labelledby="h-sources">
 ${sectionHead(tr('guide.sources'), { id: 'h-sources', icon: 'book', lead: tr('guide.sourcesNote') })}
 <ol class="source-list">${guide.sources.map((s) => `<li><a class="source" href="${attr(s.url)}" rel="noopener" target="_blank">${s.publisher ? `<span class="source-pub">${esc(s.publisher)}</span>` : ''}<span class="source-title">${esc(s.title)}</span><span class="source-host">${esc(host(s.url))}${icon('external')}</span></a></li>`).join('')}</ol>
@@ -141,7 +222,7 @@ ${guide.authors?.length ? `<p class="guide-authors">${esc(tr('guide.authors'))}:
 <svg class="ring" viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-bg" cx="32" cy="32" r="26"/><circle class="ring-fg" cx="32" cy="32" r="26" pathLength="100" data-ring/></svg>
 <div><p class="progress-label">${esc(tr('guide.progressLabel'))}</p><p class="progress-value" data-progress-text>${esc(tr('guide.progress', { done: 0, total }))}</p><button class="link-btn" type="button" data-progress-reset hidden>${esc(tr('guide.resetProgress'))}</button></div>
 </div>
-<nav class="toc"><p class="toc-title">${esc(tr('guide.toc'))}</p><ol>${guide.steps.map((s) => `<li><a href="#${attr(s.id)}" data-toc="${s.n}"><span class="toc-n">${s.n}</span><span class="toc-t">${esc(s.title)}</span></a></li>`).join('')}</ol></nav>
+<nav class="toc"><p class="toc-title">${esc(tr('guide.toc'))}</p><ol>${guide.steps.map(tocItem).join('')}</ol></nav>
 </div>
 </aside>
 </div>
@@ -151,6 +232,7 @@ ${guide.authors?.length ? `<p class="guide-authors">${esc(tr('guide.authors'))}:
 <span class="step-count" data-step-count aria-live="polite">${esc(tr('guide.stepOf', { n: 1, total }))}</span>
 <button class="btn btn-primary step-next" type="button" data-step-next data-next="${attr(tr('guide.next'))}" data-finish="${attr(tr('guide.finish'))}"><span>${esc(tr('guide.next'))}</span>${icon('arrow-right')}</button>
 </nav>
+<div class="lightbox-strings" hidden data-lightbox-strings data-close="${attr(tr('fig.close'))}"></div>
 </div>
 
 ${rel.length ? `<section class="section wrap related" aria-labelledby="h-related">${sectionHead(tr('guide.related'), { id: 'h-related' })}${cardGrid(site, rel)}</section>` : ''}`;

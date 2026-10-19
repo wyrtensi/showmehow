@@ -8,10 +8,12 @@ import { widgets } from '../../src/widgets/index.js';
 import { t, alertLabels, STRINGS } from '../../src/lib/i18n.js';
 
 const root = join(import.meta.dirname, '..', '..');
-const json = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
+// Taxonomy and the sample illustration come from the frozen fixture, not live content.
+const fixture = join(root, 'scripts', 'test', 'fixtures', 'site');
+const json = (p) => JSON.parse(readFileSync(join(fixture, p), 'utf8'));
 
 const ui = (...segs) => `<span class="ui-path">${segs.map((s) => `<span class="ui-seg">${s}</span>`).join('<span class="ui-sep"></span>')}</span>`;
-const SVG = readFileSync(join(root, 'guides/audio/airpods-pair-android/step-3.svg'), 'utf8');
+const SVG = readFileSync(join(fixture, 'guides/audio/airpods-pair-android/step-3.svg'), 'utf8');
 
 function step(n, title, html, image = null) {
   return { n, id: `step-${n}`, title, html, image };
@@ -224,3 +226,100 @@ test('i18n: ru and en define the same keys and plural forms', () => {
   assert.deepEqual(Object.keys(alertLabels('en')), ['note', 'tip', 'important', 'warning', 'caution']);
   for (const lang of ['ru', 'en']) for (const v of Object.values(STRINGS[lang]).flat()) assert.doesNotMatch(v, EMOJI);
 });
+
+// ---------------------------------------------------------------- interactivity (spec 11)
+
+// The AirPods fixture with variants, a timer, a LED, a hotspot and a widget block in a step.
+function interactiveSite(lang = 'ru') {
+  const site = makeSite(lang);
+  const g = site.guides[0];
+  g.variants = [{ id: 'with-button', name: 'Кейс с кнопкой' }, { id: 'touch-case', name: 'Сенсорный кейс' }];
+  g.steps[1] = { ...g.steps[1], variants: ['with-button'], html: '<p>Держите <button type="button" class="timer" data-seconds="15"><span class="timer-label">15 с</span></button>, индикатор <span class="led led-white led-blink" role="img" aria-label="Мигает белым" data-legend="мигает"></span>.</p>' };
+  g.steps[3] = { ...g.steps[3], html: '<div class="variant" data-variant="touch-case"><p class="variant-label">Сенсорный кейс</p><p>Коснитесь.</p></div>\n<div class="widget" data-widget="wifi-qr" data-params="{&quot;security&quot;:&quot;WEP&quot;}"></div>' };
+  g.faq = [{ q: 'Индикатор не мигает', aHtml: 'Зарядите кейс.' }, { q: 'Звук в одном ухе', aHtml: 'Переподключите.' }];
+  return { site, guide: g };
+}
+
+test('render: variants picker, step labels for no-JS and data for the client', () => withDemoWidget(() => {
+  const { site, guide } = interactiveSite();
+  const html = render.renderGuide(site, guide).html;
+  checkPage(site, { path: 'audio/airpods-pair-android/index.html', html });
+  assert.match(html, /<div class="variant-picker" data-variant-picker data-js role="group" aria-labelledby="h-variant">/);
+  assert.match(html, /data-variant-pick="with-button" aria-pressed="false">Кейс с кнопкой<\/button>/);
+  assert.match(html, /data-variant-pick="" aria-pressed="true">Показать всё<\/button>/);
+  assert.ok(html.indexOf('data-variant-picker') < html.indexOf('id="step-1"'), 'the picker is above step 1');
+  assert.match(html, /<li class="step" id="step-2" data-step="2" data-variants="with-button">/);
+  assert.match(html, /<p class="step-for">Только для: Кейс с кнопкой<\/p>/);
+  assert.match(html, /<li data-variants="with-button"><a href="#step-2" data-toc="2">/);
+  assert.match(html, /<div class="variant" data-variant="touch-case"><p class="variant-label">Сенсорный кейс<\/p>/);
+  const plain = render.renderGuide(makeSite('ru'), makeSite('ru').guides[0]).html;
+  assert.doesNotMatch(plain, /data-variant-picker|step-for/, 'no picker without variants');
+}));
+
+test('render: timer and LED chips pass through; step widgets get their server HTML', () => withDemoWidget(() => {
+  const { site, guide } = interactiveSite('en');
+  const html = render.renderGuide(site, guide).html;
+  checkPage(site, { path: 'audio/airpods-pair-android/index.html', html });
+  assert.match(html, /<button type="button" class="timer" data-seconds="15">/);
+  assert.match(html, /<span class="led led-white led-blink" role="img" aria-label="[^"]+" data-legend="[^"]+"><\/span>/);
+  assert.match(html, /<div class="widget widget-inline" data-widget="wifi-qr" data-widget-client data-params="\{&quot;security&quot;:&quot;WEP&quot;\}"><div class="wgt wgt-wifi">/);
+  assert.match(html, /<option value="WEP" selected>/, 'the step widget params reach render()');
+  assert.doesNotMatch(html, /<div class="widget" data-widget="wifi-qr" data-params="[^"]*"><\/div>/, 'no empty placeholder left');
+  assert.throws(() => render.renderGuide(site, { ...guide, steps: [{ ...guide.steps[0], html: '<div class="widget" data-widget="nope" data-params="{}"></div>' }, ...guide.steps.slice(1)] }), /unknown widget type "nope"/);
+}));
+
+test('render: illustrations open enlarged; faq chips with a prefilled "did not help" issue', () => withDemoWidget(() => {
+  const { site, guide } = interactiveSite();
+  const html = render.renderGuide(site, guide).html;
+  assert.match(html, /<figure class="step-fig" data-zoomable><div class="ill" role="img" aria-label="[^"]+">[\s\S]*?<\/div><button type="button" class="fig-zoom" data-zoom data-js>[\s\S]*?<span>Увеличить<\/span><\/button><\/figure>/);
+  assert.match(html, /data-lightbox-strings data-close="Закрыть"/);
+  assert.match(html, /<h2 class="section-title" id="h-faq">Что пошло не так\?<\/h2>/);
+  assert.match(html, /<div class="faq-chips" role="group" aria-labelledby="h-faq" data-js><button type="button" class="faq-chip" data-faq-pick="0" aria-expanded="false" aria-controls="faq-0">Индикатор не мигает<\/button>/);
+  assert.match(html, /<details class="faq-item" id="faq-1" data-faq-item="1"><summary>Звук в одном ухе/);
+  const fix = /<a class="faq-fix" href="([^"]+)"/.exec(html)[1].replace(/&amp;/g, '&');
+  const url = new URL(fix);
+  assert.equal(url.searchParams.get('template'), 'fix-guide.yml');
+  assert.equal(url.searchParams.get('guide'), 'https://wyrtensi.github.io/showmehow/audio/airpods-pair-android/');
+  assert.match(url.searchParams.get('problem'), /^Не помогло: «Индикатор не мигает»/);
+}));
+
+test('render: completion banner with the burst, share and the next guide on the device', () => withDemoWidget(() => {
+  const site = makeSite('ru');
+  const first = site.guides[0];
+  const other = { ...site.guides[1], slug: 'airpods-reset', path: 'audio/airpods-reset/', title: 'Как сбросить AirPods', device: first.device, category: first.category };
+  site.byDevice[first.device.id] = [first, other];
+  const html = render.renderGuide(site, first).html;
+  assert.match(html, /<div class="done-banner" data-done-banner hidden tabindex="-1" role="status">/);
+  assert.match(html, /<svg class="burst" viewBox="0 0 120 120" aria-hidden="true" focusable="false">/);
+  assert.match(html, /<a class="done-next" href="\/showmehow\/audio\/airpods-reset\/"><span class="done-next-k">Следующая для этого устройства<\/span><span class="done-next-t">Как сбросить AirPods<\/span>/);
+  assert.match(html, /data-done-share data-text="Получилось по инструкции: [^"]+"/);
+  site.byDevice[first.device.id] = [first];
+  assert.doesNotMatch(render.renderGuide(site, first).html, /class="done-next"/, 'no next link when the device has one guide');
+}));
+
+test('render: home finder, continue box and the data island', () => withDemoWidget(() => {
+  const site = makeSite('ru');
+  const html = render.renderHome(site).html;
+  assert.match(html, /<section class="section wrap finder" aria-labelledby="h-finder" data-finder data-js data-catalog="\/showmehow\/guides\/"/);
+  assert.match(html, /<h2 class="section-title" id="h-finder">Что у вас\?<\/h2>/);
+  assert.match(html, /<input type="radio" name="c" value="audio"><span class="chip">[\s\S]*?<span class="chip-count" data-count-for="audio">1<\/span>/);
+  assert.doesNotMatch(html, /name="c" value="kitchen"/, 'empty categories are not offered');
+  assert.match(html, /data-finder-step="d" hidden/);
+  assert.match(html, /<section class="section wrap continue" aria-labelledby="h-continue" data-continue hidden data-at="Вы остановились на шаге \{n\} из \{total\}"/);
+  const island = JSON.parse(/<script type="application\/json" id="smh-home">([\s\S]*?)<\/script>/.exec(html)[1]);
+  assert.deepEqual(island.g[0], ['airpods-pair-android', 'audio/airpods-pair-android/', 'Как подключить AirPods к телефону на Android', 'audio', 'earbuds', 'pair', 3]);
+  assert.equal(island.d.earbuds, site.devices.find((d) => d.id === 'earbuds').plural);
+  assert.equal(island.k.pair, site.tasks.find((k) => k.id === 'pair').name);
+}));
+
+test('render: stats bars open the filtered catalog and carry their numbers', () => withDemoWidget(() => {
+  const site = makeSite('ru');
+  const html = render.renderStats(site).html;
+  assert.match(html, /<a class="bar-row c-audio bar-link" href="\/showmehow\/guides\/\?c=audio" aria-describedby="tip-c-audio" data-bar>/);
+  assert.match(html, /<span class="bar-tip" role="tooltip" id="tip-c-audio">1 инструкция, 33% от всех<\/span>/);
+  assert.match(html, /href="\/showmehow\/guides\/\?k=pair"/);
+  assert.match(html, /href="\/showmehow\/guides\/\?d=earbuds"/);
+  assert.match(html, /href="\/showmehow\/guides\/\?b=apple"/);
+  assert.match(html, /<a class="legend-link" href="\/showmehow\/guides\/\?f=easy"/);
+  assert.match(html, /<span class="bar-row c-kitchen is-zero">/, 'a category without guides is not a link');
+}));

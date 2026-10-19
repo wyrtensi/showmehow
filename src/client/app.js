@@ -12,6 +12,18 @@ initInstant();
 
 const guide = document.querySelector('[data-guide]');
 if (guide) import('./guide.js').then((m) => m.initGuide(guide));
+if (document.querySelector('button.timer[data-seconds]')) import('./timer.js').then((m) => m.initTimers());
+if (document.querySelector('[data-zoomable]')) import('./lightbox.js').then((m) => m.initLightbox());
+
+const finder = document.querySelector('[data-finder]');
+const resume = document.querySelector('[data-continue]');
+if (finder || resume) {
+  import('./home.js').then((m) => {
+    if (resume) m.initContinue(resume);
+    if (finder) m.initFinder(finder);
+  });
+}
+if (document.querySelector('[data-bar]')) import('./stats.js').then((m) => m.initStats());
 
 const faceted = document.querySelector('[data-faceted]');
 if (faceted) import('./facets.js').then((m) => m.initFacets(faceted));

@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { parseFrontmatter } from '../../src/lib/frontmatter.js';
-import { splitGuide, renderMarkdown, renderInline, plainText, countWords } from '../../src/lib/markdown.js';
-import { ROOT, SAMPLE } from './fixtures/content.mjs';
+import { splitGuide, renderMarkdown, renderInline, plainText, countWords, parseDuration, parseLed, LED_COLORS, LED_PATTERNS, DEFAULT_LABELS } from '../../src/lib/markdown.js';
+import { FIXTURE, SAMPLE } from './fixtures/content.mjs';
 
 const md = (src, opts) => renderMarkdown(src, opts);
 const issuesOf = (src) => {
@@ -13,7 +13,7 @@ const issuesOf = (src) => {
 };
 
 test('splits the sample guide into intro and steps', async () => {
-  const text = await readFile(join(ROOT, SAMPLE, 'index.ru.md'), 'utf8');
+  const text = await readFile(join(FIXTURE, SAMPLE, 'index.ru.md'), 'utf8');
   const fm = parseFrontmatter(text);
   const g = splitGuide(fm.body, { line: fm.bodyLine, labels: { tip: 'Совет', note: 'Заметка' } });
   assert.deepEqual(g.issues, []);
@@ -119,8 +119,8 @@ test('pipe tables with alignment and inline cells', () => {
 });
 
 test('output uses only the allowed elements', () => {
-  const html = md('# h1\n\n## h2\n\n> [!NOTE]\n> n\n\n| a |\n|---|\n| b |\n\n- x\n\n1. y\n\n```\nz\n```\n\n**s** *e* `c` <kbd>k</kbd> {{u > v}} [l](https://e.com) <img src=x> <iframe>');
-  const allowed = new Set('p h3 ul ol li strong em code pre a kbd span table thead tbody tr th td blockquote figure img div'.split(' '));
+  const html = md('# h1\n\n## h2\n\n> [!NOTE]\n> n\n\n| a |\n|---|\n| b |\n\n- x\n\n1. y\n\n```\nz\n```\n\n**s** *e* `c` <kbd>k</kbd> {{u > v}} {{timer 5s}} {{led red blink}} [l](https://e.com) <img src=x> <iframe>\n\n> [!VARIANT a]\n> v\n\n```widget wifi-qr\nsecurity: WPA\n```');
+  const allowed = new Set('p h3 ul ol li strong em code pre a kbd span table thead tbody tr th td blockquote figure img div button'.split(' '));
   for (const [, tag] of html.matchAll(/<\/?([a-z0-9]+)/g)) assert.ok(allowed.has(tag), `unexpected <${tag}>`);
   assert.ok(!html.includes('<img'));
 });
@@ -128,4 +128,93 @@ test('output uses only the allowed elements', () => {
 test('plain text and word counts', () => {
   assert.equal(plainText('Open {{Settings > Bluetooth}} and press <kbd>OK</kbd>, **then** wait.\n\n> [!TIP]\n> Fast.'), 'Open Settings > Bluetooth and press OK, then wait.\n\nFast.');
   assert.equal(countWords('Wi-Fi роутер, 2 раза'), 4);
+});
+
+
+// ---------------------------------------------------------------- interactivity (spec 11)
+
+test('timer chips: durations, localised labels, limits', () => {
+  assert.equal(parseDuration('15s'), 15);
+  assert.equal(parseDuration('2m'), 120);
+  assert.equal(parseDuration('1m30s'), 90);
+  assert.equal(parseDuration('1h'), 3600);
+  assert.equal(parseDuration('90'), null);
+  assert.equal(parseDuration('s'), null);
+  assert.equal(renderInline('Hold {{timer 15s}}.'), 'Hold <button type="button" class="timer" data-seconds="15"><span class="timer-label">15 с</span></button>.');
+  assert.match(renderInline('{{timer 1m30s}}', { labels: DEFAULT_LABELS.en }), /data-seconds="90"><span class="timer-label">1 min 30 s<\/span>/);
+  assert.match(renderInline('{{ timer 2m }}'), /data-seconds="120"><span class="timer-label">2 мин</);
+  for (const bad of ['{{timer}}', '{{timer 15}}', '{{timer 61m}}', '{{timer 0s}}', '{{timer 2x}}']) {
+    const issues = [];
+    const html = renderInline(bad, { issues, line: 7 });
+    assert.equal(issues.length, 1, bad);
+    assert.equal(issues[0].level, 'error');
+    assert.equal(issues[0].line, 7);
+    assert.ok(!html.includes('<button'), bad);
+  }
+});
+
+test('LED chips: every colour and pattern, two colours only when alternating', () => {
+  for (const c of LED_COLORS) {
+    for (const p of LED_PATTERNS.filter((x) => x !== 'alternate')) {
+      const issues = [];
+      const html = renderInline(`{{led ${c} ${p}}}`, { issues });
+      assert.deepEqual(issues, [], `${c} ${p}`);
+      assert.match(html, new RegExp(`^<span class="led led-${c} led-${p}" role="img" aria-label="[^"]+"${p === 'solid' ? '' : ' data-legend="[^"]+"'}></span>$`));
+    }
+  }
+  assert.equal(renderInline('{{led white blink}}'), '<span class="led led-white led-blink" role="img" aria-label="Мигает белым" data-legend="мигает"></span>');
+  assert.equal(renderInline('{{led amber}}'), '<span class="led led-amber led-solid" role="img" aria-label="Горит оранжевым"></span>');
+  assert.equal(renderInline('{{led white/amber alternate}}', { labels: DEFAULT_LABELS.en }),
+    '<span class="led led-white led-alternate led-b-amber" role="img" aria-label="Alternating white and amber" data-legend="alternating"></span>');
+  assert.deepEqual(parseLed('green fast'), { colors: ['green'], pattern: 'fast' });
+  for (const [bad, re] of [['{{led}}', /needs a colour/], ['{{led pink blink}}', /unknown LED colour "pink"/], ['{{led white wink}}', /unknown LED pattern "wink"/],
+    ['{{led white alternate}}', /needs two colours/], ['{{led white/red blink}}', /alternate pattern/], ['{{led red green blue}}', /too many words/]]) {
+    const issues = [];
+    renderInline(bad, { issues });
+    assert.equal(issues.length, 1, bad);
+    assert.match(issues[0].message, re);
+  }
+});
+
+test('anything else in {{ }} stays a UI path', () => {
+  assert.match(renderInline('{{Timer > Start}}'), /^<span class="ui-path"><span class="ui-seg">Timer<\/span>/);
+  assert.match(renderInline('{{Настройки}}'), /^<span class="ui-path">/);
+  const issues = [];
+  assert.match(renderInline('{{wifi settings}}', { issues }), /ui-path/);
+  assert.deepEqual(issues, []);
+});
+
+test('variants: heading attribute and VARIANT blocks', () => {
+  const g = splitGuide('Intro.\n\n## Press the button {variant=with-button}\n\nText.\n\n## Pick it {variant=a, b}\n\n> [!VARIANT with-button]\n> Only **this**.\n\nAll.\n\n## Plain\n\nx', { line: 1, variants: { 'with-button': 'Кейс с кнопкой' } });
+  assert.deepEqual(g.issues, []);
+  assert.deepEqual(g.steps.map((s) => s.title), ['Press the button', 'Pick it', 'Plain']);
+  assert.deepEqual(g.steps.map((s) => s.variants), [['with-button'], ['a', 'b'], null]);
+  assert.deepEqual(g.steps[1].variantRefs, [{ ids: ['with-button'], line: 9 }]);
+  assert.match(g.steps[1].html, /^<div class="variant" data-variant="with-button"><p class="variant-label">Кейс с кнопкой<\/p><p>Only <strong>this<\/strong>.<\/p><\/div>/);
+  assert.equal(g.steps[0].text, 'Text.');
+  const bad = splitGuide('> [!VARIANT a]\n> intro\n\n## T {variant=Bad_Id}\n\n> [!VARIANT]\n> x');
+  const messages = bad.issues.map((i) => i.message).join('\n');
+  assert.match(messages, /variant blocks belong to steps/);
+  assert.match(messages, /"Bad_Id" must be kebab-case/);
+  assert.match(messages, /variant block needs a variant id/);
+});
+
+test('widget blocks: placeholder HTML, params with frontmatter rules, steps only', () => {
+  const g = splitGuide('## Make a code\n\nText.\n\n```widget wifi-qr\nsecurity: WPA\nsize: 3\n```\n\nAfter.', { line: 1 });
+  assert.deepEqual(g.issues, []);
+  assert.deepEqual(g.steps[0].widgets, [{ type: 'wifi-qr', params: { security: 'WPA', size: 3 }, line: 5 }]);
+  assert.equal(g.steps[0].html, '<p>Text.</p>\n<div class="widget" data-widget="wifi-qr" data-params="{&quot;security&quot;:&quot;WPA&quot;,&quot;size&quot;:3}"></div>\n<p>After.</p>');
+  assert.equal(g.steps[0].text, 'Text.\n\nAfter.', 'widget params are not text');
+  const bad = splitGuide('```widget reminder\nevery: 1m\n```\n\n## S\n\n```widget\nx: 1\n```\n\n```widget Bad Type\n```\n\n```widget reminder\ntitle: a: b\n```');
+  const messages = bad.issues.map((i) => i.message).join('\n');
+  assert.match(messages, /widget blocks belong to steps/);
+  assert.match(messages, /needs a type/);
+  assert.match(messages, /"Bad Type" must be kebab-case/);
+  assert.match(messages, /widget reminder: a plain value cannot contain/);
+  assert.equal(md('```text more words\nliteral\n```'), '<pre><code class="language-text">literal</code></pre>', 'info strings with spaces still open code blocks');
+});
+
+test('plain text of the interactive syntax', () => {
+  assert.equal(plainText('Wait {{timer 1m30s}}, light {{led white/amber alternate}} {{Menu > OK}}.'), 'Wait 1m30s, light white/amber alternate Menu > OK.');
+  assert.equal(plainText('> [!VARIANT with-button]\n> Only here.\n\n```widget wifi-qr\nsecurity: WPA\n```\n\nEnd.'), 'Only here.\n\nEnd.');
 });

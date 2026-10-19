@@ -18,12 +18,24 @@ const requestLabels = Object.fromEntries(
 const REQUESTS_API = 'https://api.github.com/repos/wyrtensi/showmehow/issues?labels=request&state=open&per_page=100';
 const REQUESTS_HTML = `${REPO}/issues?q=is%3Aissue+is%3Aopen+label%3Arequest+sort%3Areactions-%2B1-desc`;
 
-// Horizontal bar chart. rows: [{name, n, href?, cls?, iconHtml?}]
-function bars(rows, { max } = {}) {
+// The catalog filtered by one facet (spec 11.5): guides/?c=audio, ?d=, ?b=, ?k=, ?f=.
+const catalogHref = (site, key, id) => `${site.href('guides/')}?${key}=${encodeURIComponent(id)}`;
+
+// Horizontal bar chart (spec 11.5). rows: [{name, n, href?, cls?, iconHtml?}]. A row with a link
+// is one big target: hover or focus shows the numbers ("5 guides, 20% of all"), a click opens
+// the filtered catalog; on touch screens the first tap shows the numbers (src/client/stats.js).
+function bars(site, rows, { max, total } = {}) {
+  const { tr } = tools(site);
   const top = max || Math.max(1, ...rows.map((r) => r.n));
+  const all = total || rows.reduce((sum, r) => sum + r.n, 0) || 1;
   return `<ul class="bars">${rows.map((r) => {
-    const label = `${r.iconHtml ? `<span class="bar-icon">${r.iconHtml}</span>` : ''}<span class="bar-name">${esc(r.name)}</span>`;
-    return `<li class="${cls('bar-row', r.cls, !r.n && 'is-zero')}">${r.href ? `<a class="bar-label" href="${attr(r.href)}">${label}</a>` : `<span class="bar-label">${label}</span>`}<span class="bar-track"><span class="bar-fill" style="--v:${(r.n / top).toFixed(3)}"></span></span><span class="bar-n">${r.n}</span></li>`;
+    const label = `<span class="bar-label">${r.iconHtml ? `<span class="bar-icon">${r.iconHtml}</span>` : ''}<span class="bar-name">${esc(r.name)}</span></span>`;
+    const tip = `${tr('count.guides', { n: r.n })}, ${tr('stats.share', { p: Math.round((r.n / all) * 100) })}`;
+    const inner = `${label}<span class="bar-track"><span class="bar-fill" style="--v:${(r.n / top).toFixed(3)}"></span></span><span class="bar-n">${r.n}</span><span class="bar-tip" role="tooltip" id="${attr(r.tipId)}">${esc(tip)}</span>`;
+    const rowCls = cls('bar-row', r.cls, !r.n && 'is-zero');
+    return r.href && r.n
+      ? `<li class="bar-item"><a class="${rowCls} bar-link" href="${attr(r.href)}" aria-describedby="${attr(r.tipId)}" data-bar>${inner}</a></li>`
+      : `<li class="bar-item"><span class="${rowCls}">${inner}</span></li>`;
   }).join('')}</ul>`;
 }
 
@@ -62,11 +74,11 @@ export function renderStats(site) {
 <ul class="big-numbers">${big.map(([ic, v, key]) => `<li class="big-number">${icon(ic)}<span class="big-n">${v ?? 0}</span><span class="big-l">${esc(tr(key, { n: v ?? 0 }))}</span></li>`).join('')}</ul>
 </section>
 <section class="section wrap stats-grid">
-${panel(tr('stats.byCategory'), 'grid', bars(site.categories.map((c) => ({ name: c.name, n: c.count || 0, href: site.href(c.id + '/'), cls: 'c-' + c.id, iconHtml: catIcon(c) }))), 'panel-wide')}
-${panel(tr('stats.byTask'), 'sparkle', bars(site.tasks.filter((k) => k.count).map((k) => ({ name: k.name, n: k.count, href: site.href('task/' + k.id + '/'), iconHtml: taskIcon(k) }))))}
-${panel(tr('stats.byDifficulty'), 'gauge', `<div class="donut-wrap">${donut(byDiff.map((d) => ({ n: d.n, cls: 'seg-' + d.id })), String(T.guides), tr('totals.guides', { n: T.guides }))}<ul class="legend">${byDiff.map((d) => `<li><span class="legend-dot seg-${d.id}"></span>${difficulty(site, d.id)}<span class="legend-n">${d.n}</span></li>`).join('')}</ul></div>`)}
-${panel(tr('stats.byDevice'), 'device', topDevices.length ? bars(topDevices.map((d) => ({ name: d.plural || d.name, n: d.count, href: site.href('device/' + d.id + '/'), cls: 'c-' + d.category }))) : `<p class="muted">${esc(tr('stats.empty'))}</p>`)}
-${panel(tr('stats.byBrand'), 'tag', topBrands.length ? bars(topBrands.map((b) => ({ name: b.name, n: b.count, href: site.href('brand/' + b.id + '/') }))) : `<p class="muted">${esc(tr('stats.empty'))}</p>`)}
+${panel(tr('stats.byCategory'), 'grid', bars(site, site.categories.map((c) => ({ name: c.name, n: c.count || 0, href: catalogHref(site, 'c', c.id), cls: 'c-' + c.id, iconHtml: catIcon(c), tipId: 'tip-c-' + c.id })), { total: T.guides }), 'panel-wide')}
+${panel(tr('stats.byTask'), 'sparkle', bars(site, site.tasks.filter((k) => k.count).map((k) => ({ name: k.name, n: k.count, href: catalogHref(site, 'k', k.id), iconHtml: taskIcon(k), tipId: 'tip-k-' + k.id })), { total: T.guides }))}
+${panel(tr('stats.byDifficulty'), 'gauge', `<div class="donut-wrap">${donut(byDiff.map((d) => ({ n: d.n, cls: 'seg-' + d.id })), String(T.guides), tr('totals.guides', { n: T.guides }))}<ul class="legend">${byDiff.map((d) => `<li>${d.n ? `<a class="legend-link" href="${attr(catalogHref(site, 'f', d.id))}" title="${attr(tr('stats.openCatalog'))}">` : '<span class="legend-link">'}<span class="legend-dot seg-${d.id}"></span>${difficulty(site, d.id)}<span class="legend-n">${d.n}</span>${d.n ? '</a>' : '</span>'}</li>`).join('')}</ul></div>`)}
+${panel(tr('stats.byDevice'), 'device', topDevices.length ? bars(site, topDevices.map((d) => ({ name: d.plural || d.name, n: d.count, href: catalogHref(site, 'd', d.id), cls: 'c-' + d.category, tipId: 'tip-d-' + d.id })), { total: T.guides }) : `<p class="muted">${esc(tr('stats.empty'))}</p>`)}
+${panel(tr('stats.byBrand'), 'tag', topBrands.length ? bars(site, topBrands.map((b) => ({ name: b.name, n: b.count, href: catalogHref(site, 'b', b.id), tipId: 'tip-b-' + b.id })), { total: T.guides }) : `<p class="muted">${esc(tr('stats.empty'))}</p>`)}
 ${panel(tr('stats.languages'), 'globe', `<div class="donut-wrap">${donut([{ n: T.withEnglish, cls: 'seg-en' }, { n: T.guides - T.withEnglish, cls: 'seg-ru' }], enShare + '%', 'EN')}<ul class="legend"><li><span class="legend-dot seg-en"></span>${esc(tr('stats.withEnglish'))}<span class="legend-n">${T.withEnglish}</span></li><li><span class="legend-dot seg-ru"></span>${esc(tr('stats.ruOnly'))}<span class="legend-n">${T.guides - T.withEnglish}</span></li></ul></div>`)}
 ${panel(tr('stats.content'), 'clock', `<ul class="mini-stats"><li><span class="mini-n">${avgTime}</span><span class="mini-l">${esc(tr('unit.min', { n: '' }).trim())}, ${esc(tr('stats.avgTime'))}</span></li><li><span class="mini-n">${avgSteps}</span><span class="mini-l">${esc(tr('stats.avgSteps'))}</span></li><li><span class="mini-n">${T.categories}</span><span class="mini-l">${esc(tr('totals.categories', { n: T.categories }))}</span></li></ul>`)}
 ${panel(tr('stats.latest'), 'refresh', `<ol class="latest">${guides.slice(0, 8).map((g) => `<li class="c-${g.category.id}"><a href="${attr(site.href(g.path))}"><span class="latest-icon">${catIcon(g.category)}</span><span class="latest-title">${esc(g.title)}</span><time datetime="${attr(g.updated)}">${esc(date(g.updated))}</time></a></li>`).join('')}</ol>`, 'panel-wide')}

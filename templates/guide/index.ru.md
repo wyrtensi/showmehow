@@ -24,6 +24,23 @@ sources:
 updated: __DATE__
 authors: [__AUTHOR__]
 draft: true
+# Optional: models that differ in a few steps ("Ваша модель:" chips above step 1), 2-6 items.
+# variants:
+#   - id: with-button
+#     name: Кейс с кнопкой
+#   - id: touch-case
+#     name: Сенсорный кейс
+#
+# Interactive extras for the body (docs/guide-format.md, "Интерактивные элементы"):
+#   Удерживайте кнопку {{timer 15s}}        - a timer chip: 15s, 2m, 1m30s (up to 1h)
+#   Индикатор {{led white blink}}           - a light: white green amber red blue;
+#                                             solid blink fast pulse; {{led white/amber alternate}}
+#   ## Зажмите кнопку {variant=with-button} - the whole step is for one model (or a,b)
+#   > [!VARIANT touch-case]                 - a part of a step for one model,
+#   > Дважды коснитесь кейса.                 the following "> " lines are its text
+#   ```widget wifi-qr                       - a widget inside a step: wifi-qr, saddle-height,
+#   security: WPA                             reminder; "key: value" lines are its parameters
+#   ```
 ---
 
 Короткое вступление: для чего эта инструкция и на какие модели она рассчитана. Можно опустить.

@@ -89,3 +89,7 @@ html.js .wgt-nojs { display: none; }
   html.wgt-printing .wgt-card-name { font-size: 22pt; }
   html.wgt-printing .wgt-card-hint { font-size: 12pt; color: #000; }
 }
+
+/* Long button labels wrap instead of widening the page (a widget can sit inside a step card). */
+.wgt .btn { white-space: normal; text-align: center; max-width: 100%; }
+.wgt > *, .wgt-form, .wgt-side, .wgt-out { min-width: 0; }

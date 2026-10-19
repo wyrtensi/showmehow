@@ -340,6 +340,11 @@ export function llmsFullTxt(site) {
 export function mdToText(md, lang = 'en') {
   const T = LOCAL[lang] || LOCAL.en;
   return String(md || '')
+    // Interactive syntax (spec 11): widget blocks are page tools, not text; chips become words.
+    .replace(/^ {0,3}(`{3,})[ \t]*widget\b[^\n]*\n[\s\S]*?^ {0,3}\1`*[ \t]*\n?/gim, '')
+    .replace(/^> ?\[!VARIANT(?:\s+([^\]]*))?\]\s*$/gim, (_, ids) => `> (${String(ids || '').trim()})`)
+    .replace(/\{\{\s*timer\s+([^}]*)\}\}/g, (_, p) => p.trim())
+    .replace(/\{\{\s*led\s+([^}]*)\}\}/g, (_, p) => `(${p.trim()})`)
     .replace(/\{\{([^}]*)\}\}/g, (_, p) => p.split(/(?<!<\/?kbd)>/i).map((s) => s.trim()).filter(Boolean).join(' > '))
     .replace(/<kbd>(.*?)<\/kbd>/gi, '$1')
     .replace(/^> ?\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*$/gim, (_, k) => `> ${T[k.toLowerCase()]}:`)

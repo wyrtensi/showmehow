@@ -61,12 +61,19 @@ async function readDoc(path, file, lang) {
   try {
     const fm = parseFrontmatter(doc.text);
     Object.assign(doc, { data: fm.data, lines: fm.lines, body: fm.body, bodyLine: fm.bodyLine });
-    doc.split = splitGuide(fm.body, { line: fm.bodyLine, labels: DEFAULT_LABELS[lang] });
+    doc.split = splitGuide(fm.body, { line: fm.bodyLine, labels: DEFAULT_LABELS[lang], variants: variantNames(fm.data.variants) });
   } catch (error) {
     if (error.name !== 'FrontmatterError') throw error;
     doc.error = { line: error.line, message: error.message };
   }
   return doc;
+}
+
+// {id: name} from a frontmatter variants list (spec 11.2); bad entries are left to the validator.
+function variantNames(list) {
+  const out = {};
+  if (Array.isArray(list)) for (const v of list) if (v && typeof v.id === 'string' && typeof v.name === 'string') out[v.id] = v.name;
+  return out;
 }
 
 async function listDir(dir) {
@@ -214,11 +221,19 @@ export async function loadSite({ root, lang = 'ru', base = '/', siteUrl = '', la
     const textDoc = useEn ? enDoc : ru;
     const t = textDoc.data;
     const path = `${entry.category}/${entry.slug}/`;
-    const body = splitGuide(textDoc.body, { line: textDoc.bodyLine, labels: alertLabels });
+    // Variant ids come from the Russian file, names from the reading language (Russian fallback).
+    const ruVariants = Array.isArray(d.variants) ? d.variants.filter((v) => v && typeof v.id === 'string') : [];
+    const names = { ...variantNames(ruVariants), ...(useEn ? variantNames(t.variants) : {}) };
+    const variants = ruVariants.map((v) => ({ id: v.id, name: String(names[v.id] ?? v.id) }));
+    const body = splitGuide(textDoc.body, { line: textDoc.bodyLine, labels: alertLabels, variants: names });
 
     const steps = [];
     for (const s of body.steps) {
-      steps.push({ n: s.n, id: `step-${s.n}`, title: s.title, html: s.html, md: s.md, image: await loadImage(entry, s, site, path) });
+      steps.push({
+        n: s.n, id: `step-${s.n}`, title: s.title, html: s.html, md: s.md, image: await loadImage(entry, s, site, path),
+        variants: s.variants && s.variants.length ? [...s.variants] : null,
+        widgets: (s.widgets || []).map((w) => ({ type: w.type, params: w.params || {} }))
+      });
     }
     const ruParts = Array.isArray(d.parts) ? d.parts : [];
     const enParts = useEn && Array.isArray(t.parts) ? t.parts : [];
@@ -245,11 +260,12 @@ export async function loadSite({ root, lang = 'ru', base = '/', siteUrl = '', la
       })),
       aliases: textList(useEn && Array.isArray(t.aliases) ? t.aliases : d.aliases),
       steps,
-      faq: faqSrc.map((f) => ({ q: String(f.q ?? ''), a: String(f.a ?? ''), aHtml: renderInline(String(f.a ?? '')) })),
+      faq: faqSrc.map((f) => ({ q: String(f.q ?? ''), a: String(f.a ?? ''), aHtml: renderInline(String(f.a ?? ''), { labels: alertLabels }) })),
       sources: ruSources.map((s, k) => ({ title: String((enSources[k] && enSources[k].title) || s.title || ''), url: s.url, publisher: s.publisher ? String(s.publisher) : '' })),
       updated: String(d.updated),
       lastmod: dates[`${entry.category}/${entry.slug}`] || String(d.updated),
       authors: textList(d.authors),
+      variants,
       widget: widget ? {
         type: String(widget.type),
         params: Object.fromEntries(Object.entries(widget).filter(([k]) => k !== 'type' && k !== 'placement')),

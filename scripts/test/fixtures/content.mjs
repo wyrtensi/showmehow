@@ -1,4 +1,4 @@
-// Builds throw-away content roots under .tmp/ for the core tests: the real taxonomy, the sample
+// Builds throw-away content roots under .tmp/ for the core tests: the fixture taxonomy, the sample
 // guide, and whatever extra files a test writes.
 import { mkdir, rm, cp, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
@@ -6,6 +6,9 @@ import { fileURLToPath } from 'node:url';
 
 export const ROOT = fileURLToPath(new URL('../../../', import.meta.url));
 export const SAMPLE = 'guides/audio/airpods-pair-android';
+// Frozen copy of the sample guide and the taxonomy: tests must not depend on live content that
+// content authors edit (guides/**, taxonomy/**). Update it on purpose when the format changes.
+export const FIXTURE = join(ROOT, 'scripts', 'test', 'fixtures', 'site');
 
 let n = 0;
 // files: {relativePath: string | Buffer}; options: {sample: true} copies the sample guide.
@@ -14,8 +17,8 @@ export async function makeRoot(name, files = {}, { sample = true } = {}) {
   const dir = join(ROOT, '.tmp', `test-${name}-${process.pid}-${n}`);
   await rm(dir, { recursive: true, force: true });
   await mkdir(dir, { recursive: true });
-  await cp(join(ROOT, 'taxonomy'), join(dir, 'taxonomy'), { recursive: true });
-  if (sample) await cp(join(ROOT, SAMPLE), join(dir, SAMPLE), { recursive: true });
+  await cp(join(FIXTURE, 'taxonomy'), join(dir, 'taxonomy'), { recursive: true });
+  if (sample) await cp(join(FIXTURE, SAMPLE), join(dir, SAMPLE), { recursive: true });
   for (const [rel, data] of Object.entries(files)) {
     const file = join(dir, rel);
     await mkdir(dirname(file), { recursive: true });

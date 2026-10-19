@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { checkAll, jsonEntryLines } from '../../src/lib/schema.js';
-import { makeRoot, removeRoot, guideFile, BASE_FIELDS, STEPS3, ROOT, SAMPLE, tinyPng } from './fixtures/content.mjs';
+import { makeRoot, removeRoot, guideFile, BASE_FIELDS, STEPS3, ROOT, FIXTURE, SAMPLE, tinyPng } from './fixtures/content.mjs';
 
 const G = 'guides/audio/test-guide';
 const run = async (files, opts) => {
@@ -20,7 +20,7 @@ const has = (list, file, re, line) => {
   if (line !== undefined) assert.equal(hit.line, line, `line of ${re}`);
 };
 
-test('the sample guide and the shipped taxonomy pass with no errors or warnings', async () => {
+test('the frozen sample guide and taxonomy fixture pass with no errors or warnings', async () => {
   const r = await run({});
   assert.deepEqual(r.errors, []);
   assert.deepEqual(r.warnings, []);
@@ -118,7 +118,7 @@ test('photos: size and width limits', async () => {
 });
 
 test('English file: same steps and images; ignored fields warn', async () => {
-  const sample = await readFile(join(ROOT, SAMPLE, 'index.ru.md'), 'utf8');
+  const sample = await readFile(join(FIXTURE, SAMPLE, 'index.ru.md'), 'utf8');
   const enGood = sample.replace('title: Как подключить AirPods к телефону на Android', 'title: How to pair AirPods with an Android phone')
     .replace(/^summary: .*$/m, 'summary: AirPods work with any phone over Bluetooth. Put the case into pairing mode with the back button and pick them in Bluetooth settings.');
   const good = await run({ [`${SAMPLE}/index.en.md`]: enGood });
@@ -143,12 +143,12 @@ test('frontmatter syntax errors are reported with their line', async () => {
 });
 
 test('taxonomy rules', async () => {
-  const cats = JSON.parse(await readFile(join(ROOT, 'taxonomy/categories.json'), 'utf8'));
+  const cats = JSON.parse(await readFile(join(FIXTURE, 'taxonomy/categories.json'), 'utf8'));
   cats.push({ id: 'stats', hue: 10, icon: 'cat-audio', ru: { name: 'x', desc: 'x' }, en: { name: 'x', desc: 'x' } });
   cats.push({ id: 'audio', hue: 400, icon: 'no-such-icon', ru: { name: 'x' }, en: {} });
-  const devices = JSON.parse(await readFile(join(ROOT, 'taxonomy/devices.json'), 'utf8'));
+  const devices = JSON.parse(await readFile(join(FIXTURE, 'taxonomy/devices.json'), 'utf8'));
   devices.push({ id: 'orphan', category: 'nowhere', ru: { name: 'x' }, en: { name: 'x' } });
-  const brands = JSON.parse(await readFile(join(ROOT, 'taxonomy/brands.json'), 'utf8'));
+  const brands = JSON.parse(await readFile(join(FIXTURE, 'taxonomy/brands.json'), 'utf8'));
   brands.push({ id: 'Bad Id', name: 'x' }, { id: 'nosite', name: 'n', site: 'ftp://x' }, { id: 'emoji', name: 'Star ⭐' });
   const r = await run({
     'taxonomy/categories.json': JSON.stringify(cats, null, 2),
@@ -171,4 +171,70 @@ test('taxonomy rules', async () => {
 
 test('json entry lines', () => {
   assert.deepEqual(jsonEntryLines('[\n {"id": "a", "x": {"y": "[{"}},\n {"id": "b"}\n]'), [2, 3]);
+});
+
+// ---------------------------------------------------------------- interactivity (spec 11)
+
+const VARIANTS = '\n  - id: with-button\n    name: Кейс с кнопкой\n  - id: touch-case\n    name: Сенсорный кейс';
+const VARIANT_BODY = '## Откройте кейс\n\nТекст {{timer 15s}} и {{led white blink}}.\n\n## Зажмите кнопку {variant=with-button}\n\nТекст.\n\n## Коснитесь кейса {variant=touch-case}\n\nТекст.\n\n## Выберите наушники\n\n> [!VARIANT with-button]\n> Только для кнопки.\n\nТекст.\n';
+
+test('interactive syntax: a guide with variants, timers, LEDs and a step widget passes', async () => {
+  const body = VARIANT_BODY + '\n## Сделайте QR-код\n\n```widget wifi-qr\nsecurity: WPA\n```\n';
+  const faq = '\n  - q: Не мигает\n    a: Подождите {{timer 30s}}.';
+  const r = await run({ [`${G}/index.ru.md`]: guideFile({ ...BASE_FIELDS, variants: VARIANTS, faq }, body) }, { sample: false });
+  assert.deepEqual(r.errors, []);
+  assert.deepEqual(r.warnings, []);
+});
+
+test('interactive syntax: bad timers and LEDs are errors with their line', async () => {
+  const body = '## Подождите\n\nДержите {{timer 2h}}.\n\n## Посмотрите\n\nИндикатор {{led pink blink}}.\n\n## Готово\n\nТекст.\n';
+  const faq = '\n  - q: Не мигает\n    a: Индикатор {{led white wink}}.';
+  const r = await run({ [`${G}/index.ru.md`]: guideFile({ ...BASE_FIELDS, faq }, body) }, { sample: false });
+  const f = `${G}/index.ru.md`;
+  has(r.errors, f, /\{\{timer 2h\}\} is 7200 s; a timer runs 1-3600 s/, 23);
+  has(r.errors, f, /unknown LED colour "pink"/, 27);
+  has(r.errors, f, /faq: unknown LED pattern "wink"/, 18);
+});
+
+test('variants: ids, names, references and visible steps are checked', async () => {
+  const f = `${G}/index.ru.md`;
+  const one = await run({ [f]: guideFile({ ...BASE_FIELDS, variants: '\n  - id: Only_One\n    name: ""' }, STEPS3) }, { sample: false });
+  has(one.errors, f, /variants needs at least 2 items/);
+  has(one.errors, f, /variants: id "Only_One" must be kebab-case/);
+  const dup = await run({ [f]: guideFile({ ...BASE_FIELDS, variants: '\n  - id: a\n    name: A\n  - id: a\n    name: B' }, STEPS3) }, { sample: false });
+  has(dup.errors, f, /variants: duplicate id "a"/);
+  const unknown = await run({ [f]: guideFile({ ...BASE_FIELDS, variants: VARIANTS }, VARIANT_BODY.replace('{variant=touch-case}', '{variant=touch}').replace('[!VARIANT with-button]', '[!VARIANT wireless]')) }, { sample: false });
+  has(unknown.errors, f, /unknown variant "touch"; the guide defines with-button, touch-case/);
+  has(unknown.errors, f, /unknown variant "wireless"/);
+  const hidden = await run({ [f]: guideFile({ ...BASE_FIELDS, variants: VARIANTS }, STEPS3.replace(/^(## .*)$/gm, '$1 {variant=with-button}')) }, { sample: false });
+  has(hidden.errors, f, /variant "touch-case" has no steps: every variant needs at least one visible step/);
+  const none = await run({ [f]: guideFile(BASE_FIELDS, VARIANT_BODY) }, { sample: false });
+  has(none.errors, f, /variant "with-button" is used but the guide has no "variants:"/);
+});
+
+test('variants: the English file has the same ids and the same step variants', async () => {
+  const ru = guideFile({ ...BASE_FIELDS, variants: VARIANTS }, VARIANT_BODY);
+  const enFields = { title: 'How to pair the earbuds with a phone', summary: 'Earbuds pair over Bluetooth in a couple of minutes. Turn on pairing mode and pick them in the list.' };
+  const good = await run({
+    [`${G}/index.ru.md`]: ru,
+    [`${G}/index.en.md`]: guideFile({ ...BASE_FIELDS, ...enFields, variants: '\n  - id: with-button\n    name: Case with a button\n  - id: touch-case\n    name: Touch case' }, VARIANT_BODY)
+  }, { sample: false });
+  assert.deepEqual(good.errors, []);
+  const bad = await run({
+    [`${G}/index.ru.md`]: ru,
+    [`${G}/index.en.md`]: guideFile({ ...BASE_FIELDS, ...enFields, variants: '\n  - id: touch-case\n    name: Touch case\n  - id: with-button\n    name: Case with a button' }, VARIANT_BODY.replace(' {variant=with-button}', ''))
+  }, { sample: false });
+  has(bad.errors, `${G}/index.en.md`, /variants must have the same ids in the same order/);
+  has(bad.errors, `${G}/index.en.md`, /step 2 is for every variant but the Russian step is for \{variant=with-button\}/);
+});
+
+test('widgets inside steps go through the registry', async () => {
+  const f = `${G}/index.ru.md`;
+  const body = '## Первый шаг\n\n```widget no-such-widget\nx: 1\n```\n\n## Второй шаг\n\n```widget wifi-qr\nsecurity: WPA4\n```\n\n## Третий шаг\n\n```widget reminder\nevery: 3m\n```\n\n## Четвёртый шаг\n\n```widget saddle-height\nlist: [a, b]\n```\n';
+  const r = await run({ [f]: guideFile(BASE_FIELDS, body) }, { sample: false });
+  has(r.errors, f, /unknown widget type "no-such-widget"/, 20);
+  has(r.errors, f, /widget wifi-qr: security must be one of WPA, WEP, nopass/, 26);
+  has(r.errors, f, /widget reminder: title is required/, 32);
+  has(r.errors, f, /widget saddle-height: list must be a scalar/, 38);
+  assert.ok(!r.warnings.some((w) => /step has no text/.test(w.message)), 'a step with only a widget has content');
 });

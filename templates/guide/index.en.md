@@ -1,6 +1,15 @@
 ---
-# English translation. Only title, summary, tools, parts[].name, aliases, faq and sources[].title
-# are read from this file; everything else comes from index.ru.md. Keep the same steps and images.
+# English translation. Only title, summary, tools, parts[].name, aliases, faq, sources[].title and
+# variants[].name are read from this file; everything else comes from index.ru.md. Keep the same
+# steps, images and {variant=...} steps.
+# If the Russian file has variants, repeat them with the same ids in the same order:
+# variants:
+#   - id: with-button
+#     name: Case with a button
+#   - id: touch-case
+#     name: Touch case
+# Interactive extras work the same in English: {{timer 15s}} {{led white blink}}
+# > [!VARIANT touch-case] and ```widget wifi-qr blocks (see docs/guide-format.md).
 title: How to __DO_WHAT__ on __DEVICE_NAME__
 summary: One or two sentences on what the reader ends up with and what it takes. 40 to 220 characters.
 tools: [What to have at hand]

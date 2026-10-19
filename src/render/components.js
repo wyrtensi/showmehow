@@ -112,7 +112,9 @@ export function standardFacets(site, guides, skip = []) {
   ].filter((f) => !skip.includes(f.key));
 }
 
-export function fixIssueHref(site, guide) {
+// The prefilled fix issue (.github/ISSUE_TEMPLATE/fix-guide.yml); `problem` prefills its textarea
+// (the faq "did not help" links).
+export function fixIssueHref(site, guide, problem = '') {
   const { tr } = tools(site);
-  return issueUrl({ template: 'fix-guide.yml', title: tr('guide.fixTitle', { title: guide.title }), guide: site.abs(guide.path) });
+  return issueUrl({ template: 'fix-guide.yml', title: tr('guide.fixTitle', { title: guide.title }), guide: site.abs(guide.path), problem });
 }

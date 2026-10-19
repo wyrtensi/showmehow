@@ -2,13 +2,13 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { checkSvg, inlineSvg, standaloneSvg, MAX_SVG_BYTES } from '../../src/lib/svg.js';
-import { ROOT, SAMPLE } from './fixtures/content.mjs';
+import { FIXTURE, SAMPLE } from './fixtures/content.mjs';
 
 const wrap = (inner, attrs = '') => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300"${attrs}>${inner}</svg>`;
 const errorsOf = (src) => checkSvg(src).errors.map((e) => e.message).join('\n');
 
 test('the sample illustration is clean and inlines with a label', async () => {
-  const src = await readFile(join(ROOT, SAMPLE, 'step-3.svg'), 'utf8');
+  const src = await readFile(join(FIXTURE, SAMPLE, 'step-3.svg'), 'utf8');
   const check = checkSvg(src);
   assert.deepEqual(check.errors, []);
   assert.deepEqual(check.warnings, []);
