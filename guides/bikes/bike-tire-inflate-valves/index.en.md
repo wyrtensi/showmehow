@@ -70,3 +70,10 @@ Release the lever and take the head off straight, without tilting it. Screw the 
 ## Check how the tyre sits on the rim
 
 Look all the way round the tyre: the guide line near the rim should run parallel to it. If the tyre bulges on one side, let the air out, centre it by hand and inflate again.
+
+Tyres lose air over time, so check the pressure at least once a month, as Schwalbe advises.
+
+```widget reminder
+every: 1m
+title: Check the bike tyre pressure
+```

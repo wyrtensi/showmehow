@@ -40,7 +40,7 @@ Turn the case over. On Redmi Buds 4 Pro the function button is on the bottom sid
 
 ![Case front with the white indicator lit steadily](step-4.svg)
 
-Keep holding until the white indicator on the front of the case **stays lit**. It takes more than 10 seconds.
+Keep holding until the white indicator on the front of the case **stays lit** {{led white solid}}. It takes more than 10 seconds {{timer 10s}}.
 
 ## Release and wait
 

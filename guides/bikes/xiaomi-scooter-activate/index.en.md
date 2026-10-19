@@ -58,7 +58,7 @@ Tighten the four screws on the stem with the T-shaped key from the box, in the o
 
 ## Charge the scooter
 
-Connect the charger. The light on the charger changes from red to green when the scooter is fully charged. It is best to charge it before the first ride.
+Connect the charger. The light on the charger changes from red {{led red solid}} to green {{led green solid}} when the scooter is fully charged. It is best to charge it before the first ride.
 
 ## Install the app
 

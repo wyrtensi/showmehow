@@ -40,7 +40,7 @@ Switch the room light off so the socket has no power and screw the bulb in all t
 
 ![Lit smart bulb blinking quickly](step-3.svg)
 
-Switch the light on. The bulb starts blinking fast - this means it is ready to connect.
+Switch the light on. The bulb starts blinking fast ({{led white fast}}) - this means it is ready to connect.
 
 ## Tap the plus in the app
 

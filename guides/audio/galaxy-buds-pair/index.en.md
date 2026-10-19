@@ -16,6 +16,13 @@ faq:
     a: On the old phone open {{Settings > Connections > Bluetooth}}, open the earbuds' settings and tap Disconnect, not Unpair - otherwise you have to set them up again. On a new phone with Android 16 or later, hold the button on the case and tap Connect in the pop-up; on Android 15 or earlier open Galaxy Wearable and tap Start.
   - q: Can I connect Galaxy Buds to an iPhone
     a: Yes, but the Galaxy Wearable app is not used there. Open the case (hold the button on its bottom for 3 seconds if needed), go to {{Settings > Bluetooth}} and pick the earbuds under Other Devices.
+variants:
+  - id: buds-first
+    name: Buds, Buds+, Live, Pro
+  - id: buds2
+    name: Buds2, Buds2 Pro
+  - id: buds3
+    name: Buds3, Buds3 Pro
 ---
 
 Galaxy Buds pair over Bluetooth with any phone, but the full set of features needs the Galaxy Wearable app. A Samsung phone only needs the Connect pop-up; other Android phones need the app and a Samsung account.
@@ -44,11 +51,14 @@ Both earbuds must be in the case, and the case needs some charge. Open the lid a
 
 The method depends on the model:
 
-| Model | How to start pairing mode |
-|---|---|
-| Buds, Buds+, Buds Live, Buds Pro | Put both earbuds in your ears and hold both touchpads for a few seconds. You hear a tone, then a steady pairing sound. |
-| Buds2, Buds2 Pro | Put both earbuds in the case, close and reopen the lid. Hold the touchpads of both earbuds at the same time for about 3 seconds, until the case lights flash. |
-| Buds3, Buds3 Pro | Put the earbuds in the case, close and reopen the lid. Hold the Connect button on the underside of the case for at least 3 seconds, until the lights flash green, blue and red. |
+> [!VARIANT buds-first]
+> Buds, Buds+, Buds Live, Buds Pro: put both earbuds in your ears and hold both touchpads for a few seconds. You hear a tone, then a steady pairing sound.
+
+> [!VARIANT buds2]
+> Buds2, Buds2 Pro: put both earbuds in the case, close and reopen the lid. Hold the touchpads of both earbuds at the same time for about 3 seconds {{timer 3s}}, until the case lights flash.
+
+> [!VARIANT buds3]
+> Buds3, Buds3 Pro: put the earbuds in the case, close and reopen the lid. Hold the Connect button on the underside of the case for at least 3 seconds {{timer 3s}}, until the lights flash green, blue and red.
 
 > [!NOTE]
 > Pairing mode lasts about 3 minutes. If you miss it, close the case and open it again.

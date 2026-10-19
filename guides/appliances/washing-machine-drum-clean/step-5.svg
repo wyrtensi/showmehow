@@ -14,7 +14,7 @@
     <rect class="f-ok" x="270" y="110" width="12" height="24" rx="3"/>
     <rect class="f-paper s-ink" x="196" y="172" width="54" height="26" rx="10" stroke-width="2"/>
     <rect class="f-paper s-ink" x="262" y="172" width="54" height="26" rx="10" stroke-width="2"/>
-    <circle class="f-accent s-ink" cx="378" cy="150" r="34" stroke-width="3"/>
+    <circle class="f-accent s-ink hot" cx="378" cy="150" r="34" stroke-width="3"/>
     <path class="f-paper" d="M368 136 L394 150 L368 164 Z"/>
     <path class="s-paper" d="M400 138 V162" fill="none" stroke-width="3"/>
     <circle class="s-hl anim-pulse" cx="378" cy="150" r="48" fill="none" stroke-width="3"/>

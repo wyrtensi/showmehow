@@ -47,7 +47,7 @@ Tighten the six M5 screws from the kit with the hex wrench. Afterwards check tha
 
 ## Charge the scooter
 
-Open the charge port cover, plug in the charger and close the cover when finished. Use only the charger supplied by Segway and do not charge if the port or the cable is wet. A full charge takes about 6.5 hours. The scooter is charged when the LED on the charger changes from red to green.
+Open the charge port cover, plug in the charger and close the cover when finished. Use only the charger supplied by Segway and do not charge if the port or the cable is wet. A full charge takes about 6.5 hours. The scooter is charged when the LED on the charger changes from red {{led red solid}} to green {{led green solid}}.
 
 ## Switch the scooter on
 

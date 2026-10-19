@@ -6,7 +6,7 @@
   <circle class="f-muted s-ink" cx="240" cy="110" r="14" stroke-width="2"/>
   <circle class="f-ink" cx="240" cy="110" r="5"/>
   </g>
-  <rect class="f-accent s-ink" x="120" y="180" width="60" height="26" rx="8" stroke-width="2"/>
+  <rect class="f-accent s-ink hot" x="120" y="180" width="60" height="26" rx="8" stroke-width="2"/>
   <circle class="f-paper s-ink" cx="150" cy="193" r="6" stroke-width="2"/>
   <circle class="f-ok anim-pulse" cx="124" cy="232" r="6"/>
   <circle class="f-muted s-ink" cx="150" cy="232" r="6" stroke-width="2"/>

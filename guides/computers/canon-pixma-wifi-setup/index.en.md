@@ -65,7 +65,7 @@ Press and hold the **Network** button until the Wi-Fi icon starts to blink on th
 
 ![A router with its WPS button and a two-minute timer beside it](step-6.svg)
 
-Within two minutes press and hold the WPS button on the router. See the router's manual for how exactly to press it.
+Within two minutes ({{timer 2m}}) press and hold the WPS button on the router. See the router's manual for how exactly to press it.
 
 ## Wait for the connection
 

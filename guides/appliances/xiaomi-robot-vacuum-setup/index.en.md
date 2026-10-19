@@ -64,10 +64,10 @@ Press and hold two buttons at the same time. The combination depends on the mode
 
 | Model | Buttons | How you know it worked |
 |---|---|---|
-| Mi Robot Vacuum | Power and Recharge | The blue indicator flashes |
+| Mi Robot Vacuum | Power and Recharge | The blue indicator flashes {{led blue blink}} |
 | Many models (general Xiaomi advice) | Cleaning and Charging | Voice prompt "Reset Wi-Fi" |
-| Xiaomi Robot Vacuum S10T | Power On and Recharge, 3 seconds, with the robot on | A prompt tone |
-| Xiaomi Robot Vacuum 6 Max | Recharge and Power/Clean, 7 seconds | Robot Wi-Fi is reset |
+| Xiaomi Robot Vacuum S10T | Power On and Recharge, 3 seconds {{timer 3s}}, with the robot on | A prompt tone |
+| Xiaomi Robot Vacuum 6 Max | Recharge and Power/Clean, 7 seconds {{timer 7s}} | Robot Wi-Fi is reset |
 
 If your model has different buttons, look in the paper manual.
 

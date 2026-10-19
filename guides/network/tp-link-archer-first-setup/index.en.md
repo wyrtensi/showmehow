@@ -22,7 +22,7 @@ This is for TP-Link routers with the classic interface (shown on an Archer AX55)
 
 ![Back of the router with the WAN port highlighted and a cable going to a modem](step-1.svg)
 
-Power off the modem (and remove its backup battery if it has one) and connect it with an Ethernet cable to the router's **WAN (Internet)** port. Power the modem on and wait about 2 minutes, then plug the router's power adapter in and switch it on. If the provider's cable comes from a wall socket, plug it straight into WAN.
+Power off the modem (and remove its backup battery if it has one) and connect it with an Ethernet cable to the router's **WAN (Internet)** port. Power the modem on and wait about 2 minutes {{timer 2m}}, then plug the router's power adapter in and switch it on. If the provider's cable comes from a wall socket, plug it straight into WAN.
 
 ## Connect your phone or laptop to the router
 
@@ -60,3 +60,11 @@ The router tests the internet by itself, which takes a few seconds. Then choose 
 
 > [!TIP]
 > Write down the new Wi-Fi password. If you forget it, the router can be reset with the Reset button and set up again.
+
+## Share the Wi-Fi with guests
+
+Enter the network name and the password you set and show the QR code to your guest: they only need to point their phone camera at it to join without typing the password.
+
+```widget wifi-qr
+security: WPA
+```

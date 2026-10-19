@@ -14,7 +14,7 @@ faq:
   - q: The phone cannot find the watch
     a: Make sure Bluetooth is on for both devices, keep the watch next to the phone and restart both. Update the Galaxy Wearable app to the latest version.
   - q: The watch will not turn on
-    a: Charge the watch fully - it will not turn on with a flat battery. If it is frozen, hold the Home and Back keys together for at least 7 seconds, until the screen goes dark.
+    a: Charge the watch fully - it will not turn on with a flat battery. If it is frozen, hold the Home and Back keys together for at least 7 seconds {{timer 7s}}, until the screen goes dark.
   - q: How do I move the watch to a new phone
     a: On the watch open the settings, choose General and Transfer data to new phone, and confirm with the tick. Then in Galaxy Wearable on the new phone tap Start. To avoid losing data, make a backup in Galaxy Wearable first.
   - q: Can I connect a Galaxy Watch to an iPhone

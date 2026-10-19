@@ -16,6 +16,11 @@ faq:
     a: Open the case lid next to an unlocked iPhone and follow the prompts on the screen. If no window appears, check that Bluetooth is on in {{Settings > Bluetooth}}.
   - q: How do I reset AirPods Max
     a: On the right headphone, hold the Digital Crown and the listening mode button together for about 15 seconds, until the light by the charging port changes from flashing amber to flashing white.
+variants:
+  - id: with-button
+    name: Case with a button
+  - id: touch-case
+    name: Case without a button
 ---
 
 A reset returns AirPods to their factory settings, so you have to pair them again afterwards. It is the standard fix when one earbud drops out, the sound does not work or AirPods cannot find the iPhone.
@@ -26,7 +31,7 @@ First work out your model: AirPods 1-3 and AirPods Pro 1-2 have a setup button o
 
 ![Closed AirPods charging case with a 30-second timer ring beside it](step-1.svg)
 
-Put both earbuds in the case, close the lid and wait 30 seconds.
+Put both earbuds in the case, close the lid and wait 30 seconds {{timer 30s}}.
 
 ## Forget the AirPods on your iPhone
 
@@ -45,19 +50,17 @@ Open the lid and leave the earbuds inside. Next, pick the method for your model.
 
 ![Back of an AirPods case, a finger pressing the round button with a timing ring around it](step-4.svg)
 
-### AirPods 1, 2, 3 and AirPods Pro 1, 2
+> [!VARIANT with-button]
+> AirPods 1, 2, 3 and AirPods Pro 1, 2: press the setup button on the back of the case and hold it for about 15 seconds {{timer 15s}}, until the light flashes amber and then white.
 
-Press the setup button on the back of the case and hold it for about 15 seconds, until the light flashes amber and then white.
-
-### AirPods 4 and AirPods Pro 3
-
-There is no button, so use taps. While the light is on, double-tap the front of the case. When the light flashes white, double-tap again. When it starts flashing faster, double-tap a third time.
+> [!VARIANT touch-case]
+> AirPods 4 and AirPods Pro 3: there is no button, so use taps. While the light is on, double-tap the front of the case. When the light flashes white {{led white blink}}, double-tap again. When it starts flashing faster {{led white fast}}, double-tap a third time.
 
 ## Wait for the amber, then white light
 
 ![The case light: an amber dot, an arrow and a white dot, showing a successful reset](step-5.svg)
 
-The light flashes amber, then white - the reset is done. Do not close the lid before that happens.
+The light flashes amber {{led amber blink}}, then white {{led white blink}} - the reset is done. Do not close the lid before that happens.
 
 > [!TIP]
 > If there is no white flash, close the lid for 20 seconds, open it and repeat step 4.

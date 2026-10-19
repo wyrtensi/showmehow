@@ -2,7 +2,7 @@
   <title>Underside of the Galaxy Buds case, pairing button held for 3 seconds</title>
   <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
   <rect class="f-soft s-ink" x="110" y="44" width="260" height="150" rx="75" stroke-width="3"/>
-  <circle class="f-paper s-ink" cx="240" cy="119" r="16" stroke-width="3"/>
+  <circle class="f-paper s-ink hot" cx="240" cy="119" r="16" stroke-width="3"/>
   <circle class="f-accent anim-pulse" cx="240" cy="119" r="7"/>
   <path class="s-hl anim-pulse" d="M240 74 A45 45 0 1 1 195 119" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <circle class="f-muted" cx="168" cy="119" r="5"/>

@@ -36,13 +36,13 @@ Find out the name of your 2.4 GHz Wi-Fi network and its password: you need them 
 
 ![A camera with its status light blinking red and green](step-3.svg)
 
-Connect the camera to power and wait about 30 seconds. The light should blink red and green: this means the camera is ready to pair.
+Connect the camera to power and wait about 30 seconds ({{timer 30s}}). The light should blink red and green ({{led red/green alternate}}): this means the camera is ready to pair.
 
 ## Reset the camera if the light blinks differently
 
 ![The back of the camera with the small reset button highlighted and a timer ring](step-4.svg)
 
-If there is no red and green blinking, hold the reset button for at least 5 seconds and check the light again.
+If there is no red and green blinking, hold the reset button for at least 5 seconds ({{timer 5s}}) and check the light again.
 
 ## Add the camera in the app
 

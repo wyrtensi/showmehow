@@ -46,7 +46,7 @@ Look at the back and side panels. There are three variants: a separate Reset but
 
 ![A paperclip pressing the Reset button in its hole, with a stopwatch showing a long hold](step-3.svg)
 
-The router must be switched on. Press the Reset (or WPS/Reset) button and keep it pressed for more than 10 seconds.
+The router must be switched on. Press the Reset (or WPS/Reset) button and keep it pressed for more than 10 seconds {{timer 10s}}.
 
 > [!WARNING]
 > Do not unplug the router until the reset is finished. If the router has a combined WPS/Reset button, a short press under 5 seconds starts WPS instead of a reset.

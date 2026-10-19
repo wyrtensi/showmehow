@@ -39,7 +39,7 @@ Put the plug into a wall outlet where Wi-Fi is stable. The indicator on the body
 
 ![A smart plug with its indicator blinking orange](step-3.svg)
 
-On the Smart Plug 2 a blinking orange light means the plug is waiting for a network connection. The older Mi Smart Plug (Wi-Fi) may show its light differently: follow the prompts in the app.
+On the Smart Plug 2 a blinking orange light ({{led amber blink}}) means the plug is waiting for a network connection. The older Mi Smart Plug (Wi-Fi) may show its light differently: follow the prompts in the app.
 
 ## Tap the plus in the app
 
@@ -55,7 +55,7 @@ Tap the plug that was found in the list. If it is not there, choose the model ma
 
 ![A smart plug with a solid light and a phone showing a check mark for a successful connection](step-6.svg)
 
-While the plug connects, the indicator blinks blue. When it finishes, the light stays blue. The app shows a success message.
+While the plug connects, the indicator blinks blue ({{led blue blink}}). When it finishes, the light stays blue ({{led blue solid}}). The app shows a success message.
 
 ## Name the plug and test it
 

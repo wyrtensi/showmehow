@@ -4,7 +4,7 @@
   <rect class="f-soft s-ink" x="100" y="112" width="280" height="76" rx="38" stroke-width="3"/>
   <rect class="f-muted" x="122" y="118" width="236" height="5" rx="2.5"/>
   <circle class="f-paper s-ink" cx="152" cy="150" r="13" stroke-width="2"/>
-  <circle class="f-accent s-ink" cx="192" cy="150" r="13" stroke-width="2"/>
+  <circle class="f-accent s-ink hot" cx="192" cy="150" r="13" stroke-width="2"/>
   <circle class="s-hl anim-pulse" cx="192" cy="150" r="23" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
   <circle class="f-paper s-ink" cx="232" cy="150" r="13" stroke-width="2"/>
   <circle class="f-paper s-ink" cx="272" cy="150" r="13" stroke-width="2"/>

@@ -30,7 +30,7 @@ Look at the control panel to the right of the door. You need a button labelled *
 
 ![Enlarged microwave panel, the Clock button is highlighted next to the display](step-2.svg)
 
-Press <kbd>Clock</kbd> briefly. If nothing happens, press and hold the button for 3 seconds. On some models one press is enough.
+Press <kbd>Clock</kbd> briefly. If nothing happens, press and hold the button for 3 seconds {{timer 3s}}. On some models one press is enough.
 
 ## Key in the time on the number pad
 

@@ -62,7 +62,7 @@ Press the Reset button with a thin sharp object such as a paperclip and keep it 
 
 ![Keenetic front panel: the leftmost Status light blinks fast, with an arrow showing the button release](step-5.svg)
 
-Watch the leftmost Status light. After 10 to 12 seconds it starts to blink fast. Release the button only then. If you let go earlier, the router just reboots without a reset.
+Watch the leftmost Status light. After 10 to 12 seconds {{timer 10s}} it starts to blink fast. Release the button only then. If you let go earlier, the router just reboots without a reset.
 
 ## Or reset from the web interface
 

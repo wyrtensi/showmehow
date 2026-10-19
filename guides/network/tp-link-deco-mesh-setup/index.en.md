@@ -55,7 +55,7 @@ Switch the modem off, connect the Deco to the modem with an Ethernet cable and s
 
 ![A Deco unit with its light: on the left steady yellow while starting, on the right pulsing blue](step-4.svg)
 
-Right after power-on the light is yellow, which means the unit is starting up. In a minute or two it begins to pulse blue: the unit is ready for setup.
+Right after power-on the light is yellow {{led amber solid}}, which means the unit is starting up. In a minute or two it begins to pulse blue {{led blue pulse}}: the unit is ready for setup.
 
 ## Select the unit's location
 
@@ -84,3 +84,11 @@ Switch on the extra unit next to the main one and wait for it to blink blue. In 
 ## Check the lights of the units
 
 Spread the units around the home, but not too far from the main one, or the link gets worse. A steady green or white light (depending on the model) means the unit works normally.
+
+## Share the Wi-Fi with guests
+
+Enter the network name and the password you set and show the QR code to your guest: they only need to point their phone camera at it to join without typing the password.
+
+```widget wifi-qr
+security: WPA
+```

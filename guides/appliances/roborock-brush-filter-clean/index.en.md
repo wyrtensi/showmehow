@@ -84,3 +84,10 @@ Let the filter dry completely. Roborock recommends 24 hours of drying. Then put 
 | Washable filter | every two weeks | if the error stays after drying |
 | Side brush | monthly | every 3-6 months |
 | Sensors and charging contacts | monthly with a soft dry cloth | - |
+
+The washable filter is cleaned every two weeks.
+
+```widget reminder
+every: 2w
+title: Wash the Roborock filter
+```

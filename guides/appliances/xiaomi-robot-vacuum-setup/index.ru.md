@@ -73,10 +73,10 @@ authors: [wyrtensi]
 
 | Модель | Кнопки | Как понять, что получилось |
 |---|---|---|
-| Mi Robot Vacuum | Power и Recharge | Мигает синий индикатор |
+| Mi Robot Vacuum | Power и Recharge | Мигает синий индикатор {{led blue blink}} |
 | Многие модели (общая рекомендация Xiaomi) | Cleaning и Charging | Голосовое сообщение «Reset Wi-Fi» |
-| Xiaomi Robot Vacuum S10T | Power On и Recharge, 3 секунды, у включённого робота | Звуковой сигнал |
-| Xiaomi Robot Vacuum 6 Max | Recharge и Power/Clean, 7 секунд | Wi-Fi робота сбрасывается |
+| Xiaomi Robot Vacuum S10T | Power On и Recharge, 3 секунды {{timer 3s}}, у включённого робота | Звуковой сигнал |
+| Xiaomi Robot Vacuum 6 Max | Recharge и Power/Clean, 7 секунд {{timer 7s}} | Wi-Fi робота сбрасывается |
 
 Если у вашей модели другие кнопки, найдите их в бумажной инструкции.
 

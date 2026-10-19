@@ -2,6 +2,11 @@
 title: How to connect an HP printer to Wi-Fi with the HP Smart app
 summary: Install the HP app, put the printer into Wi-Fi setup mode with the Wireless and Cancel buttons (or the touchscreen menu) and add the printer in the app within two hours.
 tools: [An HP printer with Wi-Fi, A smartphone or computer connected to your Wi-Fi network, Your Wi-Fi network name and password, An HP account (created in the app)]
+variants:
+  - id: no-touchscreen
+    name: No touchscreen
+  - id: touchscreen
+    name: Touchscreen
 aliases: [connect hp printer to wifi, hp smart printer setup, hp printer not connecting to wifi, hp wifi setup mode, hp deskjet 2700 wifi, hp smart tank wifi setup, connect printer to router, restore hp wifi setup mode]
 sources:
   - title: HP printer setup (Wi-Fi network)
@@ -41,15 +46,17 @@ Install the HP Smart app from your app store or from 123.hp.com, open it and sig
 
 ![Control panel of an inkjet printer with the Cancel and Wireless buttons highlighted](step-3.svg)
 
-For printers without a touchscreen, press **Cancel** to ready the printer, then hold **Wireless** and **Cancel** together until the Power button blinks.
+> [!VARIANT no-touchscreen]
+> Press **Cancel** to ready the printer, then hold **Wireless** and **Cancel** together until the Power button blinks.
 
-If the printer has a touchscreen, touch the Setup or Wireless icon, choose **Network setup** or **Settings**, then **Restore Network Settings** and confirm the prompt.
+> [!VARIANT touchscreen]
+> Touch the Setup or Wireless icon, choose **Network setup** or **Settings**, then **Restore Network Settings** and confirm the prompt.
 
 ## Wait a minute for the blue light to blink
 
 ![Printer panel with the Wireless light blinking and a one minute timer ring beside it](step-4.svg)
 
-After 60 seconds the Wireless light starts blinking blue. This means the printer is ready to accept a Wi-Fi network. Now you have two hours.
+After 60 seconds ({{timer 1m}}) the Wireless light starts blinking blue: {{led blue blink}}. This means the printer is ready to accept a Wi-Fi network. Now you have two hours.
 
 ## Add the printer in the app
 

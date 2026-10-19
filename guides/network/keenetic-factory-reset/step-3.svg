@@ -8,7 +8,7 @@
   <rect class="f-muted s-ink" x="234" y="130" width="38" height="38" rx="6" stroke-width="2"/>
   <rect class="f-muted s-ink" x="284" y="130" width="38" height="38" rx="6" stroke-width="2"/>
   <circle class="f-paper s-ink" cx="356" cy="149" r="12" stroke-width="2"/>
-  <circle class="f-paper s-ink" cx="394" cy="182" r="9" stroke-width="2"/>
+  <circle class="f-paper s-ink hot" cx="394" cy="182" r="9" stroke-width="2"/>
   <circle class="f-accent" cx="394" cy="182" r="4"/>
   <circle class="s-hl anim-pulse" cx="394" cy="182" r="18" fill="none" stroke-width="3"/>
   <path class="s-hl anim-nudge" d="M394 270 V228 M380 242 L394 228 L408 242" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

@@ -6,6 +6,6 @@
   <circle class="f-muted s-ink" cx="240" cy="150" r="22" stroke-width="2"/>
   <circle class="f-ink" cx="226" cy="150" r="3"/><circle class="f-ink" cx="254" cy="150" r="3"/>
   <rect class="f-paper s-ink" x="215" y="86" width="50" height="10" rx="5" stroke-width="2"/>
-  <circle class="f-warn anim-pulse" cx="240" cy="91" r="5"/>
+  <circle class="f-warn anim-pulse hot" cx="240" cy="91" r="5"/>
   <circle class="s-hl anim-pulse" cx="240" cy="91" r="14" fill="none" stroke-width="3"/>
 </svg>

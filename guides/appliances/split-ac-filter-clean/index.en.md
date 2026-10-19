@@ -69,3 +69,10 @@ Put the filter in a well ventilated shady place and let it dry completely. Direc
 ## Put the filter back and close the panel
 
 Put the dry filter back in place and close the panel. Make sure it is fitted correctly so that dust cannot get into the unit. Then you can plug the air conditioner in.
+
+LG advises cleaning the filter once every two weeks.
+
+```widget reminder
+every: 2w
+title: Clean the air conditioner filter
+```

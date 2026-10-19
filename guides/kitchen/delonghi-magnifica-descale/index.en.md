@@ -60,7 +60,7 @@ Place a container of at least 2 litres under the cappuccino maker and the coffee
 
 ![The descale button on the panel is highlighted, with a stopwatch next to it](step-6.svg)
 
-Wait until the coffee lights are on steadily. Then press and hold the descale button for at least **5 seconds** to confirm that you added the solution. The button light stays on and the programme starts.
+Wait until the coffee lights are on steadily. Then press and hold the descale button for at least **5 seconds** {{timer 5s}} to confirm that you added the solution. The button light stays on and the programme starts.
 
 ## Turn the dial to I
 
@@ -74,7 +74,7 @@ When the programme ends, the lights on the panel start to flash.
 
 ## Stop the flow and rinse the tank
 
-Turn the dial back to **0**. Empty the container and the drip tray. Take out the tank, empty it and rinse it under running water, fill it with fresh water up to **MAX** and put it back. Then press and hold the button for at least 5 seconds until its light flashes: the machine is ready to rinse.
+Turn the dial back to **0**. Empty the container and the drip tray. Take out the tank, empty it and rinse it under running water, fill it with fresh water up to **MAX** and put it back. Then press and hold the button for at least 5 seconds {{timer 5s}} until its light flashes: the machine is ready to rinse.
 
 ## Do the first rinse
 

@@ -18,6 +18,11 @@ faq:
     a: Remove EMBERTON III (and EMBERTON III [LE], if listed) from the phone's Bluetooth list. Turn the speaker on, hold the Bluetooth button for 7 seconds, until the indicator flashes red and the speaker restarts. Your settings are erased, firmware updates stay.
   - q: Where do I change sound settings and update the firmware
     a: In the Marshall Bluetooth app. You do not need it for pairing, but Marshall recommends it for settings and updates.
+variants:
+  - id: emberton-3
+    name: Emberton III
+  - id: acton-3
+    name: Acton III
 ---
 
 Marshall speakers pair like any Bluetooth speaker: start pairing mode, then pick the speaker on your phone. The buttons differ between models, so each step below has separate notes for Emberton III and Acton III.
@@ -29,13 +34,11 @@ Marshall speakers pair like any Bluetooth speaker: start pairing mode, then pick
 
 ![Marshall Emberton speaker with the power button at its top edge highlighted and a hold timer beside it](step-1.svg)
 
-### Emberton III
+> [!VARIANT emberton-3]
+> Emberton III: hold the power button until the speaker turns on.
 
-Hold the power button until the speaker turns on.
-
-### Acton III
-
-Acton III runs on mains power: plug the power lead into the speaker and a wall socket, then turn the speaker on with its power switch.
+> [!VARIANT acton-3]
+> Acton III runs on mains power: plug the power lead into the speaker and a wall socket, then turn the speaker on with its power switch.
 
 ## Turn on Bluetooth on the phone
 
@@ -51,13 +54,11 @@ If the speaker was already paired with this phone, find it in the Bluetooth list
 
 ![Marshall speaker with the Bluetooth button held and blue rings spreading from the indicator pulse](step-4.svg)
 
-### Emberton III
+> [!VARIANT emberton-3]
+> Emberton III: press and hold the Bluetooth button until the indicator shows a slow blue pulse {{led blue pulse}}.
 
-Press and hold the Bluetooth button until the indicator shows a slow blue pulse.
-
-### Acton III
-
-Press the source button and choose Bluetooth - a lit indicator shows the active input. Then hold the source button for about 2 seconds, until the Bluetooth indicator starts to blink (Marshall describes it as a red pulse).
+> [!VARIANT acton-3]
+> Acton III: press the source button and choose Bluetooth - a lit indicator shows the active input. Then hold the source button for about 2 seconds {{timer 2s}}, until the Bluetooth indicator starts to blink (Marshall describes it as a red pulse {{led red pulse}}).
 
 ## Pick the speaker in the Bluetooth list
 

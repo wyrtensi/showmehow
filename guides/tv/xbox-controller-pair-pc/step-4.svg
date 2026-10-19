@@ -6,7 +6,7 @@
   <rect class="f-muted s-ink" x="296" y="104" width="100" height="34" rx="14" stroke-width="3"/>
   <rect class="f-ink" x="214" y="136" width="52" height="12" rx="6"/>
   <rect class="f-paper s-ink" x="282" y="138" width="8" height="8" rx="3" stroke-width="2"/>
-  <circle class="f-accent" cx="278" cy="152" r="5"/>
+  <circle class="f-accent hot" cx="278" cy="152" r="5"/>
   <circle class="s-hl anim-pulse" cx="278" cy="152" r="20" fill="none" stroke-width="3"/>
   <path class="s-hl anim-nudge" d="M278 262 V190 M264 204 L278 190 L292 204" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <circle class="f-accent anim-pulse" cx="240" cy="200" r="12"/>

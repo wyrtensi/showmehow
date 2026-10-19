@@ -29,7 +29,7 @@ Open {{Settings > Connections > Bluetooth}} and turn Bluetooth on. Keep the phon
 
 ![Left ear cup with the power button highlighted and the indicator blinking](step-2.svg)
 
-If this is the first pairing, just turn the headphones on: they enter pairing mode by themselves. If other devices were paired before, hold the power button on the left ear cup for about **5 seconds**. The indicator flashes blue twice in a row and a voice says "Pairing".
+If this is the first pairing, just turn the headphones on: they enter pairing mode by themselves. If other devices were paired before, hold the power button on the left ear cup for about **5 seconds** {{timer 5s}}. The indicator flashes blue twice in a row and a voice says "Pairing".
 
 ## Pick WH-1000XM5 in the list
 

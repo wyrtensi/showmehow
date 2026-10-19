@@ -12,6 +12,11 @@ faq:
     a: Put both earbuds in the case for 30 seconds, open the lid, remove AirPods from the list in {{Settings > Bluetooth}} and pair again.
   - q: AirPods were connected to another device and do not show up
     a: Turn Bluetooth off on the old device and put the case into pairing mode again - the light should flash white.
+variants:
+  - id: with-button
+    name: Case with a button
+  - id: touch-case
+    name: Case without a button
 ---
 
 AirPods pair with Android like ordinary Bluetooth earbuds: sound and the microphone work. Siri and automatic switching between Apple devices are not available.
@@ -34,12 +39,13 @@ Both earbuds must be in the case. Open the lid and keep the case next to the pho
 
 The method depends on the model:
 
-| Model | What to do |
-|---|---|
-| AirPods 1, 2, 3, Pro 1 and 2 | Press and hold the button on the back of the case for about 5 seconds |
-| AirPods 4, 5, Pro 3 | Double-tap the front of the case |
+> [!VARIANT with-button]
+> AirPods 1, 2, 3, Pro 1 and 2: press and hold the button on the back of the case for about 5 seconds {{timer 5s}}.
 
-Keep going until the light **flashes white**.
+> [!VARIANT touch-case]
+> AirPods 4, 5, Pro 3: double-tap the front of the case.
+
+Keep going until the light **flashes white** {{led white blink}}.
 
 ## Pick AirPods in the device list
 

@@ -7,7 +7,7 @@
   <rect class="f-ink" x="188" y="70" width="104" height="160" rx="32"/>
   <circle class="f-paper" cx="240" cy="150" r="14"/>
   <rect class="f-muted s-ink" x="304" y="104" width="14" height="34" rx="6" stroke-width="2"/>
-  <rect class="f-accent s-ink anim-pulse" x="304" y="152" width="10" height="40" rx="5" stroke-width="2"/>
+  <rect class="f-accent s-ink anim-pulse hot" x="304" y="152" width="10" height="40" rx="5" stroke-width="2"/>
   <path class="s-hl" d="M346 150 A34 34 0 0 1 346 194" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <path class="s-hl anim-nudge" d="M410 172 H336 M350 158 L336 172 L350 186" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

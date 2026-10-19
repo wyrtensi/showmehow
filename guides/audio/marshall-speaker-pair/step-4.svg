@@ -3,7 +3,7 @@
   <rect class="f-accent-soft" width="480" height="300" rx="24" opacity="0.55"/>
   <rect class="f-soft s-ink" x="60" y="120" width="290" height="130" rx="26" stroke-width="3"/>
   <path class="s-ink" d="M84 150 H326 M84 168 H326 M84 186 H326 M84 204 H326 M84 222 H326" fill="none" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
-  <circle class="f-paper s-ink" cx="286" cy="108" r="19" stroke-width="3"/>
+  <circle class="f-paper s-ink hot" cx="286" cy="108" r="19" stroke-width="3"/>
   <path class="s-accent" d="M280 100 L292 114 L286 120 V96 L292 102 L280 116" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <circle class="s-hl anim-pulse" cx="286" cy="108" r="31" fill="none" stroke-width="3"/>
   <circle class="f-accent anim-pulse" cx="150" cy="108" r="9"/>

@@ -65,3 +65,11 @@ On the Wi-Fi screen you can keep the suggested values or set your own. Write dow
 ![Final screen with a check mark and the Finish button](step-8.svg)
 
 Save your credentials (copy or print them) and click **Finish**. To register the router and track its warranty, create a Keenetic Account at account.keenetic.com.
+
+## Share the Wi-Fi with guests
+
+Enter the network name and the password you set and show the QR code to your guest: they only need to point their phone camera at it to join without typing the password.
+
+```widget wifi-qr
+security: WPA
+```

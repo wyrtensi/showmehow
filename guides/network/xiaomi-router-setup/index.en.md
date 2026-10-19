@@ -44,7 +44,7 @@ Put the provider cable into the Internet (WAN) port. If the internet comes throu
 
 ## Wait for the blue indicator
 
-Wait until the system indicator on the router turns blue. It means the router has booted and is ready for setup.
+Wait until the system indicator on the router turns blue {{led blue solid}}. It means the router has booted and is ready for setup.
 
 ## Join the router's Wi-Fi network
 
@@ -78,8 +78,16 @@ Choose a new Wi-Fi password and an administrator password. You can use the same 
 
 ![The router indicator is steady blue, with an arrow to a phone showing a Wi-Fi symbol](step-8.svg)
 
-Wait until the indicator turns blue and stops blinking, then join the Wi-Fi again with the new password. The Wi-Fi module restarts, so the network disappears for a short time.
+Wait until the indicator turns blue and stops blinking {{led blue solid}}, then join the Wi-Fi again with the new password. The Wi-Fi module restarts, so the network disappears for a short time.
 
 ## Add the router to Xiaomi Home
 
 After the setup you can add the router to the Xiaomi Home (or Mi Home) app: tap **+** in the upper right corner, choose your model and follow the prompts. The BE3600 needs these apps, Mi Wi-Fi does not work with it.
+
+## Share the Wi-Fi with guests
+
+Enter the network name and the password you set and show the QR code to your guest: they only need to point their phone camera at it to join without typing the password.
+
+```widget wifi-qr
+security: WPA
+```

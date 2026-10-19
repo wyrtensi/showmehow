@@ -32,6 +32,11 @@ You set the saddle height by your leg, then make sure the post is inserted deep 
 
 Sit on the saddle and put your heel on the lower pedal. According to Trek, the leg should be only slightly bent. If the knee is bent more than that, raise the saddle. If you cannot reach the pedal, lower it.
 
+If you want a number to start from, enter your inseam below. It is only a starting point: the heel check above decides.
+
+```widget saddle-height
+```
+
 ## Find the minimum insertion line on the post
 
 The seatpost has a minimum insertion line marked on it. Do not raise the saddle so that this line shows above the frame: Trek says it can damage the post or the frame. If you cannot get the height you need that way, see a bike shop.

@@ -52,7 +52,7 @@ Press the Xbox button in the centre of the controller to turn it on.
 
 ![Xbox controller seen from the top, the small Pair button on the top edge next to the port highlighted](step-4.svg)
 
-Press the Pair button on the top edge of the controller between the bumpers and hold it for about three seconds. The Xbox button lights up and starts to blink: the controller is ready to pair.
+Press the Pair button on the top edge of the controller between the bumpers and hold it for about three seconds: {{timer 3s}}. The Xbox button lights up and starts to blink: the controller is ready to pair.
 
 ## Click Add device
 

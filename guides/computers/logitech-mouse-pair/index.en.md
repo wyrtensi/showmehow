@@ -42,7 +42,7 @@ To use the receiver, plug it into a free USB port on the computer. If the mouse 
 
 ![Underside of a mouse with the Easy-Switch button pressed and a channel light blinking](step-3.svg)
 
-If the cursor does not move or you want Bluetooth, check the Easy-Switch lights on the mouse. If none is blinking, hold the Easy-Switch button for 3 seconds. The mouse is ready to pair when a light starts blinking.
+If the cursor does not move or you want Bluetooth, check the Easy-Switch lights on the mouse. If none is blinking, hold the Easy-Switch button for 3 seconds: {{timer 3s}}. The mouse is ready to pair when a light starts blinking.
 
 ## Open the Bluetooth settings on the computer
 
